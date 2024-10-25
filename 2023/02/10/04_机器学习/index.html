@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+
+    
+    
+        
+<link rel="stylesheet" href="/css/mdui.min.v1.0.0.css">
+
+    
+    
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/iconfont.css">
+
+
+    
+    
+
+    
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            机器学习入门视频教程-笔记 | Road2Dasheng
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/" class="mdui-typo-headline">Road2Dasheng</a>
+    <a href="/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">关于</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="/icons/avatar.gif"/>
+                
+            </div>
+            <div class="sidebar-author-name">ZhaWB</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="/zhawenbin516@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">Steam</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">友情链接</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a target="_blank" rel="noopener" href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                        <a target="_blank" rel="noopener" href="https://nav.laogou717.com" class="mdui-list-item mdui-ripple">
+                            AI工具集合
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/2023/02/10/04_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习入门视频教程-笔记</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2023-02-10
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2024-10-25
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        阅读次数:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=机器学习入门视频教程-笔记&url=http://example.com/2023/02/10/04_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/&pic=http://example.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=机器学习入门视频教程-笔记&url=http://example.com/2023/02/10/04_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/&via=ZhaWB" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2023/02/10/04_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=http://example.com/2023/02/10/04_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/2023/02/10/04_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/&title=机器学习入门视频教程-笔记" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Road2Dasheng&title=机器学习入门视频教程-笔记&summary=&pics=http://example.com/null&url=http://example.com/2023/02/10/04_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=http://example.com/2023/02/10/04_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/&text=机器学习入门视频教程-笔记" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/ >机器学习</a>
+      </i>
+    
+  </div>
+
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <h3 id="B站黑马程序员-机器学习入门视频课程笔记"><a href="#B站黑马程序员-机器学习入门视频课程笔记" class="headerlink" title="B站黑马程序员-机器学习入门视频课程笔记"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1pf4y1y7kw/?spm_id_from=333.880.my_history.page.click&vd_source=ce97f8ebe1ffd37a2e287328d33d93b1">B站黑马程序员-机器学习入门视频课程</a>笔记</h3><h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><h4 id="1-1-人工智能"><a href="#1-1-人工智能" class="headerlink" title="1.1 人工智能"></a>1.1 人工智能</h4><h5 id="1-1-1-人工智能应用场景"><a href="#1-1-1-人工智能应用场景" class="headerlink" title="1.1.1 人工智能应用场景"></a>1.1.1 人工智能应用场景</h5><p><img src="/img/04/04_01.png" alt="人工智能应用场景"></p>
+<h5 id="1-1-2-人工智能小案例"><a href="#1-1-2-人工智能小案例" class="headerlink" title="1.1.2 人工智能小案例"></a>1.1.2 人工智能小案例</h5><p><img src="/img/04/04_02.png" alt="人工智能小案例"></p>
+<h5 id="1-1-3-人工智能发展必备三要素"><a href="#1-1-3-人工智能发展必备三要素" class="headerlink" title="1.1.3 人工智能发展必备三要素"></a>1.1.3 人工智能发展必备三要素</h5><p><img src="/img/04/04_03.png" alt="人工智能发展必备三要素"></p>
+<blockquote>
+<ul>
+<li>算力之CPU、GPU对比：CPU主要适合IO密集型的任务; GPU主要适合计算密集型任务</li>
+<li>什么类型的程序适合在GPU上运行 <img src="/img/04/04_04.png" alt="什么类型的程序适合在GPU上运行"></li>
+<li><a target="_blank" rel="noopener" href="http://www.sohu.com/a/201309334_468740">CPU和GPU的区别</a></li>
+<li><a target="_blank" rel="noopener" href="https://buzzorange.com/techorange/2017/09/27/what-intel-google-nvidia-microsoft-do-for-ai-chips/">Google TPU介绍</a></li>
+</ul>
+</blockquote>
+<h5 id="1-1-4-人工智能、机器学习和深度学习"><a href="#1-1-4-人工智能、机器学习和深度学习" class="headerlink" title="1.1.4 人工智能、机器学习和深度学习"></a>1.1.4 人工智能、机器学习和深度学习</h5><p><img src="/img/04/04_05.png" alt="人工智能、机器学习和深度学习的关系"></p>
+<blockquote>
+<p>机器学习是人工智能的一个实现途径，深度学习是机器学习的一个方法发展而来的</p>
+</blockquote>
+<h5 id="1-1-5-人工智能的发展历程"><a href="#1-1-5-人工智能的发展历程" class="headerlink" title="1.1.5 人工智能的发展历程"></a>1.1.5 人工智能的发展历程</h5><blockquote>
+<ol>
+<li>起源<blockquote>
+<ul>
+<li>图灵测试<img src="/img/04/04_06.png" alt="图灵测试"></li>
+<li>达特茅斯会议 <img src="/img/04/04_07.png" alt="达特茅斯会议"></li>
+</ul>
+</blockquote>
+</li>
+<li>发展<blockquote>
+<ul>
+<li>学术界可谓仁者见仁、智者见智，我们将人工智能的发展历程划分为以下6个阶段：<img src="/img/04/04_08.png" alt="人工智能发展阶段"><img src="/img/04/04_09.png" alt="人工智能发展阶段"></li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</blockquote>
+<h5 id="1-1-6-人工智能主要分支"><a href="#1-1-6-人工智能主要分支" class="headerlink" title="1.1.6 人工智能主要分支"></a>1.1.6 人工智能主要分支</h5><blockquote>
+<p>通讯、感知与行动是现代人工智能的三个关键能力</p>
+<p>&#x3D;&#x3D;分支一：计算机视觉（CV）&#x3D;&#x3D;</p>
+<blockquote>
+<p>  计算机视觉(CV)是指机器感知环境的能力。这一技术类别中的经典任务有图像形成、图像处理、图像提取和图像的三维推理。物体检测和人脸识别是其比较成功的研究领域。<img src="/img/04/04_10.png" alt="分支一：计算机视觉"></p>
+</blockquote>
+<p>&#x3D;&#x3D;分支二：语音识别&#x3D;&#x3D;</p>
+<blockquote>
+<p> 语音识别是指识别语音(说出的语言)并将其转换成对应文本的技术。相反的任务(文本转语音&#x2F;TTS)也是这一领域内一个类似的研究主题。<img src="/img/04/04_11.png" alt="分支二：语音识别"><br> 语音识别领域仍然面临着声纹识别和「鸡尾酒会效应」等一些特殊情况的难题。<br> 现代语音识别系统严重依赖于云，在离线时可能就无法取得理想的工作效果。</p>
+</blockquote>
+<p>&#x3D;&#x3D;分支三：文本挖掘&#x2F;分类&#x3D;&#x3D;</p>
+<blockquote>
+<p>这里的文本挖掘主要是指文本分类，该技术可用于理解、组织和分类结构化或非结构化文文档。其涵盖的主要任务有句法分析、情绪分析和垃圾信息检测。<img src="/img/04/04_12.png" alt="分支三：文本挖掘/分类"><br>文本挖掘和分类领域的一个瓶颈出现在歧义和有偏差的数据上。</p>
+</blockquote>
+<p>&#x3D;&#x3D;分支四：机器翻译&#x3D;&#x3D;</p>
+<blockquote>
+<p>机器翻译(MT)是利用机器的力量自动将一种自然语言(源语言)的文本翻译成另一种语言(目标语言)。<img src="/img/04/04_13.png" alt="分支四：机器翻译"><br>在某些情况下，俚语和行话等内容的翻译会比较困难(受限词表问题)。<br>专业领域的机器翻译(比如医疗领域)表现通常不好。</p>
+</blockquote>
+<p>&#x3D;&#x3D;分支五：机器人&#x3D;&#x3D;</p>
+<blockquote>
+<p>机器人学(Robotics)研究的是机器人的设计、制造、运作和应用，以及控制它们的计算机系统、传感反馈和信息处理。<img src="/img/04/04_14.png" alt="分支五：机器人"></p>
+</blockquote>
+<p>&#x3D;&#x3D;总的来说，人工智能领域的研究前沿正逐渐从搜索、知识和推理领域转向机器学习、深度学习、计算机视觉和机器人领域。&#x3D;&#x3D;</p>
+</blockquote>
+<h4 id="1-2-机器学习工作流程"><a href="#1-2-机器学习工作流程" class="headerlink" title="1.2 机器学习工作流程"></a>1.2 机器学习工作流程</h4><h5 id="1-2-1-什么是机器学习"><a href="#1-2-1-什么是机器学习" class="headerlink" title="1.2.1 什么是机器学习"></a>1.2.1 什么是机器学习</h5><blockquote>
+<p>机器学习是指从数据中自动分析获得模型，并利用模型对未知数据进行预测。 <img src="/img/04/04_15.png" alt="机器学习"></p>
+</blockquote>
+<h5 id="1-2-2-机器学习工作流程"><a href="#1-2-2-机器学习工作流程" class="headerlink" title="1.2.2 机器学习工作流程"></a>1.2.2 机器学习工作流程</h5><blockquote>
+<p>获取数据 -&gt; 数据基本处理 -&gt; 特征工程 -&gt; 机器学习（模型训练）-&gt; 结果达到要求,上线服务 -&gt; 结果未达到要求，重复前述步骤  <img src="/img/04/04_16.png" alt="机器学习工作流程"></p>
+</blockquote>
+<h5 id="1-2-3-数据集介绍"><a href="#1-2-3-数据集介绍" class="headerlink" title="1.2.3 数据集介绍"></a>1.2.3 数据集介绍</h5><blockquote>
+<p>&#x3D;&#x3D;- 数据简介&#x3D;&#x3D;</p>
+<blockquote>
+<p>一行数据成为一个样本<br>一列数据成为一个特征<br>有些数据有目标值（标签值），有些数据没有目标值</p>
+</blockquote>
+<p>&#x3D;&#x3D;- 数据类型构成&#x3D;&#x3D;</p>
+<blockquote>
+<p>类型一：特征值 + 目标值（连续的或离散的）<br>类型二：只有特征值，没有目标值</p>
+</blockquote>
+<p>&#x3D;&#x3D;- 数据分割&#x3D;&#x3D;</p>
+<blockquote>
+<p>训练数据：用于训练，构建模型<br>测试数据：在模型检验时使用，用于评估模型是否有效<br>两种数据的划分比例：7:3 或 8:2 或 7.5:2.5</p>
+</blockquote>
+</blockquote>
+<h5 id="1-2-4-数据基本处理"><a href="#1-2-4-数据基本处理" class="headerlink" title="1.2.4 数据基本处理"></a>1.2.4 数据基本处理</h5><blockquote>
+<p>即对数据进行缺失值、去除异常值等处理</p>
+</blockquote>
+<h5 id="1-2-5-特征工程"><a href="#1-2-5-特征工程" class="headerlink" title="1.2.5 特征工程"></a>1.2.5 特征工程</h5><blockquote>
+<ul>
+<li><p>定义</p>
+<blockquote>
+<p>指使用专业背景知识和技巧处理数据，使得特征能在机器学习算法上发挥更好的作用的过程</p>
+</blockquote>
+</li>
+<li><p>作用</p>
+<blockquote>
+<p>机器学习领域的大神Andrew Ng(吴恩达)老师说“Coming up with features is difficult, time-consuming, requires expert knowledge. “Applied machine learning” is basically feature engineering. ”<br>&#x3D;&#x3D;业界广泛流传：数据和特征决定了机器学习的上限，而模型和算法只是逼近这个上限而已。&#x3D;&#x3D;</p>
+</blockquote>
+</li>
+<li><p>内涵</p>
+<blockquote>
+<p>&#x3D;&#x3D;– 特征提取&#x3D;&#x3D;</p>
+<blockquote>
+<p> 将任意数据（如文本或图像）转换为可用于机器学习的数字特征<img src="/img/04/04_17.png" alt="特征提取"><br> &#x3D;&#x3D;– 特征预处理&#x3D;&#x3D;<br>通过一些转换函数将特征数据转换成更加适合算法模型的特征数据过程<img src="/img/04/04_18.png" alt="特征预处理"><br>&#x3D;&#x3D;– 特征降维&#x3D;&#x3D;<br> 指在某些限定条件下，降低随机变量(特征)个数，得到一组“不相关”主变量的过程<img src="/img/04/04_19.png" alt="特征降维"></p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h5 id="1-2-6-机器学习"><a href="#1-2-6-机器学习" class="headerlink" title="1.2.6 机器学习"></a>1.2.6 机器学习</h5><blockquote>
+<p>选择合适的算法对模型进行训练（具体内容见[[#^edf363 | 机器学习算法]]）</p>
+</blockquote>
+<h5 id="1-2-7-模型评估"><a href="#1-2-7-模型评估" class="headerlink" title="1.2.7 模型评估"></a>1.2.7 模型评估</h5><blockquote>
+<p>对训练好的模型进行评估（具体内容见[[#^cbe98e| 模型评估]]）</p>
+</blockquote>
+<h5 id="1-2-8-拓展阅读"><a href="#1-2-8-拓展阅读" class="headerlink" title="1.2.8 拓展阅读"></a>1.2.8 拓展阅读</h5><p>[[#^bce1d5 | 机器学习项目的完整流程]]</p>
+<h4 id="1-3-机器学习算法"><a href="#1-3-机器学习算法" class="headerlink" title="1.3 机器学习算法"></a>1.3 机器学习算法</h4><p>^edf363</p>
+<h5 id="1-3-1-监督学习"><a href="#1-3-1-监督学习" class="headerlink" title="1.3.1 监督学习"></a>1.3.1 监督学习</h5><blockquote>
+<ul>
+<li><p>定义</p>
+<blockquote>
+<p>输入数据是由输入特征值和目标值所组成。<br>函数的输出值可以是一个连续的值(称为回归)；或是有限个离散值(称为分类)</p>
+</blockquote>
+</li>
+<li><p>回归问题</p>
+<blockquote>
+<p>如预测房价，根据样本集拟合出一条连续曲线 <img src="/img/04/04_20.png" alt="回归问题"></p>
+</blockquote>
+</li>
+<li><p>分类问题</p>
+<blockquote>
+<p>如根据肿瘤特征判断良性还是恶性，得到的结果是“良性”或者“恶性”，是离散的。<img src="/img/04/04_21.png" alt="分类问题"></p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h5 id="1-3-2-无监督学习"><a href="#1-3-2-无监督学习" class="headerlink" title="1.3.2 无监督学习"></a>1.3.2 无监督学习</h5><blockquote>
+<ul>
+<li>定义<blockquote>
+<p>输入数据是由输入特征值组成，没有目标值。<br>输入数据没有被标记，也没有确定的结果。样本数据类别未知。需要根据样本间的相似性对样本集进行类别划分。<img src="/img/04/04_22.png" alt="无监督学习"></p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h5 id="1-3-3-半监督学习"><a href="#1-3-3-半监督学习" class="headerlink" title="1.3.3 半监督学习"></a>1.3.3 半监督学习</h5><blockquote>
+<ul>
+<li>定义<br>训练集同时包含有标记样本数据和未标记样本数据。</li>
+</ul>
+</blockquote>
+<h5 id="1-3-4-强化学习"><a href="#1-3-4-强化学习" class="headerlink" title="1.3.4 强化学习"></a>1.3.4 强化学习</h5><blockquote>
+<ul>
+<li>定义<blockquote>
+<p>实质是make decisions 问题，即自动进行决策，并且可以做连续决策。<img src="/img/04/04_23.png" alt="强化学习"></p>
+</blockquote>
+</li>
+<li>&#x3D;&#x3D;强化学习的目标是获得最多的累计奖励&#x3D;&#x3D;</li>
+</ul>
+</blockquote>
+<h5 id="1-3-5-上述算法对比"><a href="#1-3-5-上述算法对比" class="headerlink" title="1.3.5 上述算法对比"></a>1.3.5 上述算法对比</h5><blockquote>
+<ul>
+<li>&#x3D;&#x3D;监督学习和无监督学习的对比&#x3D;&#x3D;<img src="/img/04/04_24.png" alt="监督学习和无监督学习的对比"></li>
+</ul>
+<p>-&#x3D;&#x3D;监督学习和半监督学习训练方式的对比&#x3D;&#x3D;</p>
+<blockquote>
+<p>–  监督学习的训练方式<img src="/img/04/04_25.png" alt="监督学习和半监督学习训练方式的对比"><br>– 半监督学习的训练方式 <img src="/img/04/04_26.png" alt="监督学习和半监督学习训练方式的对比"></p>
+</blockquote>
+<ul>
+<li>&#x3D;&#x3D;监督学习和强化学习的对比&#x3D;&#x3D;<img src="/img/04/04_27.png" alt="监督学习和强化学习的对比"></li>
+</ul>
+</blockquote>
+<h5 id="1-3-6-总结"><a href="#1-3-6-总结" class="headerlink" title="1.3.6 总结"></a>1.3.6 总结</h5><blockquote>
+<p>&#x3D;&#x3D;<img src="/img/04/04_29.png" alt="监督学习和强化学习的对比"></p>
+</blockquote>
+<h5 id="1-3-7-拓展阅读"><a href="#1-3-7-拓展阅读" class="headerlink" title="1.3.7 拓展阅读"></a>1.3.7 拓展阅读</h5><blockquote>
+<ul>
+<li>[[#^5ed916 | 独立同分布]]</li>
+<li><a target="_blank" rel="noopener" href="http://sports.sina.com.cn/chess/weiqi/2017-10-21/doc-ifymyyxw4023875.shtml">Alphago进化史 漫画告诉你Zero为什么这么牛</a></li>
+</ul>
+</blockquote>
+<h4 id="1-4-模型评估"><a href="#1-4-模型评估" class="headerlink" title="1.4 模型评估"></a>1.4 模型评估</h4><p>^cbe98e</p>
+<h5 id="1-4-1-作用"><a href="#1-4-1-作用" class="headerlink" title="1.4.1 作用"></a>1.4.1 作用</h5><blockquote>
+<p>模型评估是模型开发过程不可或缺的一部分。它有助于发现表达数据的最佳模型和所选模型将来工作的性能如何。</p>
+</blockquote>
+<h5 id="1-4-2-类型"><a href="#1-4-2-类型" class="headerlink" title="1.4.2 类型"></a>1.4.2 类型</h5><blockquote>
+<ul>
+<li><p>按照数据集的目标值不同，可以把模型评估分为分类模型评估和回归模型评估。</p>
+</li>
+<li><p>分类模型评估指标</p>
+<blockquote>
+<p>– <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1510724">准确率(Accuracy)、精确率(Precision)和召回率(Recall)</a></p>
+<ul>
+<li><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/matrix_space/article/details/50384518">F1-score</a></li>
+</ul>
+</li>
+<li><ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/33407505">AUC</a></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>回归模型评估</p>
+<blockquote>
+<p>– <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/143169742">均方根误差</a><br>– <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/143169742">相对平方误差</a><br>– <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/143169742">平均绝对误差 </a><br>– <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/143169742">相对绝对误差</a></p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h5 id="1-4-3-拟合"><a href="#1-4-3-拟合" class="headerlink" title="1.4.3 拟合"></a>1.4.3 拟合</h5><blockquote>
+<p>模型的表现效果大致可以分为两类：过拟合、欠拟合。<img src="/img/04/04_30.png" alt="拟合"></p>
+<ul>
+<li>欠拟合<img src="/img/04/04_31.png" alt="欠拟合"></li>
+<li>过拟合<img src="/img/04/04_32.png" alt="过拟合"></li>
+</ul>
+</blockquote>
+<h4 id="1-5-深度学习简介"><a href="#1-5-深度学习简介" class="headerlink" title="1.5 深度学习简介"></a>1.5 深度学习简介</h4><h5 id="1-5-1-定义"><a href="#1-5-1-定义" class="headerlink" title="1.5.1 定义"></a>1.5.1 定义</h5><blockquote>
+<ul>
+<li>深度学习（Deep Learning）（也称为深度结构学习[Deep Structured Learning]、层次学习[Hierarchical Learning]或者是深度机器学习 [Deep Machine Learning]）</li>
+<li>是一类算法集合</li>
+<li>是机器学习的一个分支</li>
+<li>&#x3D;&#x3D;深度学习方法近年来，在会话识别、图像识别和对象侦测等领域表现出了惊人的准确性。&#x3D;&#x3D;</li>
+<li>但是，“深度学习”这个词语很古老，它在1986年由Dechter在机器学习领域提出，然后在2000年有Aizenberg等人引入到人工神经网络中。而现在，由于Alex Krizhevsky在2012年使用卷积网络结构赢得了Image Net比赛之后受到大家的瞩目。</li>
+</ul>
+</blockquote>
+<h5 id="1-5-2-起源"><a href="#1-5-2-起源" class="headerlink" title="1.5.2 起源"></a>1.5.2 起源</h5><blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-hans/%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C">神经网络</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-hans/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C">卷积神经网络</a></li>
+</ul>
+</blockquote>
+<h5 id="1-5-3-演示"><a href="#1-5-3-演示" class="headerlink" title="1.5.3 演示"></a>1.5.3 演示</h5><blockquote>
+<p><a target="_blank" rel="noopener" href="http://playground.tensorflow.org/">深度学习演示</a></p>
+</blockquote>
+<h5 id="1-5-4-各层负责内容"><a href="#1-5-4-各层负责内容" class="headerlink" title="1.5.4 各层负责内容"></a>1.5.4 各层负责内容</h5><blockquote>
+<p>&#x3D;&#x3D;多层神经网络，在最初几层是识别简单内容，后面几层是识别一些复杂内容&#x3D;&#x3D;</p>
+<ul>
+<li>1层：负责识别颜色及简单纹理<img src="/img/04/04_33.png" alt="1层"></li>
+<li>2层：一些神经元可以识别更加细化的纹理，布纹，刻纹，叶纹等<img src="/img/04/04_34.png" alt="2层"></li>
+<li>3层：一些神经元负责感受黑夜里的黄色烛光，高光，萤火，鸡蛋黄色等<img src="/img/04/04_35.png" alt="3层"></li>
+<li>4层：一些神经元识别萌狗的脸，宠物形貌，圆柱体事物，七星瓢虫等的存在<img src="/img/04/04_36.png" alt="4层"></li>
+<li>5层：一些神经元负责识别花，黑眼圈动物，鸟，键盘，原型屋顶等<img src="/img/04/04_37.png" alt="5层"></li>
+</ul>
+</blockquote>
+<h3 id="二、算法"><a href="#二、算法" class="headerlink" title="二、算法"></a>二、算法</h3><h4 id="2-1-K-近邻算法"><a href="#2-1-K-近邻算法" class="headerlink" title="2.1 K-近邻算法"></a>2.1 K-近邻算法</h4><blockquote>
+<ul>
+<li>K Nearest Neighbor算法⼜叫KNN算法，这个算法是机器学习⾥⾯⼀个⽐较经典的算法，总体来说KNN算法是相对⽐较容易理解的算法<img src="/img/04/04_38.png" alt="KNN"></li>
+<li>&#x3D;&#x3D;根据你的“邻居”来推断出你的类别&#x3D;&#x3D;</li>
+</ul>
+</blockquote>
+<h5 id="2-1-1-定义"><a href="#2-1-1-定义" class="headerlink" title="2.1.1 定义"></a>2.1.1 定义</h5><blockquote>
+<ul>
+<li>如果⼀个样本在特征空间中的k个最相似(即特征空间中最邻近)的样本中的⼤多数属于某⼀个类别，则该样本也属于这个类别。&#x3D;&#x3D;KNN算法最早是由Cover和Hart提出的⼀种分类算法&#x3D;&#x3D;</li>
+</ul>
+</blockquote>
+<h5 id="2-1-2-距离公式"><a href="#2-1-2-距离公式" class="headerlink" title="2.1.2 距离公式"></a>2.1.2 距离公式</h5><blockquote>
+<ul>
+<li>基本性质<img src="/img/04/04_43.png" alt="距离公式的基本性质"></li>
+<li>常见的距离公式 <blockquote>
+<p>–  &#x3D;&#x3D;欧式距离(Euclidean Distance)&#x3D;&#x3D;<img src="/img/04/04_39.png" alt="欧式距离公式">	<br>– &#x3D;&#x3D;曼哈顿距离(Manhattan Distance)&#x3D;&#x3D;<img src="/img/04/04_44.png" alt="曼哈顿距离公式"><br>– &#x3D;&#x3D;切⽐雪夫距离(Chebyshev Distance)&#x3D;&#x3D;<br>国际象棋中，国王可以直⾏、横⾏、斜⾏，所以国王⾛⼀步可以移动到相邻8个⽅格中的任意⼀个。国王从格⼦(x1,y1) ⾛到格⼦(x2,y2)最少需要多少步？这个距离就叫切⽐雪夫距离<img src="/img/04/04_45.png" alt="切比雪夫距离公式"><br>– &#x3D;&#x3D;闵可夫斯基距离(Minkowski Distance)&#x3D;&#x3D;<img src="/img/04/04_46.png" alt="闵可夫斯基距离公式"><br>– &#x3D;&#x3D;上述距离公式的缺点&#x3D;&#x3D;&#x3D;&#x3D;<img src="/img/04/04_47.png" alt="闵可夫斯基距离公式的缺点"><br>– &#x3D;&#x3D;拓展阅读&#x3D;&#x3D;</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h5 id="2-1-3-应用"><a href="#2-1-3-应用" class="headerlink" title="2.1.3 应用"></a>2.1.3 应用</h5><blockquote>
+<ul>
+<li>电影类型分析<img src="/img/04/04_40.png" alt="电影类型分析"><img src="/img/04/04_41.png" alt="电影类型分析"></li>
+<li>&#x3D;&#x3D;算法流程总结&#x3D;&#x3D;<img src="/img/04/04_42.png" alt="KNN算法流程"></li>
+<li>API调用</li>
+</ul>
+</blockquote>
+<h3 id="拓展阅读"><a href="#拓展阅读" class="headerlink" title="拓展阅读"></a>拓展阅读</h3><h4 id="1-机器学习项目的完整流程"><a href="#1-机器学习项目的完整流程" class="headerlink" title="1_机器学习项目的完整流程"></a>1_机器学习项目的完整流程</h4><p>^bce1d5</p>
+<h5 id="1-1-抽象成数学问题"><a href="#1-1-抽象成数学问题" class="headerlink" title="1.1 抽象成数学问题"></a>1.1 抽象成数学问题</h5><blockquote>
+<p>明确问题是进行机器学习的第一步。机器学习的训练过程通常都是一件非常耗时的事情，胡乱尝试时间成本是非常高的。 这里的抽象成数学问题，指的明确我们可以获得什么样的数据，抽象出的问题，是一个分类还是回归或者是聚类的问题。</p>
+</blockquote>
+<h5 id="1-2-获取数据"><a href="#1-2-获取数据" class="headerlink" title="1.2 获取数据"></a>1.2 获取数据</h5><blockquote>
+<ul>
+<li>数据决定了机器学习结果的上限，而算法只是尽可能逼近这个上限。</li>
+<li>数据要有代表性，否则必然会过拟合。</li>
+<li>而且对于分类问题，数据偏斜不能过于严重，不同类别的数据数量不要有数量级的差距。</li>
+<li>而且还要对数据的量级有一个评估，多少个样本，多少个特征，可以估算出其对内存的消耗程度，判断训练过程中内存是否能够放得下。如果 放不下就得考虑改进算法或者使用一些降维的技巧了。如果数据量实在太大，那就要考虑分布式了。</li>
+</ul>
+</blockquote>
+<h5 id="1-3-特征预处理与特征选择"><a href="#1-3-特征预处理与特征选择" class="headerlink" title="1.3 特征预处理与特征选择"></a>1.3 特征预处理与特征选择</h5><blockquote>
+<ul>
+<li>良好的数据要能够提取出良好的特征才能真正发挥作用。</li>
+<li>特征预处理、数据清洗是很关键的步骤，往往能够使得算法的效果和性能得到显著提高。归一化、离散化、因子化、缺失值处理、去除共线性 等，数据挖掘过程中很多时间就花在它们上面。这些工作简单可复制，收益稳定可预期，是机器学习的基础必备步骤。</li>
+<li>筛选出显著特征、摒弃非显著特征，需要机器学习工程师反复理解业务。这对很多结果有决定性的影响。特征选择好了，非常简单的算法也能 得出良好、稳定的结果。这需要运用特征有效性分析的相关技术，如相关系数、卡方检验、平均互信息、条件熵、后验概率、逻辑回归权重等 方法。</li>
+</ul>
+</blockquote>
+<h5 id="1-4-训练模型与调优"><a href="#1-4-训练模型与调优" class="headerlink" title="1.4 训练模型与调优"></a>1.4 训练模型与调优</h5><blockquote>
+<p>直到这一步才能用到具体的算法进行训练。现在很多算法都能够封装成黑盒供人使用。但是真正考验水平的是调整这些算法的（超）参 数，使得结果变得更加优良。这需要我们对算法的原理有深入的理解。理解越深入，就越能发现问题的症结，提出良好的调优方案。</p>
+</blockquote>
+<h5 id="1-5-模型诊断"><a href="#1-5-模型诊断" class="headerlink" title="1.5 模型诊断"></a>1.5 模型诊断</h5><blockquote>
+<ul>
+<li>用于确定模型调优的方向与思路</li>
+<li>过拟合、欠拟合 判断是模型诊断中至关重要的一步。常见的方法如交叉验证，绘制学习曲线等。过拟合的基本调优思路是增加数据量，降低模 型复杂度。欠拟合的基本调优思路是提高特征数量和质量，增加模型复杂度。</li>
+<li>误差分析也是机器学习至关重要的步骤。通过观察误差样本全面分析产生误差的原因:是参数的问题还是算法选择的问题，是特征的问题还是数据本身的问题……</li>
+<li>诊断后的模型需要进行调优，调优后的新模型需要重新进行诊断，这是一个反复迭代不断逼近的过程，需要不断地尝试， 进而达到最优状态。</li>
+</ul>
+</blockquote>
+<h5 id="1-6-模型融合"><a href="#1-6-模型融合" class="headerlink" title="1.6 模型融合"></a>1.6 模型融合</h5><blockquote>
+<ul>
+<li>一般来说，模型融合后都能使得效果有一定提升。而且效果很好。</li>
+<li>工程上，主要提升算法准确度的方法是分别在模型的前端（特征清洗和预处理，不同的采样模式）与后端（模型融合）上下功夫。因为他们比较标准可复制，效果比较稳定。而直接调参的工作不会很多，毕竟大量数据训练起来太慢了，而且效果难以保证。</li>
+</ul>
+</blockquote>
+<h5 id="1-7-上线运行"><a href="#1-7-上线运行" class="headerlink" title="1.7 上线运行"></a>1.7 上线运行</h5><blockquote>
+<p>这一部分内容主要跟工程实现的相关性比较大。工程上是结果导向，模型在线上运行的效果直接决定模型的成败。 不单纯包括其准确程度、误差等情况，还包括其运行的速度(时间复杂度)、资源消耗程度（空间复杂度）、稳定性是否可接受。</p>
+</blockquote>
+<h5 id="1-8-总结"><a href="#1-8-总结" class="headerlink" title="1.8 总结"></a>1.8 总结</h5><blockquote>
+<p>&#x3D;&#x3D;这些工作流程主要是工程实践上总结出的一些经验。并不是每个项目都包含完整的一个流程。这里的部分只是一个指导性的说明，只有大家自 己多实践，多积累项目经验，才会有自己更深刻的认识。&#x3D;&#x3D;</p>
+</blockquote>
+<h4 id="2-独立同分布IID（Independent-and-Identically-Distributed）"><a href="#2-独立同分布IID（Independent-and-Identically-Distributed）" class="headerlink" title="2_独立同分布IID（Independent and Identically Distributed）"></a>2_独立同分布IID（Independent and Identically Distributed）</h4><p>^5ed916</p>
+<h5 id="2-1-定义"><a href="#2-1-定义" class="headerlink" title="2.1 定义"></a>2.1 定义</h5><blockquote>
+<p>在概率统计理论中，如果变量序列或者其他随机变量有相同的概率分布，并且互相独立，那么这些随机变量是独立同分布。 在西瓜书中解释是：输入空间中的所有样本服从一个隐含未知的分布，训练数据所有样本都是独立地从这个分布上采样而得。</p>
+</blockquote>
+<h5 id="2-2-独立、同分布和独立同分布的简单解释"><a href="#2-2-独立、同分布和独立同分布的简单解释" class="headerlink" title="2.2 独立、同分布和独立同分布的简单解释"></a>2.2 独立、同分布和独立同分布的简单解释</h5><blockquote>
+<p>&#x3D;&#x3D;<img src="/img/04/04_28.png" alt="监督学习和强化学习的对比"></p>
+</blockquote>
+<h5 id="2-3-机器学习领域的重要假设"><a href="#2-3-机器学习领域的重要假设" class="headerlink" title="2.3 机器学习领域的重要假设"></a>2.3 机器学习领域的重要假设</h5><blockquote>
+<p>&#x3D;&#x3D;IID独立同分布即假设训练数据和测试数据是满足相同分布的，它是通过训练数据获得的模型能够在测试集获得好的效果的一个基本保障。&#x3D;&#x3D;</p>
+</blockquote>
+<h5 id="2-4-目前发展"><a href="#2-4-目前发展" class="headerlink" title="2.4 目前发展"></a>2.4 目前发展</h5><blockquote>
+<ul>
+<li>机器学习并不总要求独立同分布，在不少问题中要求样本数据采样自同一个分布是因为希望用训练数据集得到的模型可以合理的用于测试数据集，使用独立同分布假设能够解释得通。</li>
+<li>目前一些机器学习内容已经不再囿于独立同分布假设下，一些问题会假设样本没有同分布。</li>
+</ul>
+</blockquote>
+
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/2023/03/10/06_Pyhton%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>Python入门视频教程-笔记</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2023/01/30/03_Linux%E5%85%A5%E9%97%A8/">
+        <span>Linux入门视频教程-笔记</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/2023/02/10/04_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#B%E7%AB%99%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E8%A7%86%E9%A2%91%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">B站黑马程序员-机器学习入门视频课程笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%A6%82%E8%BF%B0"><span class="toc-number">2.</span> <span class="toc-text">一、概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 人工智能</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-1-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">2.1.1.</span> <span class="toc-text">1.1.1 人工智能应用场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-2-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%B0%8F%E6%A1%88%E4%BE%8B"><span class="toc-number">2.1.2.</span> <span class="toc-text">1.1.2 人工智能小案例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-3-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%8F%91%E5%B1%95%E5%BF%85%E5%A4%87%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="toc-number">2.1.3.</span> <span class="toc-text">1.1.3 人工智能发展必备三要素</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-4-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E3%80%81%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0"><span class="toc-number">2.1.4.</span> <span class="toc-text">1.1.4 人工智能、机器学习和深度学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-5-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B"><span class="toc-number">2.1.5.</span> <span class="toc-text">1.1.5 人工智能的发展历程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-6-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%BB%E8%A6%81%E5%88%86%E6%94%AF"><span class="toc-number">2.1.6.</span> <span class="toc-text">1.1.6 人工智能主要分支</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 机器学习工作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="toc-number">2.2.1.</span> <span class="toc-text">1.2.1 什么是机器学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-number">2.2.2.</span> <span class="toc-text">1.2.2 机器学习工作流程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-3-%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.2.3.</span> <span class="toc-text">1.2.3 数据集介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-4-%E6%95%B0%E6%8D%AE%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86"><span class="toc-number">2.2.4.</span> <span class="toc-text">1.2.4 数据基本处理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-5-%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B"><span class="toc-number">2.2.5.</span> <span class="toc-text">1.2.5 特征工程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-6-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="toc-number">2.2.6.</span> <span class="toc-text">1.2.6 机器学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-7-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0"><span class="toc-number">2.2.7.</span> <span class="toc-text">1.2.7 模型评估</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-8-%E6%8B%93%E5%B1%95%E9%98%85%E8%AF%BB"><span class="toc-number">2.2.8.</span> <span class="toc-text">1.2.8 拓展阅读</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 机器学习算法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-1-%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0"><span class="toc-number">2.3.1.</span> <span class="toc-text">1.3.1 监督学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-2-%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0"><span class="toc-number">2.3.2.</span> <span class="toc-text">1.3.2 无监督学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-3-%E5%8D%8A%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0"><span class="toc-number">2.3.3.</span> <span class="toc-text">1.3.3 半监督学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-4-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0"><span class="toc-number">2.3.4.</span> <span class="toc-text">1.3.4 强化学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-5-%E4%B8%8A%E8%BF%B0%E7%AE%97%E6%B3%95%E5%AF%B9%E6%AF%94"><span class="toc-number">2.3.5.</span> <span class="toc-text">1.3.5 上述算法对比</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-6-%E6%80%BB%E7%BB%93"><span class="toc-number">2.3.6.</span> <span class="toc-text">1.3.6 总结</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-7-%E6%8B%93%E5%B1%95%E9%98%85%E8%AF%BB"><span class="toc-number">2.3.7.</span> <span class="toc-text">1.3.7 拓展阅读</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0"><span class="toc-number">2.4.</span> <span class="toc-text">1.4 模型评估</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-1-%E4%BD%9C%E7%94%A8"><span class="toc-number">2.4.1.</span> <span class="toc-text">1.4.1 作用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-2-%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.4.2.</span> <span class="toc-text">1.4.2 类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-3-%E6%8B%9F%E5%90%88"><span class="toc-number">2.4.3.</span> <span class="toc-text">1.4.3 拟合</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AE%80%E4%BB%8B"><span class="toc-number">2.5.</span> <span class="toc-text">1.5 深度学习简介</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-1-%E5%AE%9A%E4%B9%89"><span class="toc-number">2.5.1.</span> <span class="toc-text">1.5.1 定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-2-%E8%B5%B7%E6%BA%90"><span class="toc-number">2.5.2.</span> <span class="toc-text">1.5.2 起源</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-3-%E6%BC%94%E7%A4%BA"><span class="toc-number">2.5.3.</span> <span class="toc-text">1.5.3 演示</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-4-%E5%90%84%E5%B1%82%E8%B4%9F%E8%B4%A3%E5%86%85%E5%AE%B9"><span class="toc-number">2.5.4.</span> <span class="toc-text">1.5.4 各层负责内容</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%AE%97%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">二、算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-K-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 K-近邻算法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-1-%E5%AE%9A%E4%B9%89"><span class="toc-number">3.1.1.</span> <span class="toc-text">2.1.1 定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-2-%E8%B7%9D%E7%A6%BB%E5%85%AC%E5%BC%8F"><span class="toc-number">3.1.2.</span> <span class="toc-text">2.1.2 距离公式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-3-%E5%BA%94%E7%94%A8"><span class="toc-number">3.1.3.</span> <span class="toc-text">2.1.3 应用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%93%E5%B1%95%E9%98%85%E8%AF%BB"><span class="toc-number">4.</span> <span class="toc-text">拓展阅读</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B"><span class="toc-number">4.1.</span> <span class="toc-text">1_机器学习项目的完整流程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-%E6%8A%BD%E8%B1%A1%E6%88%90%E6%95%B0%E5%AD%A6%E9%97%AE%E9%A2%98"><span class="toc-number">4.1.1.</span> <span class="toc-text">1.1 抽象成数学问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-number">4.1.2.</span> <span class="toc-text">1.2 获取数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86%E4%B8%8E%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9"><span class="toc-number">4.1.3.</span> <span class="toc-text">1.3 特征预处理与特征选择</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%B0%83%E4%BC%98"><span class="toc-number">4.1.4.</span> <span class="toc-text">1.4 训练模型与调优</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-%E6%A8%A1%E5%9E%8B%E8%AF%8A%E6%96%AD"><span class="toc-number">4.1.5.</span> <span class="toc-text">1.5 模型诊断</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-6-%E6%A8%A1%E5%9E%8B%E8%9E%8D%E5%90%88"><span class="toc-number">4.1.6.</span> <span class="toc-text">1.6 模型融合</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-7-%E4%B8%8A%E7%BA%BF%E8%BF%90%E8%A1%8C"><span class="toc-number">4.1.7.</span> <span class="toc-text">1.7 上线运行</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-8-%E6%80%BB%E7%BB%93"><span class="toc-number">4.1.8.</span> <span class="toc-text">1.8 总结</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%8B%AC%E7%AB%8B%E5%90%8C%E5%88%86%E5%B8%83IID%EF%BC%88Independent-and-Identically-Distributed%EF%BC%89"><span class="toc-number">4.2.</span> <span class="toc-text">2_独立同分布IID（Independent and Identically Distributed）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-%E5%AE%9A%E4%B9%89"><span class="toc-number">4.2.1.</span> <span class="toc-text">2.1 定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-%E7%8B%AC%E7%AB%8B%E3%80%81%E5%90%8C%E5%88%86%E5%B8%83%E5%92%8C%E7%8B%AC%E7%AB%8B%E5%90%8C%E5%88%86%E5%B8%83%E7%9A%84%E7%AE%80%E5%8D%95%E8%A7%A3%E9%87%8A"><span class="toc-number">4.2.2.</span> <span class="toc-text">2.2 独立、同分布和独立同分布的简单解释</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%A2%86%E5%9F%9F%E7%9A%84%E9%87%8D%E8%A6%81%E5%81%87%E8%AE%BE"><span class="toc-number">4.2.3.</span> <span class="toc-text">2.3 机器学习领域的重要假设</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4-%E7%9B%AE%E5%89%8D%E5%8F%91%E5%B1%95"><span class="toc-number">4.2.4.</span> <span class="toc-text">2.4 目前发展</span></a></li></ol></li></ol></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2015 - 2024 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        ZhaWB
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>总访问量 <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+    
+<script src="/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >

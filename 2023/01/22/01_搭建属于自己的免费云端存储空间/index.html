@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+
+    
+    
+        
+<link rel="stylesheet" href="/css/mdui.min.v1.0.0.css">
+
+    
+    
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/iconfont.css">
+
+
+    
+    
+
+    
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            搭建属于自己的免费云端存储空间 | Road2Dasheng
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/" class="mdui-typo-headline">Road2Dasheng</a>
+    <a href="/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">关于</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="/icons/avatar.gif"/>
+                
+            </div>
+            <div class="sidebar-author-name">ZhaWB</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="/zhawenbin516@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">Steam</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">友情链接</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a target="_blank" rel="noopener" href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                        <a target="_blank" rel="noopener" href="https://nav.laogou717.com" class="mdui-list-item mdui-ripple">
+                            AI工具集合
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/2023/01/22/01_%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BA%91%E7%AB%AF%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4/">搭建属于自己的免费云端存储空间</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2023-01-22
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2024-10-25
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E5%85%B6%E5%AE%83/">其它</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        阅读次数:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=搭建属于自己的免费云端存储空间&url=http://example.com/2023/01/22/01_%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BA%91%E7%AB%AF%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4/&pic=http://example.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=搭建属于自己的免费云端存储空间&url=http://example.com/2023/01/22/01_%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BA%91%E7%AB%AF%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4/&via=ZhaWB" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2023/01/22/01_%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BA%91%E7%AB%AF%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=http://example.com/2023/01/22/01_%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BA%91%E7%AB%AF%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/2023/01/22/01_%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BA%91%E7%AB%AF%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4/&title=搭建属于自己的免费云端存储空间" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Road2Dasheng&title=搭建属于自己的免费云端存储空间&summary=&pics=http://example.com/null&url=http://example.com/2023/01/22/01_%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BA%91%E7%AB%AF%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=http://example.com/2023/01/22/01_%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BA%91%E7%AB%AF%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4/&text=搭建属于自己的免费云端存储空间" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD/ >文件备份</a>
+      </i>
+    
+  </div>
+
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <h5 id="时间：12-18-am"><a href="#时间：12-18-am" class="headerlink" title="时间：12:18 am"></a>时间：12:18 am</h5><h5 id="地点：-苏州-冰雪坞"><a href="#地点：-苏州-冰雪坞" class="headerlink" title="地点： 苏州 _ 冰雪坞"></a>地点： 苏州 _ 冰雪坞</h5><h4 id="一、技术盘"><a href="#一、技术盘" class="headerlink" title="一、技术盘"></a>一、技术盘</h4><blockquote>
+<p><strong>阿里云盘</strong></p>
+<blockquote>
+<p>因为我是阿里云盘的第一批内测用户（3T，永久有效，但每年需要登录一次）<br>加上学生认证赠送的存储空间（1T，3年有效期）<br>以及其他的福利（例如新用户赠礼）（100G，永久有效）<br>所以我云盘的存储空间达到了惊人的近5T，对于个人用户来说已经足够了<br>而且它目前上传和下载的速度比某知名网盘快得实在太多<br>希望它能一直保持 :smile:<br>因此我将它主要用于大型文件的存储，例如三维建模软件等<br>主要想法是依托它搭建一个自己的技术仓库（<strong>硬实力的积累</strong>）</p>
+</blockquote>
+</blockquote>
+<h4 id="二、知识盘"><a href="#二、知识盘" class="headerlink" title="二、知识盘"></a>二、知识盘</h4><blockquote>
+<p><strong>百度网盘 + (坚果云&amp;iCloud)</strong></p>
+<blockquote>
+<p>虽然没赶上百度网盘的内测，但也遇到了它抢占市场的窗口期<br>薅到了4个T的羊毛 :grinning:（永久有效）<br>但奈何不开会员的下载速度太慢<br>因此我将它主要用于小型文件的存储，例如电子书等<br>坚果云作为国内目前唯一一个支持WebDAV的云服务<br>我主要用它同步一些小的文件，例如Zotero管理的文献资料（每月1G上传，3G下载）<br>而iCloud也是配合Zotero实现文献的多平台同步阅读（ipad做移动端需要下载PDF Expert）<br>关于如何“搭建自己的文献阅读生态”，这个专题我有时间会再详细阐述，先挖个坑<br>回到主题，使用它们的主要想法是依托它们搭建一个自己的知识仓库（<strong>软实力的培养</strong>）</p>
+</blockquote>
+</blockquote>
+<h4 id="三、盘一盘"><a href="#三、盘一盘" class="headerlink" title="三、盘一盘"></a>三、盘一盘</h4><blockquote>
+<p><strong>小米云空间</strong></p>
+<blockquote>
+<p>因为我是小米的铁粉（2014年至今）<br>所以平常用的笔记本、手机、手表、耳机等都是在小米买的<br>也算搭建了一个小生态吧<br>在如今我觉得已经算是比较强大的MIUI+的加持下<br>用户体验相当Nice!!!<br>上面这些其实和小米云服务没啥关系<br>我就是想夸下小米<br>这些年真的一直在进步<br>雷布斯说：“要一直做感动人心的产品”<br>我不知道你们有没有被感动，但我深以为然<br>都说小米一直在模仿苹果或者说抄袭苹果<br>我绝不否认这个观点<br>从外观设计、软件交互等等都能一眼看出<br>但苹果毕竟是行业老大啊<br>开始的时候肯定只能是跟随<br>当然也有可能这辈子我都看不到小米干掉苹果的那一天<br>毕竟乔老爷子是多少年才出一个的人物啊<br>但小米愿意对标苹果，就凭这份勇气我跟了<br>另外话说回来<br>苹果产品什么价，小米产品什么价<br>“还要啥自行车啊”<br>有些激动，主要确实被MIUI+感动到了<br>去年卡成那个鬼样子，短短不到一年时间已经能够这么丝滑<br>真的太开心了，那个熟悉的小米感觉又回来了<br>虽然不知道这种开心能持续多久，但偶尔感受下还是很惬意的<br>好了，回到正题<br>因为我没开会员，我的小米云空间才20G<br>所以它啥也干不了。。<br>哎，我的开心没有了，它来的好快 :disappointed:<br>不对，icloud好像只有5个G :v:</p>
+</blockquote>
+</blockquote>
+
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/2023/01/24/02_%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD%E4%BB%93%E5%BA%93/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>搭建手机文件免费备份仓库</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2023/01/15/05_Git&GitHub%E7%9A%84%E4%BD%BF%E7%94%A8/">
+        <span>Git&Github视频教程-笔记</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/2023/01/22/01_%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BA%91%E7%AB%AF%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%EF%BC%9A12-18-am"><span class="toc-number">1.</span> <span class="toc-text">时间：12:18 am</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%B0%E7%82%B9%EF%BC%9A-%E8%8B%8F%E5%B7%9E-%E5%86%B0%E9%9B%AA%E5%9D%9E"><span class="toc-number">2.</span> <span class="toc-text">地点： 苏州 _ 冰雪坞</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%8A%80%E6%9C%AF%E7%9B%98"><span class="toc-number"></span> <span class="toc-text">一、技术盘</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%9F%A5%E8%AF%86%E7%9B%98"><span class="toc-number"></span> <span class="toc-text">二、知识盘</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%9B%98%E4%B8%80%E7%9B%98"><span class="toc-number"></span> <span class="toc-text">三、盘一盘</span></a>
+      </li>
+    </ul>
+  </div>
+
+
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2015 - 2024 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        ZhaWB
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>总访问量 <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+    
+<script src="/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >
