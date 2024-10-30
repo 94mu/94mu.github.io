@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>04 - 操作臂运动学 | Road2Dasheng</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="04 - 操作臂运动学 | Road2Dasheng">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Road2Dasheng">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-01-22T13:02:17.000Z">
+<meta property="article:modified_time" content="2023-02-21T15:45:14.410Z">
+<meta property="article:author" content="ZhaWB">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/road2Dasheng.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/little-stone-monkey.jpg"/>
+</a>
+<div class="author">
+    <span>ZhaWB</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="编程">
+            <i class="fold iconfont icon-right"></i>
+            编程
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;编程语言">
+            <i class="fold iconfont icon-right"></i>
+            编程语言
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;编程语言&lt;---&gt;C++">
+            
+            C++
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;编程语言&lt;---&gt;C语言">
+            
+            C语言
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;编程语言&lt;---&gt;Python">
+            
+            Python
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;操作系统">
+            <i class="fold iconfont icon-right"></i>
+            操作系统
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;操作系统&lt;---&gt;Linux">
+            
+            Linux
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="人工智能">
+            
+            人工智能
+            
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="机器人">
+            <i class="fold iconfont icon-right"></i>
+            机器人
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="机器人&lt;---&gt;机器人学">
+            <i class="fold iconfont icon-right"></i>
+            机器人学
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="机器人&lt;---&gt;机器人学&lt;---&gt;建模、控制与视觉">
+            
+            建模、控制与视觉
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="力学">
+            <i class="fold iconfont icon-right"></i>
+            力学
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="力学&lt;---&gt;理论力学">
+            
+            理论力学
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="其它">
+            <i class="fold iconfont icon-right"></i>
+            其它
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="其它&lt;---&gt;文件备份">
+            
+            文件备份
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="21">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://www.subingwen.cn/">爱编程的大丙</a></li>
+            
+            <li><a target="_blank" href="https://r2coding.com/#/">codesheep</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>关于我</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>机器学习</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>教程</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 机器人 机器人学 建模、控制与视觉 "
+           href="/2024/06/18/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%EF%BC%9A%E5%BB%BA%E6%A8%A1%E3%80%81%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%A7%86%E8%A7%89%20-%20%E5%B0%BE%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="尾记">尾记</span>
+            <span class="post-date" title="2024-06-18 00:00:00">2024/06/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 机器人学 建模、控制与视觉 "
+           href="/2024/06/17/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%EF%BC%9A%E5%BB%BA%E6%A8%A1%E3%80%81%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%A7%86%E8%A7%89%20-%2010/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="10 - 视觉图像">10 - 视觉图像</span>
+            <span class="post-date" title="2024-06-17 00:00:00">2024/06/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 机器人学 建模、控制与视觉 "
+           href="/2024/06/16/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%EF%BC%9A%E5%BB%BA%E6%A8%A1%E3%80%81%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%A7%86%E8%A7%89%20-%209/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="09 - 机器人的力控制">09 - 机器人的力控制</span>
+            <span class="post-date" title="2024-06-16 00:00:00">2024/06/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 机器人学 建模、控制与视觉 "
+           href="/2024/06/15/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%EF%BC%9A%E5%BB%BA%E6%A8%A1%E3%80%81%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%A7%86%E8%A7%89%20-%208/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="08 - 操作臂的轨迹控制">08 - 操作臂的轨迹控制</span>
+            <span class="post-date" title="2024-06-15 00:00:00">2024/06/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 机器人学 建模、控制与视觉 "
+           href="/2024/06/14/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%EF%BC%9A%E5%BB%BA%E6%A8%A1%E3%80%81%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%A7%86%E8%A7%89%20-%207/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="07 - 轨迹生成">07 - 轨迹生成</span>
+            <span class="post-date" title="2024-06-14 00:00:00">2024/06/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 机器人学 建模、控制与视觉 "
+           href="/2024/06/13/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%EF%BC%9A%E5%BB%BA%E6%A8%A1%E3%80%81%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%A7%86%E8%A7%89%20-%206/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="06 - 操作臂动力学">06 - 操作臂动力学</span>
+            <span class="post-date" title="2024-06-13 00:00:00">2024/06/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 机器人学 建模、控制与视觉 "
+           href="/2024/06/12/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%EF%BC%9A%E5%BB%BA%E6%A8%A1%E3%80%81%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%A7%86%E8%A7%89%20-%205/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="05 - 操作臂的雅可比矩阵">05 - 操作臂的雅可比矩阵</span>
+            <span class="post-date" title="2024-06-12 00:00:00">2024/06/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 机器人学 建模、控制与视觉 "
+           href="/2024/06/11/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%EF%BC%9A%E5%BB%BA%E6%A8%A1%E3%80%81%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%A7%86%E8%A7%89%20-%204/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="04 - 操作臂运动学">04 - 操作臂运动学</span>
+            <span class="post-date" title="2024-06-11 00:00:00">2024/06/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 机器人学 建模、控制与视觉 "
+           href="/2024/06/10/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%EF%BC%9A%E5%BB%BA%E6%A8%A1%E3%80%81%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%A7%86%E8%A7%89%20-%203/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="03 - 刚体速度和静力">03 - 刚体速度和静力</span>
+            <span class="post-date" title="2024-06-10 00:00:00">2024/06/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 机器人学 建模、控制与视觉 "
+           href="/2024/06/09/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%EF%BC%9A%E5%BB%BA%E6%A8%A1%E3%80%81%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%A7%86%E8%A7%89%20-%202/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="02 - 位姿描述与齐次变换">02 - 位姿描述与齐次变换</span>
+            <span class="post-date" title="2024-06-09 00:00:00">2024/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 机器人学 建模、控制与视觉 "
+           href="/2024/06/08/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%EF%BC%9A%E5%BB%BA%E6%A8%A1%E3%80%81%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%A7%86%E8%A7%89%20-%201/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="01 - 概述与机器人机构">01 - 概述与机器人机构</span>
+            <span class="post-date" title="2024-06-08 00:00:00">2024/06/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 力学 理论力学 "
+           href="/2024/06/08/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6%20-%20%E9%9D%99%E5%8A%9B%E5%AD%A6/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="01 - 静力学">01 - 静力学</span>
+            <span class="post-date" title="2024-06-08 00:00:00">2024/06/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 编程语言 C++ "
+           href="/2023/03/24/08_C++%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="C++视频教程-笔记">C++视频教程-笔记</span>
+            <span class="post-date" title="2023-03-24 00:00:00">2023/03/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 编程语言 C语言 "
+           href="/2023/03/24/07_C%E8%AF%AD%E8%A8%80%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="C语言入门视频教程-笔记">C语言入门视频教程-笔记</span>
+            <span class="post-date" title="2023-03-24 00:00:00">2023/03/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 编程语言 Python "
+           href="/2023/03/10/06_Pyhton%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Python入门视频教程-笔记">Python入门视频教程-笔记</span>
+            <span class="post-date" title="2023-03-10 00:00:00">2023/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 人工智能 "
+           href="/2023/02/10/04_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"
+           data-tag="机器学习"
+           data-author="" >
+            <span class="post-title" title="机器学习入门视频教程-笔记">机器学习入门视频教程-笔记</span>
+            <span class="post-date" title="2023-02-10 00:00:00">2023/02/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 操作系统 Linux "
+           href="/2023/01/30/03_Linux%E5%85%A5%E9%97%A8/"
+           data-tag="教程"
+           data-author="" >
+            <span class="post-title" title="Linux入门视频教程-笔记">Linux入门视频教程-笔记</span>
+            <span class="post-date" title="2023-01-30 00:00:00">2023/01/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 其它 文件备份 "
+           href="/2023/01/24/02_%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD%E4%BB%93%E5%BA%93/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="搭建手机文件免费备份仓库">搭建手机文件免费备份仓库</span>
+            <span class="post-date" title="2023-01-24 00:00:00">2023/01/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 其它 文件备份 "
+           href="/2023/01/22/01_%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BA%91%E7%AB%AF%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="搭建属于自己的免费云端存储空间">搭建属于自己的免费云端存储空间</span>
+            <span class="post-date" title="2023-01-22 00:00:00">2023/01/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 其它 "
+           href="/2023/01/15/05_Git&GitHub%E7%9A%84%E4%BD%BF%E7%94%A8/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Git&amp;Github视频教程-笔记">Git&amp;Github视频教程-笔记</span>
+            <span class="post-date" title="2023-01-15 00:00:00">2023/01/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2017/07/03/about/"
+           data-tag="关于我"
+           data-author="" >
+            <span class="post-title" title="关于我">关于我</span>
+            <span class="post-date" title="2017-07-03 11:51:24">2017/07/03</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-机器人学：建模、控制与视觉 - 4" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">04 - 操作臂运动学</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="机器人">机器人</a> > 
+            
+            <a  data-rel="机器人&lt;---&gt;机器人学">机器人学</a> > 
+            
+            <a  data-rel="机器人&lt;---&gt;机器人学&lt;---&gt;建模、控制与视觉">建模、控制与视觉</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-10-30 22:37:28'>2024-06-11 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%93%8D%E4%BD%9C%E8%87%82%E8%BF%90%E5%8A%A8%E5%AD%A6"><span class="toc-text">4 操作臂运动学</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E7%AE%80%E4%BB%8B"><span class="toc-text">4.1 简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E8%BF%9E%E6%9D%86%E5%8F%82%E6%95%B0%E5%92%8C%E8%BF%9E%E6%9D%86%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-text">4.2 连杆参数和连杆坐标系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E8%BF%9E%E6%9D%86%E5%8F%98%E6%8D%A2%E5%92%8C%E8%BF%90%E5%8A%A8%E5%AD%A6%E6%96%B9%E7%A8%8B"><span class="toc-text">4.3 连杆变换和运动学方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%BF%90%E5%8A%A8%E5%AD%A6%E5%8F%8D%E8%A7%A3"><span class="toc-text">4.4 机器人运动学反解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-%E6%8C%87%E6%95%B0%E7%A7%AF"><span class="toc-text">4.5 指数积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-%E8%BF%90%E5%8A%A8%E7%A9%BA%E9%97%B4"><span class="toc-text">4.6 运动空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-7-%E5%B9%B6%E8%81%94%E6%9C%BA%E6%9E%84%E8%BF%90%E5%8A%A8%E5%AD%A6"><span class="toc-text">4.7 并联机构运动学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-8-%E5%B0%8F%E7%BB%93"><span class="toc-text">4.8 小结</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-6 i,
+    .toc-level-6 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="4-操作臂运动学"><a href="#4-操作臂运动学" class="headerlink" title="4 操作臂运动学"></a>4 操作臂运动学</h2><p><img src="/img/robot/1/000022db6971c5dc0cc9b963a2e77d1483323597be8c6ed8582317708817746f31.png" alt=" "></p>
+<h3 id="4-1-简介"><a href="#4-1-简介" class="headerlink" title="4.1 简介"></a>4.1 简介</h3><p><img src="/img/robot/1/75d186f2036dcff389740db191a6bbc5841613830a3d32fc89f5bfea32fb2bcf.png" alt=" "></p>
+<h3 id="4-2-连杆参数和连杆坐标系"><a href="#4-2-连杆参数和连杆坐标系" class="headerlink" title="4.2 连杆参数和连杆坐标系"></a>4.2 连杆参数和连杆坐标系</h3><p><img src="/img/robot/1/55f203ac2a5e6df57e177edcae745233bcfc64b256950992a4546d2f109b8eb5.png" alt=" "></p>
+<p><img src="/img/robot/1/ff501a1916c72c74f35f155e578a0d48be1c0b26516d44cb3bf80000bd4122c5.png" alt=" "></p>
+<p><img src="/img/robot/1/cf0cd9a7312e32deef0ace6464cfd81891202d9f74982cf6c2080684b6526374.png" alt=" "></p>
+<p><img src="/img/robot/1/d5e5ee97943aeb2d6e7b18ee18f47e221e8dbbf85b8d668948ecb08a223e0af1.png" alt=" "></p>
+<p><img src="/img/robot/1/6038c4cf2a14da19b836731126dd31918619766c523b4eced13ca08770308d57.png" alt=" "></p>
+<p><img src="/img/robot/1/dcc357212e763aac1b6186f5750399db16dec472c2e9fb6eeba89319df80687a.png" alt=" "></p>
+<p><img src="/img/robot/1/22db6971c5dc0cc9b963a2e77d1483323597be8c6ed478582317708817746f31.png" alt=" "></p>
+<h3 id="4-3-连杆变换和运动学方程"><a href="#4-3-连杆变换和运动学方程" class="headerlink" title="4.3 连杆变换和运动学方程"></a>4.3 连杆变换和运动学方程</h3><p><img src="/img/robot/1/02315345d0e282dfbf2892b5966cb8fabf999b6d08e3cf570d9d70683c62a83e.png" alt=" "></p>
+<p><img src="/img/robot/1/e7b6d93bd58cbcdd4de4e089c6262c5c6760e1b2f007ac965bb64f8564d435a7.png" alt=" "></p>
+<p><img src="/img/robot/1/95642659199ad1ee830ceed1b0c7862f3eed86097179934a5e94f47bb1cfce1c.png" alt=" "></p>
+<p><img src="/img/robot/1/45c481393fa416104e662c9aeb26a3e972d75e255a7c745e58c465c0656cb75d.png" alt=" "></p>
+<p><img src="/img/robot/1/8519d1fae20e0ec2fa4b4845e8038a53a6d9ef3ea31d03c398ef1862354f2e66.png" alt=" "></p>
+<h3 id="4-4-机器人运动学反解"><a href="#4-4-机器人运动学反解" class="headerlink" title="4.4 机器人运动学反解"></a>4.4 机器人运动学反解</h3><p><img src="/img/robot/1/4d73e9ddc3f93d5c23df0677ef2efa2ed3653ad9539e78bd562db970fe4d1b24.png" alt=" "></p>
+<p><img src="/img/robot/1/bae4f02b34cffff9b8fc4ea168de911509edd8f19148daaa13a10e96b7ede480.png" alt=" "></p>
+<p><img src="/img/robot/1/c2c40a1b111a60f84e594886141fddaa79b31c468133d433ac9150fff8d67d62.png" alt=" "></p>
+<h3 id="4-5-指数积"><a href="#4-5-指数积" class="headerlink" title="4.5 指数积"></a>4.5 指数积</h3><p><img src="/img/robot/1/ea162ae03a111d9d8a277b72a9aed3e46bbf6ba4e31072c09f671d3b045341f6.png" alt=" "></p>
+<p><img src="/img/robot/1/826bdaa9cc58d2d6a0629b8bad1ed191286929bc76a800e9aabe99871f719297.png" alt=" "></p>
+<p><img src="/img/robot/1/89c87e4f34c08caa3ef144c10bfdaee631d56c19815801e84135514f42e9528f.png" alt=" "></p>
+<p><img src="/img/robot/1/5b2b86b53b29dc9dffe7a21141ca2bbe281f6fb4d0db8e275012fecc32fa9231.png" alt=" "></p>
+<p><img src="/img/robot/1/af45ccfde5b00ebf4fd2bb263dd52f6f7f4ab3774e90edce4b7b6e3e3a58e699.png" alt=" "></p>
+<p><img src="/img/robot/1/01a19aa3f693c3f64e160edc957c69742cccbe2369f8f686b6b9a1f9d6daab3b.png" alt=" "></p>
+<p><img src="/img/robot/1/1eed2702c86ea6df7160c9754207ae0d2d223a5cb60b2880a4638b1d68c06716.png" alt=" "></p>
+<p><img src="/img/robot/1/721f087cff39c64907135b34c3ef79385a882639fe1295fe7430684ea7044f81.png" alt=" "></p>
+<h3 id="4-6-运动空间"><a href="#4-6-运动空间" class="headerlink" title="4.6 运动空间"></a>4.6 运动空间</h3><p><img src="/img/robot/1/618ab9da2e1b726077238e22eb860495ae7f65917af777a6a760218d203d477a.png" alt=" "></p>
+<h3 id="4-7-并联机构运动学"><a href="#4-7-并联机构运动学" class="headerlink" title="4.7 并联机构运动学"></a>4.7 并联机构运动学</h3><p><img src="/img/robot/1/ec651fab349232ae67e0eb79015ce84a19115896c5de3efbed031c5458b5071d.png" alt=" "></p>
+<h3 id="4-8-小结"><a href="#4-8-小结" class="headerlink" title="4.8 小结"></a>4.8 小结</h3><p><img src="/img/robot/1/5073bcf1aabb763687dce0879d862ffcc2cd709fb52711a4310b59baf3fc14d4.png" alt=" "></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2018-2024 LittleStoneMonkey
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
