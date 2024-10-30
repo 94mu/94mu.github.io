@@ -1,308 +1,552 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    
-    <meta name="renderer" content="webkit"/>
-    <meta name="force-rendering" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
-    
-    
-        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
-        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
-    
-    
-    
-        <link rel="shortcut icon" href="/icons/favicon.ico">
-    
-
-    
-    
-        
-<link rel="stylesheet" href="/css/mdui.min.v1.0.0.css">
-
-    
-    
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/iconfont.css">
+  <meta charset="utf-8">
+  <title>Python入门视频教程-笔记 | Road2Dasheng</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="Python入门视频教程-笔记 | Road2Dasheng">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Road2Dasheng">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-01-22T13:02:17.000Z">
+<meta property="article:modified_time" content="2023-02-21T15:45:14.410Z">
+<meta property="article:author" content="ZhaWB">
+<meta name="twitter:card" content="summary">
 
 
-    
-    
+<link rel="icon" href="/img/road2Dasheng.jpg">
 
-    
-        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
 
 
 
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
 
+<script src="/js/iconfont.js?v=1.1.0" ></script>
 
-
-
-
-
-
-
-
-          
-
-
-    
-    
-    <title>
-        
-            Python入门视频教程-笔记 | Road2Dasheng
-        
-    </title>
-    
-    
 <meta name="generator" content="Hexo 7.3.0"></head>
-<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
-  
-  <header class="mdui-appbar mdui-appbar-fixed">
-  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
-    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
-    <a href="/" class="mdui-typo-headline">Road2Dasheng</a>
-    <a href="/" class="header-subtitle mdui-typo-headline"></a>
-    <div class="mdui-toolbar-spacer"></div>
-    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
-  </div>
-</header>
-
-<div class="mdui-dialog" id="search">
-  
-    <div class="search-form">
-      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
-    </div>
-    <div class="search-result" data-resource="/search.xml"></div>
-  
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
 </div>
 
-  <aside id="sidebar" class="mdui-drawer">
-    <div class="mdui-tab" mdui-tab>
-        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
-        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
-    </div>
 
-    
-    <div id="sidebar-tab1" class="mdui-p-a-1">
-        <div class="mdui-list">
-            
-                
-                <a href="/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-home"></i>
-                    </div>
-                    <div class="mdui-list-item-content">主页</div>
-                </a>
-            
-                
-                <a href="/tags/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-bookmark"></i>
-                    </div>
-                    <div class="mdui-list-item-content">标签</div>
-                </a>
-            
-                
-                <a href="/categories/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-folder"></i>
-                    </div>
-                    <div class="mdui-list-item-content">分类</div>
-                </a>
-            
-                
-                <a href="/archives/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-archive"></i>
-                    </div>
-                    <div class="mdui-list-item-content">归档</div>
-                </a>
-            
-                
-                <a href="/tools/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-tools"></i>
-                    </div>
-                    <div class="mdui-list-item-content">工具箱</div>
-                </a>
-            
-                
-                <a href="/about/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-user"></i>
-                    </div>
-                    <div class="mdui-list-item-content">关于</div>
-                </a>
-            
-            <div class="mdui-list-item mdui-ripple">
-                <div class="mdui-list-item-icon">
-                    <i class="iconfont icon-moon"></i>
-                </div>
-                <div class="mdui-list-item-content">夜间模式</div>
-                <label class="mdui-switch" id="darkmode">
-                  <input type="checkbox" id="nightmode_switch"/>
-                  <i class="mdui-switch-icon"></i>
-                </label>
-            </div>           
-        </div>
-    </div>
 
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/little-stone-monkey.jpg"/>
+</a>
+<div class="author">
+    <span>ZhaWB</span>
+</div>
+
+<div class="icon">
     
-    <div id="sidebar-tab2" class="mdui-p-a-1">
-        <div class="sidebar-overview">
-            <div class="sidebar-avatar">
+        
+            <a title="github"
+               href="https://github.com/yelog"
+               target="_blank">
                 
-                    <img src="/icons/avatar.gif"/>
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
                 
-            </div>
-            <div class="sidebar-author-name">ZhaWB</div>
-            <div class="sidebar-description"></div>
-        </div>
-        <div class="sidebar-links">
-            
-                
-                <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
-                    <a href="/zhawenbin516@gmail.com" class="mdui-chip-title">E-Mail</a>
-                </div>
-            
-                
-                <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">GitHub</a>
-                </div>
-            
-                
-                <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
-                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">Steam</a>
-                </div>
-            
-                
-                <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
-                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">Weibo</a>
-                </div>
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
             
         </div>
-        <ul class="mdui-list" mdui-collapse="{accordion: true}">
-            <li class="mdui-collapse-item">
-                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-link"></i>
-                    </div>
-                    <div class="mdui-list-item-content">友情链接</div>
-                    <div class="mdui-collapse-item-arrow">
-                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
-                    </div>
-                </div>
-                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="编程">
+            <i class="fold iconfont icon-right"></i>
+            编程
+            
+        </div>
+        
+            <ul class="sub hide">
+                
                     
-                        <a target="_blank" rel="noopener" href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
-                            Meadow说明文档
-                        </a>
+    <li>
+        <div data-rel="编程&lt;---&gt;编程语言">
+            <i class="fold iconfont icon-right"></i>
+            编程语言
+            
+        </div>
+        
+            <ul class="sub hide">
+                
                     
-                        <a target="_blank" rel="noopener" href="https://nav.laogou717.com" class="mdui-list-item mdui-ripple">
-                            AI工具集合
-                        </a>
+    <li>
+        <div data-rel="编程&lt;---&gt;编程语言&lt;---&gt;C++">
+            
+            C++
+            
+        </div>
+        
+    </li>
+
+                
                     
-                </ul>
-            </li>
+    <li>
+        <div data-rel="编程&lt;---&gt;编程语言&lt;---&gt;C语言">
+            
+            C语言
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;编程语言&lt;---&gt;Python">
+            
+            Python
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;操作系统">
+            <i class="fold iconfont icon-right"></i>
+            操作系统
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;操作系统&lt;---&gt;Linux">
+            
+            Linux
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="人工智能">
+            
+            人工智能
+            
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="机器人">
+            <i class="fold iconfont icon-right"></i>
+            机器人
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="机器人&lt;---&gt;机器人学">
+            
+            机器人学
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="其它">
+            <i class="fold iconfont icon-right"></i>
+            其它
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="其它&lt;---&gt;文件备份">
+            
+            文件备份
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="10">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
         </ul>
     </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
 
-    <div class="mdui-divider"></div>
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>关于我</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>机器学习</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>教程</a>
+            </li>
+        
+    </div>
+
+</div>
+
     
+    <div id="local-search-result">
+
+    </div>
     
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 机器人 机器人学 "
+           href="/2024/06/08/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%EF%BC%9A%E5%BB%BA%E6%A8%A1%E3%80%81%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%A7%86%E8%A7%89/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="机器人学：建模、控制与视觉">机器人学：建模、控制与视觉</span>
+            <span class="post-date" title="2024-06-08 00:00:00">2024/06/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 编程语言 C语言 "
+           href="/2023/03/24/07_C%E8%AF%AD%E8%A8%80%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="C语言入门视频教程-笔记">C语言入门视频教程-笔记</span>
+            <span class="post-date" title="2023-03-24 00:00:00">2023/03/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 编程语言 C++ "
+           href="/2023/03/24/08_C++%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="C++视频教程-笔记">C++视频教程-笔记</span>
+            <span class="post-date" title="2023-03-24 00:00:00">2023/03/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 编程语言 Python "
+           href="/2023/03/10/06_Pyhton%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Python入门视频教程-笔记">Python入门视频教程-笔记</span>
+            <span class="post-date" title="2023-03-10 00:00:00">2023/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 人工智能 "
+           href="/2023/02/10/04_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"
+           data-tag="机器学习"
+           data-author="" >
+            <span class="post-title" title="机器学习入门视频教程-笔记">机器学习入门视频教程-笔记</span>
+            <span class="post-date" title="2023-02-10 00:00:00">2023/02/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 操作系统 Linux "
+           href="/2023/01/30/03_Linux%E5%85%A5%E9%97%A8/"
+           data-tag="教程"
+           data-author="" >
+            <span class="post-title" title="Linux入门视频教程-笔记">Linux入门视频教程-笔记</span>
+            <span class="post-date" title="2023-01-30 00:00:00">2023/01/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 其它 文件备份 "
+           href="/2023/01/24/02_%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD%E4%BB%93%E5%BA%93/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="搭建手机文件免费备份仓库">搭建手机文件免费备份仓库</span>
+            <span class="post-date" title="2023-01-24 00:00:00">2023/01/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 其它 文件备份 "
+           href="/2023/01/22/01_%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BA%91%E7%AB%AF%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="搭建属于自己的免费云端存储空间">搭建属于自己的免费云端存储空间</span>
+            <span class="post-date" title="2023-01-22 00:00:00">2023/01/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 其它 "
+           href="/2023/01/15/05_Git&GitHub%E7%9A%84%E4%BD%BF%E7%94%A8/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Git&amp;Github视频教程-笔记">Git&amp;Github视频教程-笔记</span>
+            <span class="post-date" title="2023-01-15 00:00:00">2023/01/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2017/07/03/about/"
+           data-tag="关于我"
+           data-author="" >
+            <span class="post-title" title="关于我">关于我</span>
+            <span class="post-date" title="2017-07-03 11:51:24">2017/07/03</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
 </aside>
-  
-  <main id="main-contain" class="mdui-container mdui-m-t-5">
-    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
-  <header class="mdui-card-media">
+<div id="post">
+    <div class="pjax">
+        <article id="post-06_Pyhton视频教程笔记" class="article article-type-post" itemscope itemprop="blogPost">
     
+        <h1 class="article-title">Python入门视频教程-笔记</h1>
     
-      <div class="post-header"> 
-  <a class="post-header-title" href="/2023/03/10/06_Pyhton%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/">Python入门视频教程-笔记</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2023-03-10
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2024-10-25
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/">编程开发</a>
-    </span>
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="编程">编程</a> > 
+            
+            <a  data-rel="编程&lt;---&gt;编程语言">编程语言</a> > 
+            
+            <a  data-rel="编程&lt;---&gt;编程语言&lt;---&gt;Python">Python</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-10-30 17:38:42'>2023-03-10 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
     
-      <span>
-        <span class="iconfont icon-eye"></span>
-        阅读次数:&nbsp;
-        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
-      </span>
+    <div class="toc-ref">
     
-  </div>
-</div>   
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#B%E7%AB%99%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98-Python%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0"><span class="toc-text">B站黑马程序员-Python视频教程笔记</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81-%E4%BD%A0%E5%A5%BD-Python"><span class="toc-text">一、 你好 Python</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-%E5%88%9D%E8%AF%86Python"><span class="toc-text">1.1  初识Python</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80"><span class="toc-text">1.2  编程语言</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-Python%E5%AE%89%E8%A3%85"><span class="toc-text">1.3 Python安装</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-3-1-windows"><span class="toc-text">1.3.1 windows</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#1-3-2-MacOS%EF%BC%88%E6%9C%AA%E5%86%99%EF%BC%89"><span class="toc-text">1.3.2 MacOS（未写）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#1-3-3-Linux%EF%BC%88%E6%9C%AA%E5%86%99%E5%AE%8C%EF%BC%89"><span class="toc-text">1.3.3 Linux（未写完）</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-Python%E8%A7%A3%E9%87%8A%E5%99%A8"><span class="toc-text">1.4 Python解释器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">1.5 Python开发环境</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-5-1-%E4%B8%8B%E8%BD%BD"><span class="toc-text">1.5.1 下载</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#1-5-2-%E5%AE%89%E8%A3%85"><span class="toc-text">1.5.2 安装</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#1-5-3-%E4%BD%BF%E7%94%A8"><span class="toc-text">1.5.3 使用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-text">二、Python基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-text">2.1 字面量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-%E6%B3%A8%E9%87%8A"><span class="toc-text">2.2 注释</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-%E5%8F%98%E9%87%8F"><span class="toc-text">2.3 变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">2.4 数据类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-5-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">2.5 数据类型转换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-6-%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-text">2.6 标识符</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83%EF%BC%9A%E4%BB%A5%E5%8F%98%E9%87%8F%E4%B8%BA%E4%BE%8B"><span class="toc-text">&#x3D;&#x3D;命名规范：以变量为例&#x3D;&#x3D;</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-7-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">2.7 运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-8-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95"><span class="toc-text">2.8 字符串扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#2-8-1-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E4%B8%89%E7%A7%8D%E5%AE%9A%E4%B9%89%E6%96%B9%E5%BC%8F"><span class="toc-text">2.8.1 字符串的三种定义方式</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-8-2-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5"><span class="toc-text">2.8.2 字符串拼接</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-8-3-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-text">2.8.3 字符串格式化</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-8-4-%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%9A%84%E6%95%B0%E5%AD%97%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6"><span class="toc-text">2.8.4 格式化的数字精度控制</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-8-5-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%96%B9%E5%BC%8F2"><span class="toc-text">2.8.5 字符串格式化方式2</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-8-6-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-text">2.8.6 表达式的格式化</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-9-%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5%EF%BC%9Ainput%E8%AF%AD%E5%8F%A5"><span class="toc-text">2.9 数据输入：input语句</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81Python%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5"><span class="toc-text">三、Python判断语句</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-%E5%89%8D%E8%A8%80"><span class="toc-text">3.1 前言</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B%E5%92%8C%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">3.2 布尔类型和比较运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-if-%E8%AF%AD%E5%8F%A5"><span class="toc-text">3.3 if 语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-if-else-%E8%AF%AD%E5%8F%A5"><span class="toc-text">3.4 if else 语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-5-if-elif-else-%E8%AF%AD%E5%8F%A5"><span class="toc-text">3.5 if elif else 语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%E7%9A%84%E5%B5%8C%E5%A5%97"><span class="toc-text">3.6 判断语句的嵌套</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-text">四、循环语句</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-%E5%89%8D%E8%A8%80"><span class="toc-text">4.1 前言</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-2-While-%E5%BE%AA%E7%8E%AF"><span class="toc-text">4.2 While 循环</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#4-2-1-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-text">4.2.1 基础语法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-2-2-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">4.2.2 注意事项</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-2-3-%E5%B5%8C%E5%A5%97%E5%BA%94%E7%94%A8"><span class="toc-text">4.2.3 嵌套应用</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-2-4-%E5%B5%8C%E5%A5%97%E6%A1%88%E4%BE%8B"><span class="toc-text">4.2.4 嵌套案例</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-3-for-%E5%BE%AA%E7%8E%AF"><span class="toc-text">4.3 for 循环</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#4-3-1-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-text">4.3.1 基础语法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-3-2-range-%E8%AF%AD%E5%8F%A5"><span class="toc-text">4.3.2 range 语句</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-3-3-%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-text">4.3.3 变量作用域</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-3-4-%E5%B5%8C%E5%A5%97%E5%BA%94%E7%94%A8"><span class="toc-text">4.3.4 嵌套应用</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-4-%E5%BE%AA%E7%8E%AF%E4%B8%AD%E6%96%AD%EF%BC%9Abreak-%E5%92%8Ccontinue"><span class="toc-text">4.4 循环中断：break 和continue</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%87%BD%E6%95%B0"><span class="toc-text">五、函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-1-%E5%87%BD%E6%95%B0%E4%BB%8B%E7%BB%8D"><span class="toc-text">5.1 函数介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-2-%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">5.2 函数的定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-3-%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-text">5.3 函数的参数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-4-%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">5.4 函数的返回值</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#5-4-1-return-%E8%AF%AD%E5%8F%A5"><span class="toc-text">5.4.1 return 语句</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#5-4-2-None"><span class="toc-text">5.4.2 None</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-5-%E5%87%BD%E6%95%B0%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3"><span class="toc-text">5.5 函数说明文档</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-6-%E5%87%BD%E6%95%B0%E7%9A%84%E5%B5%8C%E5%A5%97%E8%B0%83%E7%94%A8"><span class="toc-text">5.6 函数的嵌套调用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-7-%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-text">5.7 变量的作用域</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%AD%E3%80%81python-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8"><span class="toc-text">六、python 数据容器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#6-1-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%E5%85%A5%E9%97%A8"><span class="toc-text">6.1 数据容器入门</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-2-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%EF%BC%9Alist-%E5%88%97%E8%A1%A8"><span class="toc-text">6.2 数据容器：list(列表)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-3-list%EF%BC%88%E5%88%97%E8%A1%A8%EF%BC%89%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-text">6.3 list（列表）的遍历</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-4-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%EF%BC%9Atuple-%E5%85%83%E7%BB%84"><span class="toc-text">6.4 数据容器：tuple(元组)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-5-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%EF%BC%9Astr-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">6.5 数据容器：str(字符串)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-6-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%EF%BC%88%E5%BA%8F%E5%88%97%EF%BC%89%E7%9A%84%E5%88%87%E7%89%87"><span class="toc-text">6.6 数据容器（序列）的切片</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-7-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%EF%BC%9Aset-%E9%9B%86%E5%90%88"><span class="toc-text">6.7 数据容器：set(集合)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-8-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%EF%BC%9Adict-%E5%AD%97%E5%85%B8%E3%80%81%E6%98%A0%E5%B0%84"><span class="toc-text">6.8 数据容器：dict(字典、映射)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-9-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%E7%9A%84%E9%80%9A%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="toc-text">6.9 数据容器的通用操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-10-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B"><span class="toc-text">6.10 综合案例</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6"><span class="toc-text">七、函数进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#7-1-%E5%87%BD%E6%95%B0%E5%A4%9A%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">7.1 函数多返回值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-2-%E5%87%BD%E6%95%B0%E5%A4%9A%E7%A7%8D%E4%BC%A0%E5%8F%82%E6%96%B9%E5%BC%8F"><span class="toc-text">7.2 函数多种传参方式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-3-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="toc-text">7.3 匿名函数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%AB%E3%80%81python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-text">八、python文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#8-0-%E6%96%87%E4%BB%B6%E5%8F%8A%E5%85%B6%E6%93%8D%E4%BD%9C%E7%9A%84%E5%90%AB%E4%B9%89"><span class="toc-text">8.0 文件及其操作的含义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-1-%E6%96%87%E4%BB%B6%E7%9A%84%E7%BC%96%E7%A0%81"><span class="toc-text">8.1 文件的编码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%8F%96"><span class="toc-text">8.2 文件的读取</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-3-%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E5%85%A5"><span class="toc-text">8.3 文件的写入</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-4-%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%BD%E5%8A%A0"><span class="toc-text">8.4 文件的追加</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-5-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B"><span class="toc-text">8.5 文件操作综合案例</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%9D%E3%80%81python%E5%BC%82%E5%B8%B8%E3%80%81%E6%A8%A1%E5%9D%97%E4%B8%8E%E5%8C%85"><span class="toc-text">九、python异常、模块与包</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#9-1-%E4%BA%86%E8%A7%A3%E5%BC%82%E5%B8%B8"><span class="toc-text">9.1 了解异常</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-2-%E5%BC%82%E5%B8%B8%E7%9A%84%E6%8D%95%E8%8E%B7%E6%96%B9%E6%B3%95"><span class="toc-text">9.2 异常的捕获方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-3-%E5%BC%82%E5%B8%B8%E7%9A%84%E4%BC%A0%E9%80%92"><span class="toc-text">9.3 异常的传递</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-4-Python%E6%A8%A1%E5%9D%97"><span class="toc-text">9.4 Python模块</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-5-Python%E5%8C%85"><span class="toc-text">9.5 Python包</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-6-%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9Python%E5%8C%85"><span class="toc-text">9.6 安装第三方Python包</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">十、数据可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#10-1-json%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F"><span class="toc-text">10.1 json数据格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-2-pyecharts%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D"><span class="toc-text">10.2 pyecharts模块介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-3-%E6%8A%98%E7%BA%BF%E5%9B%BE%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">10.3 折线图可视化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-4-%E5%9C%B0%E5%9B%BE%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">10.4  地图可视化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-5-%E5%8A%A8%E6%80%81%E5%B1%95%E7%A4%BA%E6%9F%B1%E7%8A%B6%E5%9B%BE"><span class="toc-text">10.5 动态展示柱状图</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-text">十一、面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#11-1-%E5%88%9D%E8%AF%86%E5%AF%B9%E8%B1%A1"><span class="toc-text">11.1 初识对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-2-%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95"><span class="toc-text">11.2 成员方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-3-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1"><span class="toc-text">11.3 类和对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-4-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-text">11.4 构造方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-5-%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E7%9A%84%E7%B1%BB%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95"><span class="toc-text">11.5 几种常用的类内置方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-6-%E5%B0%81%E8%A3%85"><span class="toc-text">11.6 封装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-7-%E7%BB%A7%E6%89%BF"><span class="toc-text">11.7 继承</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-8-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3"><span class="toc-text">11.8 类型注解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-9-%E5%A4%9A%E6%80%81"><span class="toc-text">11.9 多态</span></a></li></ol></li></ol>
     
-
-
-
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-6 i,
+    .toc-level-6 ol {
+        display: none !important;
+    }
+</style>
+</div>
     
-    
-    <div class="mdui-card-menu">
-    
-      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
-      <ul class="mdui-menu" id="share_menu">
-        <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=Python入门视频教程-笔记&url=http://example.com/2023/03/10/06_Pyhton%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/&pic=http://example.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=Python入门视频教程-笔记&url=http://example.com/2023/03/10/06_Pyhton%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/&via=ZhaWB" target="_blank" class="mdui-ripple">分享到 Twitter</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2023/03/10/06_Pyhton%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=http://example.com/2023/03/10/06_Pyhton%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/" target="_blank" class="mdui-ripple">分享到 Google+</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/2023/03/10/06_Pyhton%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/&title=Python入门视频教程-笔记" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Road2Dasheng&title=Python入门视频教程-笔记&summary=&pics=http://example.com/null&url=http://example.com/2023/03/10/06_Pyhton%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/" target="_blank" class="mdui-ripple">分享到 QQ</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=http://example.com/2023/03/10/06_Pyhton%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/&text=Python入门视频教程-笔记" target="_blank" class="mdui-ripple">分享到 Telegram</a>
-        </li>
-      </ul>
-    
-  </div>
-  </header>
-  
-  
-  
-  
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/ >编程语言</a>
-      </i>
-    
-  </div>
-
-  
-  <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <h4 id="B站黑马程序员-Python视频教程笔记"><a href="#B站黑马程序员-Python视频教程笔记" class="headerlink" title="B站黑马程序员-Python视频教程笔记"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qW4y1a7fU?p=4&vd_source=ce97f8ebe1ffd37a2e287328d33d93b1">B站黑马程序员-Python视频教程</a>笔记</h4><h4 id="一、-你好-Python"><a href="#一、-你好-Python" class="headerlink" title="一、 你好 Python"></a>一、 你好 Python</h4><h5 id="1-1-初识Python"><a href="#1-1-初识Python" class="headerlink" title="1.1  初识Python"></a>1.1  初识Python</h5><blockquote>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="B站黑马程序员-Python视频教程笔记"><a href="#B站黑马程序员-Python视频教程笔记" class="headerlink" title="B站黑马程序员-Python视频教程笔记"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qW4y1a7fU?p=4&vd_source=ce97f8ebe1ffd37a2e287328d33d93b1">B站黑马程序员-Python视频教程</a>笔记</h4><h4 id="一、-你好-Python"><a href="#一、-你好-Python" class="headerlink" title="一、 你好 Python"></a>一、 你好 Python</h4><h5 id="1-1-初识Python"><a href="#1-1-初识Python" class="headerlink" title="1.1  初识Python"></a>1.1  初识Python</h5><blockquote>
 <ul>
 <li><em><strong>&#x3D;&#x3D;起源&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230206184959746.png" alt="image-20230206184959746"></li>
 <li><em><strong>&#x3D;&#x3D;优雅&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230206185323576.png" alt="image-20230206185323576"></li>
@@ -343,18 +587,12 @@
 <li><em><strong>&#x3D;&#x3D;Pycharm&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230206215850954.png" alt="image-20230206215850954"></li>
 </ul>
 </blockquote>
-<h6 id="1-5-1-下载"><a href="#1-5-1-下载" class="headerlink" title="1.5.1 下载"></a>1.5.1 下载</h6><blockquote>
-<p>   <img src="/img/06/image-20230206215954695.png" alt="image-20230206215954695"></p>
-</blockquote>
-<h6 id="1-5-2-安装"><a href="#1-5-2-安装" class="headerlink" title="1.5.2 安装"></a>1.5.2 安装</h6><blockquote>
-<p><img src="/img/06/image-20230206220857348.png" alt="image-20230206220857348"><br><img src="/img/06/image-20230206220931223.png" alt="image-20230206220931223"><br><img src="/img/06/image-20230206220951229.png" alt="image-20230206220951229"><br><img src="/img/06/image-20230206221010183.png" alt="image-20230206221010183"><br><img src="/img/06/image-20230206221025464.png" alt="image-20230206221025464"><br><img src="/img/06/image-20230206221043659.png" alt="image-20230206221043659"></p>
-</blockquote>
-<h6 id="1-5-3-使用"><a href="#1-5-3-使用" class="headerlink" title="1.5.3 使用"></a>1.5.3 使用</h6><blockquote>
+<h6 id="1-5-1-下载"><a href="#1-5-1-下载" class="headerlink" title="1.5.1 下载"></a>1.5.1 下载</h6><h6 id="1-5-2-安装"><a href="#1-5-2-安装" class="headerlink" title="1.5.2 安装"></a>1.5.2 安装</h6><h6 id="1-5-3-使用"><a href="#1-5-3-使用" class="headerlink" title="1.5.3 使用"></a>1.5.3 使用</h6><blockquote>
 <ol>
 <li><em><strong>&#x3D;&#x3D;新建工程&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230206221501809.png" alt="image-20230206221501809"></li>
 <li><em><strong>&#x3D;&#x3D;指定工程路径以及选择Python解释器&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230206221746955.png" alt="image-20230206221746955"></li>
 <li><em><strong>&#x3D;&#x3D;配置Python解释器&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230206221814288.png" alt="image-20230206221814288"></li>
-<li><em><strong>&#x3D;&#x3D;确认工程路径和解释器&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230206221927453.png" alt="image-20230206221927453"> </li>
+<li><em><strong>&#x3D;&#x3D;确认工程路径和解释器&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230206221927453.png" alt="image-20230206221927453"></li>
 <li><em><strong>&#x3D;&#x3D;工程创建完成&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230206222257781.png" alt="image-20230206222257781"></li>
 </ol>
 </blockquote>
@@ -365,13 +603,7 @@
 <li><em><strong>&#x3D;&#x3D;常用的值类型&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230206225339746.png" alt="image-20230206225339746"><br><img src="/img/06/image-20230206225450175.png" alt="image-20230206225450175"></li>
 </ul>
 </blockquote>
-<h5 id="2-2-注释"><a href="#2-2-注释" class="headerlink" title="2.2 注释"></a>2.2 注释</h5><blockquote>
-<p><img src="/img/06/image-20230206225802843.png" alt="image-20230206225802843"></p>
-</blockquote>
-<h5 id="2-3-变量"><a href="#2-3-变量" class="headerlink" title="2.3 变量"></a>2.3 变量</h5><blockquote>
-<p><img src="/img/06/image-20230206230018642.png" alt="image-20230206230018642"></p>
-</blockquote>
-<h5 id="2-4-数据类型"><a href="#2-4-数据类型" class="headerlink" title="2.4 数据类型"></a>2.4 数据类型</h5><blockquote>
+<h5 id="2-2-注释"><a href="#2-2-注释" class="headerlink" title="2.2 注释"></a>2.2 注释</h5><h5 id="2-3-变量"><a href="#2-3-变量" class="headerlink" title="2.3 变量"></a>2.3 变量</h5><h5 id="2-4-数据类型"><a href="#2-4-数据类型" class="headerlink" title="2.4 数据类型"></a>2.4 数据类型</h5><blockquote>
 <p><img src="/img/06/image-20230206230308771.png" alt="image-20230206230308771"></p>
 <ul>
 <li><em><strong>&#x3D;&#x3D;type()语句：用于查看数据的类型&#x3D;&#x3D;</strong></em></li>
@@ -390,9 +622,6 @@
 </ul>
 </blockquote>
 <h5 id="2-6-标识符"><a href="#2-6-标识符" class="headerlink" title="2.6 标识符"></a>2.6 标识符</h5><blockquote>
-<p><img src="/img/06/image-20230206232605676.png" alt="image-20230206232605676"></p>
-</blockquote>
-<blockquote>
 <ul>
 <li><p><em><strong>&#x3D;&#x3D;命名规则&#x3D;&#x3D;</strong></em></p>
 <p><img src="/img/06/image-20230206232545339.png" alt="image-20230206232545339"></p>
@@ -427,47 +656,8 @@
 <li><em><strong>&#x3D;&#x3D;注意&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230206233658022.png" alt="image-20230206233658022"></li>
 </ul>
 </blockquote>
-<h6 id="2-8-3-字符串格式化"><a href="#2-8-3-字符串格式化" class="headerlink" title="2.8.3 字符串格式化"></a>2.8.3 字符串格式化</h6><blockquote>
-<p><img src="/img/06/image-20230206233818043.png" alt="image-20230206233818043"></p>
-</blockquote>
-<blockquote>
-<p><img src="/img/06/image-20230206233944307.png" alt="image-20230206233944307"></p>
-</blockquote>
-<blockquote>
-<p><img src="/img/06/image-20230206234021770.png" alt="image-20230206234021770"></p>
-</blockquote>
-<blockquote>
-<p><img src="/img/06/image-20230206234118627.png" alt="image-20230206234118627"></p>
-</blockquote>
-<h6 id="2-8-4-格式化的数字精度控制"><a href="#2-8-4-格式化的数字精度控制" class="headerlink" title="2.8.4 格式化的数字精度控制"></a>2.8.4 格式化的数字精度控制</h6><blockquote>
-<p><img src="/img/06/image-20230206234306806.png" alt="image-20230206234306806"></p>
-</blockquote>
-<blockquote>
-<p><img src="/img/06/image-20230206234447985.png" alt="image-20230206234447985"></p>
-</blockquote>
-<h6 id="2-8-5-字符串格式化方式2"><a href="#2-8-5-字符串格式化方式2" class="headerlink" title="2.8.5 字符串格式化方式2"></a>2.8.5 字符串格式化方式2</h6><blockquote>
-<p><img src="/img/06/image-20230206234737583.png" alt="image-20230206234737583"></p>
-</blockquote>
-<h6 id="2-8-6-表达式的格式化"><a href="#2-8-6-表达式的格式化" class="headerlink" title="2.8.6 表达式的格式化"></a>2.8.6 表达式的格式化</h6><blockquote>
-<p><img src="/img/06/image-20230206234946380.png" alt="image-20230206234946380"></p>
-</blockquote>
-<blockquote>
-<p><img src="/img/06/image-20230206235014790.png" alt="image-20230206235014790"></p>
-</blockquote>
-<h5 id="2-9-数据输入：input语句"><a href="#2-9-数据输入：input语句" class="headerlink" title="2.9 数据输入：input语句"></a>2.9 数据输入：input语句</h5><blockquote>
-<p><img src="/img/06/image-20230206235251638.png" alt="image-20230206235251638"></p>
-</blockquote>
-<blockquote>
-<p><img src="/img/06/image-20230206235311420.png" alt="image-20230206235311420"></p>
-</blockquote>
-<blockquote>
-<p><img src="/img/06/image-20230206235343068.png" alt="image-20230206235343068"></p>
-</blockquote>
-<hr>
-<h4 id="三、Python判断语句"><a href="#三、Python判断语句" class="headerlink" title="三、Python判断语句"></a>三、Python判断语句</h4><h5 id="3-1-前言"><a href="#3-1-前言" class="headerlink" title="3.1 前言"></a>3.1 前言</h5><blockquote>
-<p><img src="/img/06/image-20230207080344967.png" alt="image-20230207080344967"></p>
-</blockquote>
-<h5 id="3-2-布尔类型和比较运算符"><a href="#3-2-布尔类型和比较运算符" class="headerlink" title="3.2 布尔类型和比较运算符"></a>3.2 布尔类型和比较运算符</h5><blockquote>
+<h6 id="2-8-3-字符串格式化"><a href="#2-8-3-字符串格式化" class="headerlink" title="2.8.3 字符串格式化"></a>2.8.3 字符串格式化</h6><h6 id="2-8-4-格式化的数字精度控制"><a href="#2-8-4-格式化的数字精度控制" class="headerlink" title="2.8.4 格式化的数字精度控制"></a>2.8.4 格式化的数字精度控制</h6><h6 id="2-8-5-字符串格式化方式2"><a href="#2-8-5-字符串格式化方式2" class="headerlink" title="2.8.5 字符串格式化方式2"></a>2.8.5 字符串格式化方式2</h6><h6 id="2-8-6-表达式的格式化"><a href="#2-8-6-表达式的格式化" class="headerlink" title="2.8.6 表达式的格式化"></a>2.8.6 表达式的格式化</h6><h5 id="2-9-数据输入：input语句"><a href="#2-9-数据输入：input语句" class="headerlink" title="2.9 数据输入：input语句"></a>2.9 数据输入：input语句</h5><hr>
+<h4 id="三、Python判断语句"><a href="#三、Python判断语句" class="headerlink" title="三、Python判断语句"></a>三、Python判断语句</h4><h5 id="3-1-前言"><a href="#3-1-前言" class="headerlink" title="3.1 前言"></a>3.1 前言</h5><h5 id="3-2-布尔类型和比较运算符"><a href="#3-2-布尔类型和比较运算符" class="headerlink" title="3.2 布尔类型和比较运算符"></a>3.2 布尔类型和比较运算符</h5><blockquote>
 <ul>
 <li><em><strong>&#x3D;&#x3D;布尔类型的定义&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207085452264.png" alt="image-20230207085452264"></li>
 <li><em><strong>&#x3D;&#x3D;比较运算符&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207085541085.png" alt="image-20230207085541085"><br><img src="/img/06/image-20230207085607512.png" alt="image-20230207085607512"></li>
@@ -501,16 +691,7 @@
 </ul>
 </blockquote>
 <hr>
-<h4 id="四、循环语句"><a href="#四、循环语句" class="headerlink" title="四、循环语句"></a>四、循环语句</h4><h5 id="4-1-前言"><a href="#4-1-前言" class="headerlink" title="4.1 前言"></a>4.1 前言</h5><blockquote>
-<p><img src="/img/06/image-20230207094109353.png" alt="image-20230207094109353"></p>
-</blockquote>
-<h5 id="4-2-While-循环"><a href="#4-2-While-循环" class="headerlink" title="4.2 While 循环"></a>4.2 While 循环</h5><h6 id="4-2-1-基础语法"><a href="#4-2-1-基础语法" class="headerlink" title="4.2.1 基础语法"></a>4.2.1 基础语法</h6><blockquote>
-<p><img src="/img/06/image-20230207094506878.png" alt="image-20230207094506878"></p>
-</blockquote>
-<h6 id="4-2-2-注意事项"><a href="#4-2-2-注意事项" class="headerlink" title="4.2.2 注意事项"></a>4.2.2 注意事项</h6><blockquote>
-<p><img src="/img/06/image-20230207094606623.png" alt="image-20230207094606623"></p>
-</blockquote>
-<h6 id="4-2-3-嵌套应用"><a href="#4-2-3-嵌套应用" class="headerlink" title="4.2.3 嵌套应用"></a>4.2.3 嵌套应用</h6><blockquote>
+<h4 id="四、循环语句"><a href="#四、循环语句" class="headerlink" title="四、循环语句"></a>四、循环语句</h4><h5 id="4-1-前言"><a href="#4-1-前言" class="headerlink" title="4.1 前言"></a>4.1 前言</h5><h5 id="4-2-While-循环"><a href="#4-2-While-循环" class="headerlink" title="4.2 While 循环"></a>4.2 While 循环</h5><h6 id="4-2-1-基础语法"><a href="#4-2-1-基础语法" class="headerlink" title="4.2.1 基础语法"></a>4.2.1 基础语法</h6><h6 id="4-2-2-注意事项"><a href="#4-2-2-注意事项" class="headerlink" title="4.2.2 注意事项"></a>4.2.2 注意事项</h6><h6 id="4-2-3-嵌套应用"><a href="#4-2-3-嵌套应用" class="headerlink" title="4.2.3 嵌套应用"></a>4.2.3 嵌套应用</h6><blockquote>
 <ul>
 <li><em><strong>&#x3D;&#x3D;基本格式&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207095034307.png" alt="image-20230207095034307"></li>
 <li><em><strong>&#x3D;&#x3D;注意点&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207095135492.png" alt="image-20230207095135492"></li>
@@ -535,10 +716,7 @@
 <li><em><strong>&#x3D;&#x3D;基本格式&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207100539084.png" alt="image-20230207100539084"></li>
 </ul>
 </blockquote>
-<h6 id="4-3-3-变量作用域"><a href="#4-3-3-变量作用域" class="headerlink" title="4.3.3 变量作用域"></a>4.3.3 变量作用域</h6><blockquote>
-<p><img src="/img/06/image-20230207101332358.png" alt="image-20230207101332358"><br><img src="/img/06/image-20230207101402400.png" alt="image-20230207101402400"></p>
-</blockquote>
-<h6 id="4-3-4-嵌套应用"><a href="#4-3-4-嵌套应用" class="headerlink" title="4.3.4 嵌套应用"></a>4.3.4 嵌套应用</h6><blockquote>
+<h6 id="4-3-3-变量作用域"><a href="#4-3-3-变量作用域" class="headerlink" title="4.3.3 变量作用域"></a>4.3.3 变量作用域</h6><h6 id="4-3-4-嵌套应用"><a href="#4-3-4-嵌套应用" class="headerlink" title="4.3.4 嵌套应用"></a>4.3.4 嵌套应用</h6><blockquote>
 <ul>
 <li><em><strong>&#x3D;&#x3D;基本格式&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207101514750.png" alt="image-20230207101514750"></li>
 <li><em><strong>&#x3D;&#x3D;注意点&#x3D;&#x3D;</strong></em><br>1、缩进<br><img src="/img/06/image-20230207101536850.png" alt="image-20230207101536850"><br>2、while循环和for循环可以相互嵌套<br><img src="/img/06/image-20230207101649473.png" alt="image-20230207101649473"></li>
@@ -617,10 +795,10 @@
 </ul>
 <p><em><strong>&#x3D;&#x3D;！列表特点&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207143200206.png" alt="image-20230207143200206"></p>
 <ul>
-<li><em><strong>&#x3D;&#x3D;列表的下标索引&#x3D;&#x3D;</strong></em><br>  <em>正向索引</em><br>  <img src="/img/06/image-20230207142423850.png" alt="image-20230207142423850"></li>
+<li><em><strong>&#x3D;&#x3D;列表的下标索引&#x3D;&#x3D;</strong></em><br><em>正向索引</em><br><img src="/img/06/image-20230207142423850.png" alt="image-20230207142423850"></li>
 </ul>
-<p>  <em>反向索引</em><br>  <img src="/img/06/image-20230207142450740.png" alt="image-20230207142450740"></p>
-<p>  <em>嵌套索引</em><br>  <img src="/img/06/image-20230207142530435.png" alt="image-20230207142530435"></p>
+<p><em>反向索引</em><br><img src="/img/06/image-20230207142450740.png" alt="image-20230207142450740"></p>
+<p><em>嵌套索引</em><br><img src="/img/06/image-20230207142530435.png" alt="image-20230207142530435"></p>
 <ul>
 <li><em><strong>&#x3D;&#x3D;列表的常用操作（方法）&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207142853698.png" alt="image-20230207142853698"></li>
 </ul>
@@ -629,7 +807,7 @@
 <ul>
 <li><em><strong>&#x3D;&#x3D;使用while循环遍历列表&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207143652064.png" alt="image-20230207143652064"></li>
 <li><em><strong>&#x3D;&#x3D;使用for循环遍历列表&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207143732181.png" alt="image-20230207143732181"></li>
-<li><em><strong>&#x3D;&#x3D;区别&#x3D;&#x3D;</strong></em><img src="/img/06/image-20230207143756454.png" alt="image-20230207143756454" style="zoom:80%;" /></li>
+<li><em><strong>&#x3D;&#x3D;区别&#x3D;&#x3D;</strong></em><br><code>&lt;img src=&quot;/img/06/image-20230207143756454.png&quot; alt=&quot;image-20230207143756454&quot; style=&quot;zoom:80%;&quot; /&gt;</code></li>
 </ul>
 </blockquote>
 <h5 id="6-4-数据容器：tuple-元组"><a href="#6-4-数据容器：tuple-元组" class="headerlink" title="6.4 数据容器：tuple(元组)"></a>6.4 数据容器：tuple(元组)</h5><blockquote>
@@ -681,14 +859,8 @@
 <li><em><strong>&#x3D;&#x3D;数据容器通用操作（方法）&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207165432366.png" alt="image-20230207165432366"></li>
 </ul>
 </blockquote>
-<h5 id="6-10-综合案例"><a href="#6-10-综合案例" class="headerlink" title="6.10 综合案例"></a>6.10 综合案例</h5><blockquote>
-<p><img src="/img/06/image-20230207165920874.png" alt="image-20230207165920874"></p>
-</blockquote>
-<hr>
-<h4 id="七、函数进阶"><a href="#七、函数进阶" class="headerlink" title="七、函数进阶"></a>七、函数进阶</h4><h5 id="7-1-函数多返回值"><a href="#7-1-函数多返回值" class="headerlink" title="7.1 函数多返回值"></a>7.1 函数多返回值</h5><blockquote>
-<p><img src="/img/06/image-20230207170256424.png" alt="image-20230207170256424"><br><img src="/img/06/image-20230207170321882.png" alt="image-20230207170321882"></p>
-</blockquote>
-<h5 id="7-2-函数多种传参方式"><a href="#7-2-函数多种传参方式" class="headerlink" title="7.2 函数多种传参方式"></a>7.2 函数多种传参方式</h5><blockquote>
+<h5 id="6-10-综合案例"><a href="#6-10-综合案例" class="headerlink" title="6.10 综合案例"></a>6.10 综合案例</h5><hr>
+<h4 id="七、函数进阶"><a href="#七、函数进阶" class="headerlink" title="七、函数进阶"></a>七、函数进阶</h4><h5 id="7-1-函数多返回值"><a href="#7-1-函数多返回值" class="headerlink" title="7.1 函数多返回值"></a>7.1 函数多返回值</h5><h5 id="7-2-函数多种传参方式"><a href="#7-2-函数多种传参方式" class="headerlink" title="7.2 函数多种传参方式"></a>7.2 函数多种传参方式</h5><blockquote>
 <ul>
 <li><em><strong>&#x3D;&#x3D;参数种类&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207170620424.png" alt="image-20230207170620424"></li>
 <li><em><strong>&#x3D;&#x3D;位置参数&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207170605629.png" alt="image-20230207170605629"></li>
@@ -736,10 +908,7 @@
 <li><em><strong>&#x3D;&#x3D;注意点&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207181244031.png" alt="image-20230207181244031"></li>
 </ul>
 </blockquote>
-<h5 id="8-5-文件操作综合案例"><a href="#8-5-文件操作综合案例" class="headerlink" title="8.5 文件操作综合案例"></a>8.5 文件操作综合案例</h5><blockquote>
-<p><img src="/img/06/image-20230207181328964.png" alt="image-20230207181328964"></p>
-</blockquote>
-<hr>
+<h5 id="8-5-文件操作综合案例"><a href="#8-5-文件操作综合案例" class="headerlink" title="8.5 文件操作综合案例"></a>8.5 文件操作综合案例</h5><hr>
 <h4 id="九、python异常、模块与包"><a href="#九、python异常、模块与包" class="headerlink" title="九、python异常、模块与包"></a>九、python异常、模块与包</h4><h5 id="9-1-了解异常"><a href="#9-1-了解异常" class="headerlink" title="9.1 了解异常"></a>9.1 了解异常</h5><blockquote>
 <ul>
 <li><em><strong>&#x3D;&#x3D;什么是异常&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207181919475.png" alt="image-20230207181919475"></li>
@@ -752,10 +921,7 @@
 <li><em><strong>&#x3D;&#x3D;捕获异常的方法&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207183649135.png" alt="image-20230207183649135"><br><em><strong>&#x3D;&#x3D;0、语法&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207184923110.png" alt="image-20230207184923110"><br><em><strong>&#x3D;&#x3D;1、捕获常规异常&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207183815732.png" alt="image-20230207183815732"><br><em><strong>&#x3D;&#x3D;2、捕获指定异常&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207183859846.png" alt="image-20230207183859846"><br><em><strong>&#x3D;&#x3D;3、捕获多个异常&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207184508899.png" alt="image-20230207184508899"><br><em><strong>&#x3D;&#x3D;4、捕获异常并输出描述信息&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207184554469.png" alt="image-20230207184554469"><br><em><strong>&#x3D;&#x3D;5、捕获所有异常&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207184610533.png" alt="image-20230207184610533"><br><em><strong>&#x3D;&#x3D;6、异常else&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207184635432.png" alt="image-20230207184635432"><br><em><strong>&#x3D;&#x3D;7、异常finally&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207184703979.png" alt="image-20230207184703979"></li>
 </ul>
 </blockquote>
-<h5 id="9-3-异常的传递"><a href="#9-3-异常的传递" class="headerlink" title="9.3 异常的传递"></a>9.3 异常的传递</h5><blockquote>
-<p><img src="/img/06/image-20230207185119362.png" alt="image-20230207185119362"><br><img src="/img/06/image-20230207185153893.png" alt="image-20230207185153893"></p>
-</blockquote>
-<h5 id="9-4-Python模块"><a href="#9-4-Python模块" class="headerlink" title="9.4 Python模块"></a>9.4 Python模块</h5><blockquote>
+<h5 id="9-3-异常的传递"><a href="#9-3-异常的传递" class="headerlink" title="9.3 异常的传递"></a>9.3 异常的传递</h5><h5 id="9-4-Python模块"><a href="#9-4-Python模块" class="headerlink" title="9.4 Python模块"></a>9.4 Python模块</h5><blockquote>
 <ul>
 <li><em><strong>&#x3D;&#x3D;模块的含义&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207185658434.png" alt="image-20230207185658434"></li>
 <li><em><strong>&#x3D;&#x3D;模块的导入：模块的导入一般写在代码文件的开头位置&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207185743071.png" alt="image-20230207185743071"><br><em><strong>&#x3D;&#x3D;1、import模块名&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207212004261.png" alt="image-20230207212004261"><br><em><strong>&#x3D;&#x3D;2、from 模块名 import 功能名&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207212023320.png" alt="image-20230207212023320"><br>***&#x3D;&#x3D;3、from 模块名 import <em>&#x3D;&#x3D;</em>**<br><img src="/img/06/image-20230207212033935.png" alt="image-20230207212033935"><br><em><strong>&#x3D;&#x3D;4、as定义别名&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207212058354.png" alt="image-20230207212058354"></li>
@@ -785,19 +951,7 @@
 <li><em><strong>&#x3D;&#x3D;python数据和Json数据的转化&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230207220224205.png" alt="image-20230207220224205"></li>
 </ul>
 </blockquote>
-<h5 id="10-2-pyecharts模块介绍"><a href="#10-2-pyecharts模块介绍" class="headerlink" title="10.2 pyecharts模块介绍"></a>10.2 pyecharts模块介绍</h5><blockquote>
-<p><img src="/img/06/image-20230207222046588.png" alt="image-20230207222046588"></p>
-</blockquote>
-<h5 id="10-3-折线图可视化"><a href="#10-3-折线图可视化" class="headerlink" title="10.3 折线图可视化"></a>10.3 折线图可视化</h5><blockquote>
-<p><img src="/img/06/image-20230207230131006.png" alt="image-20230207230131006"></p>
-</blockquote>
-<h5 id="10-4-地图可视化"><a href="#10-4-地图可视化" class="headerlink" title="10.4  地图可视化"></a>10.4  地图可视化</h5><blockquote>
-<p><img src="/img/06/image-20230207230421518.png" alt="image-20230207230421518"></p>
-</blockquote>
-<h5 id="10-5-动态展示柱状图"><a href="#10-5-动态展示柱状图" class="headerlink" title="10.5 动态展示柱状图"></a>10.5 动态展示柱状图</h5><blockquote>
-<p><img src="/img/06/image-20230207230337591.png" alt="image-20230207230337591"></p>
-</blockquote>
-<hr>
+<h5 id="10-2-pyecharts模块介绍"><a href="#10-2-pyecharts模块介绍" class="headerlink" title="10.2 pyecharts模块介绍"></a>10.2 pyecharts模块介绍</h5><h5 id="10-3-折线图可视化"><a href="#10-3-折线图可视化" class="headerlink" title="10.3 折线图可视化"></a>10.3 折线图可视化</h5><h5 id="10-4-地图可视化"><a href="#10-4-地图可视化" class="headerlink" title="10.4  地图可视化"></a>10.4  地图可视化</h5><h5 id="10-5-动态展示柱状图"><a href="#10-5-动态展示柱状图" class="headerlink" title="10.5 动态展示柱状图"></a>10.5 动态展示柱状图</h5><hr>
 <h4 id="十一、面向对象"><a href="#十一、面向对象" class="headerlink" title="十一、面向对象"></a>十一、面向对象</h4><h5 id="11-1-初识对象"><a href="#11-1-初识对象" class="headerlink" title="11.1 初识对象"></a>11.1 初识对象</h5><blockquote>
 <ul>
 <li><em><strong>&#x3D;&#x3D;为什么需要使用对象？&#x3D;&#x3D;</strong></em><br><img src="/Python%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0.assets/image-20230213221001714.png" alt="image-20230213221001714"><br><img src="/img/06/image-20230213223431699.png" alt="image-20230213223431699"></li>
@@ -859,10 +1013,10 @@
 <li><strong>&#x3D;&#x3D;<em>为什么需要类型注解</em>&#x3D;&#x3D;</strong><br><img src="/img/06/image-20230214003420099.png" alt="image-20230214003420099"><br><img src="/img/06/image-20230214003507600.png" alt="image-20230214003507600"><br><img src="/img/06/image-20230214003614850.png" alt="image-20230214003614850"></li>
 <li><strong>&#x3D;&#x3D;<em>类型注解的作用</em>&#x3D;&#x3D;</strong><br><img src="/img/06/image-20230214003806560.png" alt="image-20230214003806560"></li>
 <li><strong>&#x3D;&#x3D;<em>变量类型注解的语法</em>&#x3D;&#x3D;</strong><br><img src="/img/06/image-20230214004010760.png" alt="image-20230214004010760"><br><img src="/img/06/image-20230214004402225.png" alt="image-20230214004402225"><br><img src="/img/06/image-20230214004459426.png" alt="image-20230214004459426"><br><img src="/img/06/image-20230214004647996.png" alt="image-20230214004647996"></li>
-<li><em><strong>&#x3D;&#x3D;类型注解的限制&#x3D;&#x3D;</strong></em><br> <img src="/img/06/image-20230214004801118.png" alt="image-20230214004801118"></li>
-<li><strong>&#x3D;&#x3D;<em>函数（方法）的类型注解 - 形参注解</em>&#x3D;&#x3D;</strong><br> <img src="/img/06/image-20230214005256695.png" alt="image-20230214005256695"></li>
-<li><em><strong>&#x3D;&#x3D;函数（方法）的类型注解 - 返回值注解&#x3D;&#x3D;</strong></em><br> <img src="/img/06/image-20230214005412412.png" alt="image-20230214005412412"></li>
-<li><em><strong>&#x3D;&#x3D;Union类型&#x3D;&#x3D;</strong></em><br> <img src="/img/06/image-20230214005653174.png" alt="image-20230214005653174"><br> <img src="/img/06/image-20230214005751943.png" alt="image-20230214005751943"></li>
+<li><em><strong>&#x3D;&#x3D;类型注解的限制&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230214004801118.png" alt="image-20230214004801118"></li>
+<li><strong>&#x3D;&#x3D;<em>函数（方法）的类型注解 - 形参注解</em>&#x3D;&#x3D;</strong><br><img src="/img/06/image-20230214005256695.png" alt="image-20230214005256695"></li>
+<li><em><strong>&#x3D;&#x3D;函数（方法）的类型注解 - 返回值注解&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230214005412412.png" alt="image-20230214005412412"></li>
+<li><em><strong>&#x3D;&#x3D;Union类型&#x3D;&#x3D;</strong></em><br><img src="/img/06/image-20230214005653174.png" alt="image-20230214005653174"><br><img src="/img/06/image-20230214005751943.png" alt="image-20230214005751943"></li>
 </ul>
 </blockquote>
 <h5 id="11-9-多态"><a href="#11-9-多态" class="headerlink" title="11.9 多态"></a>11.9 多态</h5><blockquote>
@@ -872,155 +1026,178 @@
 </ul>
 </blockquote>
 
-  </div>
-  <!--文末结束语-->
-  
-    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
-  
-  <!--页脚广告-->
-  
-  <div class="mdui-divider"></div>
-  
-  <nav>
-    
-      <a rel="prev" class="post-nav-item mdui-float-left" href="/2023/03/24/08_C++%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/">
-        <i class="iconfont icon-angle-left"></i>
-        <span>C++视频教程-笔记</span>
-      </a>
-    
-    
-      <a rel="next" class="post-nav-item mdui-float-right" href="/2023/02/10/04_%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-        <span>机器学习入门视频教程-笔记</span>
-        <i class="iconfont icon-angle-right"></i>
-      </a>
-    
-  </nav>
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
 </article>
 
 
 
 
-  <div class="toc-button"  style="z-index: 100;">
-    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
-    <ul class="mdui-menu" id="toc">
-      <li class="mdui-menu-item">
-        <a href="/2023/03/10/06_Pyhton%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#B%E7%AB%99%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98-Python%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">B站黑马程序员-Python视频教程笔记</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81-%E4%BD%A0%E5%A5%BD-Python"><span class="toc-number">2.</span> <span class="toc-text">一、 你好 Python</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-%E5%88%9D%E8%AF%86Python"><span class="toc-number">2.1.</span> <span class="toc-text">1.1  初识Python</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80"><span class="toc-number">2.2.</span> <span class="toc-text">1.2  编程语言</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-Python%E5%AE%89%E8%A3%85"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 Python安装</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-3-1-windows"><span class="toc-number">2.3.1.</span> <span class="toc-text">1.3.1 windows</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#1-3-2-MacOS%EF%BC%88%E6%9C%AA%E5%86%99%EF%BC%89"><span class="toc-number">2.3.2.</span> <span class="toc-text">1.3.2 MacOS（未写）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#1-3-3-Linux%EF%BC%88%E6%9C%AA%E5%86%99%E5%AE%8C%EF%BC%89"><span class="toc-number">2.3.3.</span> <span class="toc-text">1.3.3 Linux（未写完）</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-Python%E8%A7%A3%E9%87%8A%E5%99%A8"><span class="toc-number">2.4.</span> <span class="toc-text">1.4 Python解释器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-number">2.5.</span> <span class="toc-text">1.5 Python开发环境</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-5-1-%E4%B8%8B%E8%BD%BD"><span class="toc-number">2.5.1.</span> <span class="toc-text">1.5.1 下载</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#1-5-2-%E5%AE%89%E8%A3%85"><span class="toc-number">2.5.2.</span> <span class="toc-text">1.5.2 安装</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#1-5-3-%E4%BD%BF%E7%94%A8"><span class="toc-number">2.5.3.</span> <span class="toc-text">1.5.3 使用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">二、Python基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 字面量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-%E6%B3%A8%E9%87%8A"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 注释</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-%E5%8F%98%E9%87%8F"><span class="toc-number">3.3.</span> <span class="toc-text">2.3 变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.4.</span> <span class="toc-text">2.4 数据类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-5-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.5.</span> <span class="toc-text">2.5 数据类型转换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-6-%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-number">3.6.</span> <span class="toc-text">2.6 标识符</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83%EF%BC%9A%E4%BB%A5%E5%8F%98%E9%87%8F%E4%B8%BA%E4%BE%8B"><span class="toc-number">3.6.1.</span> <span class="toc-text">&#x3D;&#x3D;命名规范：以变量为例&#x3D;&#x3D;</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-7-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.7.</span> <span class="toc-text">2.7 运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-8-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95"><span class="toc-number">3.8.</span> <span class="toc-text">2.8 字符串扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#2-8-1-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E4%B8%89%E7%A7%8D%E5%AE%9A%E4%B9%89%E6%96%B9%E5%BC%8F"><span class="toc-number">3.8.1.</span> <span class="toc-text">2.8.1 字符串的三种定义方式</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-8-2-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5"><span class="toc-number">3.8.2.</span> <span class="toc-text">2.8.2 字符串拼接</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-8-3-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">3.8.3.</span> <span class="toc-text">2.8.3 字符串格式化</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-8-4-%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%9A%84%E6%95%B0%E5%AD%97%E7%B2%BE%E5%BA%A6%E6%8E%A7%E5%88%B6"><span class="toc-number">3.8.4.</span> <span class="toc-text">2.8.4 格式化的数字精度控制</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-8-5-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%96%B9%E5%BC%8F2"><span class="toc-number">3.8.5.</span> <span class="toc-text">2.8.5 字符串格式化方式2</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-8-6-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">3.8.6.</span> <span class="toc-text">2.8.6 表达式的格式化</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-9-%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5%EF%BC%9Ainput%E8%AF%AD%E5%8F%A5"><span class="toc-number">3.9.</span> <span class="toc-text">2.9 数据输入：input语句</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81Python%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5"><span class="toc-number">4.</span> <span class="toc-text">三、Python判断语句</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-%E5%89%8D%E8%A8%80"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 前言</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B%E5%92%8C%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 布尔类型和比较运算符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-if-%E8%AF%AD%E5%8F%A5"><span class="toc-number">4.3.</span> <span class="toc-text">3.3 if 语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-if-else-%E8%AF%AD%E5%8F%A5"><span class="toc-number">4.4.</span> <span class="toc-text">3.4 if else 语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-5-if-elif-else-%E8%AF%AD%E5%8F%A5"><span class="toc-number">4.5.</span> <span class="toc-text">3.5 if elif else 语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%E7%9A%84%E5%B5%8C%E5%A5%97"><span class="toc-number">4.6.</span> <span class="toc-text">3.6 判断语句的嵌套</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">5.</span> <span class="toc-text">四、循环语句</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-%E5%89%8D%E8%A8%80"><span class="toc-number">5.1.</span> <span class="toc-text">4.1 前言</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-2-While-%E5%BE%AA%E7%8E%AF"><span class="toc-number">5.2.</span> <span class="toc-text">4.2 While 循环</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#4-2-1-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-number">5.2.1.</span> <span class="toc-text">4.2.1 基础语法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-2-2-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">5.2.2.</span> <span class="toc-text">4.2.2 注意事项</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-2-3-%E5%B5%8C%E5%A5%97%E5%BA%94%E7%94%A8"><span class="toc-number">5.2.3.</span> <span class="toc-text">4.2.3 嵌套应用</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-2-4-%E5%B5%8C%E5%A5%97%E6%A1%88%E4%BE%8B"><span class="toc-number">5.2.4.</span> <span class="toc-text">4.2.4 嵌套案例</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-3-for-%E5%BE%AA%E7%8E%AF"><span class="toc-number">5.3.</span> <span class="toc-text">4.3 for 循环</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#4-3-1-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-number">5.3.1.</span> <span class="toc-text">4.3.1 基础语法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-3-2-range-%E8%AF%AD%E5%8F%A5"><span class="toc-number">5.3.2.</span> <span class="toc-text">4.3.2 range 语句</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-3-3-%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">5.3.3.</span> <span class="toc-text">4.3.3 变量作用域</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4-3-4-%E5%B5%8C%E5%A5%97%E5%BA%94%E7%94%A8"><span class="toc-number">5.3.4.</span> <span class="toc-text">4.3.4 嵌套应用</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-4-%E5%BE%AA%E7%8E%AF%E4%B8%AD%E6%96%AD%EF%BC%9Abreak-%E5%92%8Ccontinue"><span class="toc-number">5.4.</span> <span class="toc-text">4.4 循环中断：break 和continue</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%87%BD%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">五、函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-1-%E5%87%BD%E6%95%B0%E4%BB%8B%E7%BB%8D"><span class="toc-number">6.1.</span> <span class="toc-text">5.1 函数介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-2-%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">6.2.</span> <span class="toc-text">5.2 函数的定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-3-%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-number">6.3.</span> <span class="toc-text">5.3 函数的参数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-4-%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">6.4.</span> <span class="toc-text">5.4 函数的返回值</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#5-4-1-return-%E8%AF%AD%E5%8F%A5"><span class="toc-number">6.4.1.</span> <span class="toc-text">5.4.1 return 语句</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#5-4-2-None"><span class="toc-number">6.4.2.</span> <span class="toc-text">5.4.2 None</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-5-%E5%87%BD%E6%95%B0%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3"><span class="toc-number">6.5.</span> <span class="toc-text">5.5 函数说明文档</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-6-%E5%87%BD%E6%95%B0%E7%9A%84%E5%B5%8C%E5%A5%97%E8%B0%83%E7%94%A8"><span class="toc-number">6.6.</span> <span class="toc-text">5.6 函数的嵌套调用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-7-%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">6.7.</span> <span class="toc-text">5.7 变量的作用域</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%AD%E3%80%81python-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8"><span class="toc-number">7.</span> <span class="toc-text">六、python 数据容器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#6-1-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%E5%85%A5%E9%97%A8"><span class="toc-number">7.1.</span> <span class="toc-text">6.1 数据容器入门</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-2-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%EF%BC%9Alist-%E5%88%97%E8%A1%A8"><span class="toc-number">7.2.</span> <span class="toc-text">6.2 数据容器：list(列表)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-3-list%EF%BC%88%E5%88%97%E8%A1%A8%EF%BC%89%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-number">7.3.</span> <span class="toc-text">6.3 list（列表）的遍历</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-4-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%EF%BC%9Atuple-%E5%85%83%E7%BB%84"><span class="toc-number">7.4.</span> <span class="toc-text">6.4 数据容器：tuple(元组)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-5-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%EF%BC%9Astr-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">7.5.</span> <span class="toc-text">6.5 数据容器：str(字符串)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-6-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%EF%BC%88%E5%BA%8F%E5%88%97%EF%BC%89%E7%9A%84%E5%88%87%E7%89%87"><span class="toc-number">7.6.</span> <span class="toc-text">6.6 数据容器（序列）的切片</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-7-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%EF%BC%9Aset-%E9%9B%86%E5%90%88"><span class="toc-number">7.7.</span> <span class="toc-text">6.7 数据容器：set(集合)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-8-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%EF%BC%9Adict-%E5%AD%97%E5%85%B8%E3%80%81%E6%98%A0%E5%B0%84"><span class="toc-number">7.8.</span> <span class="toc-text">6.8 数据容器：dict(字典、映射)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-9-%E6%95%B0%E6%8D%AE%E5%AE%B9%E5%99%A8%E7%9A%84%E9%80%9A%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="toc-number">7.9.</span> <span class="toc-text">6.9 数据容器的通用操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-10-%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B"><span class="toc-number">7.10.</span> <span class="toc-text">6.10 综合案例</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6"><span class="toc-number">8.</span> <span class="toc-text">七、函数进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#7-1-%E5%87%BD%E6%95%B0%E5%A4%9A%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">8.1.</span> <span class="toc-text">7.1 函数多返回值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-2-%E5%87%BD%E6%95%B0%E5%A4%9A%E7%A7%8D%E4%BC%A0%E5%8F%82%E6%96%B9%E5%BC%8F"><span class="toc-number">8.2.</span> <span class="toc-text">7.2 函数多种传参方式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-3-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="toc-number">8.3.</span> <span class="toc-text">7.3 匿名函数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%AB%E3%80%81python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">9.</span> <span class="toc-text">八、python文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#8-0-%E6%96%87%E4%BB%B6%E5%8F%8A%E5%85%B6%E6%93%8D%E4%BD%9C%E7%9A%84%E5%90%AB%E4%B9%89"><span class="toc-number">9.1.</span> <span class="toc-text">8.0 文件及其操作的含义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-1-%E6%96%87%E4%BB%B6%E7%9A%84%E7%BC%96%E7%A0%81"><span class="toc-number">9.2.</span> <span class="toc-text">8.1 文件的编码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%8F%96"><span class="toc-number">9.3.</span> <span class="toc-text">8.2 文件的读取</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-3-%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E5%85%A5"><span class="toc-number">9.4.</span> <span class="toc-text">8.3 文件的写入</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-4-%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%BD%E5%8A%A0"><span class="toc-number">9.5.</span> <span class="toc-text">8.4 文件的追加</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-5-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B"><span class="toc-number">9.6.</span> <span class="toc-text">8.5 文件操作综合案例</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%9D%E3%80%81python%E5%BC%82%E5%B8%B8%E3%80%81%E6%A8%A1%E5%9D%97%E4%B8%8E%E5%8C%85"><span class="toc-number">10.</span> <span class="toc-text">九、python异常、模块与包</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#9-1-%E4%BA%86%E8%A7%A3%E5%BC%82%E5%B8%B8"><span class="toc-number">10.1.</span> <span class="toc-text">9.1 了解异常</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-2-%E5%BC%82%E5%B8%B8%E7%9A%84%E6%8D%95%E8%8E%B7%E6%96%B9%E6%B3%95"><span class="toc-number">10.2.</span> <span class="toc-text">9.2 异常的捕获方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-3-%E5%BC%82%E5%B8%B8%E7%9A%84%E4%BC%A0%E9%80%92"><span class="toc-number">10.3.</span> <span class="toc-text">9.3 异常的传递</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-4-Python%E6%A8%A1%E5%9D%97"><span class="toc-number">10.4.</span> <span class="toc-text">9.4 Python模块</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-5-Python%E5%8C%85"><span class="toc-number">10.5.</span> <span class="toc-text">9.5 Python包</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-6-%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9Python%E5%8C%85"><span class="toc-number">10.6.</span> <span class="toc-text">9.6 安装第三方Python包</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">11.</span> <span class="toc-text">十、数据可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#10-1-json%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F"><span class="toc-number">11.1.</span> <span class="toc-text">10.1 json数据格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-2-pyecharts%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D"><span class="toc-number">11.2.</span> <span class="toc-text">10.2 pyecharts模块介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-3-%E6%8A%98%E7%BA%BF%E5%9B%BE%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">11.3.</span> <span class="toc-text">10.3 折线图可视化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-4-%E5%9C%B0%E5%9B%BE%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">11.4.</span> <span class="toc-text">10.4  地图可视化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-5-%E5%8A%A8%E6%80%81%E5%B1%95%E7%A4%BA%E6%9F%B1%E7%8A%B6%E5%9B%BE"><span class="toc-number">11.5.</span> <span class="toc-text">10.5 动态展示柱状图</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">12.</span> <span class="toc-text">十一、面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#11-1-%E5%88%9D%E8%AF%86%E5%AF%B9%E8%B1%A1"><span class="toc-number">12.1.</span> <span class="toc-text">11.1 初识对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-2-%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95"><span class="toc-number">12.2.</span> <span class="toc-text">11.2 成员方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-3-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1"><span class="toc-number">12.3.</span> <span class="toc-text">11.3 类和对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-4-%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-number">12.4.</span> <span class="toc-text">11.4 构造方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-5-%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E7%9A%84%E7%B1%BB%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95"><span class="toc-number">12.5.</span> <span class="toc-text">11.5 几种常用的类内置方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-6-%E5%B0%81%E8%A3%85"><span class="toc-number">12.6.</span> <span class="toc-text">11.6 封装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-7-%E7%BB%A7%E6%89%BF"><span class="toc-number">12.7.</span> <span class="toc-text">11.7 继承</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-8-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3"><span class="toc-number">12.8.</span> <span class="toc-text">11.8 类型注解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-9-%E5%A4%9A%E6%80%81"><span class="toc-number">12.9.</span> <span class="toc-text">11.9 多态</span></a></li></ol></li></ol>
-      </li>
-    </ul>
-  </div>
-
-
-
-    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
-      <div class="mdui-tab" mdui-tab>
-        
-          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
-        
-          <a href="#comment-tab1" class="mdui-ripple">livere</a>
-        
-      </div>
-      
-        <div id="comment-tab0" class="mdui-p-a-2">
-          <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
-<script>
-  var gitalk = new Gitalk({
-    clientID: '',
-    clientSecret: '',
-    repo: '',
-    owner: '',
-    admin: [''],
-    id:  md5(location.pathname) ,
-    distractionFreeMode: 'true',
-  });
-  gitalk.render('gitalk-container');
-</script>
-        </div>
-      
-        <div id="comment-tab1" class="mdui-p-a-2">
-          <div id="lv-container" data-id="city" data-uid="">
-  <script type="text/javascript">
-    (function (d, s) {
-      var j, e = d.getElementsByTagName(s)[0];
-      if (typeof LivereTower === 'function') { return; }
-      j = d.createElement(s);
-      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-      j.async = true;
-      e.parentNode.insertBefore(j, e);
-    })(document, 'script');
-  </script>
-  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
-</div>
-        </div>
-      
-    </div>
-
-  </main>
-  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
-  <div class="mdui-container">
-    <div class="mdui-row">
-      
-        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
-      
-      <span>
-        &copy; 2015 - 2024 
-        
-          <span style="color:#d9333f" class="iconfont icon-heart"></span>
-        
-        ZhaWB
-      </span>
-    </div>
-    <div class="mdui-row">
-      
-        <div class="mdui-col-xs-6 mdui-text-right">
-          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
-        </div>
-        <div class="mdui-col-xs-6 mdui-text-left">
-          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
-        </div>
-      
-    </div>
-    <div class="mdui-row">
-      
-        <div class="mdui-col-xs-6 mdui-text-right">
-          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>总访客量 <span id="busuanzi_value_site_uv"></span></span>
-        </div>
-        <div class="mdui-col-xs-6 mdui-text-left">
-          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>总访问量 <span id="busuanzi_value_site_pv"></span></span>
-        </div>
-      
-    </div>
- </div>
-</footer>
-  
-  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
-  
-  
-
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({
-        startOnLoad: true,
-        theme: "default"
-    });</script>
-
 
 
 
     
-<script src="/js/mdui.min.v1.0.0.js"></script>
 
 
 
 
-<script src="/js/meadow.js"></script>
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2018-2024 LittleStoneMonkey
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
 
 </body>
-</html >
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
