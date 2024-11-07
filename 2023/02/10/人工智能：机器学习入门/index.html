@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>视频教程笔记：机器学习入门 | Road2Dasheng</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="视频教程笔记：机器学习入门 | Road2Dasheng">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Road2Dasheng">
+<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:site_name" content="Road2Dasheng">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="ZhaWB">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/road2Dasheng.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/little-stone-monkey.jpg"/>
+</a>
+<div class="author">
+    <span>ZhaWB</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="工具">
+            <i class="fold iconfont icon-right"></i>
+            工具
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;AI">
+            
+            AI
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="编程">
+            <i class="fold iconfont icon-right"></i>
+            编程
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;编程语言">
+            <i class="fold iconfont icon-right"></i>
+            编程语言
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;编程语言&lt;---&gt;C语言">
+            
+            C语言
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;编程语言&lt;---&gt;CPP">
+            
+            CPP
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;编程语言&lt;---&gt;Python">
+            
+            Python
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;操作系统">
+            <i class="fold iconfont icon-right"></i>
+            操作系统
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;操作系统&lt;---&gt;Linux">
+            
+            Linux
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;计算机原理">
+            
+            计算机原理
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="人工智能">
+            <i class="fold iconfont icon-right"></i>
+            人工智能
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="人工智能&lt;---&gt;机器学习">
+            
+            机器学习
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="人工智能&lt;---&gt;计算机视觉">
+            <i class="fold iconfont icon-right"></i>
+            计算机视觉
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="人工智能&lt;---&gt;计算机视觉&lt;---&gt;机器视觉">
+            
+            机器视觉
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="人工智能&lt;---&gt;算法">
+            
+            算法
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="机器人">
+            <i class="fold iconfont icon-right"></i>
+            机器人
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="机器人&lt;---&gt;机器人力控">
+            
+            机器人力控
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="机器人&lt;---&gt;机器人学">
+            
+            机器人学
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="机器人&lt;---&gt;应用">
+            <i class="fold iconfont icon-right"></i>
+            应用
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="机器人&lt;---&gt;应用&lt;---&gt;机器人编程">
+            
+            机器人编程
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="机器人&lt;---&gt;应用&lt;---&gt;机器人标定">
+            
+            机器人标定
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="机器人&lt;---&gt;应用&lt;---&gt;机器人仿真">
+            
+            机器人仿真
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="自动控制">
+            <i class="fold iconfont icon-right"></i>
+            自动控制
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="自动控制&lt;---&gt;理论">
+            
+            理论
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="力学">
+            <i class="fold iconfont icon-right"></i>
+            力学
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="力学&lt;---&gt;理论力学">
+            
+            理论力学
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="数学">
+            <i class="fold iconfont icon-right"></i>
+            数学
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="数学&lt;---&gt;微积分">
+            
+            微积分
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="其它">
+            <i class="fold iconfont icon-right"></i>
+            其它
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="其它&lt;---&gt;文件备份">
+            
+            文件备份
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="34">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://www.subingwen.cn/">爱编程的大丙</a></li>
+            
+            <li><a target="_blank" href="https://r2coding.com/#/">codesheep</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>关于我</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 "
+           href="/2024/11/07/%E7%BB%9F%E8%AE%A1/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="统计">统计</span>
+            <span class="post-date" title="2024-11-07 22:00:20">2024/11/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 人工智能 "
+           href="/2024/11/05/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E5%8F%91%E5%B1%95%E5%8F%B2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：一口气搞懂人工智能和神经网络">视频教程笔记：一口气搞懂人工智能和神经网络</span>
+            <span class="post-date" title="2024-11-05 00:00:00">2024/11/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 人工智能 算法 "
+           href="/2024/11/05/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：梯度下降">视频教程笔记：梯度下降</span>
+            <span class="post-date" title="2024-11-05 00:00:00">2024/11/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 人工智能 "
+           href="/2024/11/01/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E5%8D%81%E5%A0%82%E6%9E%81%E7%AE%80%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AF%BE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="书籍笔记：十堂极简人工智能课">书籍笔记：十堂极简人工智能课</span>
+            <span class="post-date" title="2024-11-01 00:00:00">2024/11/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 AI "
+           href="/2024/10/31/%E5%B7%A5%E5%85%B7%EF%BC%9AAI/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="AI 工具">AI 工具</span>
+            <span class="post-date" title="2024-10-31 00:00:00">2024/10/31</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 "
+           href="/2024/10/31/%E5%B7%A5%E5%85%B7%EF%BC%9A%E5%AF%BC%E8%88%AA%E7%BD%91%E7%AB%99/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="网站导航">网站导航</span>
+            <span class="post-date" title="2024-10-31 00:00:00">2024/10/31</span>
+        </a>
+        
+        
+        <a  class="全部文章 力学 理论力学 "
+           href="/2024/06/23/%E5%8A%9B%E5%AD%A6%EF%BC%9A%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：理论力学">视频教程笔记：理论力学</span>
+            <span class="post-date" title="2024-06-23 00:00:00">2024/06/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 编程语言 C语言 "
+           href="/2024/06/23/%E7%BC%96%E7%A8%8B%EF%BC%9AC%E8%AF%AD%E8%A8%80%E9%9D%9E%E5%B8%B8%E9%81%93/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="书籍笔记：C语言非常道">书籍笔记：C语言非常道</span>
+            <span class="post-date" title="2024-06-23 00:00:00">2024/06/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 机器人力控 "
+           href="/2024/06/20/%E6%9C%BA%E5%99%A8%E4%BA%BA%EF%BC%9A%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%8A%9B%E6%8E%A7%E5%88%B6%E7%BB%BC%E8%BF%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="论文笔记 - 机器人力控制综述">论文笔记 - 机器人力控制综述</span>
+            <span class="post-date" title="2024-06-20 00:00:00">2024/06/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 操作系统 Linux "
+           href="/2024/06/19/%E7%BC%96%E7%A8%8B%EF%BC%9ALinux/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="技术博客笔记：Linux">技术博客笔记：Linux</span>
+            <span class="post-date" title="2024-06-19 00:00:00">2024/06/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 机器人学 "
+           href="/2024/06/18/%E6%9C%BA%E5%99%A8%E4%BA%BA%EF%BC%9A%E5%BB%BA%E6%A8%A1%E3%80%81%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%A7%86%E8%A7%89/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：机器人学 - 建模、控制与视觉">视频教程笔记：机器人学 - 建模、控制与视觉</span>
+            <span class="post-date" title="2024-06-18 00:00:00">2024/06/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 应用 机器人标定 "
+           href="/2024/06/18/%E6%9C%BA%E5%99%A8%E4%BA%BA%EF%BC%9A%E6%A0%87%E5%AE%9A/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="机器人标定">机器人标定</span>
+            <span class="post-date" title="2024-06-18 00:00:00">2024/06/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 计算机原理 "
+           href="/2024/05/23/%E7%BC%96%E7%A8%8B%EF%BC%9A%E7%A9%BF%E8%B6%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E8%BF%B7%E9%9B%BE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="书籍：穿越计算机的迷雾">书籍：穿越计算机的迷雾</span>
+            <span class="post-date" title="2024-05-23 00:00:00">2024/05/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 编程语言 C语言 "
+           href="/2024/05/21/%E7%BC%96%E7%A8%8B%EF%BC%9AC%E8%AF%AD%E8%A8%80/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="技术博客笔记：C">技术博客笔记：C</span>
+            <span class="post-date" title="2024-05-21 00:00:00">2024/05/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 应用 机器人编程 "
+           href="/2024/05/08/%E6%9C%BA%E5%99%A8%E4%BA%BA%EF%BC%9A%E7%BC%96%E7%A8%8B/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="机器人编程">机器人编程</span>
+            <span class="post-date" title="2024-05-08 00:00:00">2024/05/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 人工智能 计算机视觉 机器视觉 "
+           href="/2024/04/27/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：机器视觉">视频教程笔记：机器视觉</span>
+            <span class="post-date" title="2024-04-27 00:00:00">2024/04/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 人工智能 计算机视觉 "
+           href="/2024/04/26/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：计算机视觉">视频教程笔记：计算机视觉</span>
+            <span class="post-date" title="2024-04-26 00:00:00">2024/04/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 机器人 应用 机器人仿真 "
+           href="/2024/04/08/%E6%9C%BA%E5%99%A8%E4%BA%BA%EF%BC%9A%E4%BB%BF%E7%9C%9F/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="机器人仿真">机器人仿真</span>
+            <span class="post-date" title="2024-04-08 00:00:00">2024/04/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 数学 微积分 "
+           href="/2024/03/20/%E6%95%B0%E5%AD%A6%EF%BC%9A%E5%BE%AE%E7%A7%AF%E5%88%86/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：微积分">视频教程笔记：微积分</span>
+            <span class="post-date" title="2024-03-20 00:00:00">2024/03/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 自动控制 理论 "
+           href="/2024/03/10/%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%EF%BC%9A%E6%8E%A7%E5%88%B6%E4%B9%8B%E7%BE%8E%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="书籍笔记：控制之美">书籍笔记：控制之美</span>
+            <span class="post-date" title="2024-03-10 00:00:00">2024/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 人工智能 机器学习 "
+           href="/2024/01/19/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：机器学习算法">视频教程笔记：机器学习算法</span>
+            <span class="post-date" title="2024-01-19 00:00:00">2024/01/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 编程语言 CPP "
+           href="/2024/01/19/%E7%BC%96%E7%A8%8B%EF%BC%9AQt/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：Qt">视频教程笔记：Qt</span>
+            <span class="post-date" title="2024-01-19 00:00:00">2024/01/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 人工智能 机器学习 "
+           href="/2024/01/01/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%8F%91%E5%B1%95%E5%8F%B2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：机器学习发展史">视频教程笔记：机器学习发展史</span>
+            <span class="post-date" title="2024-01-01 00:00:00">2024/01/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 编程语言 C语言 "
+           href="/2023/03/24/%E7%BC%96%E7%A8%8B%EF%BC%9AC%E8%AF%AD%E8%A8%80%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：C语言入门">视频教程笔记：C语言入门</span>
+            <span class="post-date" title="2023-03-24 00:00:00">2023/03/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 编程语言 CPP "
+           href="/2023/03/24/%E7%BC%96%E7%A8%8B%EF%BC%9AC++%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：C++">视频教程笔记：C++</span>
+            <span class="post-date" title="2023-03-24 00:00:00">2023/03/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 编程语言 Python "
+           href="/2023/03/10/%E7%BC%96%E7%A8%8B%EF%BC%9APyhton%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：Python入门">视频教程笔记：Python入门</span>
+            <span class="post-date" title="2023-03-10 00:00:00">2023/03/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 人工智能 机器学习 "
+           href="/2023/02/10/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：机器学习入门">视频教程笔记：机器学习入门</span>
+            <span class="post-date" title="2023-02-10 00:00:00">2023/02/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 操作系统 Linux "
+           href="/2023/01/30/%E7%BC%96%E7%A8%8B%EF%BC%9ALinux%E5%85%A5%E9%97%A8/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：Linux入门">视频教程笔记：Linux入门</span>
+            <span class="post-date" title="2023-01-30 00:00:00">2023/01/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 其它 文件备份 "
+           href="/2023/01/24/%E5%85%B6%E5%AE%83%EF%BC%9A%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD%E4%BB%93%E5%BA%93/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="搭建手机文件免费备份仓库">搭建手机文件免费备份仓库</span>
+            <span class="post-date" title="2023-01-24 00:00:00">2023/01/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 其它 文件备份 "
+           href="/2023/01/22/%E5%85%B6%E5%AE%83%EF%BC%9A%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BA%91%E7%AB%AF%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="搭建属于自己的免费云端存储空间">搭建属于自己的免费云端存储空间</span>
+            <span class="post-date" title="2023-01-22 00:00:00">2023/01/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 其它 "
+           href="/2023/01/15/%E7%BC%96%E7%A8%8B%EF%BC%9AGitHub%E7%9A%84%E4%BD%BF%E7%94%A8/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：Github">视频教程笔记：Github</span>
+            <span class="post-date" title="2023-01-15 00:00:00">2023/01/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 其它 "
+           href="/2023/01/15/%E7%BC%96%E7%A8%8B%EF%BC%9AGit%E7%9A%84%E4%BD%BF%E7%94%A8/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：Git">视频教程笔记：Git</span>
+            <span class="post-date" title="2023-01-15 00:00:00">2023/01/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 人工智能 机器学习 "
+           href="/2023/01/02/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频教程笔记：机器学习概述">视频教程笔记：机器学习概述</span>
+            <span class="post-date" title="2023-01-02 00:00:00">2023/01/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2017/07/03/about/"
+           data-tag="关于我"
+           data-author="" >
+            <span class="post-title" title="关于我">关于我</span>
+            <span class="post-date" title="2017-07-03 11:51:24">2017/07/03</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-人工智能：机器学习入门" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">视频教程笔记：机器学习入门</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="人工智能">人工智能</a> > 
+            
+            <a  data-rel="人工智能&lt;---&gt;机器学习">机器学习</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-11-07 17:16:05'>2023-02-10 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%86%E9%A2%91%E9%93%BE%E6%8E%A5"><span class="toc-text">视频链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%A6%82%E8%BF%B0"><span class="toc-text">一、概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD"><span class="toc-text">1.1 人工智能</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-1-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">1.1.1 人工智能应用场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-2-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%B0%8F%E6%A1%88%E4%BE%8B"><span class="toc-text">1.1.2 人工智能小案例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-3-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%8F%91%E5%B1%95%E5%BF%85%E5%A4%87%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="toc-text">1.1.3 人工智能发展必备三要素</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-4-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E3%80%81%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0"><span class="toc-text">1.1.4 人工智能、机器学习和深度学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-5-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B"><span class="toc-text">1.1.5 人工智能的发展历程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-6-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%BB%E8%A6%81%E5%88%86%E6%94%AF"><span class="toc-text">1.1.6 人工智能主要分支</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">1.2 机器学习工作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="toc-text">1.2.1 什么是机器学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">1.2.2 机器学习工作流程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-3-%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D"><span class="toc-text">1.2.3 数据集介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-4-%E6%95%B0%E6%8D%AE%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86"><span class="toc-text">1.2.4 数据基本处理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-5-%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B"><span class="toc-text">1.2.5 特征工程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-6-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="toc-text">1.2.6 机器学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-7-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0"><span class="toc-text">1.2.7 模型评估</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-8-%E6%8B%93%E5%B1%95%E9%98%85%E8%AF%BB"><span class="toc-text">1.2.8 拓展阅读</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95"><span class="toc-text">1.3 机器学习算法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-1-%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0"><span class="toc-text">1.3.1 监督学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-2-%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0"><span class="toc-text">1.3.2 无监督学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-3-%E5%8D%8A%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0"><span class="toc-text">1.3.3 半监督学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-4-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0"><span class="toc-text">1.3.4 强化学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-5-%E4%B8%8A%E8%BF%B0%E7%AE%97%E6%B3%95%E5%AF%B9%E6%AF%94"><span class="toc-text">1.3.5 上述算法对比</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-6-%E6%80%BB%E7%BB%93"><span class="toc-text">1.3.6 总结</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-7-%E6%8B%93%E5%B1%95%E9%98%85%E8%AF%BB"><span class="toc-text">1.3.7 拓展阅读</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0"><span class="toc-text">1.4 模型评估</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-1-%E4%BD%9C%E7%94%A8"><span class="toc-text">1.4.1 作用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-2-%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.4.2 类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-3-%E6%8B%9F%E5%90%88"><span class="toc-text">1.4.3 拟合</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AE%80%E4%BB%8B"><span class="toc-text">1.5 深度学习简介</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-1-%E5%AE%9A%E4%B9%89"><span class="toc-text">1.5.1 定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-2-%E8%B5%B7%E6%BA%90"><span class="toc-text">1.5.2 起源</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-3-%E6%BC%94%E7%A4%BA"><span class="toc-text">1.5.3 演示</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-4-%E5%90%84%E5%B1%82%E8%B4%9F%E8%B4%A3%E5%86%85%E5%AE%B9"><span class="toc-text">1.5.4 各层负责内容</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%AE%97%E6%B3%95"><span class="toc-text">二、算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-K-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95"><span class="toc-text">2.1 K-近邻算法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-1-%E5%AE%9A%E4%B9%89"><span class="toc-text">2.1.1 定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-2-%E8%B7%9D%E7%A6%BB%E5%85%AC%E5%BC%8F"><span class="toc-text">2.1.2 距离公式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-3-%E5%BA%94%E7%94%A8"><span class="toc-text">2.1.3 应用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%93%E5%B1%95%E9%98%85%E8%AF%BB"><span class="toc-text">拓展阅读</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B"><span class="toc-text">1_机器学习项目的完整流程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-%E6%8A%BD%E8%B1%A1%E6%88%90%E6%95%B0%E5%AD%A6%E9%97%AE%E9%A2%98"><span class="toc-text">1.1 抽象成数学问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-text">1.2 获取数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86%E4%B8%8E%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9"><span class="toc-text">1.3 特征预处理与特征选择</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%E4%B8%8E%E8%B0%83%E4%BC%98"><span class="toc-text">1.4 训练模型与调优</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-%E6%A8%A1%E5%9E%8B%E8%AF%8A%E6%96%AD"><span class="toc-text">1.5 模型诊断</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-6-%E6%A8%A1%E5%9E%8B%E8%9E%8D%E5%90%88"><span class="toc-text">1.6 模型融合</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-7-%E4%B8%8A%E7%BA%BF%E8%BF%90%E8%A1%8C"><span class="toc-text">1.7 上线运行</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-8-%E6%80%BB%E7%BB%93"><span class="toc-text">1.8 总结</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%8B%AC%E7%AB%8B%E5%90%8C%E5%88%86%E5%B8%83IID%EF%BC%88Independent-and-Identically-Distributed%EF%BC%89"><span class="toc-text">2_独立同分布IID（Independent and Identically Distributed）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-%E5%AE%9A%E4%B9%89"><span class="toc-text">2.1 定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-%E7%8B%AC%E7%AB%8B%E3%80%81%E5%90%8C%E5%88%86%E5%B8%83%E5%92%8C%E7%8B%AC%E7%AB%8B%E5%90%8C%E5%88%86%E5%B8%83%E7%9A%84%E7%AE%80%E5%8D%95%E8%A7%A3%E9%87%8A"><span class="toc-text">2.2 独立、同分布和独立同分布的简单解释</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%A2%86%E5%9F%9F%E7%9A%84%E9%87%8D%E8%A6%81%E5%81%87%E8%AE%BE"><span class="toc-text">2.3 机器学习领域的重要假设</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4-%E7%9B%AE%E5%89%8D%E5%8F%91%E5%B1%95"><span class="toc-text">2.4 目前发展</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-6 i,
+    .toc-level-6 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="视频链接"><a href="#视频链接" class="headerlink" title="视频链接"></a>视频链接</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1pf4y1y7kw/?spm_id_from=333.880.my_history.page.click&vd_source=ce97f8ebe1ffd37a2e287328d33d93b1">黑马程序员人工智能入门</a></li>
+</ul>
+<h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><h4 id="1-1-人工智能"><a href="#1-1-人工智能" class="headerlink" title="1.1 人工智能"></a>1.1 人工智能</h4><h5 id="1-1-1-人工智能应用场景"><a href="#1-1-1-人工智能应用场景" class="headerlink" title="1.1.1 人工智能应用场景"></a>1.1.1 人工智能应用场景</h5><p><img src="/img/04/04_01.png" alt="人工智能应用场景"></p>
+<h5 id="1-1-2-人工智能小案例"><a href="#1-1-2-人工智能小案例" class="headerlink" title="1.1.2 人工智能小案例"></a>1.1.2 人工智能小案例</h5><p><img src="/img/04/04_02.png" alt="人工智能小案例"></p>
+<h5 id="1-1-3-人工智能发展必备三要素"><a href="#1-1-3-人工智能发展必备三要素" class="headerlink" title="1.1.3 人工智能发展必备三要素"></a>1.1.3 人工智能发展必备三要素</h5><p><img src="/img/04/04_03.png" alt="人工智能发展必备三要素"></p>
+<blockquote>
+<ul>
+<li>算力之CPU、GPU对比：CPU主要适合IO密集型的任务; GPU主要适合计算密集型任务</li>
+<li>什么类型的程序适合在GPU上运行 <img src="/img/04/04_04.png" alt="什么类型的程序适合在GPU上运行"></li>
+<li><a target="_blank" rel="noopener" href="http://www.sohu.com/a/201309334_468740">CPU和GPU的区别</a></li>
+<li><a target="_blank" rel="noopener" href="https://buzzorange.com/techorange/2017/09/27/what-intel-google-nvidia-microsoft-do-for-ai-chips/">Google TPU介绍</a></li>
+</ul>
+</blockquote>
+<h5 id="1-1-4-人工智能、机器学习和深度学习"><a href="#1-1-4-人工智能、机器学习和深度学习" class="headerlink" title="1.1.4 人工智能、机器学习和深度学习"></a>1.1.4 人工智能、机器学习和深度学习</h5><p><img src="/img/04/04_05.png" alt="人工智能、机器学习和深度学习的关系"></p>
+<blockquote>
+<p>机器学习是人工智能的一个实现途径，深度学习是机器学习的一个方法发展而来的</p>
+</blockquote>
+<h5 id="1-1-5-人工智能的发展历程"><a href="#1-1-5-人工智能的发展历程" class="headerlink" title="1.1.5 人工智能的发展历程"></a>1.1.5 人工智能的发展历程</h5><blockquote>
+<ol>
+<li>起源<blockquote>
+<ul>
+<li>图灵测试<img src="/img/04/04_06.png" alt="图灵测试"></li>
+<li>达特茅斯会议 <img src="/img/04/04_07.png" alt="达特茅斯会议"></li>
+</ul>
+</blockquote>
+</li>
+<li>发展<blockquote>
+<ul>
+<li>学术界可谓仁者见仁、智者见智，我们将人工智能的发展历程划分为以下6个阶段：<img src="/img/04/04_08.png" alt="人工智能发展阶段"><img src="/img/04/04_09.png" alt="人工智能发展阶段"></li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</blockquote>
+<h5 id="1-1-6-人工智能主要分支"><a href="#1-1-6-人工智能主要分支" class="headerlink" title="1.1.6 人工智能主要分支"></a>1.1.6 人工智能主要分支</h5><blockquote>
+<p>通讯、感知与行动是现代人工智能的三个关键能力</p>
+<p>&#x3D;&#x3D;分支一：计算机视觉（CV）&#x3D;&#x3D;</p>
+<blockquote>
+<p>  计算机视觉(CV)是指机器感知环境的能力。这一技术类别中的经典任务有图像形成、图像处理、图像提取和图像的三维推理。物体检测和人脸识别是其比较成功的研究领域。<img src="/img/04/04_10.png" alt="分支一：计算机视觉"></p>
+</blockquote>
+<p>&#x3D;&#x3D;分支二：语音识别&#x3D;&#x3D;</p>
+<blockquote>
+<p> 语音识别是指识别语音(说出的语言)并将其转换成对应文本的技术。相反的任务(文本转语音&#x2F;TTS)也是这一领域内一个类似的研究主题。<img src="/img/04/04_11.png" alt="分支二：语音识别"><br> 语音识别领域仍然面临着声纹识别和「鸡尾酒会效应」等一些特殊情况的难题。<br> 现代语音识别系统严重依赖于云，在离线时可能就无法取得理想的工作效果。</p>
+</blockquote>
+<p>&#x3D;&#x3D;分支三：文本挖掘&#x2F;分类&#x3D;&#x3D;</p>
+<blockquote>
+<p>这里的文本挖掘主要是指文本分类，该技术可用于理解、组织和分类结构化或非结构化文文档。其涵盖的主要任务有句法分析、情绪分析和垃圾信息检测。<img src="/img/04/04_12.png" alt="分支三：文本挖掘/分类"><br>文本挖掘和分类领域的一个瓶颈出现在歧义和有偏差的数据上。</p>
+</blockquote>
+<p>&#x3D;&#x3D;分支四：机器翻译&#x3D;&#x3D;</p>
+<blockquote>
+<p>机器翻译(MT)是利用机器的力量自动将一种自然语言(源语言)的文本翻译成另一种语言(目标语言)。<img src="/img/04/04_13.png" alt="分支四：机器翻译"><br>在某些情况下，俚语和行话等内容的翻译会比较困难(受限词表问题)。<br>专业领域的机器翻译(比如医疗领域)表现通常不好。</p>
+</blockquote>
+<p>&#x3D;&#x3D;分支五：机器人&#x3D;&#x3D;</p>
+<blockquote>
+<p>机器人学(Robotics)研究的是机器人的设计、制造、运作和应用，以及控制它们的计算机系统、传感反馈和信息处理。<img src="/img/04/04_14.png" alt="分支五：机器人"></p>
+</blockquote>
+<p>&#x3D;&#x3D;总的来说，人工智能领域的研究前沿正逐渐从搜索、知识和推理领域转向机器学习、深度学习、计算机视觉和机器人领域。&#x3D;&#x3D;</p>
+</blockquote>
+<h4 id="1-2-机器学习工作流程"><a href="#1-2-机器学习工作流程" class="headerlink" title="1.2 机器学习工作流程"></a>1.2 机器学习工作流程</h4><h5 id="1-2-1-什么是机器学习"><a href="#1-2-1-什么是机器学习" class="headerlink" title="1.2.1 什么是机器学习"></a>1.2.1 什么是机器学习</h5><blockquote>
+<p>机器学习是指从数据中自动分析获得模型，并利用模型对未知数据进行预测。 <img src="/img/04/04_15.png" alt="机器学习"></p>
+</blockquote>
+<h5 id="1-2-2-机器学习工作流程"><a href="#1-2-2-机器学习工作流程" class="headerlink" title="1.2.2 机器学习工作流程"></a>1.2.2 机器学习工作流程</h5><blockquote>
+<p>获取数据 -&gt; 数据基本处理 -&gt; 特征工程 -&gt; 机器学习（模型训练）-&gt; 结果达到要求,上线服务 -&gt; 结果未达到要求，重复前述步骤  <img src="/img/04/04_16.png" alt="机器学习工作流程"></p>
+</blockquote>
+<h5 id="1-2-3-数据集介绍"><a href="#1-2-3-数据集介绍" class="headerlink" title="1.2.3 数据集介绍"></a>1.2.3 数据集介绍</h5><blockquote>
+<p>&#x3D;&#x3D;- 数据简介&#x3D;&#x3D;</p>
+<blockquote>
+<p>一行数据成为一个样本<br>一列数据成为一个特征<br>有些数据有目标值（标签值），有些数据没有目标值</p>
+</blockquote>
+<p>&#x3D;&#x3D;- 数据类型构成&#x3D;&#x3D;</p>
+<blockquote>
+<p>类型一：特征值 + 目标值（连续的或离散的）<br>类型二：只有特征值，没有目标值</p>
+</blockquote>
+<p>&#x3D;&#x3D;- 数据分割&#x3D;&#x3D;</p>
+<blockquote>
+<p>训练数据：用于训练，构建模型<br>测试数据：在模型检验时使用，用于评估模型是否有效<br>两种数据的划分比例：7:3 或 8:2 或 7.5:2.5</p>
+</blockquote>
+</blockquote>
+<h5 id="1-2-4-数据基本处理"><a href="#1-2-4-数据基本处理" class="headerlink" title="1.2.4 数据基本处理"></a>1.2.4 数据基本处理</h5><blockquote>
+<p>即对数据进行缺失值、去除异常值等处理</p>
+</blockquote>
+<h5 id="1-2-5-特征工程"><a href="#1-2-5-特征工程" class="headerlink" title="1.2.5 特征工程"></a>1.2.5 特征工程</h5><blockquote>
+<ul>
+<li><p>定义</p>
+<blockquote>
+<p>指使用专业背景知识和技巧处理数据，使得特征能在机器学习算法上发挥更好的作用的过程</p>
+</blockquote>
+</li>
+<li><p>作用</p>
+<blockquote>
+<p>机器学习领域的大神Andrew Ng(吴恩达)老师说“Coming up with features is difficult, time-consuming, requires expert knowledge. “Applied machine learning” is basically feature engineering. ”<br>&#x3D;&#x3D;业界广泛流传：数据和特征决定了机器学习的上限，而模型和算法只是逼近这个上限而已。&#x3D;&#x3D;</p>
+</blockquote>
+</li>
+<li><p>内涵</p>
+<blockquote>
+<p>&#x3D;&#x3D;– 特征提取&#x3D;&#x3D;</p>
+<blockquote>
+<p> 将任意数据（如文本或图像）转换为可用于机器学习的数字特征<img src="/img/04/04_17.png" alt="特征提取"><br> &#x3D;&#x3D;– 特征预处理&#x3D;&#x3D;<br>通过一些转换函数将特征数据转换成更加适合算法模型的特征数据过程<img src="/img/04/04_18.png" alt="特征预处理"><br>&#x3D;&#x3D;– 特征降维&#x3D;&#x3D;<br> 指在某些限定条件下，降低随机变量(特征)个数，得到一组“不相关”主变量的过程<img src="/img/04/04_19.png" alt="特征降维"></p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h5 id="1-2-6-机器学习"><a href="#1-2-6-机器学习" class="headerlink" title="1.2.6 机器学习"></a>1.2.6 机器学习</h5><blockquote>
+<p>选择合适的算法对模型进行训练（具体内容见[[#^edf363 | 机器学习算法]]）</p>
+</blockquote>
+<h5 id="1-2-7-模型评估"><a href="#1-2-7-模型评估" class="headerlink" title="1.2.7 模型评估"></a>1.2.7 模型评估</h5><blockquote>
+<p>对训练好的模型进行评估（具体内容见[[#^cbe98e| 模型评估]]）</p>
+</blockquote>
+<h5 id="1-2-8-拓展阅读"><a href="#1-2-8-拓展阅读" class="headerlink" title="1.2.8 拓展阅读"></a>1.2.8 拓展阅读</h5><p>[[#^bce1d5 | 机器学习项目的完整流程]]</p>
+<h4 id="1-3-机器学习算法"><a href="#1-3-机器学习算法" class="headerlink" title="1.3 机器学习算法"></a>1.3 机器学习算法</h4><p>^edf363</p>
+<h5 id="1-3-1-监督学习"><a href="#1-3-1-监督学习" class="headerlink" title="1.3.1 监督学习"></a>1.3.1 监督学习</h5><blockquote>
+<ul>
+<li><p>定义</p>
+<blockquote>
+<p>输入数据是由输入特征值和目标值所组成。<br>函数的输出值可以是一个连续的值(称为回归)；或是有限个离散值(称为分类)</p>
+</blockquote>
+</li>
+<li><p>回归问题</p>
+<blockquote>
+<p>如预测房价，根据样本集拟合出一条连续曲线 <img src="/img/04/04_20.png" alt="回归问题"></p>
+</blockquote>
+</li>
+<li><p>分类问题</p>
+<blockquote>
+<p>如根据肿瘤特征判断良性还是恶性，得到的结果是“良性”或者“恶性”，是离散的。<img src="/img/04/04_21.png" alt="分类问题"></p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h5 id="1-3-2-无监督学习"><a href="#1-3-2-无监督学习" class="headerlink" title="1.3.2 无监督学习"></a>1.3.2 无监督学习</h5><blockquote>
+<ul>
+<li>定义<blockquote>
+<p>输入数据是由输入特征值组成，没有目标值。<br>输入数据没有被标记，也没有确定的结果。样本数据类别未知。需要根据样本间的相似性对样本集进行类别划分。<img src="/img/04/04_22.png" alt="无监督学习"></p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h5 id="1-3-3-半监督学习"><a href="#1-3-3-半监督学习" class="headerlink" title="1.3.3 半监督学习"></a>1.3.3 半监督学习</h5><blockquote>
+<ul>
+<li>定义<br>训练集同时包含有标记样本数据和未标记样本数据。</li>
+</ul>
+</blockquote>
+<h5 id="1-3-4-强化学习"><a href="#1-3-4-强化学习" class="headerlink" title="1.3.4 强化学习"></a>1.3.4 强化学习</h5><blockquote>
+<ul>
+<li>定义<blockquote>
+<p>实质是make decisions 问题，即自动进行决策，并且可以做连续决策。<img src="/img/04/04_23.png" alt="强化学习"></p>
+</blockquote>
+</li>
+<li>&#x3D;&#x3D;强化学习的目标是获得最多的累计奖励&#x3D;&#x3D;</li>
+</ul>
+</blockquote>
+<h5 id="1-3-5-上述算法对比"><a href="#1-3-5-上述算法对比" class="headerlink" title="1.3.5 上述算法对比"></a>1.3.5 上述算法对比</h5><blockquote>
+<ul>
+<li>&#x3D;&#x3D;监督学习和无监督学习的对比&#x3D;&#x3D;<img src="/img/04/04_24.png" alt="监督学习和无监督学习的对比"></li>
+</ul>
+<p>-&#x3D;&#x3D;监督学习和半监督学习训练方式的对比&#x3D;&#x3D;</p>
+<blockquote>
+<p>–  监督学习的训练方式<img src="/img/04/04_25.png" alt="监督学习和半监督学习训练方式的对比"><br>– 半监督学习的训练方式 <img src="/img/04/04_26.png" alt="监督学习和半监督学习训练方式的对比"></p>
+</blockquote>
+<ul>
+<li>&#x3D;&#x3D;监督学习和强化学习的对比&#x3D;&#x3D;<img src="/img/04/04_27.png" alt="监督学习和强化学习的对比"></li>
+</ul>
+</blockquote>
+<h5 id="1-3-6-总结"><a href="#1-3-6-总结" class="headerlink" title="1.3.6 总结"></a>1.3.6 总结</h5><blockquote>
+<p>&#x3D;&#x3D;<img src="/img/04/04_29.png" alt="监督学习和强化学习的对比"></p>
+</blockquote>
+<h5 id="1-3-7-拓展阅读"><a href="#1-3-7-拓展阅读" class="headerlink" title="1.3.7 拓展阅读"></a>1.3.7 拓展阅读</h5><blockquote>
+<ul>
+<li>[[#^5ed916 | 独立同分布]]</li>
+<li><a target="_blank" rel="noopener" href="http://sports.sina.com.cn/chess/weiqi/2017-10-21/doc-ifymyyxw4023875.shtml">Alphago进化史 漫画告诉你Zero为什么这么牛</a></li>
+</ul>
+</blockquote>
+<h4 id="1-4-模型评估"><a href="#1-4-模型评估" class="headerlink" title="1.4 模型评估"></a>1.4 模型评估</h4><p>^cbe98e</p>
+<h5 id="1-4-1-作用"><a href="#1-4-1-作用" class="headerlink" title="1.4.1 作用"></a>1.4.1 作用</h5><blockquote>
+<p>模型评估是模型开发过程不可或缺的一部分。它有助于发现表达数据的最佳模型和所选模型将来工作的性能如何。</p>
+</blockquote>
+<h5 id="1-4-2-类型"><a href="#1-4-2-类型" class="headerlink" title="1.4.2 类型"></a>1.4.2 类型</h5><blockquote>
+<ul>
+<li><p>按照数据集的目标值不同，可以把模型评估分为分类模型评估和回归模型评估。</p>
+</li>
+<li><p>分类模型评估指标</p>
+<blockquote>
+<p>– <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1510724">准确率(Accuracy)、精确率(Precision)和召回率(Recall)</a></p>
+<ul>
+<li><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/matrix_space/article/details/50384518">F1-score</a></li>
+</ul>
+</li>
+<li><ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/33407505">AUC</a></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>回归模型评估</p>
+<blockquote>
+<p>– <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/143169742">均方根误差</a><br>– <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/143169742">相对平方误差</a><br>– <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/143169742">平均绝对误差 </a><br>– <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/143169742">相对绝对误差</a></p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h5 id="1-4-3-拟合"><a href="#1-4-3-拟合" class="headerlink" title="1.4.3 拟合"></a>1.4.3 拟合</h5><blockquote>
+<p>模型的表现效果大致可以分为两类：过拟合、欠拟合。<img src="/img/04/04_30.png" alt="拟合"></p>
+<ul>
+<li>欠拟合<img src="/img/04/04_31.png" alt="欠拟合"></li>
+<li>过拟合<img src="/img/04/04_32.png" alt="过拟合"></li>
+</ul>
+</blockquote>
+<h4 id="1-5-深度学习简介"><a href="#1-5-深度学习简介" class="headerlink" title="1.5 深度学习简介"></a>1.5 深度学习简介</h4><h5 id="1-5-1-定义"><a href="#1-5-1-定义" class="headerlink" title="1.5.1 定义"></a>1.5.1 定义</h5><blockquote>
+<ul>
+<li>深度学习（Deep Learning）（也称为深度结构学习[Deep Structured Learning]、层次学习[Hierarchical Learning]或者是深度机器学习 [Deep Machine Learning]）</li>
+<li>是一类算法集合</li>
+<li>是机器学习的一个分支</li>
+<li>&#x3D;&#x3D;深度学习方法近年来，在会话识别、图像识别和对象侦测等领域表现出了惊人的准确性。&#x3D;&#x3D;</li>
+<li>但是，“深度学习”这个词语很古老，它在1986年由Dechter在机器学习领域提出，然后在2000年有Aizenberg等人引入到人工神经网络中。而现在，由于Alex Krizhevsky在2012年使用卷积网络结构赢得了Image Net比赛之后受到大家的瞩目。</li>
+</ul>
+</blockquote>
+<h5 id="1-5-2-起源"><a href="#1-5-2-起源" class="headerlink" title="1.5.2 起源"></a>1.5.2 起源</h5><blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-hans/%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C">神经网络</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-hans/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C">卷积神经网络</a></li>
+</ul>
+</blockquote>
+<h5 id="1-5-3-演示"><a href="#1-5-3-演示" class="headerlink" title="1.5.3 演示"></a>1.5.3 演示</h5><blockquote>
+<p><a target="_blank" rel="noopener" href="http://playground.tensorflow.org/">深度学习演示</a></p>
+</blockquote>
+<h5 id="1-5-4-各层负责内容"><a href="#1-5-4-各层负责内容" class="headerlink" title="1.5.4 各层负责内容"></a>1.5.4 各层负责内容</h5><blockquote>
+<p>&#x3D;&#x3D;多层神经网络，在最初几层是识别简单内容，后面几层是识别一些复杂内容&#x3D;&#x3D;</p>
+<ul>
+<li>1层：负责识别颜色及简单纹理<img src="/img/04/04_33.png" alt="1层"></li>
+<li>2层：一些神经元可以识别更加细化的纹理，布纹，刻纹，叶纹等<img src="/img/04/04_34.png" alt="2层"></li>
+<li>3层：一些神经元负责感受黑夜里的黄色烛光，高光，萤火，鸡蛋黄色等<img src="/img/04/04_35.png" alt="3层"></li>
+<li>4层：一些神经元识别萌狗的脸，宠物形貌，圆柱体事物，七星瓢虫等的存在<img src="/img/04/04_36.png" alt="4层"></li>
+<li>5层：一些神经元负责识别花，黑眼圈动物，鸟，键盘，原型屋顶等<img src="/img/04/04_37.png" alt="5层"></li>
+</ul>
+</blockquote>
+<h3 id="二、算法"><a href="#二、算法" class="headerlink" title="二、算法"></a>二、算法</h3><h4 id="2-1-K-近邻算法"><a href="#2-1-K-近邻算法" class="headerlink" title="2.1 K-近邻算法"></a>2.1 K-近邻算法</h4><blockquote>
+<ul>
+<li>K Nearest Neighbor算法⼜叫KNN算法，这个算法是机器学习⾥⾯⼀个⽐较经典的算法，总体来说KNN算法是相对⽐较容易理解的算法<img src="/img/04/04_38.png" alt="KNN"></li>
+<li>&#x3D;&#x3D;根据你的“邻居”来推断出你的类别&#x3D;&#x3D;</li>
+</ul>
+</blockquote>
+<h5 id="2-1-1-定义"><a href="#2-1-1-定义" class="headerlink" title="2.1.1 定义"></a>2.1.1 定义</h5><blockquote>
+<ul>
+<li>如果⼀个样本在特征空间中的k个最相似(即特征空间中最邻近)的样本中的⼤多数属于某⼀个类别，则该样本也属于这个类别。&#x3D;&#x3D;KNN算法最早是由Cover和Hart提出的⼀种分类算法&#x3D;&#x3D;</li>
+</ul>
+</blockquote>
+<h5 id="2-1-2-距离公式"><a href="#2-1-2-距离公式" class="headerlink" title="2.1.2 距离公式"></a>2.1.2 距离公式</h5><blockquote>
+<ul>
+<li>基本性质<img src="/img/04/04_43.png" alt="距离公式的基本性质"></li>
+<li>常见的距离公式 <blockquote>
+<p>–  &#x3D;&#x3D;欧式距离(Euclidean Distance)&#x3D;&#x3D;<img src="/img/04/04_39.png" alt="欧式距离公式">	<br>– &#x3D;&#x3D;曼哈顿距离(Manhattan Distance)&#x3D;&#x3D;<img src="/img/04/04_44.png" alt="曼哈顿距离公式"><br>– &#x3D;&#x3D;切⽐雪夫距离(Chebyshev Distance)&#x3D;&#x3D;<br>国际象棋中，国王可以直⾏、横⾏、斜⾏，所以国王⾛⼀步可以移动到相邻8个⽅格中的任意⼀个。国王从格⼦(x1,y1) ⾛到格⼦(x2,y2)最少需要多少步？这个距离就叫切⽐雪夫距离<img src="/img/04/04_45.png" alt="切比雪夫距离公式"><br>– &#x3D;&#x3D;闵可夫斯基距离(Minkowski Distance)&#x3D;&#x3D;<img src="/img/04/04_46.png" alt="闵可夫斯基距离公式"><br>– &#x3D;&#x3D;上述距离公式的缺点&#x3D;&#x3D;&#x3D;&#x3D;<img src="/img/04/04_47.png" alt="闵可夫斯基距离公式的缺点"><br>– &#x3D;&#x3D;拓展阅读&#x3D;&#x3D;</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h5 id="2-1-3-应用"><a href="#2-1-3-应用" class="headerlink" title="2.1.3 应用"></a>2.1.3 应用</h5><blockquote>
+<ul>
+<li>电影类型分析<img src="/img/04/04_40.png" alt="电影类型分析"><img src="/img/04/04_41.png" alt="电影类型分析"></li>
+<li>&#x3D;&#x3D;算法流程总结&#x3D;&#x3D;<img src="/img/04/04_42.png" alt="KNN算法流程"></li>
+<li>API调用</li>
+</ul>
+</blockquote>
+<h3 id="拓展阅读"><a href="#拓展阅读" class="headerlink" title="拓展阅读"></a>拓展阅读</h3><h4 id="1-机器学习项目的完整流程"><a href="#1-机器学习项目的完整流程" class="headerlink" title="1_机器学习项目的完整流程"></a>1_机器学习项目的完整流程</h4><p>^bce1d5</p>
+<h5 id="1-1-抽象成数学问题"><a href="#1-1-抽象成数学问题" class="headerlink" title="1.1 抽象成数学问题"></a>1.1 抽象成数学问题</h5><blockquote>
+<p>明确问题是进行机器学习的第一步。机器学习的训练过程通常都是一件非常耗时的事情，胡乱尝试时间成本是非常高的。 这里的抽象成数学问题，指的明确我们可以获得什么样的数据，抽象出的问题，是一个分类还是回归或者是聚类的问题。</p>
+</blockquote>
+<h5 id="1-2-获取数据"><a href="#1-2-获取数据" class="headerlink" title="1.2 获取数据"></a>1.2 获取数据</h5><blockquote>
+<ul>
+<li>数据决定了机器学习结果的上限，而算法只是尽可能逼近这个上限。</li>
+<li>数据要有代表性，否则必然会过拟合。</li>
+<li>而且对于分类问题，数据偏斜不能过于严重，不同类别的数据数量不要有数量级的差距。</li>
+<li>而且还要对数据的量级有一个评估，多少个样本，多少个特征，可以估算出其对内存的消耗程度，判断训练过程中内存是否能够放得下。如果 放不下就得考虑改进算法或者使用一些降维的技巧了。如果数据量实在太大，那就要考虑分布式了。</li>
+</ul>
+</blockquote>
+<h5 id="1-3-特征预处理与特征选择"><a href="#1-3-特征预处理与特征选择" class="headerlink" title="1.3 特征预处理与特征选择"></a>1.3 特征预处理与特征选择</h5><blockquote>
+<ul>
+<li>良好的数据要能够提取出良好的特征才能真正发挥作用。</li>
+<li>特征预处理、数据清洗是很关键的步骤，往往能够使得算法的效果和性能得到显著提高。归一化、离散化、因子化、缺失值处理、去除共线性 等，数据挖掘过程中很多时间就花在它们上面。这些工作简单可复制，收益稳定可预期，是机器学习的基础必备步骤。</li>
+<li>筛选出显著特征、摒弃非显著特征，需要机器学习工程师反复理解业务。这对很多结果有决定性的影响。特征选择好了，非常简单的算法也能 得出良好、稳定的结果。这需要运用特征有效性分析的相关技术，如相关系数、卡方检验、平均互信息、条件熵、后验概率、逻辑回归权重等 方法。</li>
+</ul>
+</blockquote>
+<h5 id="1-4-训练模型与调优"><a href="#1-4-训练模型与调优" class="headerlink" title="1.4 训练模型与调优"></a>1.4 训练模型与调优</h5><blockquote>
+<p>直到这一步才能用到具体的算法进行训练。现在很多算法都能够封装成黑盒供人使用。但是真正考验水平的是调整这些算法的（超）参 数，使得结果变得更加优良。这需要我们对算法的原理有深入的理解。理解越深入，就越能发现问题的症结，提出良好的调优方案。</p>
+</blockquote>
+<h5 id="1-5-模型诊断"><a href="#1-5-模型诊断" class="headerlink" title="1.5 模型诊断"></a>1.5 模型诊断</h5><blockquote>
+<ul>
+<li>用于确定模型调优的方向与思路</li>
+<li>过拟合、欠拟合 判断是模型诊断中至关重要的一步。常见的方法如交叉验证，绘制学习曲线等。过拟合的基本调优思路是增加数据量，降低模 型复杂度。欠拟合的基本调优思路是提高特征数量和质量，增加模型复杂度。</li>
+<li>误差分析也是机器学习至关重要的步骤。通过观察误差样本全面分析产生误差的原因:是参数的问题还是算法选择的问题，是特征的问题还是数据本身的问题……</li>
+<li>诊断后的模型需要进行调优，调优后的新模型需要重新进行诊断，这是一个反复迭代不断逼近的过程，需要不断地尝试， 进而达到最优状态。</li>
+</ul>
+</blockquote>
+<h5 id="1-6-模型融合"><a href="#1-6-模型融合" class="headerlink" title="1.6 模型融合"></a>1.6 模型融合</h5><blockquote>
+<ul>
+<li>一般来说，模型融合后都能使得效果有一定提升。而且效果很好。</li>
+<li>工程上，主要提升算法准确度的方法是分别在模型的前端（特征清洗和预处理，不同的采样模式）与后端（模型融合）上下功夫。因为他们比较标准可复制，效果比较稳定。而直接调参的工作不会很多，毕竟大量数据训练起来太慢了，而且效果难以保证。</li>
+</ul>
+</blockquote>
+<h5 id="1-7-上线运行"><a href="#1-7-上线运行" class="headerlink" title="1.7 上线运行"></a>1.7 上线运行</h5><blockquote>
+<p>这一部分内容主要跟工程实现的相关性比较大。工程上是结果导向，模型在线上运行的效果直接决定模型的成败。 不单纯包括其准确程度、误差等情况，还包括其运行的速度(时间复杂度)、资源消耗程度（空间复杂度）、稳定性是否可接受。</p>
+</blockquote>
+<h5 id="1-8-总结"><a href="#1-8-总结" class="headerlink" title="1.8 总结"></a>1.8 总结</h5><blockquote>
+<p>&#x3D;&#x3D;这些工作流程主要是工程实践上总结出的一些经验。并不是每个项目都包含完整的一个流程。这里的部分只是一个指导性的说明，只有大家自 己多实践，多积累项目经验，才会有自己更深刻的认识。&#x3D;&#x3D;</p>
+</blockquote>
+<h4 id="2-独立同分布IID（Independent-and-Identically-Distributed）"><a href="#2-独立同分布IID（Independent-and-Identically-Distributed）" class="headerlink" title="2_独立同分布IID（Independent and Identically Distributed）"></a>2_独立同分布IID（Independent and Identically Distributed）</h4><p>^5ed916</p>
+<h5 id="2-1-定义"><a href="#2-1-定义" class="headerlink" title="2.1 定义"></a>2.1 定义</h5><blockquote>
+<p>在概率统计理论中，如果变量序列或者其他随机变量有相同的概率分布，并且互相独立，那么这些随机变量是独立同分布。 在西瓜书中解释是：输入空间中的所有样本服从一个隐含未知的分布，训练数据所有样本都是独立地从这个分布上采样而得。</p>
+</blockquote>
+<h5 id="2-2-独立、同分布和独立同分布的简单解释"><a href="#2-2-独立、同分布和独立同分布的简单解释" class="headerlink" title="2.2 独立、同分布和独立同分布的简单解释"></a>2.2 独立、同分布和独立同分布的简单解释</h5><blockquote>
+<p>&#x3D;&#x3D;<img src="/img/04/04_28.png" alt="监督学习和强化学习的对比"></p>
+</blockquote>
+<h5 id="2-3-机器学习领域的重要假设"><a href="#2-3-机器学习领域的重要假设" class="headerlink" title="2.3 机器学习领域的重要假设"></a>2.3 机器学习领域的重要假设</h5><blockquote>
+<p>&#x3D;&#x3D;IID独立同分布即假设训练数据和测试数据是满足相同分布的，它是通过训练数据获得的模型能够在测试集获得好的效果的一个基本保障。&#x3D;&#x3D;</p>
+</blockquote>
+<h5 id="2-4-目前发展"><a href="#2-4-目前发展" class="headerlink" title="2.4 目前发展"></a>2.4 目前发展</h5><blockquote>
+<ul>
+<li>机器学习并不总要求独立同分布，在不少问题中要求样本数据采样自同一个分布是因为希望用训练数据集得到的模型可以合理的用于测试数据集，使用独立同分布假设能够解释得通。</li>
+<li>目前一些机器学习内容已经不再囿于独立同分布假设下，一些问题会假设样本没有同分布。</li>
+</ul>
+</blockquote>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2018-2024 LittleStoneMonkey
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
