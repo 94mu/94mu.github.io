@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>《从零开始：机器学习的数学原理和算法实践》 | Road2Dasheng</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="《从零开始：机器学习的数学原理和算法实践》 | Road2Dasheng">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="书籍简介 豆瓣  &#x20;书籍笔记第一部分 Numpy篇&#x20;一、数据分析概述&#x20;1.1 数据分析简介 （1）数据科学是什么   （2）数据分析是什么    &#x20;二、Numpy基础&#x20;2.1 Numpy是什么 数据分析“三剑客”指的是NumPy、Pandas、Matplotlib 机器学习算法中用到的大量数组及矩阵运算，也需要借助NumPy来实现。可以这样说，&amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《从0到1：Python数据分析》">
+<meta property="og:url" content="http://example.com/2024/12/10/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E4%BB%8E0%E5%88%B01%EF%BC%9APython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="Road2Dasheng">
+<meta property="og:description" content="书籍简介 豆瓣  &#x20;书籍笔记第一部分 Numpy篇&#x20;一、数据分析概述&#x20;1.1 数据分析简介 （1）数据科学是什么   （2）数据分析是什么    &#x20;二、Numpy基础&#x20;2.1 Numpy是什么 数据分析“三剑客”指的是NumPy、Pandas、Matplotlib 机器学习算法中用到的大量数组及矩阵运算，也需要借助NumPy来实现。可以这样说，&amp;#">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6757adf9d0e0a243d4e0d35d.jpg">
+<meta property="article:published_time" content="2024-12-09T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-12-22T22:47:49.652Z">
+<meta property="article:author" content="ZhaWB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/6757adf9d0e0a243d4e0d35d.jpg">
+
+
+<link rel="icon" href="/img/road2Dasheng.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/little-stone-monkey.jpg"/>
+</a>
+<div class="author">
+    <span>ZhaWB</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="编程">
+            <i class="fold iconfont icon-right"></i>
+            编程
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;其他">
+            
+            其他
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Git">
+            <i class="fold iconfont icon-right"></i>
+            Git
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Git&lt;---&gt;书籍笔记">
+            
+            书籍笔记
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Python">
+            <i class="fold iconfont icon-right"></i>
+            Python
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Python&lt;---&gt;其他">
+            
+            其他
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Python&lt;---&gt;书籍笔记">
+            
+            书籍笔记
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="AI">
+            <i class="fold iconfont icon-right"></i>
+            AI
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="AI&lt;---&gt;机器学习">
+            <i class="fold iconfont icon-right"></i>
+            机器学习
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="AI&lt;---&gt;机器学习&lt;---&gt;书籍笔记">
+            
+            书籍笔记
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="9">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://www.subingwen.cn/">爱编程的大丙</a></li>
+            
+            <li><a target="_blank" href="https://r2coding.com/#/">codesheep</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 编程 Git 书籍笔记 "
+           href="/2024/12/20/%E7%BC%96%E7%A8%8B%EF%BC%9Agit_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_Git%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《Git从入门到精通》">《Git从入门到精通》</span>
+            <span class="post-date" title="2024-12-20 00:00:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 书籍笔记 "
+           href="/2024/12/10/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E4%BB%8E0%E5%88%B01%EF%BC%9APython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《从0到1：Python数据分析》">《从0到1：Python数据分析》</span>
+            <span class="post-date" title="2024-12-10 00:00:00">2024/12/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 书籍笔记 "
+           href="/2024/12/10/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E4%BB%8E0%E5%88%B01%EF%BC%9APython%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《从0到1：Python数据可视化》">《从0到1：Python数据可视化》</span>
+            <span class="post-date" title="2024-12-10 00:00:00">2024/12/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 书籍笔记 "
+           href="/2024/12/09/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_Python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B9%8Bmatplotlib%E7%B2%BE%E8%BF%9B/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《Python数据可视化之matplotlib精进》">《Python数据可视化之matplotlib精进》</span>
+            <span class="post-date" title="2024-12-09 00:00:00">2024/12/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 AI 机器学习 书籍笔记 "
+           href="/2024/12/03/AI%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%92%8C%E7%AE%97%E6%B3%95%E5%AE%9E%E8%B7%B5/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《从零开始：机器学习的数学原理和算法实践》">《从零开始：机器学习的数学原理和算法实践》</span>
+            <span class="post-date" title="2024-12-03 00:00:00">2024/12/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 其他 "
+           href="/2024/11/29/%E7%BC%96%E7%A8%8B%EF%BC%9A%E5%85%B6%E4%BB%96_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="正则表达式">正则表达式</span>
+            <span class="post-date" title="2024-11-29 00:00:00">2024/11/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 其他 "
+           href="/2024/11/29/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E5%85%B6%E4%BB%96_%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="学习资源">学习资源</span>
+            <span class="post-date" title="2024-11-29 00:00:00">2024/11/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 其他 "
+           href="/2024/11/29/%E7%BC%96%E7%A8%8B%EF%BC%9A%E5%85%B6%E4%BB%96_%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="文件编码">文件编码</span>
+            <span class="post-date" title="2024-11-29 00:00:00">2024/11/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 书籍笔记 "
+           href="/2024/11/29/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E7%9C%8B%E6%BC%AB%E7%94%BB%E5%AD%A6Python/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《看漫画学Python》">《看漫画学Python》</span>
+            <span class="post-date" title="2024-11-29 00:00:00">2024/11/29</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-AI：机器学习_书籍笔记_从零开始：机器学习的数学原理和算法实践" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">《从零开始：机器学习的数学原理和算法实践》</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="AI">AI</a> > 
+            
+            <a  data-rel="AI&lt;---&gt;机器学习">机器学习</a> > 
+            
+            <a  data-rel="AI&lt;---&gt;机器学习&lt;---&gt;书籍笔记">书籍笔记</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-12-23 06:29:01'>2024-12-03 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#x20-%E4%B9%A6%E7%B1%8D%E7%AE%80%E4%BB%8B"><span class="toc-text"> 书籍简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x20-%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0"><span class="toc-text"> 书籍笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-%E4%B8%80%E3%80%81%E8%A1%A5%E5%9F%BA%E7%A1%80%EF%BC%9A%E4%B8%8D%E6%80%95%E5%AD%A6%E4%B8%8D%E6%87%82%E5%BE%AE%E7%A7%AF%E5%88%86"><span class="toc-text"> 一、补基础：不怕学不懂微积分</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-1-1-%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%AF%BC%E6%95%B0%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="toc-text"> 1.1 深入理解导数的本质</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-1-2-%E7%90%86%E8%A7%A3%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E5%81%8F%E5%AF%BC"><span class="toc-text"> 1.2 理解多元函数偏导</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-1-3-%E7%90%86%E8%A7%A3%E5%BE%AE%E7%A7%AF%E5%88%86"><span class="toc-text"> 1.3 理解微积分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-1-4-%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F%E5%A4%AA%E9%87%8D%E8%A6%81%E4%BA%86"><span class="toc-text"> 1.4 泰勒公式太重要了</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-%E4%BA%8C%E3%80%81%E8%A1%A5%E5%9F%BA%E7%A1%80%EF%BC%9A%E4%B8%8D%E6%80%95%E5%AD%A6%E4%B8%8D%E6%87%82%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="toc-text"> 二、补基础：不怕学不懂线性代数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-2-1-%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3%E5%90%91%E9%87%8F"><span class="toc-text"> 2.1 直观理解向量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-2-2-%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3%E7%9F%A9%E9%98%B5"><span class="toc-text"> 2.2 直观理解矩阵</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-2-3-%E7%90%86%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E6%B1%82%E8%A7%A3%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="toc-text"> 2.3 理解线性方程组求解的本质</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4-%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="toc-text">2.4 彻底理解最小二乘法的本质</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-5-%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E5%8C%96"><span class="toc-text">2.5 直观理解相似矩阵对角化</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-%E4%B8%89%E3%80%81%E8%A1%A5%E5%9F%BA%E7%A1%80%EF%BC%9A%E4%B8%8D%E6%80%95%E5%AD%A6%E4%B8%8D%E6%87%82%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1"><span class="toc-text"> 三、补基础：不怕学不懂概率统计</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-3-1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%A6%82%E7%8E%87"><span class="toc-text"> 3.1 什么是概率</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-3-2-%E6%90%9E%E6%87%82%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B%E4%B8%8E%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86"><span class="toc-text"> 3.2 搞懂大数定律与中心极限定理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-3-3-%E7%90%86%E8%A7%A3%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E5%88%86%E5%B8%83"><span class="toc-text"> 3.3 理解概率统计中的重要分布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-3-4-%E7%90%86%E8%A7%A3%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%80%9D%E6%83%B3%E5%BE%88%E9%87%8D%E8%A6%81"><span class="toc-text"> 3.4 理解朴素贝叶斯思想很重要</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%85%A8%E6%99%AF%E5%9B%BE%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E5%9B%BE"><span class="toc-text">四、全景图：机器学习路线图</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-1-%E9%80%9A%E4%BF%97%E8%AE%B2%E8%A7%A3%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text"> 4.1 通俗讲解机器学习是什么</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-2-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%89%80%E9%9C%80%E7%8E%AF%E5%A2%83%E4%BB%8B%E7%BB%8D"><span class="toc-text"> 4.2 机器学习所需环境介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-3-%E8%B7%9F%E7%9D%80%E4%BE%8B%E5%AD%90%E7%86%9F%E6%82%89%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A8%E8%BF%87%E7%A8%8B"><span class="toc-text"> 4.3 跟着例子熟悉机器学习全过程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-4-%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E5%8C%85%E6%8B%AC%E4%BB%80%E4%B9%88"><span class="toc-text"> 4.4 准备数据包括什么</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-5-%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E7%AE%97%E6%B3%95"><span class="toc-text"> 4.5 如何选择算法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-6-%E8%B0%83%E5%8F%82%E4%BC%98%E5%8C%96%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86"><span class="toc-text"> 4.6 调参优化怎么处理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-7-%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="toc-text"> 4.7 如何进行性能评估</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4%EF%BC%9A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3PCA%E7%9A%84%E6%9D%A5%E9%BE%99%E5%8E%BB%E8%84%89"><span class="toc-text">五、数据降维：深入理解PCA的来龙去脉</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-1-PCA%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">5.1 PCA是什么</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-2-%E7%94%A8%E4%B8%80%E4%B8%AA%E4%BE%8B%E5%AD%90%E6%9D%A5%E7%90%86%E8%A7%A3PCA%E8%BF%87%E7%A8%8B%EF%BC%88%E8%AF%A6%E8%A7%81%E4%B9%A6%EF%BC%89"><span class="toc-text"> 5.2 用一个例子来理解PCA过程（详见书）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-3-%E5%A6%82%E4%BD%95%E5%AF%BB%E6%89%BE%E9%99%8D%E7%BB%B4%E7%9F%A9%E9%98%B5P%EF%BC%88%E8%AF%A6%E8%A7%81%E4%B9%A6%EF%BC%89"><span class="toc-text"> 5.3 如何寻找降维矩阵P（详见书）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-4-PCA%E9%99%8D%E7%BB%B4%E7%9A%84%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="toc-text"> 5.4 PCA降维的核心思想</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-5-%E9%9D%A2%E5%90%91%E9%9B%B6%E5%9F%BA%E7%A1%80%E8%AF%BB%E8%80%85%E8%AF%A6%E8%A7%A3PCA%E9%99%8D%E7%BB%B4%EF%BC%88%E8%AF%A6%E8%A7%81%E4%B9%A6%EF%BC%89"><span class="toc-text"> 5.5 面向零基础读者详解PCA降维（详见书）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-6-%E7%BC%96%E7%A8%8B%E5%AE%9E%E8%B7%B5%EF%BC%88%E8%AF%A6%E8%A7%81%E4%B9%A6%EF%BC%89"><span class="toc-text"> 5.6 编程实践（详见书）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-%E5%85%AD%E3%80%81%E5%87%B8%E4%BC%98%E5%8C%96%E6%A0%B8%E5%BF%83%E8%BF%87%E7%A8%8B%EF%BC%9A%E7%9C%9F%E6%AD%A3%E6%90%9E%E6%87%82%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E8%BF%87%E7%A8%8B"><span class="toc-text"> 六、凸优化核心过程：真正搞懂梯度下降过程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-6-1-%E9%80%9A%E4%BF%97%E8%AE%B2%E8%A7%A3%E5%87%B8%E5%87%BD%E6%95%B0"><span class="toc-text"> 6.1 通俗讲解凸函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-6-2-%E9%80%9A%E4%BF%97%E8%AE%B2%E8%A7%A3%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D"><span class="toc-text"> 6.2 通俗讲解梯度下降</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-6-3-%E7%BC%96%E7%A8%8B%E5%AE%9E%E8%B7%B5%EF%BC%88%E8%AF%A6%E8%A7%81%E4%B9%A6%EF%BC%89"><span class="toc-text"> 6.3 编程实践（详见书）</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-6 i,
+    .toc-level-6 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="x20-书籍简介"><a href="#x20-书籍简介" class="headerlink" title="&#x20;书籍简介"></a>&#x20;书籍简介</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://book.douban.com/subject/35687613/">豆瓣</a></li>
+</ul>
+<h3 id="x20-书籍笔记"><a href="#x20-书籍笔记" class="headerlink" title="&#x20;书籍笔记"></a>&#x20;书籍笔记</h3><h4 id="x20-一、补基础：不怕学不懂微积分"><a href="#x20-一、补基础：不怕学不懂微积分" class="headerlink" title="&#x20;一、补基础：不怕学不懂微积分"></a>&#x20;一、补基础：不怕学不懂微积分</h4><ul>
+<li><p>&#x3D;&#x3D;机器学习的核心是“使用算法解析数据并从中学习，然后对世界上的某件事情做出预测”&#x3D;&#x3D;</p>
+</li>
+<li><p>绝大多数机器学习算法在训练或者预测时会碰到最优化问题，而最优化问题的解决需要用到微积分中函数极值的求解知识，可以说&#x3D;&#x3D;微积分是机器学习数学大厦的基石&#x3D;&#x3D;</p>
+</li>
+<li><p>微积分包括核心概念和关键技术，其中&#x3D;&#x3D;核心概念是微分和积分，关键技术是微积分基本定理和泰勒定理&#x3D;&#x3D;</p>
+</li>
+<li><p>微积分的&#x3D;&#x3D;基本思想就是将其他复杂的函数或者方程变成一次函数或一次方程来研究&#x3D;&#x3D;。根据近似的精确度不同，微积分可以分为以下几种情况：</p>
+<p>-- ① 用&#x3D;&#x3D;常数项&#x3D;&#x3D;近似代替某个函数在某点附近的数值，这就是极限，误差是无穷小</p>
+<p>-- ② 用&#x3D;&#x3D;一次函数&#x3D;&#x3D;近似代替某个函数在某点附近的数值，这就是微分，误差为高阶无穷小</p>
+<p>-- ③ 用&#x3D;&#x3D;泰勒公式&#x3D;&#x3D;近似代替某个函数在某点附近的数值，误差比前两种情况都要小。从近似的精确度来看，泰勒公式的极限最低，但精确度是最高的。</p>
+</li>
+</ul>
+<h5 id="x20-1-1-深入理解导数的本质"><a href="#x20-1-1-深入理解导数的本质" class="headerlink" title="&#x20;1.1 深入理解导数的本质"></a>&#x20;1.1 深入理解导数的本质</h5><ul>
+<li>（1）哲学层面理解变化（&#x3D;&#x3D;飞矢不动&#x3D;&#x3D;）</li>
+<li>（2）生活中处处有函数（&#x3D;&#x3D;你是你吗&#x3D;&#x3D;）</li>
+<li>（3）从瞬时速度到导数（&#x3D;&#x3D;极限&#x3D;&#x3D;）</li>
+<li>（4）从近似运动来理解导数（&#x3D;&#x3D;寻找一个与变速运动最接近的匀速运动&#x3D;&#x3D;）</li>
+<li>（5）直观理解复合函数求导（&#x3D;&#x3D;加法法则、乘法法则、链式法则&#x3D;&#x3D;）</li>
+</ul>
+<h5 id="x20-1-2-理解多元函数偏导"><a href="#x20-1-2-理解多元函数偏导" class="headerlink" title="&#x20;1.2 理解多元函数偏导"></a>&#x20;1.2 理解多元函数偏导</h5><ul>
+<li><p>（1）多元函数偏导数是什么（&#x3D;&#x3D;保持其他变量固定而关注一个变量的微小变化带来的函数值变化情况&#x3D;&#x3D;）</p>
+</li>
+<li><p>（2）搞清楚梯度是什么</p>
+<p>-- &#x3D;&#x3D;梯度是导数对多元函数的推广，它是多元函数对各个自变量求偏导形成的向量&#x3D;&#x3D;</p>
+<p>-- &#x3D;&#x3D;梯度的本意是一个向量，&#x3D;&#x3D;表示某一函数在该点处的方向导数沿着该方向取得最大值，即函数在该点处沿着该方向（此梯度的方向）变化最快，变化率最大（该梯度的模）</p>
+</li>
+</ul>
+<h5 id="x20-1-3-理解微积分"><a href="#x20-1-3-理解微积分" class="headerlink" title="&#x20;1.3 理解微积分"></a>&#x20;1.3 理解微积分</h5><ul>
+<li>（1）直观理解积分（&#x3D;&#x3D;曲线下方的面积就是速度对时间的“积分”，它表示所有的微小量累加起来的结果&#x3D;&#x3D;）</li>
+<li>（2）直观理解微积分基本定理（&#x3D;&#x3D;如果函数&#x3D;&#x3D;&#x3D;&#x3D;<code>$f(x)$</code>&#x3D;&#x3D;&#x3D;&#x3D;在区间&#x3D;&#x3D;&#x3D;&#x3D;<code>$[a,b]$</code>&#x3D;&#x3D;&#x3D;&#x3D;上连续，并且存在原函数&#x3D;&#x3D;&#x3D;&#x3D;<code>$F(x)$</code>&#x3D;&#x3D;&#x3D;&#x3D;,则&#x3D;&#x3D;&#x3D;&#x3D;<code>$\int_&#123;a&#125;^&#123;b&#125;f(x)dx = F(a)-F(b)$</code>&#x3D;&#x3D;）</li>
+</ul>
+<h5 id="x20-1-4-泰勒公式太重要了"><a href="#x20-1-4-泰勒公式太重要了" class="headerlink" title="&#x20;1.4 泰勒公式太重要了"></a>&#x20;1.4 泰勒公式太重要了</h5><ul>
+<li><p>（1）泰勒公式是什么</p>
+<p>-- &#x3D;&#x3D;<code>$f(x) = \frac&#123;f(a)&#125;&#123;0!&#125; + \frac&#123;f&#39;(a)&#125;&#123;1!&#125;(x-a) + \frac&#123;f&#39;&#39;(a)&#125;&#123;2!&#125;(x-a)^2 + \cdots + \frac&#123;f^&#123;(n)&#125;(a)&#125;&#123;n!&#125;(x-a)^n + R_n(x)$</code>&#x3D;&#x3D;</p>
+<p>-- 微分的“巅峰”和精华所在</p>
+<p>-- 主要作用是对特别复杂的函数进行简化，&#x3D;&#x3D;具体来说就是通过近似函数来代替原函数，通过使用简单熟悉的多项式去代替复杂的原函数&#x3D;&#x3D;</p>
+</li>
+<li></li>
+<li><p>（2）泰勒公式的典型应用（&#x3D;&#x3D;已知&#x3D;&#x3D;&#x3D;&#x3D;<code>$\sqrt&#123;9&#125; = 3$</code>&#x3D;&#x3D;&#x3D;&#x3D;，求解&#x3D;&#x3D;&#x3D;&#x3D;<code>$\sqrt&#123;10&#125;$</code>&#x3D;&#x3D;&#x3D;&#x3D;的值&#x3D;&#x3D;）</p>
+</li>
+<li><p>（3）直观理解泰勒公式的来龙去脉（&#x3D;&#x3D;对应相等&#x3D;&#x3D;）</p>
+</li>
+<li><p>（4）微积分基本定理与泰勒公式的关系（&#x3D;&#x3D;泰勒公式本质上是微积分基本定理的多次连用，两者本质上具有统一性&#x3D;&#x3D;）</p>
+</li>
+</ul>
+<hr>
+<h4 id="x20-二、补基础：不怕学不懂线性代数"><a href="#x20-二、补基础：不怕学不懂线性代数" class="headerlink" title="&#x20;二、补基础：不怕学不懂线性代数"></a>&#x20;二、补基础：不怕学不懂线性代数</h4><ul>
+<li><p>线性代数主要研究&#x3D;&#x3D;线性空间中对象的运动规律&#x3D;&#x3D;</p>
+<p>-- &#x3D;&#x3D;线性空间中的对象称为向量，&#x3D;&#x3D;通常是选定一组线性无关的基向量，通过基向量的线性组合来表示。</p>
+<p>-- 线性空间中的运动被称为线性变换，描述了线性空间中的对象也就是向量是如何运动的。&#x3D;&#x3D;这种线性变换是通过矩阵的形式来描述的&#x3D;&#x3D;</p>
+</li>
+<li></li>
+<li><p>线性空间中使得某个对象（向量）发生某种运动（线性变换）的方法，就是用描述对应运动的矩阵去乘以表示对应对象的向量</p>
+<p>-- 即确定了线性空间中的一组线性无关的基向量后，线性空间中的任一对象都可以用向量来刻画，对象的运动则由矩阵乘以向量来表达。</p>
+<p>-- &#x3D;&#x3D;而描述运动（线性变换）的矩阵自身又可以看作线性空间基向量被施加了同一线性变换，这使得一切变得和谐而统一&#x3D;&#x3D;</p>
+</li>
+</ul>
+<h5 id="x20-2-1-直观理解向量"><a href="#x20-2-1-直观理解向量" class="headerlink" title="&#x20;2.1 直观理解向量"></a>&#x20;2.1 直观理解向量</h5><ul>
+<li><p>向量在形式上表现为一系列有序数组，可以看作空间中具有方向和大小的一个箭头，&#x3D;&#x3D;而实际上向量可以表示任何符合向量规则的事务&#x3D;&#x3D;</p>
+<p>-- ① 运动的视角：向量实际上告诉我们如何从原点出发到达向量箭头的末端</p>
+<p>-- ② 数据表示的视角：虽然形式上只是一列数，但由于具有有序性，因此除了数值本身携带信息外，&#x3D;&#x3D;数值的序列位置仍然携带了部分信息，&#x3D;&#x3D;这就是向量如此有用的一个原因</p>
+<p>-- ③ 数学的视角：任何一个向量都可以用线性空间里面的一组基向量（基向量是线性无关的）的线性组合来表示</p>
+</li>
+<li><p>如果没有特别说明，一般说的向量都指&#x3D;&#x3D;列向量&#x3D;&#x3D;</p>
+<p>-- 因为矩阵乘积的习惯性写法是”先对象后操作“，即<code>$AX$</code>，所以要求向量<code>$X$</code>放置在矩阵<code>$A$</code>的右边;</p>
+<p>-- 由于矩阵<code>$A(m × n)$</code>一般具有<code>$n$</code>列，根据矩阵乘法规则要求向量<code>$x(n × 1)$</code>需具有<code>$n$</code>行，也就要求向量<code>$x$</code>是列向量</p>
+</li>
+<li><p>（1）理解向量&#x3D;&#x3D;加法与数乘&#x3D;&#x3D;（&#x3D;&#x3D;二者合称线性组合，是线性空间的基础&#x3D;&#x3D;）</p>
+</li>
+<li><p>（2）理解向量乘法的本质</p>
+<p>-- 如何理解&#x3D;&#x3D;向量内积&#x3D;&#x3D;（点积、数量积；代数定义、几何定义）</p>
+<p>-- 如何理解向量外积（叉积、向量积；代数定义、几何定义）</p>
+<p>（二维空间：向量外积的结果是&#x3D;&#x3D;标量&#x3D;&#x3D;，可以理解为向量a和向量b张成的平行四边形的&#x3D;&#x3D;面积或面积取负&#x3D;&#x3D;，取决于向量夹角是否大于180°）</p>
+<p>（三维空间：向量外积的结果是&#x3D;&#x3D;矢量&#x3D;&#x3D;，可以理解为向量a和向量b张成平面的&#x3D;&#x3D;法向量&#x3D;&#x3D;，&#x3D;&#x3D;向量外积顺序不同会导致法向量方向不同&#x3D;&#x3D;）</p>
+</li>
+<li><p>（3）理解基向量与线性无关</p>
+<p>-- ① 如何理解基向量（某个向量的坐标表示与空间中基向量的选取密切相关，&#x3D;&#x3D;不同基向量下的坐标表示是不同的&#x3D;&#x3D;）</p>
+</li>
+<li><p>-- ② 如何理解线性无关（&#x3D;&#x3D;每个向量都给张成的新空间做出了“贡献”，&#x3D;&#x3D;也就是“一个都不能少”，那么就说这些向量是线性无关的）</p>
+</li>
+</ul>
+<h5 id="x20-2-2-直观理解矩阵"><a href="#x20-2-2-直观理解矩阵" class="headerlink" title="&#x20;2.2 直观理解矩阵"></a>&#x20;2.2 直观理解矩阵</h5><ul>
+<li><p>（1） 理解矩阵运算规则</p>
+<p>-- ① 如何理解矩阵（方阵；&#x3D;&#x3D;对角矩阵&#x3D;&#x3D;(非主对角线元素全部为0的方阵)；&#x3D;&#x3D;单位矩阵&#x3D;&#x3D;(主对角线元素为1的对角矩阵)；&#x3D;&#x3D;对称矩阵&#x3D;&#x3D;(原始矩阵和它的转置矩阵相等的矩阵)）</p>
+<p>-- ② 理解矩阵加法与数乘（矩阵数乘是一类特殊的矩阵加法，它的结果就是将参与运算的标量数字分别与矩阵的各元素相乘，得到的结果作为新矩阵的各元素）</p>
+<p>-- ③ 理解矩阵乘法（两个矩阵相乘仅当第一个矩阵A的列数和另一个矩阵B 的行数相等时才能定义）</p>
+</li>
+<li><p>（2）理解矩阵向量乘法的本质（&#x3D;&#x3D;对于任意线性空间，只要选定一组线性无关的基向量就可以使用矩阵的形式来描述空间中的任意一个线性变换&#x3D;&#x3D;）</p>
+<p>-- ① 什么是线性变换</p>
+<p>（&#x3D;&#x3D;变换本质上就是函数&#x3D;&#x3D;，函数的特点是接收输入内容并输出对应结果，&#x3D;&#x3D;线性变换本质上也是一种函数，这种函数的特别之处在于：接收的是向量，输出的也是向量&#x3D;&#x3D;）</p>
+<p>（假设线性空间<code>$V$</code>中有一种变换<code>$L$</code>，使得对于线性空间<code>$V$</code>中任意两个元素<code>$x$</code>和<code>$y$</code>，以及任意实数<code>$a$</code>和<code>$b$</code>，&#x3D;&#x3D;总是有&#x3D;&#x3D;&#x3D;&#x3D;<code>$L(ax+by)=aL(x)+bL(y)$</code>&#x3D;&#x3D;&#x3D;&#x3D;，&#x3D;&#x3D;就称L为线性变换）</p>
+<p>（直观来讲，&#x3D;&#x3D;就是把空间想象成沿着各个坐标轴刻度画出网格线的空间，如果变换前后原点固定且网格线保持平行和等距分布，&#x3D;&#x3D;那么这种变换就是线性变换）</p>
+<p>-- ② 矩阵向量乘法描述了线性变换</p>
+<p>（矩阵向量乘法描述的是线性空间中的一种线性变换，原始向量在矩阵所对应的线性变换作用下空间位置甚至空间维度和形态都发生了改变，这就是&#x3D;&#x3D;矩阵的空间映射作用&#x3D;&#x3D;）</p>
+<p>（&#x3D;&#x3D;从数值表示来看，矩阵A与列向量x 的乘积Ax 就等于将原始列向量x 的默认基向量分别对应地变换为矩阵A 的各列，由矩阵A 的各列作为目标向量的新基向量&#x3D;&#x3D;）</p>
+<p>-- ③ 矩阵向量乘法实现空间映射</p>
+<p>（矩阵描述的是空间中的一种线性变换，&#x3D;&#x3D;矩阵向量乘法就是将这种线性变换施加于空间中的某个向量，这会使得向量位置甚至其所在空间的维度和形态都发生改变&#x3D;&#x3D;）</p>
+<p>（矩阵<code>$A$</code>与向量<code>$X$</code>的乘法<code>$AX$</code>的结果就是，&#x3D;&#x3D;将原始基向量变换为矩阵&#x3D;&#x3D;&#x3D;&#x3D;<code>$A$</code>&#x3D;&#x3D;&#x3D;&#x3D;的各列，用矩阵&#x3D;&#x3D;&#x3D;&#x3D;<code>$A$</code>&#x3D;&#x3D;&#x3D;&#x3D;的各列作为新的基向量，向量&#x3D;&#x3D;&#x3D;&#x3D;<code>$X$</code>&#x3D;&#x3D;&#x3D;&#x3D;的各元素分别作为对应的系数&#x3D;&#x3D;）</p>
+<p>（一个原始空间经过矩阵<code>$A$</code>的线性变换作用后得到的对应空间就是矩阵<code>$A$</code>的各列线性组合的集合，这个集合被称为矩阵<code>$A$</code>的&#x3D;&#x3D;列空间&#x3D;&#x3D;<code>$C(A)$</code>（详见书））</p>
+<p>（矩阵A与向量X相乘的性质（<code>$A$</code>中各列的线性相关情况是决定<code>$A$</code>是否具有空间压缩作用的关键因素。<code>$A$</code>各列张成的空间的维度称为<code>$A$</code> 的秩，它等于<code>$A$</code>线性无关列的个数）&#x3D;&#x3D;（详见书）&#x3D;&#x3D;）</p>
+</li>
+<li><p>（3）深刻理解矩阵乘法的本质（&#x3D;&#x3D;矩阵本质上是空间中的某种线性变换，所以矩阵与矩阵相乘可以看作线性变换的复合作用，最后可以用一个新矩阵来表示这种复合线性变换的结果&#x3D;&#x3D;）</p>
+</li>
+</ul>
+<h5 id="x20-2-3-理解线性方程组求解的本质"><a href="#x20-2-3-理解线性方程组求解的本质" class="headerlink" title="&#x20;2.3 理解线性方程组求解的本质"></a>&#x20;2.3 理解线性方程组求解的本质</h5><ul>
+<li><p><code>$Ax = b$</code>（-&#x3D;&#x3D;方程组的解是否存在？如果存在，解的形态是什么样的？&#x3D;&#x3D;）</p>
+</li>
+<li><p>（1）直观理解方程组的解（原始空间、列空间和待解空间（详见书））</p>
+<p>-- ① 一定存在解的情况（<code>$r = m$</code>，&#x3D;&#x3D;即列满秩&#x3D;&#x3D;：<code>$m$</code>维待解空间中的任意向量都在<code>$r$</code>维的列空间<code>$C(A)$</code>中）</p>
+<p>-- ② 一定不存在解的情况（不存在这种情况）</p>
+<p>-- ③ 一定存在唯一解的情况（<code>$r = m = n$</code>）</p>
+<p>-- ④ 一定存在无穷多个解的情况（<code>$r = m &lt; n$</code>）</p>
+<p>-- ⑤ 如何判断方程组解的情况（先判断是否有解（&#x3D;&#x3D;向量b是否在矩阵A的列空间上&#x3D;&#x3D;），再判断是否有唯一解（&#x3D;&#x3D;原始空间是否在矩阵A的线性变换作用下发生压缩&#x3D;&#x3D;））</p>
+</li>
+<li><p>（2）如何寻找解的表达式（详见书）</p>
+</li>
+<li><p>（3）深刻理解逆矩阵的本质</p>
+<p>-- ① 什么是逆矩阵（&#x3D;&#x3D;因为矩阵描述了一种线性变换，自然地逆矩阵就表示这种线性变换的逆操作&#x3D;&#x3D;）</p>
+<p>-- ② 只有满秩方阵才有逆矩阵（&#x3D;&#x3D;不发生空间压缩&#x3D;&#x3D;；&#x3D;&#x3D;行列式不为零&#x3D;&#x3D;；&#x3D;&#x3D;行列式表示方阵A线性变换后的线性空间的“单位面积”或“单位体积”&#x3D;&#x3D;）</p>
+</li>
+<li><p>（4）直观理解行列式的本质</p>
+<p>-- ① 直观理解行列式是什么（&#x3D;&#x3D;线性变换所带来的变化率（详见书）&#x3D;&#x3D;）</p>
+<p>-- ② 通俗讲解行列式的本质（详见书）</p>
+</li>
+</ul>
+<h5 id="2-4-彻底理解最小二乘法的本质"><a href="#2-4-彻底理解最小二乘法的本质" class="headerlink" title="2.4 彻底理解最小二乘法的本质"></a>2.4 彻底理解最小二乘法的本质</h5><ul>
+<li><p>如果线性方程组有解，可以按照相关方法和步骤进行求解；可如果线性方程组无解呢？（求近似解）</p>
+</li>
+<li><p>（1）如何求解无解的方程组</p>
+<p>-- ① 分析线性方程组解的情况</p>
+<p>-- ② 寻找合理近似解（&#x3D;&#x3D;详见书&#x3D;&#x3D;）</p>
+<p>-- ③ 求方程组近似解的思路和步骤（&#x3D;&#x3D;详见书&#x3D;&#x3D;）</p>
+<p>&#x3D;&#x3D;（&#x3D;&#x3D;<code>$\hat&#123;x&#125; = (A^&#123;T&#125;A)^&#123;-1&#125; A^&#123;T&#125;b$</code>; <code>$p = A(A^&#123;T&#125;A)^&#123;-1&#125;A^&#123;T&#125;b$</code>; <code>$P = A(A^&#123;T&#125;A)^&#123;-1&#125;A^&#123;T&#125;$</code>&#x3D;&#x3D;）&#x3D;&#x3D;</p>
+<p>（&#x3D;&#x3D;矩阵&#x3D;&#x3D;&#x3D;&#x3D;<code>$A$</code>&#x3D;&#x3D;&#x3D;&#x3D;并不是一个随意的方程组的系数矩阵，而是列空间&#x3D;&#x3D;&#x3D;&#x3D;<code>$C(A)$</code>&#x3D;&#x3D;&#x3D;&#x3D;中所有基向量组成的矩阵&#x3D;&#x3D;）</p>
+</li>
+<li><p>（2）论证n维子空间上的情况（详见书）</p>
+</li>
+<li><p>（3）搞懂施密特正交化是什么（&#x3D;&#x3D;详见书&#x3D;&#x3D;）</p>
+<p>-- ① 标准正交向量的性质</p>
+<p>-- ② 施密特正交化方法</p>
+<p>（4）理解最小二乘法的本质（&#x3D;&#x3D;详见书&#x3D;&#x3D;）</p>
+</li>
+</ul>
+<h5 id="2-5-直观理解相似矩阵对角化"><a href="#2-5-直观理解相似矩阵对角化" class="headerlink" title="2.5 直观理解相似矩阵对角化"></a>2.5 直观理解相似矩阵对角化</h5><ul>
+<li><p>（1）相似矩阵是什么（&#x3D;&#x3D;相似矩阵实际上是指同一个线性变换的不同矩阵形式的描述&#x3D;&#x3D;）</p>
+<p>-- ① 相似矩阵的定义（设<code>$A、B$</code>都是<code>$n$</code>阶方阵，若存在可逆矩阵<code>$P$</code>，使<code>$A=P^&#123;-1&#125;BP$</code>，则称矩阵<code>$A、B$</code>是相似矩阵，记为<code>$A$</code>~<code>$B$</code>）</p>
+<p>-- ② 直观理解相似矩阵的本质 （&#x3D;&#x3D;详见书&#x3D;&#x3D;）</p>
+<p>-- ③ 理解相似矩阵有什么用（可以把一些矩阵转化为计算性能良好的对角矩阵）</p>
+<p>-- ④ 用于对角化的可逆矩阵P需要满足什么条件（&#x3D;&#x3D;可逆矩阵P的各列就是矩阵A的特征向量&#x3D;&#x3D;）</p>
+</li>
+<li><p>（2）如何理解特征值与特征向量</p>
+<p>-- &#x3D;&#x3D;矩阵的特征向量是矩阵理论的重要概念之一，有着广泛的应用&#x3D;&#x3D;</p>
+<p>-- &#x3D;&#x3D;一个线性变换通常可以由其特征值和特征向量完全描述，特征值和特征向量表达了一个线性变换的最重要的特征，需要重点掌握&#x3D;&#x3D;</p>
+<p>-- ① &#x3D;&#x3D;特征值和特征向量是什么&#x3D;&#x3D;（矩阵A在其维度空间内对向量v进行线性变换时，有些向量v只会发生数值大小变化（伸缩）而不会发生方向偏移，&#x3D;&#x3D;这些只发生数值大小变化的向量就是该矩阵的特征向量，对应向量数值大小变化的倍数就是特征值&#x3D;&#x3D;）</p>
+<p>-- ② &#x3D;&#x3D;求解特征值与特征向量&#x3D;&#x3D;（<code>$det(A-\lambda I) = 0$</code>）</p>
+<p>-- ③ &#x3D;&#x3D;不是所有矩阵都有特征向量&#x3D;&#x3D;（实数范围内）</p>
+<p>-- ④ &#x3D;&#x3D;什么样的矩阵才有特征向量&#x3D;&#x3D;（矩阵必须是方阵；<code>$det(A-\lambda I) = 0$</code>必须有解）</p>
+<p>-- ⑤ 直观理解特征基的性质（&#x3D;&#x3D;线性空间中的基向量恰好就是对角矩阵的特征向量，主对角线上的数值，就是对应特征向量的特征值&#x3D;&#x3D;）</p>
+</li>
+<li><p>（3）直观理解相似矩阵的对角化（详见书）</p>
+</li>
+</ul>
+<hr>
+<h4 id="x20-三、补基础：不怕学不懂概率统计"><a href="#x20-三、补基础：不怕学不懂概率统计" class="headerlink" title="&#x20;三、补基础：不怕学不懂概率统计"></a>&#x20;三、补基础：不怕学不懂概率统计</h4><h5 id="x20-3-1-什么是概率"><a href="#x20-3-1-什么是概率" class="headerlink" title="&#x20;3.1 什么是概率"></a>&#x20;3.1 什么是概率</h5><ul>
+<li>&#x3D;&#x3D;概率亦称“或然率”，它反映随机事件出现的可能性大小，在现实生活中有着极其普遍的应用。&#x3D;&#x3D;</li>
+<li>（1）最简单的概率的例子（抛硬币猜正反面）</li>
+<li>（2）概率论与数理统计的关系（&#x3D;&#x3D;概率论是数理统计的理论基础，数理统计是概率论的一种应用&#x3D;&#x3D;）</li>
+</ul>
+<h5 id="x20-3-2-搞懂大数定律与中心极限定理"><a href="#x20-3-2-搞懂大数定律与中心极限定理" class="headerlink" title="&#x20;3.2 搞懂大数定律与中心极限定理"></a>&#x20;3.2 搞懂大数定律与中心极限定理</h5><ul>
+<li><p>大数定律和中心极限定理可以说是&#x3D;&#x3D;概率论的核心&#x3D;&#x3D;</p>
+</li>
+<li><p>大数定律和中心极限定理有着非常紧密的联系，&#x3D;&#x3D;它们可以看作从不同的方面对相同的问题进行了阐述&#x3D;&#x3D;</p>
+</li>
+<li><p>由于它们的条件各不相同，因此由它们得到的结论的强弱程度也不一样。</p>
+</li>
+<li><p>（1）大数定律想表达什么</p>
+<p>-- ① 大数定律算得上整个数理统计的基石</p>
+<p>-- ② 大数定律告诉我们&#x3D;&#x3D;大量重复出现的随机事件中蕴含着某种必然的规律&#x3D;&#x3D;</p>
+<p>-- ③ 保持试验条件不变，多次地重复试验，&#x3D;&#x3D;随机事件出现的概率近似于它出现的频率&#x3D;&#x3D;</p>
+</li>
+<li><p>（2）中心极限定理想表达什么</p>
+<p>-- 大数定律告诉我们样本均值收敛到总体均值，但是&#x3D;&#x3D;样本均值具体是如何收敛到总体均值的则没有讲明&#x3D;&#x3D;</p>
+<p>-- 中心极限定理告诉我们，&#x3D;&#x3D;当样本量足够大时，样本均值的分布围绕总体均值呈现正态分布&#x3D;&#x3D;</p>
+</li>
+<li><p>（3）大数定律与中心极限定理的区别</p>
+<p>-- 当你联想到大数定律时，你脑海里想到的应该是&#x3D;&#x3D;一个样本和总体的均值关系&#x3D;&#x3D;；而当你联想到中心极限定理时，你脑海里想到的应该是&#x3D;&#x3D;多个样本均值的分布情况&#x3D;&#x3D;</p>
+</li>
+</ul>
+<h5 id="x20-3-3-理解概率统计中的重要分布"><a href="#x20-3-3-理解概率统计中的重要分布" class="headerlink" title="&#x20;3.3 理解概率统计中的重要分布"></a>&#x20;3.3 理解概率统计中的重要分布</h5><ul>
+<li><p>（1）真正搞懂正态分布</p>
+<p>-- ① 正态分布是什么</p>
+<p>-- ② 正态分布背后的原理是什么（中心极限定理）</p>
+</li>
+<li><p>（2）真正搞懂泊松分布</p>
+<p>-- ① 泊松分布是什么（如果某事件以固定频率λ随机且独立地发生，那么该事件在单位时间内出现的次数（个数）就可以看作服从泊松分布）</p>
+<p>-- ② 泊松分布背后的原理是什么（泊松分布可作为二项分布的极限而得到）</p>
+</li>
+</ul>
+<h5 id="x20-3-4-理解朴素贝叶斯思想很重要"><a href="#x20-3-4-理解朴素贝叶斯思想很重要" class="headerlink" title="&#x20;3.4 理解朴素贝叶斯思想很重要"></a>&#x20;3.4 理解朴素贝叶斯思想很重要</h5><ul>
+<li><p>朴素贝叶斯是经典的机器学习算法，也是基于概率论的分类算法。朴素贝叶斯原理简单，容易实现，多用于文本分类问题</p>
+</li>
+<li><p>朴素贝叶斯思想由“条件概率”这个概念发展而来，要理解朴素贝叶斯思想首先要理解条件概率</p>
+</li>
+<li><p>（1）如何理解条件概率（&#x3D;&#x3D;详见书&#x3D;&#x3D;</p>
+</li>
+<li><p>（2）如何理解贝叶斯公式（&#x3D;&#x3D;详见书&#x3D;&#x3D;）</p>
+</li>
+<li><p>（3）贝叶斯公式的应用</p>
+</li>
+<li><p>（4）最大似然估计</p>
+<p>-- ① 最大似然原理：</p>
+<p>&#x3D;&#x3D;（通俗但不严谨的表述&#x3D;&#x3D;：最大似然原理中的“最大似然”表示“最大概率看起来是这个样子”，所以最大似然原理的意思其实就是“最大概率看起来是这个样子，那我们认为真实情况就是这个样子”）</p>
+<p>&#x3D;&#x3D;（严谨表述&#x3D;&#x3D;：若一次试验有n个可能的结果，分别为A1, A2, …, An，现在做一次试验的结果为Ai，那么我们可以认为本次试验的结果事件Ai在这n个可能的结果中出现的概率最大。）</p>
+<p>-- ② 最大似然估计：</p>
+<p>（最大似然估计实际上就是利用最大似然原理完成一项任务：&#x3D;&#x3D;参数估计&#x3D;&#x3D;）</p>
+<p>（最大似然估计的目的是，利用已知样本结果，反推最有可能（最大概率）导致出现这样结果的参数值是多少。）</p>
+<p>（最大似然估计是一种统计方法，属于统计学的范畴。最大似然原理是一种基础原理，属于概率论的范畴。）</p>
+<p>（最大似然估计是建立在最大似然原理基础上的一种统计方法。它通过现实中已经给定的观察数据来倒推和评估模型参数，例如经过若干次试验并观察结果，构造试验结果概率的某个含参表达式，通过假定该概率值最大来求解参数值。）</p>
+</li>
+</ul>
+<hr>
+<h4 id="四、全景图：机器学习路线图"><a href="#四、全景图：机器学习路线图" class="headerlink" title="四、全景图：机器学习路线图"></a>四、全景图：机器学习路线图</h4><h5 id="x20-4-1-通俗讲解机器学习是什么"><a href="#x20-4-1-通俗讲解机器学习是什么" class="headerlink" title="&#x20;4.1 通俗讲解机器学习是什么"></a>&#x20;4.1 通俗讲解机器学习是什么</h5><ul>
+<li><p>&#x3D;&#x3D;风不定，人初静，明日落红应满径&#x3D;&#x3D;</p>
+</li>
+<li><p>（1）究竟什么是机器学习</p>
+<p>-- 对人类来说，经验以记忆（图片、声音或其他形式）形式存储在我们的大脑里面。&#x3D;&#x3D;对计算机来说，经验以数据形式存储在机器里面&#x3D;&#x3D;</p>
+<p>-- 机器学习，就是&#x3D;&#x3D;研究如何从数据产生模型，从而让人们利用模型来对未来进行预测&#x3D;&#x3D;</p>
+<p>-- A program can be said to learn from &#x3D;&#x3D;experience E&#x3D;&#x3D; with respect to some class of &#x3D;&#x3D;tasks T&#x3D;&#x3D; and &#x3D;&#x3D;performance measure P&#x3D;&#x3D;, if its performance at tasks in T, as measured by P, improveswith experience E.</p>
+<p>-- 机器学习有时候又被称为统计学习，&#x3D;&#x3D;它是计算机基于数据来构建概率统计模型并运用模型对数据进行分析和预测的学科&#x3D;&#x3D;</p>
+<p>-- 机器学习基于统计方法，以计算机为工具对数据进行分析和预测。之所以将其称为“统计学习”或“机器学习”，&#x3D;&#x3D;是因为具有“自我改进”的特征&#x3D;&#x3D;</p>
+<p>-- &#x3D;&#x3D;如果一个系统能够通过执行某个过程而改进它的性能&#x3D;&#x3D;，这就是学习。</p>
+<p>-- 机器学习过程：</p>
+<p><img src="https://pic.imgdb.cn/item/6759b84cd0e0a243d4e1dfc0.jpg" alt="机器学习过程"></p>
+</li>
+<li><p>（2）机器学习的分类</p>
+<p>-- ① 按照是否有监督，分为有监督学习和无监督学习</p>
+<p>-- 一个典型的有监督学习流程：</p>
+<p><img src="https://pic.imgdb.cn/item/6759f012d0e0a243d4e1e330.jpg" alt="一个典型的有监督学习流程"></p>
+<p>-- 有监督学习与无监督学习的任务、理解和典型算法</p>
+<p><img src="https://pic.imgdb.cn/item/6759f142d0e0a243d4e1e339.jpg"></p>
+<p>-- ② 按照预测值是连续还是离散，机器学习可以分为分类和回归</p>
+<p><img src="https://pic.imgdb.cn/item/6759f282d0e0a243d4e1e346.jpg"></p>
+</li>
+<li><p>&#x3D;&#x3D;相对无监督学习，有监督学习在工业界具有更大的影响力，我们日常所说的“机器学习”其实更多偏重于“有监督学习”&#x3D;&#x3D;</p>
+</li>
+</ul>
+<h5 id="x20-4-2-机器学习所需环境介绍"><a href="#x20-4-2-机器学习所需环境介绍" class="headerlink" title="&#x20;4.2 机器学习所需环境介绍"></a>&#x20;4.2 机器学习所需环境介绍</h5><h5 id="x20-4-3-跟着例子熟悉机器学习全过程"><a href="#x20-4-3-跟着例子熟悉机器学习全过程" class="headerlink" title="&#x20;4.3 跟着例子熟悉机器学习全过程"></a>&#x20;4.3 跟着例子熟悉机器学习全过程</h5><ul>
+<li><p>一个典型的机器学习模型构建过程</p>
+<p><img src="https://pic.imgdb.cn/item/6759f721d0e0a243d4e1e371.jpg"></p>
+</li>
+</ul>
+<h5 id="x20-4-4-准备数据包括什么"><a href="#x20-4-4-准备数据包括什么" class="headerlink" title="&#x20;4.4 准备数据包括什么"></a>&#x20;4.4 准备数据包括什么</h5><ul>
+<li><p>&#x3D;&#x3D;业界广泛流传着这样一句话：“数据决定了机器学习的上限，而算法只是尽可能逼近这个上限。”&#x3D;&#x3D;</p>
+</li>
+<li><p>（1）数据采集（应该思考&#x3D;&#x3D;预测任务究竟是什么&#x3D;&#x3D;？&#x3D;&#x3D;什么样的数据可能与预测任务密切相关呢&#x3D;&#x3D;？&#x3D;&#x3D;这些数据是否可以获取，获取的方式是什么&#x3D;&#x3D;？）</p>
+</li>
+<li><p>（2）数据清洗（&#x3D;&#x3D;数据采集之后，并不意味着数据就可以直接使用&#x3D;&#x3D;；常包括数据一致性检查，数据缺失值、错误值或无效值的纠正等）</p>
+</li>
+<li><p>（3）不均衡样本处理（&#x3D;&#x3D;很多情况下，数据的正负样本是不均衡的，而大多数算法模型又对正负样本比较敏感&#x3D;&#x3D;；下采样、上采样）</p>
+</li>
+<li><p>（4）数据类型转换（连续数据离散化、类别数据数值化）</p>
+<p>-- 模型究竟采用离散特征还是连续特征，是一个&#x3D;&#x3D;“海量离散特征+简单模型”&#x3D;&#x3D;与&#x3D;&#x3D;“少量连续特征+复杂模型”的权衡问题&#x3D;&#x3D;</p>
+<p>-- &#x3D;&#x3D;one-hot编码&#x3D;&#x3D;</p>
+</li>
+<li><p>（5）数据标准化（主要是为了&#x3D;&#x3D;消除不同指标量纲带来的影响，提高不同数据指标之间的可比性&#x3D;&#x3D;）</p>
+<p>-- ① 最大值-最小值(max-min)标准化（&#x3D;&#x3D;主要是将原始指标缩放到0～1&#x3D;&#x3D;）</p>
+<p>--（如果测试集数据或者预测数据中部分样本特征超过了训练集数据的最大值或最小值，会导致max 和min 发生变化，&#x3D;&#x3D;需要重新计算极值&#x3D;&#x3D;）</p>
+<p>-- ② z-score标准化（&#x3D;&#x3D;将数据转换为均值为0、标准差为1的正态分布&#x3D;&#x3D;）</p>
+</li>
+<li><p>（6）特征工程</p>
+<p>-- ① 特侦工程概述（技术与艺术的结合）</p>
+<p>（如果直接使用算法对所有数据维度进行学习，&#x3D;&#x3D;既增加了计算的复杂性，又增加了噪声的影响&#x3D;&#x3D;）</p>
+<p>（通过特征工程对数据进行预处理，&#x3D;&#x3D;能够降低算法模型受噪声干扰的程度，能够更好地找出发展趋势&#x3D;&#x3D;）</p>
+<p>（&#x3D;&#x3D;特征工程的目的是筛选出更好的特征，获取更好的训练数据&#x3D;&#x3D;。因为更好的特征意味着特征具有更强的灵活性，&#x3D;&#x3D;可以使用更简单的算法模型同时得到更优秀的训练结果&#x3D;&#x3D;）</p>
+<p>（特征工程可以分为&#x3D;&#x3D;特征构建&#x3D;&#x3D;、&#x3D;&#x3D;特征提取&#x3D;&#x3D;、&#x3D;&#x3D;特征选择&#x3D;&#x3D;3种方式）</p>
+<p>-- ② 特征选择（&#x3D;&#x3D;特征工程中使用最广泛的技术&#x3D;&#x3D;就是特征选择）</p>
+<p>（一方面是因为部分特征之间相关度较高导致&#x3D;&#x3D;特征冗余&#x3D;&#x3D;，从而容易造成计算资源浪费，需要进行特征选择来降低计算资源的浪费；）</p>
+<p>（另一方面是因为&#x3D;&#x3D;部分特征是噪声&#x3D;&#x3D;，会对预测结果产生负面影响，需要进行特征选择。）</p>
+<p>（&#x3D;&#x3D;“特征选择”&#x3D;&#x3D;是从原来的特征集合中&#x3D;&#x3D;剔除部分&#x3D;&#x3D;对预测结果无效甚至会产生负面影响的特征，从而提高预测模型的性能；</p>
+<p>（而&#x3D;&#x3D;“降维”&#x3D;&#x3D;是对原来的特征集合中的某些特征做计算组合，从而&#x3D;&#x3D;构建新的&#x3D;&#x3D;特征）</p>
+<p>（过滤法；包装法；嵌入法）</p>
+</li>
+</ul>
+<h5 id="x20-4-5-如何选择算法"><a href="#x20-4-5-如何选择算法" class="headerlink" title="&#x20;4.5 如何选择算法"></a>&#x20;4.5 如何选择算法</h5><ul>
+<li><p>机器学习算法模型可以分为两类，&#x3D;&#x3D;一类是单一算法模型&#x3D;&#x3D;，&#x3D;&#x3D;另一类是集成学习模型&#x3D;&#x3D;。</p>
+</li>
+<li><p>（1）单一算法模型</p>
+</li>
+<li><p>（2）集成学习模型</p>
+<p>-- 集成学习通过构建多个学习器并将其结合，从而更好地完成预测任务，也常被称为&#x3D;&#x3D;模型融合或者基于委员会的学习&#x3D;&#x3D;。</p>
+<p>-- 模型融合的一般步骤是，首先产生一系列“个体学习器”，然后通过某种策略将这些“个体学习器”组合起来使用，从而获得更好的预测效果</p>
+<p>-- &#x3D;&#x3D;融合模型并不总能产生更好的预测结果，甚至会产生更坏的结果&#x3D;&#x3D;</p>
+<p>-- 融合模型根据个体学习器生成方式的不同，可以分为两大类：</p>
+<p>（① 个体学习器之间存在强依赖关系、必须串行生成的序列化算法，代表算法是Boosting）</p>
+<p>（② 个体学习器之间不存在强依赖关系、可同时生成的并行化算法，代表算法是Bagging 和随机森林）</p>
+</li>
+<li><p>（3）算法选择路径</p>
+<p>-- ① &#x3D;&#x3D;观察数据量大小&#x3D;&#x3D;。如果数据量太小（例如样本数小于50），那么首先要做的应该是获取更多的数据。或者说，数据量较小时，你未必需要使用机器学习算法来解决问题，可能一个简单的数据统计就能够解决问题。总之，数据量足够大是使用机器学习算法的一个前提，可以防止由于数据量太小带来的过拟合问题。</p>
+<p>-- ② &#x3D;&#x3D;问题类型&#x3D;&#x3D;。如果数据量足够大并且特征维度足够多，我们就可以尝试采用机器学习的方法来解决问题。一个首要的任务就是，明确问题类型，究竟是连续值预测还是离散值分类。</p>
+<p>-- ③ &#x3D;&#x3D;分类问题解决&#x3D;&#x3D;。分类问题根据数据是否存在标签数据，可以分为有监督分类问题和无监督分类问题。</p>
+<p>-- ④ &#x3D;&#x3D;连续值预测问题解决&#x3D;&#x3D;。如果问题类型是连续值预测，那么根据特征维度可以采取不同的处理方法。如果特征维度不是特别多，我们可以直接采用回归算法来处理；如果特征维度很多则需要先进行降维处理</p>
+<p>-- 实际中，我们很少只使用一个算法模型来训练学习，而是使用几个适用的算法模型，然后对各个算法模型的预测能力进行评估，“优中选优”，最终确定合适的算法模型。</p>
+</li>
+</ul>
+<h5 id="x20-4-6-调参优化怎么处理"><a href="#x20-4-6-调参优化怎么处理" class="headerlink" title="&#x20;4.6 调参优化怎么处理"></a>&#x20;4.6 调参优化怎么处理</h5><ul>
+<li><p>（1）关于调参的几个常识</p>
+<p>-- ① 机器学习通过训练数据得到一个具体算法模型的过程，就是确定这个算法模型参数的过程。例如线性回归算法中，通过对训练数据的学习，我们希望得到一组最好的参数ω和b ，从而得到一个参数值给定的、具体的线性回归算法模型来进行预测。这些参数（ω和b）是在模型训练的过程中，计算机根据训练集数据自动得到的。</p>
+<p>-- ② 超参数是在模型训练前我们手动设定的。&#x3D;&#x3D;超参数设定的目的是更快、更好地得到算法模型的参数。&#x3D;&#x3D;而我们一般谈论的调参指的实际上是调整超参数。</p>
+<p>-- ③ 如果以线性回归算法为例，回归模型一般表达式里面的系数ω和b是参数，而正则项的惩罚系数就是超参数。神经网络算法中，节点的权重是参数，而神经网络的层数和每层节点个数就是超参数</p>
+<p>-- 其实，&#x3D;&#x3D;有监督学习的核心环节就是选择合适的算法模型和调整超参数，通过损失函数最小化来为算法模型找到合适的参数值，确定一个泛化性能良好的算法模型&#x3D;&#x3D;</p>
+<p><img src="https://pic.imgdb.cn/item/675d77cdd0e0a243d4e4009d.jpg"></p>
+</li>
+<li><p>（2）模型过拟合与欠拟合</p>
+<p>-- &#x3D;&#x3D;机器学习的本质是利用算法模型对样本数据进行拟合，从而对未知的新数据进行有效预测。&#x3D;&#x3D;</p>
+<p>-- 一般来说，我们把算法模型预测数据与样本真实数据之间的差异称为“误差”，其中算法模型在训练集上的误差称为&#x3D;&#x3D;“经验误差”或者“训练误差”&#x3D;&#x3D;，而在新样本上的误差称为&#x3D;&#x3D;“泛化误差”&#x3D;&#x3D;。</p>
+<p>-- 算法模型&#x3D;&#x3D;对训练集以外数据的预测能力（即模型的泛化能力）&#x3D;&#x3D;，是机器学习所追求的目标。</p>
+<p>-- 欠拟合和过拟合是导致模型泛化能力不高的两种常见原因。&#x3D;&#x3D;“欠拟合”是指模型学习能力较弱，无法学习到样本数据中的“一般规律”，因此导致模型泛化能力较弱。“过拟合”则是指模型学习能力太强，以至于将样本数据中的“个别特点”也当成了“一般规律”，因此导致模型泛化能力同样较弱&#x3D;&#x3D;</p>
+<p>-- 虽然欠拟合与过拟合都说明模型的泛化能力较弱，但两者还是存在较大差异的：&#x3D;&#x3D;欠拟合是在训练集和测试集上的性能都较差，因为它压根儿就没有学到“一般规律”；而过拟合是在训练集上表现优异，但是在测试集上表现较差，因为它“生搬硬套”训练集的“规律”，一股脑儿不加区别地把噪声和“普遍规律”都学进去了&#x3D;&#x3D;</p>
+<p>-- &#x3D;&#x3D;欠拟合相对容易解决，提高学习器的学习能力即可&#x3D;&#x3D;，例如在决策树中扩展分支数量或者在神经网络算法中增加训练轮数等；而&#x3D;&#x3D;过拟合是机器学习的重要难题，无法被避免，只能被缓解&#x3D;&#x3D;</p>
+<p>-- &#x3D;&#x3D;过拟合常见的解决方法包括增大样本量和正则化&#x3D;&#x3D;。&#x3D;&#x3D;增大样本量是解决过拟合问题最根本的方法&#x3D;&#x3D;，增大样本量，噪声数据的比例就相对降低，从而算法模型受到噪声的影响降低，提高了算法模型的普适性。而&#x3D;&#x3D;正则化可以在不损失信息的情况下，缓解过拟合问题&#x3D;&#x3D;。即通过调节正则化系数这个超参数，可以部分缓解过拟合现象，提高预测能力。总的来说，&#x3D;&#x3D;过拟合问题是超参数存在的一个重要原因&#x3D;&#x3D;</p>
+</li>
+<li><p>（3）常见算法调参的内容</p>
+<p>-- 不同的算法由于原理和实现过程不同，所对应的超参数也各不相同，例如线性算法需要调整的超参数主要是正则化系数，而决策树算法需要调整的超参数主要是决策树最大深度、分裂标准等。</p>
+<p>-- 各算法对应的超参数（详见书）</p>
+</li>
+<li><p>（4）算法调参的实践方法</p>
+<p>-- 通常情况下，算法模型的超参数可以手动设定。但由于超参数组合空间巨大，手动设定超参数的过程过于繁杂，这个时候我们就可以考虑使用&#x3D;&#x3D;网格搜索（Grid Search）方法&#x3D;&#x3D;来寻找合适的超参数</p>
+<p>-- 网格搜索其实就是&#x3D;&#x3D;遍历超参数组合的各种可能，找到一个性能最好的超参数组合，进而确定一个性能最好的算法模型&#x3D;&#x3D;。这看起来是一个“稳妥而可行”的方案，但是它的缺点是&#x3D;&#x3D;计算资源开支较大&#x3D;&#x3D;</p>
+</li>
+</ul>
+<h5 id="x20-4-7-如何进行性能评估"><a href="#x20-4-7-如何进行性能评估" class="headerlink" title="&#x20;4.7 如何进行性能评估"></a>&#x20;4.7 如何进行性能评估</h5><ul>
+<li><p>不管是选择算法还是调整超参数都是为了获得更好的算法模型。那么，算法模型究竟如何度量好坏呢？这就需要一把“尺子”来度量，这把“尺子”就是性能度量。</p>
+</li>
+<li><p>针对不同的任务需求，这把“尺子”是不同的，也就是说模型的好坏本身是相对的。</p>
+</li>
+<li><p>（1）回归预测性能度量（平均绝对误差、均方误差）</p>
+</li>
+<li><p>（2）分类任务性能度量（精度与错误率、查全率与查准率）</p>
+<p>-- 查全率也叫“召回率”，查准率也叫“准确率”，二者相互矛盾</p>
+</li>
+</ul>
+<hr>
+<h4 id="五、数据降维：深入理解PCA的来龙去脉"><a href="#五、数据降维：深入理解PCA的来龙去脉" class="headerlink" title="五、数据降维：深入理解PCA的来龙去脉"></a>五、数据降维：深入理解PCA的来龙去脉</h4><ul>
+<li>经常需要通过一系列特征属性来对研究对象进行分析。特征属性越多越有利于刻画和分析事物，但数据计算量也会越大，需要在两者之间取得一个平衡点。</li>
+<li>&#x3D;&#x3D;既能够减少研究对象的特征维度从而降低计算复杂度&#x3D;&#x3D;，&#x3D;&#x3D;又能够尽量减少因为降维导致的信息损失&#x3D;&#x3D;，就是数据降维的&#x3D;&#x3D;关键和首要目标&#x3D;&#x3D;</li>
+</ul>
+<h5 id="5-1-PCA是什么"><a href="#5-1-PCA是什么" class="headerlink" title="5.1 PCA是什么"></a>5.1 PCA是什么</h5><ul>
+<li>PCA是一种典型的数据降维方法，将相关性高的变量转变为较少的独立新变量，实现用较少的综合指标分别代表存在于各个变量中的各类信息</li>
+<li>PCA在承受一定范围内的信息损失的情况下节省了大量时间和资源，是一种应用广泛的数据预处理方法</li>
+<li><img src="https://pic.imgdb.cn/item/675feb41d0e0a243d4e49291.jpg"></li>
+</ul>
+<h5 id="x20-5-2-用一个例子来理解PCA过程（详见书）"><a href="#x20-5-2-用一个例子来理解PCA过程（详见书）" class="headerlink" title="&#x20;5.2 用一个例子来理解PCA过程（详见书）"></a>&#x20;5.2 用一个例子来理解PCA过程（详见书）</h5><ul>
+<li><p>从PCA降维的实际过程来看，对某个矩阵<code>$A(m×n)$</code>降维实际上就是寻找对应的降维矩阵<code>$P(k×m)$</code>。</p>
+</li>
+<li><p><img src="https://pic.imgdb.cn/item/675fec57d0e0a243d4e49306.jpg"></p>
+</li>
+</ul>
+<h5 id="x20-5-3-如何寻找降维矩阵P（详见书）"><a href="#x20-5-3-如何寻找降维矩阵P（详见书）" class="headerlink" title="&#x20;5.3 如何寻找降维矩阵P（详见书）"></a>&#x20;5.3 如何寻找降维矩阵P（详见书）</h5><h5 id="x20-5-4-PCA降维的核心思想"><a href="#x20-5-4-PCA降维的核心思想" class="headerlink" title="&#x20;5.4 PCA降维的核心思想"></a>&#x20;5.4 PCA降维的核心思想</h5><ul>
+<li><p>数据降维是因为高维数据中部分维度之间相关性较高造成了数据冗余，但数据降维的过程中又不可避免地造成部分信息的损失。</p>
+</li>
+<li><p>&#x3D;&#x3D;如何做到既能够通过数据降维降低原始数据的冗余程度，又能够尽可能多地保留原始数据的信息呢？&#x3D;&#x3D;这其实就是PCA的核心思想。</p>
+</li>
+<li><p>（1）核心思想一：基变换向量投影</p>
+<p>-- 要实现高维向量降维，一个常见的方法就是高维向量向低维空间投影</p>
+<p>-- ① 向量投影与向量内积</p>
+<p>-- ② 向量投影与矩阵向量乘法</p>
+</li>
+<li><p>（2）核心思想二：协方差归零投影</p>
+<p>-- ① 方差</p>
+<p>-- ② 协方差</p>
+<p>-- ③ 协方差矩阵（&#x3D;&#x3D;降维之后不同维度之间的协方差为0，同样也就是希望协方差矩阵除了主对角线之外的部分都为0&#x3D;&#x3D;）</p>
+</li>
+<li><p>（3）核心思想三：最大方差投影</p>
+</li>
+<li><p>（4）PCA降维的关键：协方差矩阵对角化（&#x3D;&#x3D;降维的实质就是要求降维之后的新矩阵的协方差矩阵是对角矩阵&#x3D;&#x3D;）</p>
+</li>
+</ul>
+<h5 id="x20-5-5-面向零基础读者详解PCA降维（详见书）"><a href="#x20-5-5-面向零基础读者详解PCA降维（详见书）" class="headerlink" title="&#x20;5.5 面向零基础读者详解PCA降维（详见书）"></a>&#x20;5.5 面向零基础读者详解PCA降维（详见书）</h5><h5 id="x20-5-6-编程实践（详见书）"><a href="#x20-5-6-编程实践（详见书）" class="headerlink" title="&#x20;5.6 编程实践（详见书）"></a>&#x20;5.6 编程实践（详见书）</h5><hr>
+<h4 id="x20-六、凸优化核心过程：真正搞懂梯度下降过程"><a href="#x20-六、凸优化核心过程：真正搞懂梯度下降过程" class="headerlink" title="&#x20;六、凸优化核心过程：真正搞懂梯度下降过程"></a>&#x20;六、凸优化核心过程：真正搞懂梯度下降过程</h4><ul>
+<li>优化问题可以分为&#x3D;&#x3D;凸优化问题&#x3D;&#x3D;和&#x3D;&#x3D;非凸优化问题&#x3D;&#x3D;</li>
+<li>非凸优化问题相对凸优化问题来说要困难得多，&#x3D;&#x3D;一个问题如果可以表述为凸优化问题，很大程度上意味着这个问题可以被彻底解决&#x3D;&#x3D;。&#x3D;&#x3D;而非凸优化问题常常无法被解决&#x3D;&#x3D;。</li>
+<li>凸优化问题是指&#x3D;&#x3D;定义在凸集中的凸函数最优化的问题&#x3D;&#x3D;，它在机器学习领域有十分广泛且重要的应用&#x3D;&#x3D;，典型应用场景就是目标函数极值问题的求解。&#x3D;&#x3D;</li>
+<li>凸优化问题的求解目前已经较为成熟，所以&#x3D;&#x3D;当一个极值求解问题被归为凸优化问题时往往意味着该问题是可以被求解的&#x3D;&#x3D;</li>
+<li>&#x3D;&#x3D;凸优化问题的局部最优解就是全局最优解&#x3D;&#x3D;，因此机器学习中很多非凸优化问题都需要被转化为等价凸优化问题或者被近似为凸优化问题。</li>
+</ul>
+<h5 id="x20-6-1-通俗讲解凸函数"><a href="#x20-6-1-通俗讲解凸函数" class="headerlink" title="&#x20;6.1 通俗讲解凸函数"></a>&#x20;6.1 通俗讲解凸函数</h5><ul>
+<li><p>（1）什么是凸集</p>
+<p>-- 凸集表示一个欧几里得空间中的区域，这个区域具有如下特点：&#x3D;&#x3D;区域内任意两点之间的线段都包含在该区域内&#x3D;&#x3D;；更为数学化的表述为，&#x3D;&#x3D;集合C内任意两点间的线段也均在集合C内，则称集合C为凸集&#x3D;&#x3D;。</p>
+</li>
+<li><p>（2）什么是凸函数</p>
+<p>-- 凸函数是一个&#x3D;&#x3D;定义在某个向量空间的凸子集&#x3D;&#x3D;&#x3D;&#x3D;<code>$C$</code>&#x3D;&#x3D;&#x3D;&#x3D;（区间）上的实值函数&#x3D;&#x3D;&#x3D;&#x3D;<code>$f$</code>&#x3D;&#x3D;&#x3D;&#x3D;，而且对于凸子集&#x3D;&#x3D;&#x3D;&#x3D;<code>$C$</code>&#x3D;&#x3D;&#x3D;&#x3D;中的任意两个向量，如果&#x3D;&#x3D;&#x3D;&#x3D;<code>$f\left(\left(x_1+x_2\right) / 2\right) \leqslant\left(f\left(x_1\right)+f\left(x_2\right)\right) / 2$</code>&#x3D;&#x3D;&#x3D;&#x3D;，则&#x3D;&#x3D;&#x3D;&#x3D;<code>$f(x)$</code>&#x3D;&#x3D;&#x3D;&#x3D;是定义在凸子集&#x3D;&#x3D;&#x3D;&#x3D;<code>$C$</code>&#x3D;&#x3D;&#x3D;&#x3D;中的凸函数&#x3D;&#x3D;</p>
+<p>-- 实际上，如果某函数的&#x3D;&#x3D;上镜图（函数曲线上的点和函数曲线上方所有的点的集合）是凸集&#x3D;&#x3D;，那么该函数就是凸函数。</p>
+</li>
+<li><p>（3）机器学习“热爱”凸函数</p>
+<p>-- 之所以如此“热爱”凸函数是因为，&#x3D;&#x3D;凸函数的局部极小值就是全局最小值。这样，我们就可以利用这条性质快速找到问题的最优解&#x3D;&#x3D;</p>
+<p>-- 机器学习中有很多优化问题都要通过凸优化来求解，另外一些非凸优化问题也常常被转化为凸优化问题来求解</p>
+<p><img src="https://pic.imgdb.cn/item/67641b5ad0e0a243d4e6b046.jpg"></p>
+</li>
+</ul>
+<h5 id="x20-6-2-通俗讲解梯度下降"><a href="#x20-6-2-通俗讲解梯度下降" class="headerlink" title="&#x20;6.2 通俗讲解梯度下降"></a>&#x20;6.2 通俗讲解梯度下降</h5><ul>
+<li><p>很多机器学习算法都可归结为凸优化问题的求解，因此凸优化问题在机器学习中具有特别重要的地位，而&#x3D;&#x3D;梯度下降法是最简单、也是最常见的一种最优化问题求解方法&#x3D;&#x3D;</p>
+</li>
+<li><p>&#x3D;&#x3D;机器学习中一般将凸优化问题统一表述为函数极小值求解问题，即&#x3D;&#x3D;&#x3D;&#x3D;<code>$minf(x)$</code>&#x3D;&#x3D;&#x3D;&#x3D;。&#x3D;&#x3D;其中<code>$x$</code> 是需要被优化的变量，<code>$f$</code>为目标函数。如果碰到极大值问题，则可以将目标函数加上负号。&#x3D;&#x3D;目标函数的自变量&#x3D;&#x3D;&#x3D;&#x3D;<code>$x$</code>&#x3D;&#x3D;&#x3D;&#x3D;往往受到各种约束，满足约束条件的自变量&#x3D;&#x3D;&#x3D;&#x3D;<code>$x$</code>&#x3D;&#x3D;&#x3D;&#x3D;的集合称为自变量的可行域&#x3D;&#x3D;</p>
+<p><img src="https://pic.imgdb.cn/item/67641d18d0e0a243d4e6b119.jpg"></p>
+</li>
+<li><p>（1）梯度是什么（<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1XH4y1J7GT?spm_id_from=333.788.videopod.sections&vd_source=ce97f8ebe1ffd37a2e287328d33d93b1">B站</a>）</p>
+</li>
+<li><p>（2）梯度下降与参数求解</p>
+<p>-- 梯度下降是一种求解凸函数极值的方法，&#x3D;&#x3D;它以损失函数作为纽带&#x3D;&#x3D;，从而在机器学习的参数求解过程中“大放异彩”</p>
+<p>-- 损失函数是模型预测值与训练集数据真实值的差距，它是模型参数（如ω和b）的函数。</p>
+<p>-- 这里需要注意区分一个细节，损失函数&#x3D;&#x3D;有时候指代的是训练集数据中单个样本的预测值与真实值的差距&#x3D;&#x3D;，&#x3D;&#x3D;有时候指代的则是整个训练集所有样本的预测值与真实值的差距（也称为成本函数）&#x3D;&#x3D;</p>
+<p>-- 有时候某组模型参数（如ω和b ）使得其中某个样本（如1号样本）损失函数值最小，但可能导致其他样本（如2号样本、3号样本等）损失函数值很大，&#x3D;&#x3D;所以我们不能只看一部分样本的损失函数值就决定模型参数，而应该考虑总体情况&#x3D;&#x3D;</p>
+<p>-- 成本函数描述的就是样本总体的预测偏差情况，&#x3D;&#x3D;它可以是各个样本损失函数值之和，也可以是各个样本损失函数值之和的平均值&#x3D;&#x3D;</p>
+</li>
+<li><p>（3）梯度下降具体过程演示（详见书）</p>
+</li>
+</ul>
+<h5 id="x20-6-3-编程实践（详见书）"><a href="#x20-6-3-编程实践（详见书）" class="headerlink" title="&#x20;6.3 编程实践（详见书）"></a>&#x20;6.3 编程实践（详见书）</h5><hr>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2018-2024 LittleStoneMonkey
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

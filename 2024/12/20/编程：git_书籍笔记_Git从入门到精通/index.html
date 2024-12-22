@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>《Git从入门到精通》 | Road2Dasheng</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="《Git从入门到精通》 | Road2Dasheng">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="书籍简介 豆瓣  &#x20;书籍笔记第一部分 Numpy篇&#x20;一、数据分析概述&#x20;1.1 数据分析简介 （1）数据科学是什么   （2）数据分析是什么    &#x20;二、Numpy基础&#x20;2.1 Numpy是什么 数据分析“三剑客”指的是NumPy、Pandas、Matplotlib 机器学习算法中用到的大量数组及矩阵运算，也需要借助NumPy来实现。可以这样说，&amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《从0到1：Python数据分析》">
+<meta property="og:url" content="http://example.com/2024/12/10/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E4%BB%8E0%E5%88%B01%EF%BC%9APython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="Road2Dasheng">
+<meta property="og:description" content="书籍简介 豆瓣  &#x20;书籍笔记第一部分 Numpy篇&#x20;一、数据分析概述&#x20;1.1 数据分析简介 （1）数据科学是什么   （2）数据分析是什么    &#x20;二、Numpy基础&#x20;2.1 Numpy是什么 数据分析“三剑客”指的是NumPy、Pandas、Matplotlib 机器学习算法中用到的大量数组及矩阵运算，也需要借助NumPy来实现。可以这样说，&amp;#">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6757adf9d0e0a243d4e0d35d.jpg">
+<meta property="article:published_time" content="2024-12-09T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-12-22T22:47:49.652Z">
+<meta property="article:author" content="ZhaWB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/6757adf9d0e0a243d4e0d35d.jpg">
+
+
+<link rel="icon" href="/img/road2Dasheng.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/little-stone-monkey.jpg"/>
+</a>
+<div class="author">
+    <span>ZhaWB</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="编程">
+            <i class="fold iconfont icon-right"></i>
+            编程
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;其他">
+            
+            其他
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Git">
+            <i class="fold iconfont icon-right"></i>
+            Git
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Git&lt;---&gt;书籍笔记">
+            
+            书籍笔记
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Python">
+            <i class="fold iconfont icon-right"></i>
+            Python
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Python&lt;---&gt;其他">
+            
+            其他
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Python&lt;---&gt;书籍笔记">
+            
+            书籍笔记
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="AI">
+            <i class="fold iconfont icon-right"></i>
+            AI
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="AI&lt;---&gt;机器学习">
+            <i class="fold iconfont icon-right"></i>
+            机器学习
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="AI&lt;---&gt;机器学习&lt;---&gt;书籍笔记">
+            
+            书籍笔记
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="9">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://www.subingwen.cn/">爱编程的大丙</a></li>
+            
+            <li><a target="_blank" href="https://r2coding.com/#/">codesheep</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 编程 Git 书籍笔记 "
+           href="/2024/12/20/%E7%BC%96%E7%A8%8B%EF%BC%9Agit_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_Git%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《Git从入门到精通》">《Git从入门到精通》</span>
+            <span class="post-date" title="2024-12-20 00:00:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 书籍笔记 "
+           href="/2024/12/10/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E4%BB%8E0%E5%88%B01%EF%BC%9APython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《从0到1：Python数据分析》">《从0到1：Python数据分析》</span>
+            <span class="post-date" title="2024-12-10 00:00:00">2024/12/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 书籍笔记 "
+           href="/2024/12/10/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E4%BB%8E0%E5%88%B01%EF%BC%9APython%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《从0到1：Python数据可视化》">《从0到1：Python数据可视化》</span>
+            <span class="post-date" title="2024-12-10 00:00:00">2024/12/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 书籍笔记 "
+           href="/2024/12/09/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_Python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B9%8Bmatplotlib%E7%B2%BE%E8%BF%9B/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《Python数据可视化之matplotlib精进》">《Python数据可视化之matplotlib精进》</span>
+            <span class="post-date" title="2024-12-09 00:00:00">2024/12/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 AI 机器学习 书籍笔记 "
+           href="/2024/12/03/AI%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%92%8C%E7%AE%97%E6%B3%95%E5%AE%9E%E8%B7%B5/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《从零开始：机器学习的数学原理和算法实践》">《从零开始：机器学习的数学原理和算法实践》</span>
+            <span class="post-date" title="2024-12-03 00:00:00">2024/12/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 其他 "
+           href="/2024/11/29/%E7%BC%96%E7%A8%8B%EF%BC%9A%E5%85%B6%E4%BB%96_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="正则表达式">正则表达式</span>
+            <span class="post-date" title="2024-11-29 00:00:00">2024/11/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 其他 "
+           href="/2024/11/29/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E5%85%B6%E4%BB%96_%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="学习资源">学习资源</span>
+            <span class="post-date" title="2024-11-29 00:00:00">2024/11/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 其他 "
+           href="/2024/11/29/%E7%BC%96%E7%A8%8B%EF%BC%9A%E5%85%B6%E4%BB%96_%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="文件编码">文件编码</span>
+            <span class="post-date" title="2024-11-29 00:00:00">2024/11/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 书籍笔记 "
+           href="/2024/11/29/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E7%9C%8B%E6%BC%AB%E7%94%BB%E5%AD%A6Python/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《看漫画学Python》">《看漫画学Python》</span>
+            <span class="post-date" title="2024-11-29 00:00:00">2024/11/29</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-编程：git_书籍笔记_Git从入门到精通" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">《Git从入门到精通》</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="编程">编程</a> > 
+            
+            <a  data-rel="编程&lt;---&gt;Git">Git</a> > 
+            
+            <a  data-rel="编程&lt;---&gt;Git&lt;---&gt;书籍笔记">书籍笔记</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-12-23 06:42:05'>2024-12-20 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#x20-%E4%B9%A6%E7%B1%8D%E7%AE%80%E4%BB%8B"><span class="toc-text"> 书籍简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0"><span class="toc-text">书籍笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81Git%E5%85%A5%E9%97%A8"><span class="toc-text">一、Git入门</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-1-1-Git%E6%A6%82%E8%BF%B0"><span class="toc-text"> 1.1 Git概述</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-1-1-1-%E4%BB%80%E4%B9%88%E6%98%AFGit"><span class="toc-text"> 1.1.1 什么是Git</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-1-1-2-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0Git"><span class="toc-text"> 1.1.2 为什么要学习Git</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-1-2-Git%E4%B8%8E%E5%85%B6%E4%BB%96%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B7%AE%E5%BC%82"><span class="toc-text"> 1.2 Git与其他版本控制系统的差异</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-1-2-1-Git%E7%9A%84%E4%BC%98%E7%82%B9%EF%BC%88%E5%85%8D%E8%B4%B9%E3%80%81%E5%BC%80%E6%BA%90%EF%BC%9B%E9%80%9F%E5%BA%A6%E5%BF%AB%E3%80%81%E6%96%87%E4%BB%B6%E4%BD%93%E7%A7%AF%E5%B0%8F%EF%BC%9B%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%EF%BC%89"><span class="toc-text"> 1.2.1 Git的优点（免费、开源；速度快、文件体积小；分布式系统）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-1-2-2-Git%E7%9A%84%E7%BC%BA%E7%82%B9%EF%BC%88%E6%98%93%E5%AD%A6%E9%9A%BE%E7%B2%BE%EF%BC%89"><span class="toc-text"> 1.2.2 Git的缺点（易学难精）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-1-3-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text"> 1.3 常见问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x20-%E4%BA%8C%E3%80%81%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85"><span class="toc-text"> 二、环境安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x20-%E4%B8%89%E3%80%81%E7%BB%88%E7%AB%AF%E6%9C%BA-%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6"><span class="toc-text"> 三、终端机&#x2F;命令提示符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-3-1-%E7%BB%88%E7%AB%AF%E6%9C%BA%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BB%8B%E7%BB%8D"><span class="toc-text"> 3.1 终端机及常用命令介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-3-1-1-%E7%BB%88%E7%AB%AF%E6%9C%BA"><span class="toc-text"> 3.1.1 终端机</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-3-1-2-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text"> 3.1.2 常用命令</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-3-2-%E8%B6%85%E7%AE%80%E6%98%8E%E7%9A%84Vim%E6%93%8D%E4%BD%9C%E4%BB%8B%E7%BB%8D"><span class="toc-text"> 3.2 超简明的Vim操作介绍</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x20-%E5%9B%9B%E3%80%81%E8%AE%BE%E7%BD%AEGit"><span class="toc-text"> 四、设置Git</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-4-1-%E7%94%A8%E6%88%B7%E8%AE%BE%E7%BD%AE"><span class="toc-text"> 4.1 用户设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-4-2-%E5%8F%AF%E4%BB%A5%E7%BB%99%E6%AF%8F%E4%B8%AA%E9%A1%B9%E7%9B%AE%E8%AE%BE%E7%BD%AE%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BD%9C%E8%80%85%E5%90%97"><span class="toc-text"> 4.2 可以给每个项目设置不同的作者吗</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-4-3-%E5%85%B6%E4%BB%96%E6%96%B9%E4%BE%BF%E7%9A%84%E8%AE%BE%E7%BD%AE"><span class="toc-text"> 4.3 其他方便的设置</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-3-1-%E6%9B%B4%E6%8D%A2%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text"> 4.3.1 更换编辑器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-3-2-%E8%AE%BE%E7%BD%AE%E7%BC%A9%E5%86%99"><span class="toc-text"> 4.3.2 设置缩写</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x20-%E4%BA%94%E3%80%81%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Git"><span class="toc-text"> 五、开始使用Git</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-1-%E6%96%B0%E5%A2%9E%E3%80%81%E5%88%9D%E5%A7%8BRepository"><span class="toc-text"> 5.1 新增、初始Repository</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-1-1-%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84%E7%9B%AE%E5%BD%95"><span class="toc-text"> 5.1.1 创建新的目录</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-1-2-%E5%A6%82%E6%9E%9C%E7%9B%AE%E5%BD%95%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%9C%A8"><span class="toc-text"> 5.1.2 如果目录已经存在</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-1-3-%E5%A6%82%E6%9E%9C%E7%9B%AE%E5%BD%95%E4%B8%8D%E6%83%B3%E5%86%8D%E8%A2%ABGit%E6%8E%A7%E5%88%B6"><span class="toc-text"> 5.1.3 如果目录不想再被Git控制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-1-4-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%80%E7%9B%B4%E7%94%A8-tmp%E7%9B%AE%E5%BD%95%EF%BC%8C%E5%85%B6%E4%BB%96%E7%9B%AE%E5%BD%95%E5%8F%AF%E4%BB%A5%E5%90%97"><span class="toc-text"> 5.1.4 为什么一直用&#x2F;tmp目录，其他目录可以吗</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-2-%E6%8A%8A%E6%96%87%E4%BB%B6%E4%BA%A4%E7%BB%99Git%E7%AE%A1%E6%8E%A7"><span class="toc-text"> 5.2 把文件交给Git管控</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-2-1-%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%90%8E%E4%BA%A4%E7%BB%99Git"><span class="toc-text"> 5.2.1 创建文件后交给Git</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-2-2-%E5%A6%82%E6%9E%9C%E5%9C%A8git-add%E4%B9%8B%E5%90%8E%E5%8F%88%E6%94%B9%E5%8A%A8%E4%BA%86%E9%82%A3%E4%B8%AA%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%85%E5%AE%B9%E8%AF%A5%E6%80%8E%E4%B9%88%E5%8A%9E"><span class="toc-text"> 5.2.2 如果在git add之后又改动了那个文件的内容该怎么办</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-2-3-%E2%80%9C%E2%80%93all%E2%80%9D%E4%B8%8E%E2%80%9C-%E2%80%9D%E5%8F%82%E6%95%B0%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E4%B8%80%E6%A0%B7"><span class="toc-text"> 5.2.3　“–all”与“.”参数有什么不一样</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-2-4-%E6%8A%8A%E6%9A%82%E5%AD%98%E5%8C%BA%E7%9A%84%E5%86%85%E5%AE%B9%E6%8F%90%E4%BA%A4%E5%88%B0%E5%AD%98%E5%82%A8%E5%BA%93%E9%87%8C%E5%AD%98%E6%A1%A3"><span class="toc-text"> 5.2.4 把暂存区的内容提交到存储库里存档</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-3-%E5%B7%A5%E4%BD%9C%E5%8C%BA%E3%80%81%E6%9A%82%E5%AD%98%E5%8C%BA%E4%B8%8E%E5%AD%98%E5%82%A8%E5%BA%93"><span class="toc-text"> 5.3 工作区、暂存区与存储库</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-3-1-%E4%B8%80%E5%AE%9A%E8%A6%81%E4%BA%8C%E6%AE%B5%E5%BC%8F%E5%90%97"><span class="toc-text"> 5.3.1 一定要二段式吗</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-3-2-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BA%8C%E6%AE%B5%E5%BC%8F%E8%BF%99%E4%B9%88%E9%BA%BB%E7%83%A6"><span class="toc-text"> 5.3.2 为什么要二段式这么麻烦</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-4-%E6%9F%A5%E7%9C%8B%E8%AE%B0%E5%BD%95"><span class="toc-text">5.4 查看记录</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-4-1-%E6%9F%A5%E7%9C%8B%E8%AE%B0%E5%BD%95%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">5.4.1 查看记录的方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-4-2-%E4%BD%BF%E7%94%A8Git%E6%9F%A5%E8%AF%A2%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E6%97%B6%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">5.4.2 使用Git查询历史记录时的常见问题</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-5-%E5%A6%82%E4%BD%95%E5%9C%A8Git%E4%B8%AD%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E6%88%96%E5%8F%98%E6%9B%B4%E6%96%87%E4%BB%B6%E5%90%8D"><span class="toc-text">5.5 如何在Git中删除文件或变更文件名</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-5-1-%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6"><span class="toc-text">5.5.1 删除文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-5-2-%E5%8F%98%E6%9B%B4%E6%96%87%E4%BB%B6%E5%90%8D"><span class="toc-text"> 5.5.2　变更文件名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-5-3-%E6%96%87%E4%BB%B6%E7%9A%84%E5%90%8D%E7%A7%B0%E4%B8%8D%E9%87%8D%E8%A6%81"><span class="toc-text"> 5.5.3 文件的名称不重要</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-6-%E4%BF%AE%E6%94%B9Commit%E8%AE%B0%E5%BD%95"><span class="toc-text"> 5.6 修改Commit记录</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-6-1-%E4%BD%BF%E7%94%A8%E2%80%93amend%E5%8F%82%E6%95%B0%E8%BF%9B%E8%A1%8CCommit"><span class="toc-text"> 5.6.1 使用–amend参数进行Commit</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-7-%E8%BF%BD%E5%8A%A0%E6%96%87%E4%BB%B6%E5%88%B0%E6%9C%80%E8%BF%91%E4%B8%80%E6%AC%A1%E7%9A%84Commit"><span class="toc-text"> 5.7 追加文件到最近一次的Commit</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-7-1-%E4%BD%BF%E7%94%A8%E2%80%93amend%E5%8F%82%E6%95%B0%E8%BF%9B%E8%A1%8CCommit"><span class="toc-text"> 5.7.1 使用–amend参数进行Commit</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-8-%E6%96%B0%E5%A2%9E%E7%9B%AE%E5%BD%95"><span class="toc-text"> 5.8 新增目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-9-%E6%9C%89%E4%BA%9B%E6%96%87%E4%BB%B6%E4%B8%8D%E6%83%B3%E6%94%BE%E5%9C%A8Git%E4%B8%AD"><span class="toc-text"> 5.9  有些文件不想放在Git中</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-9-1-%E5%BF%BD%E7%95%A5%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6"><span class="toc-text">5.9.1 忽略这个文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-9-2-%E5%8F%AF%E4%BB%A5%E5%BF%BD%E7%95%A5%E8%BF%99%E4%B8%AA%E5%BF%BD%E7%95%A5%E5%90%97"><span class="toc-text">5.9.2 可以忽略这个忽略吗</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-9-3-%E5%92%A6%EF%BC%9F%E6%80%8E%E4%B9%88%E6%B2%A1%E6%95%88%E6%9E%9C"><span class="toc-text">5.9.3 咦？怎么没效果</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-9-4-%E6%B8%85%E9%99%A4%E5%BF%BD%E7%95%A5%E7%9A%84%E6%96%87%E4%BB%B6"><span class="toc-text"> 5.9.4 清除忽略的文件</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-10-%E6%9F%A5%E7%9C%8B%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E7%9A%84Commit%E8%AE%B0%E5%BD%95"><span class="toc-text"> 5.10 查看特定文件的Commit记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-11-%E8%BF%99%E8%A1%8C%E4%BB%A3%E7%A0%81%E6%98%AF%E8%B0%81%E5%86%99%E7%9A%84"><span class="toc-text"> 5.11 这行代码是谁写的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-12-%E4%B8%8D%E5%B0%8F%E5%BF%83%E6%8A%8A%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95%E5%88%A0%E9%99%A4%E4%BA%86"><span class="toc-text"> 5.12 不小心把文件或目录删除了</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-12-1-%E6%8C%BD%E6%95%91%E5%B7%B2%E8%A2%AB%E5%88%A0%E9%99%A4%E7%9A%84%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95"><span class="toc-text"> 5.12.1 挽救已被删除的文件或目录</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-12-2-Git%E6%98%AF%E6%80%8E%E6%A0%B7%E6%8A%8A%E6%96%87%E4%BB%B6%E6%8C%BD%E6%95%91%E5%9B%9E%E6%9D%A5%E7%9A%84%EF%BC%88%E8%AF%A6%E8%A7%81%E4%B9%A6%EF%BC%89"><span class="toc-text"> 5.12.2  Git是怎样把文件挽救回来的（详见书）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-13-%E5%88%9A%E6%89%8D%E7%9A%84Commit%E5%90%8E%E6%82%94%E4%BA%86%EF%BC%8C%E6%83%B3%E8%A6%81%E6%8B%86%E6%8E%89%E9%87%8D%E5%81%9A"><span class="toc-text"> 5.13 刚才的Commit后悔了，想要拆掉重做</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-13-1-%E6%8B%86%E6%8E%89%E9%87%8D%E5%81%9A"><span class="toc-text">5.13.1 拆掉重做</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-13-2-%E4%B8%8D%E8%A6%81%E8%A2%ABReset%E8%BF%99%E4%B8%AA%E8%AF%8D%E7%BB%99%E8%AF%AF%E5%AF%BC%E4%BA%86"><span class="toc-text"> 5.13.2 不要被Reset这个词给误导了</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-14-%E4%B8%8D%E5%B0%8F%E5%BF%83%E4%BD%BF%E7%94%A8hard%E6%A8%A1%E5%BC%8FReset%E4%BA%86%E6%9F%90%E4%B8%AACommit%EF%BC%8C%E8%BF%98%E6%95%91%E5%BE%97%E5%9B%9E%E6%9D%A5%E5%90%97"><span class="toc-text"> 5.14 不小心使用hard模式Reset了某个Commit，还救得回来吗</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-14-1-%E9%80%80%E5%9B%9EReset%E5%89%8D"><span class="toc-text"> 5.14.1 退回Reset前</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-14-2-%E4%BD%BF%E7%94%A8Reflog"><span class="toc-text"> 5.14.2 使用Reflog</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-15-HEAD%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text"> 5.15 HEAD是什么</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-15-1-HEAD%E7%AE%80%E4%BB%8B"><span class="toc-text"> 5.15.1 HEAD简介</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-15-2-%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%88%E8%AF%A6%E8%A7%81%E4%B9%A6%EF%BC%89"><span class="toc-text"> 5.15.2 切换分支的时候（详见书）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-16-%E5%8F%AF%E4%BB%A5%E5%8F%AACommit%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E7%9A%84%E9%83%A8%E5%88%86%E5%86%85%E5%AE%B9%E5%90%97%EF%BC%88%E8%AF%A6%E8%A7%81%E4%B9%A6%EF%BC%89"><span class="toc-text"> 5.16 可以只Commit一个文件的部分内容吗（详见书）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-17-%E9%82%A3%E4%B8%AA%E9%95%BF%E5%BE%97%E5%BE%88%E5%83%8F%E4%B9%B1%E7%A0%81%E7%9A%84SHA-1%E5%80%BC%E6%98%AF%E6%80%8E%E6%A0%B7%E7%AE%97%E5%87%BA%E6%9D%A5%E7%9A%84"><span class="toc-text"> 5.17 那个长得很像乱码的SHA-1值是怎样算出来的</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-17-1-SHA-1%E5%80%BC%E4%BC%9A%E6%9C%89%E2%80%9C%E9%87%8D%E5%A4%8D%E2%80%9D%E7%9A%84%E7%8A%B6%E5%86%B5%E5%8F%91%E7%94%9F%E5%90%97"><span class="toc-text"> 5.17.1 SHA-1值会有“重复”的状况发生吗</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-17-2-%E7%AD%89%E7%AD%89%EF%BC%8C%E5%90%AC%E8%AF%B4Google%E7%A0%B4%E8%A7%A3%E4%BA%86SHA-1"><span class="toc-text"> 5.17.2 等等，听说Google破解了SHA-1</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-17-3-%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="toc-text"> 5.17.3 计算公式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-5-18-git%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%9C%89%E4%BB%80%E4%B9%88%EF%BC%9FPart-1"><span class="toc-text"> 5.18 .git目录中有什么？Part 1</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-18-1-%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%B9%B6%E4%BA%A4%E7%94%B1Git%E6%8E%A7%E5%88%B6"><span class="toc-text"> 5.18.1 创建第一个文件并交由Git控制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-18-2-%E5%88%9B%E5%BB%BA%E7%9B%AE%E5%BD%95"><span class="toc-text"> 5.18.2 创建目录</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-18-3-%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%BA%8C%E4%B8%AA%E6%96%87%E4%BB%B6"><span class="toc-text"> 5.18.3 创建第二个文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-18-4-%E8%BF%9B%E8%A1%8Ccommit"><span class="toc-text"> 5.18.4 进行commit</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-18-5-%E5%88%86%E6%94%AF%E7%99%BB%E5%9C%BA"><span class="toc-text"> 5.18.5 分支登场</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-18-6-%E7%BB%A7%E7%BB%AD%E5%89%8D%E8%BF%9B"><span class="toc-text"> 5.18.6 继续前进</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-18-7-%E7%BB%A7%E7%BB%AD%E5%89%8D%E8%BF%9B"><span class="toc-text">5.18.7 继续前进</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-18-8-%E7%AD%89%E7%AD%89%EF%BC%8C%E2%80%9C%E5%9B%9B%E5%A4%A7%E5%A4%A9%E7%8E%8B%E2%80%9D%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E4%BD%8D%E8%BF%98%E6%B2%A1%E7%99%BB%E5%9C%BA%E5%95%8A"><span class="toc-text">5.18.8 等等，“四大天王”的最后一位还没登场啊</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-18-9-%E5%B0%8F%E7%BB%93"><span class="toc-text">5.18.9 小结</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-19-git%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%9C%89%E4%BB%80%E4%B9%88%EF%BC%9FPart-2"><span class="toc-text">5.19 .git目录中有什么？Part 2</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-19-1-Git%E5%9C%A8Checkout%E6%97%B6%E7%9A%84%E5%8F%98%E5%8C%96"><span class="toc-text">5.19.1 Git在Checkout时的变化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-19-2-Git%E4%B8%8D%E6%98%AF%E5%81%9A%E5%B7%AE%E5%BC%82%E5%A4%87%E4%BB%BD"><span class="toc-text"> 5.19.2 Git不是做差异备份</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-19-3-%E8%BF%99%E6%A0%B7%E6%98%AF%E4%B8%8D%E6%98%AF%E5%BE%88%E6%B5%AA%E8%B4%B9%E7%A9%BA%E9%97%B4"><span class="toc-text"> 5.19.3 这样是不是很浪费空间</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-19-4-Git%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%BC%9A%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E8%B5%84%E6%BA%90%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6"><span class="toc-text">5.19.4 Git什么时候会自动触发资源回收机制</span></a></li></ol></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-6 i,
+    .toc-level-6 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="x20-书籍简介"><a href="#x20-书籍简介" class="headerlink" title="&#x20;书籍简介"></a>&#x20;书籍简介</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://book.douban.com/subject/34937495/">豆瓣</a></li>
+</ul>
+<hr>
+<h2 id="书籍笔记"><a href="#书籍笔记" class="headerlink" title="书籍笔记"></a>书籍笔记</h2><h3 id="一、Git入门"><a href="#一、Git入门" class="headerlink" title="一、Git入门"></a>一、Git入门</h3><h4 id="x20-1-1-Git概述"><a href="#x20-1-1-Git概述" class="headerlink" title="&#x20;1.1 Git概述"></a>&#x20;1.1 Git概述</h4><h5 id="x20-1-1-1-什么是Git"><a href="#x20-1-1-1-什么是Git" class="headerlink" title="&#x20;1.1.1 什么是Git"></a>&#x20;1.1.1 什么是Git</h5><ul>
+<li>&#x3D;&#x3D;简单地说，Git就像玩游戏的时候可以存储进度一样。&#x3D;&#x3D;例如，为了避免打头目输了而损失装备，或者打倒头目却没有掉落期望的珍贵装备，可以在每次去打头目之前都记录一下，以便在发生状况的时候回到旧进度，再挑战一次。</li>
+</ul>
+<h5 id="x20-1-1-2-为什么要学习Git"><a href="#x20-1-1-2-为什么要学习Git" class="headerlink" title="&#x20;1.1.2 为什么要学习Git"></a>&#x20;1.1.2 为什么要学习Git</h5><ul>
+<li>&#x3D;&#x3D;Git是当前业界最流行的版本控制系统，可以清楚地记录每个文件是谁在什么时候加进来的、什么时候被修改或删除的。&#x3D;&#x3D;无论做任何工作，如果有Git帮你保留这些历史记录和证据，那么发生意外状况的时候你就能知道是从什么时候开始有问题的，以及该找谁负责，再也不用自己“背黑锅”了！</li>
+</ul>
+<h4 id="x20-1-2-Git与其他版本控制系统的差异"><a href="#x20-1-2-Git与其他版本控制系统的差异" class="headerlink" title="&#x20;1.2 Git与其他版本控制系统的差异"></a>&#x20;1.2 Git与其他版本控制系统的差异</h4><h5 id="x20-1-2-1-Git的优点（免费、开源；速度快、文件体积小；分布式系统）"><a href="#x20-1-2-1-Git的优点（免费、开源；速度快、文件体积小；分布式系统）" class="headerlink" title="&#x20;1.2.1 Git的优点（免费、开源；速度快、文件体积小；分布式系统）"></a>&#x20;1.2.1 Git的优点（免费、开源；速度快、文件体积小；分布式系统）</h5><h5 id="x20-1-2-2-Git的缺点（易学难精）"><a href="#x20-1-2-2-Git的缺点（易学难精）" class="headerlink" title="&#x20;1.2.2 Git的缺点（易学难精）"></a>&#x20;1.2.2 Git的缺点（易学难精）</h5><h4 id="x20-1-3-常见问题"><a href="#x20-1-3-常见问题" class="headerlink" title="&#x20;1.3 常见问题"></a>&#x20;1.3 常见问题</h4><hr>
+<h3 id="x20-二、环境安装"><a href="#x20-二、环境安装" class="headerlink" title="&#x20;二、环境安装"></a>&#x20;二、环境安装</h3><hr>
+<h3 id="x20-三、终端机-命令提示符"><a href="#x20-三、终端机-命令提示符" class="headerlink" title="&#x20;三、终端机&#x2F;命令提示符"></a>&#x20;三、终端机&#x2F;命令提示符</h3><h4 id="x20-3-1-终端机及常用命令介绍"><a href="#x20-3-1-终端机及常用命令介绍" class="headerlink" title="&#x20;3.1 终端机及常用命令介绍"></a>&#x20;3.1 终端机及常用命令介绍</h4><h5 id="x20-3-1-1-终端机"><a href="#x20-3-1-1-终端机" class="headerlink" title="&#x20;3.1.1 终端机"></a>&#x20;3.1.1 终端机</h5><ul>
+<li>&#x3D;&#x3D;终端机就是供使用者输入命令、与计算机进行交互的&#x3D;&#x3D;</li>
+<li>如果在Windows操作系统中使用Git，在安装完Git for Windows套件之后，便会有一个&#x3D;&#x3D;Git CMD&#x3D;&#x3D;或&#x3D;&#x3D;Git Bash&#x3D;&#x3D;程序可以使用，它可以让你比较顺利地使用Git命令</li>
+</ul>
+<h5 id="x20-3-1-2-常用命令"><a href="#x20-3-1-2-常用命令" class="headerlink" title="&#x20;3.1.2 常用命令"></a>&#x20;3.1.2 常用命令</h5><ul>
+<li>cd：目录切换及显示</li>
+<li>ls：文件列表</li>
+<li>touch&#x2F;mkdir：创建文件&#x2F;目录</li>
+<li>cp&#x2F;mv&#x2F;rm：文件操作</li>
+</ul>
+<h4 id="x20-3-2-超简明的Vim操作介绍"><a href="#x20-3-2-超简明的Vim操作介绍" class="headerlink" title="&#x20;3.2 超简明的Vim操作介绍"></a>&#x20;3.2 超简明的Vim操作介绍</h4><hr>
+<h3 id="x20-四、设置Git"><a href="#x20-四、设置Git" class="headerlink" title="&#x20;四、设置Git"></a>&#x20;四、设置Git</h3><h4 id="x20-4-1-用户设置"><a href="#x20-4-1-用户设置" class="headerlink" title="&#x20;4.1 用户设置"></a>&#x20;4.1 用户设置</h4><ul>
+<li><p>使用Git时，&#x3D;&#x3D;首先要做的就是设置用户的E-mail信箱及用户名。&#x3D;&#x3D;打开终端机窗口，输入下面两行命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;yourusername&quot;</span></span><br><span class="line">$ git config --global user.email <span class="string">&quot;youruseremail&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>输入完成后，可以再检查一下当前的设置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --list</span><br><span class="line">user.name=<span class="string">&quot;yourusername&quot;</span></span><br><span class="line">user.email=<span class="string">&quot;youruseremail&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>&#x3D;&#x3D;所有Git相关的设置都默认保存在自己账号下的.gitconfig文件中，所以使用一般的文字编辑器直接手动修改该文件，也会有一样的效果：&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">  name = Eddie Kao    </span><br><span class="line">  email = eddie@digik.com.tw</span><br><span class="line">[core]</span><br><span class="line">  excludesfile = /Users/eddie/.gitignore_global  </span><br><span class="line"><span class="comment"># ...  略 ...</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="x20-4-2-可以给每个项目设置不同的作者吗"><a href="#x20-4-2-可以给每个项目设置不同的作者吗" class="headerlink" title="&#x20;4.2 可以给每个项目设置不同的作者吗"></a>&#x20;4.2 可以给每个项目设置不同的作者吗</h4><ul>
+<li><p>在设置的时候加–global参数，其含义是要进行全局（Global）设置</p>
+</li>
+<li><p>&#x3D;&#x3D;针对特定的项目设置不同的作者，可以在对该项目目录进行Git设置的时候，加上–local参数：&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="built_in">local</span> user.name <span class="string">&quot;otherusername&quot;</span></span><br><span class="line">$ git config --<span class="built_in">local</span> user.email <span class="string">&quot;otheruseremail&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="x20-4-3-其他方便的设置"><a href="#x20-4-3-其他方便的设置" class="headerlink" title="&#x20;4.3 其他方便的设置"></a>&#x20;4.3 其他方便的设置</h4><h5 id="x20-4-3-1-更换编辑器"><a href="#x20-4-3-1-更换编辑器" class="headerlink" title="&#x20;4.3.1 更换编辑器"></a>&#x20;4.3.1 更换编辑器</h5><ul>
+<li>&#x3D;&#x3D;一般来说，Vim是Git默认的编辑器，不过不一定非要用Vim，可以在终端机执行以下命令，就可以把默认的Vim编辑器换成Emacs了&#x3D;&#x3D;</li>
+<li>其实还可以使用Sublime Text、Atom或VSCode等比较现代的文字编辑器。只需先搜索一下怎样从终端机启动这些应用程式，然后就可以用同样的方法把Vim换掉了。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.editor emacs</span><br></pre></td></tr></table></figure>
+
+<h5 id="x20-4-3-2-设置缩写"><a href="#x20-4-3-2-设置缩写" class="headerlink" title="&#x20;4.3.2 设置缩写"></a>&#x20;4.3.2 设置缩写</h5><ul>
+<li><p>虽然Git命令不长，但有时懒得打那么多字，或者有些命令经常会打错。&#x3D;&#x3D;可以在Git中设置一些“缩写”，这样就可以少打几个字。&#x3D;&#x3D;只需在终端机执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global alias.co checkout</span><br><span class="line">$ git config --global alias.br branch</span><br><span class="line">$ git config --global alias.st status</span><br></pre></td></tr></table></figure></li>
+<li><p>设置之后，只需输入git co命令，就可以实现与输入git checkout命令一样的效果；输入git st命令，就可以实现与输入git status命令一样的效果。</p>
+</li>
+<li><p>此外，还可以再加入一些参数。例如，每次在查看log时，为了看到比较精简的信息，都要输入git log –oneline –graph，而改用Alias设置（如下所示）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global alias.l <span class="string">&quot;log --oneline --graph&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>以后只需输入git l命令，就可以实现与原来的 –oneline –graph命令一样的效果了</p>
+</li>
+<li><p>甚至可以把格式弄得再复杂一点，把Commit的人与时间都加进来：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global alias.ls <span class="string">&#x27;log --graph --pretty=format:&quot;%h &lt;%an&gt; %ar %s&quot;&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>&#x3D;&#x3D;上面这些Alias的设置，也可以直接到~&#x2F;.gitconfig中修改：&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">alias</span>]</span><br><span class="line">co = checkout </span><br><span class="line">br = branch</span><br><span class="line">st = status</span><br><span class="line">l = <span class="built_in">log</span> --oneline --graph</span><br><span class="line"><span class="built_in">ls</span> = <span class="built_in">log</span> --graph --pretty=format:<span class="string">&quot;%h &lt;%an&gt; %ar %s&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h3 id="x20-五、开始使用Git"><a href="#x20-五、开始使用Git" class="headerlink" title="&#x20;五、开始使用Git"></a>&#x20;五、开始使用Git</h3><h4 id="x20-5-1-新增、初始Repository"><a href="#x20-5-1-新增、初始Repository" class="headerlink" title="&#x20;5.1 新增、初始Repository"></a>&#x20;5.1 新增、初始Repository</h4><h5 id="x20-5-1-1-创建新的目录"><a href="#x20-5-1-1-创建新的目录" class="headerlink" title="&#x20;5.1.1 创建新的目录"></a>&#x20;5.1.1 创建新的目录</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /tmp                 <span class="comment">#  切换至/tmp 目录</span></span><br><span class="line">$ <span class="built_in">mkdir</span> git-practice      <span class="comment">#  创建git-practice目录</span></span><br><span class="line">$ <span class="built_in">cd</span> git-practice         <span class="comment">#  切换至git-practice目录</span></span><br><span class="line">$ git init                <span class="comment">#  初始化这个目录，让Git 对这个目录开始进行版控</span></span><br><span class="line">Initialized empty Git repository <span class="keyword">in</span> /private/tmp/git-practice/.git/</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>&#x3D;&#x3D;git init命令会在git-practice目录中创建一个.git目录，整个Git的精华都集中在这个目录中了&#x3D;&#x3D;</li>
+</ul>
+<h5 id="x20-5-1-2-如果目录已经存在"><a href="#x20-5-1-2-如果目录已经存在" class="headerlink" title="&#x20;5.1.2 如果目录已经存在"></a>&#x20;5.1.2 如果目录已经存在</h5><ul>
+<li>如果针对本来就存在的目录进行版控，&#x3D;&#x3D;只要到那个目录下执行git init命令即可&#x3D;&#x3D;</li>
+</ul>
+<h5 id="x20-5-1-3-如果目录不想再被Git控制"><a href="#x20-5-1-3-如果目录不想再被Git控制" class="headerlink" title="&#x20;5.1.3 如果目录不想再被Git控制"></a>&#x20;5.1.3 如果目录不想再被Git控制</h5><ul>
+<li>其实，Git的版控很单纯，全都是靠.git目录在做事。如果这个目录不想被版控，&#x3D;&#x3D;只要把.git目录移除，Git就对这个目录失去控制权了&#x3D;&#x3D;</li>
+<li>&#x3D;&#x3D;整个项目目录中，无论哪个文件或目录被删除了都能找回来，但如果.git目录被删除了就没有办法找回来了&#x3D;&#x3D;</li>
+</ul>
+<h5 id="x20-5-1-4-为什么一直用-tmp目录，其他目录可以吗"><a href="#x20-5-1-4-为什么一直用-tmp目录，其他目录可以吗" class="headerlink" title="&#x20;5.1.4 为什么一直用&#x2F;tmp目录，其他目录可以吗"></a>&#x20;5.1.4 为什么一直用&#x2F;tmp目录，其他目录可以吗</h5><ul>
+<li>&#x3D;&#x3D;在macOS操作系统下，&#x2F;tmp目录中的内容在下次计算机重启（或宕机）的时候就会全部被清空，所以不需要再手动整理&#x3D;&#x3D;</li>
+</ul>
+<h4 id="x20-5-2-把文件交给Git管控"><a href="#x20-5-2-把文件交给Git管控" class="headerlink" title="&#x20;5.2 把文件交给Git管控"></a>&#x20;5.2 把文件交给Git管控</h4><h5 id="x20-5-2-1-创建文件后交给Git"><a href="#x20-5-2-1-创建文件后交给Git" class="headerlink" title="&#x20;5.2.1 创建文件后交给Git"></a>&#x20;5.2.1 创建文件后交给Git</h5><ul>
+<li>（1）创建文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">Initial commitnothing to commit (create/copy files and use <span class="string">&quot;git add&quot;</span> to track)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;hello, git&quot;</span> &gt; welcome.html</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">Initial commitUntracked files: </span><br><span class="line">   (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to include <span class="keyword">in</span> wha will be committed)   </span><br><span class="line"> </span><br><span class="line">     welcome.html</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use <span class="string">&quot;git add&quot;</span> to rack)</span><br></pre></td></tr></table></figure>
+
+<p>-- 这时的状态与一开始不太一样了。&#x3D;&#x3D;这个welcome.html文件当前的状态是Untracked files，即这个文件尚未被加到Git版控系统中，还未正式被Git“追踪”，只是刚刚加入这个目录而已&#x3D;&#x3D;</p>
+<ul>
+<li><p>（2）把文件交给Git</p>
+<p>-- 既然文件当前的状态是Untracked，接下来就要把welcome.html文件交给Git，&#x3D;&#x3D;让Git开始“追踪”它。使用的命令是git add，后面加上文件名：&#x3D;&#x3D;</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add welcome.html</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">Initial commitChanges to be committed:  </span><br><span class="line">  (use <span class="string">&quot;git rm --cached &lt;file&gt;...&quot;</span> to unstage)</span><br><span class="line">    new file: welcome.html</span><br></pre></td></tr></table></figure>
+
+<p>-- 从以上信息可以看出，&#x3D;&#x3D;文件状态已从Untracked变成new file。这表示该文件已经被安置到暂存区（Staging Area），稍后将与其他文件一起被存储到存储库中&#x3D;&#x3D;,这个暂存区也称为下标（Index）</p>
+<h5 id="x20-5-2-2-如果在git-add之后又改动了那个文件的内容该怎么办"><a href="#x20-5-2-2-如果在git-add之后又改动了那个文件的内容该怎么办" class="headerlink" title="&#x20;5.2.2 如果在git add之后又改动了那个文件的内容该怎么办"></a>&#x20;5.2.2 如果在git add之后又改动了那个文件的内容该怎么办</h5><ul>
+<li>设想一下下面这样一种情境: （1）新增了一个文件abc.txt；（2）执行git add abc.txt命令，把文件加至暂存区；（3）编辑abc.txt文件。</li>
+<li>完成编辑后，可能想要进行Commit，把刚刚改动的内容保存下来。&#x3D;&#x3D;这是新手很容易犯的错误之一，以为执行Commit命令就能把所有的异动都保存下来，事实上这样的想法是不正确的&#x3D;&#x3D;</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">Changes to be committed: </span><br><span class="line">  (use <span class="string">&quot;git reset HEAD &lt;file&gt;...&quot;</span> to unstage)    </span><br><span class="line"></span><br><span class="line">    new file: abc.txt</span><br><span class="line"></span><br><span class="line">Changes not staged <span class="keyword">for</span> commit: </span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed) </span><br><span class="line">  (use <span class="string">&quot;git checkout -- &lt;file&gt;...&quot;</span> to discard changes <span class="keyword">in</span> workingdirectory)    </span><br><span class="line"></span><br><span class="line">    modified: abc.txt</span><br></pre></td></tr></table></figure>
+
+<p>-- 可以发现，abc.txt文件变成了两个，这是为什么？&#x3D;&#x3D;其实步骤（2）的确把abc.txt文件加入暂存区了，但在步骤（3）中又编辑了该文件。对Git来说，编辑的内容并没有再次被加入暂存区，所以此时暂存区中的数据还是步骤（2）中加进来的那个文件。&#x3D;&#x3D;</p>
+<p>-- 如果确定这个改动是你想要的，那就再次使用git add abc.txt命令，把abc.txt文件加入暂存区。</p>
+<h5 id="x20-5-2-3-“–all”与“-”参数有什么不一样"><a href="#x20-5-2-3-“–all”与“-”参数有什么不一样" class="headerlink" title="&#x20;5.2.3　“–all”与“.”参数有什么不一样"></a>&#x20;5.2.3　“–all”与“.”参数有什么不一样</h5><ul>
+<li><p>（1）Git版本</p>
+<p>-- 在较旧版本的Git（Git 1.x）中，&#x3D;&#x3D;git add .&#x3D;&#x3D;命令会把“新增的文件”（也就是Untracked状态的文件）以及“改动过的文件”加到暂存区，&#x3D;&#x3D;但是不会处理“删除文件”的行为&#x3D;&#x3D;</p>
+<p>-- &#x3D;&#x3D;不过在Git 2.x之后，这两个参数在功能上就没什么区别了&#x3D;&#x3D;</p>
+</li>
+<li><p>（2）执行命令时的目录位置</p>
+<p>-- 这是因为&#x3D;&#x3D;git add .&#x3D;&#x3D;命令会把当前目录，以及它的子目录、子子目录、子子子目录……中的异动全部加到暂存区，&#x3D;&#x3D;但在该目录以外的就不归它管了&#x3D;&#x3D;</p>
+<p>-- 而&#x3D;&#x3D;git add –all&#x3D;&#x3D;命令就没有这个问题，该命令不管在项目的哪一层目录执行，效果都是一样的，&#x3D;&#x3D;这个项目中所有的异动都会被加入暂存区&#x3D;&#x3D;</p>
+</li>
+<li><p>总结：&#x3D;&#x3D;因所使用的Git版本以及执行命令时的目录而有所差异&#x3D;&#x3D;</p>
+</li>
+</ul>
+<h5 id="x20-5-2-4-把暂存区的内容提交到存储库里存档"><a href="#x20-5-2-4-把暂存区的内容提交到存储库里存档" class="headerlink" title="&#x20;5.2.4 把暂存区的内容提交到存储库里存档"></a>&#x20;5.2.4 把暂存区的内容提交到存储库里存档</h5><ul>
+<li>如果仅是通过git add命令把异动加到暂存区，还不算是完成整个流程。&#x3D;&#x3D;如果想让暂存区的内容永久保存下来，就要使用git commit命令：&#x3D;&#x3D;</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">&quot;init commit&quot;</span></span><br><span class="line">[master (root-commit) dfccf0c] init commit </span><br><span class="line">1 file changed, 1 insertion(+) </span><br><span class="line">create mode 100644 welcome.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>在后面加上&#x3D;&#x3D;“-m “init commit””是要说明“这次的Commit做了什么事”，&#x3D;&#x3D;只要使用简单、清楚的文本说明即可，中英文都可以，重点是要说清楚，能让自己和别人很快明白就行。</p>
+</li>
+<li><p>（1）到底Commit了哪些东西</p>
+<p>-- &#x3D;&#x3D;Git每次的Commit都只会处理暂存区中的内容。&#x3D;&#x3D;也就是说，在执行git commit命令时，那些还没有被加到暂存区中的文件不会被Commit到存储库中。</p>
+</li>
+<li><p>（2）输入的信息很重要吗</p>
+<p>-- &#x3D;&#x3D;在Commit时，如果没有输入这个信息，Git默认是不会完成Commit的。&#x3D;&#x3D;它最主要的目的就是告诉你自己及其他人“这次的改动做了什么”。</p>
+</li>
+<li><p>（3）等等，怎么弹出了一个奇怪的窗口</p>
+<p>-- 在执行git commit命令时，&#x3D;&#x3D;如果没有在后面加上信息参数，默认会弹出一个黑色的画面，也就是编辑器——Vim&#x3D;&#x3D;</p>
+</li>
+<li><p>（4）一定要有内容才能Commit吗</p>
+<p>-- 只要加上&#x3D;&#x3D;–allow-empty&#x3D;&#x3D;参数，没有内容也是可以Commit的：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git commit --allow-empty -m <span class="string">&quot; 空的 &quot;</span></span><br><span class="line">[master 76a5b84] 空的</span><br></pre></td></tr></table></figure>
+
+<h4 id="x20-5-3-工作区、暂存区与存储库"><a href="#x20-5-3-工作区、暂存区与存储库" class="headerlink" title="&#x20;5.3 工作区、暂存区与存储库"></a>&#x20;5.3 工作区、暂存区与存储库</h4><p><img src="https://pic.imgdb.cn/item/676776f9d0e0a243d4e7eb1e.jpg"></p>
+<h5 id="x20-5-3-1-一定要二段式吗"><a href="#x20-5-3-1-一定要二段式吗" class="headerlink" title="&#x20;5.3.1 一定要二段式吗"></a>&#x20;5.3.1 一定要二段式吗</h5><ul>
+<li>如果觉得先add再commit有点烦琐，&#x3D;&#x3D;可以在Commit时多加一个-a参数，缩短这个流程：&#x3D;&#x3D;</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -a -m <span class="string">&quot;update content&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这样即使没有先add，也可以完成Commit。&#x3D;&#x3D;但要注意的是，这个-a参数只对已经存在于Repository区域的文件有效，对新加入（也就是Untracked files）的文件是无效的。&#x3D;&#x3D;</li>
+</ul>
+<h5 id="x20-5-3-2-为什么要二段式这么麻烦"><a href="#x20-5-3-2-为什么要二段式这么麻烦" class="headerlink" title="&#x20;5.3.2 为什么要二段式这么麻烦"></a>&#x20;5.3.2 为什么要二段式这么麻烦</h5><ul>
+<li>先add再commit，这样的二段式可能会让人觉得有点烦琐，但也是有好处的。&#x3D;&#x3D;假设有一个仓库，仓库门口有个小广场，这个广场就相当于暂存区。把要存放到仓库的货物先放到小广场（git add），等货物达到一定数量后打开仓库门，把小广场上的货物送进仓库中（git commit），并且记录下这批货的来源和用途。&#x3D;&#x3D;</li>
+<li>&#x3D;&#x3D;当然，也可以每来一件货物就打开仓库门存一次、记录一次，但这样一来，开仓库的次数就会非常多。也就是说，这种操作方式会导致Commit太过零碎，在查阅记录时可能会不太方便。另外，过于零碎的Commit也可能给其他人带来一些困扰，&#x3D;&#x3D;例如，要进行CodeReview的时候，比较有规律的Commit可以一次性看到比较完整的内容，而不需要一个一个Commit慢慢看。</li>
+</ul>
+<h4 id="5-4-查看记录"><a href="#5-4-查看记录" class="headerlink" title="5.4 查看记录"></a>5.4 查看记录</h4><h5 id="5-4-1-查看记录的方法"><a href="#5-4-1-查看记录的方法" class="headerlink" title="5.4.1 查看记录的方法"></a>5.4.1 查看记录的方法</h5><ul>
+<li>因为当前只Commit了一次，不好比较，所以这里再次Commit，顺便也复习一下前文介绍的内容：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> index.html                      <span class="comment"># 创建文件index.html</span></span><br><span class="line">$ git add index.html                    <span class="comment"># 把index.html加至暂存区</span></span><br><span class="line">$ git commit -m <span class="string">&quot;create index page&quot;</span>     <span class="comment"># 进行Commit</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>（1）使用Git命令</p>
+<p>&#x20;-- 查看Git记录使用的是&#x3D;&#x3D;git log命令，&#x3D;&#x3D;其执行后的结果如下：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">commit cef6e4017eb1a16a7bb3434f12d9008ff83a821a (HEAD -&gt; master)</span><br><span class="line">Author: Eddie Kao &lt;eddie@5xruby.tw&gt;</span><br><span class="line">Date:  Wed Aug 2 03:02:37 2017 +0800    </span><br><span class="line"></span><br><span class="line">    create index page</span><br><span class="line">    </span><br><span class="line">commit cc797cdb7c7a337824a25075e0dbe0bc7c703a1e</span><br><span class="line">Author: Eddie Kao &lt;eddie@5xruby.tw&gt;</span><br><span class="line">Date:  Sun Jul 30 05:04:05 2017 +0800    </span><br><span class="line"></span><br><span class="line">    init commit</span><br></pre></td></tr></table></figure>
+
+<p>-- 在使用git log命令时，如果加上额外参数，可以看到不一样的输出格式。例如，加上&#x3D;&#x3D;– oneline和–graph参数：&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --oneline --graph</span><br><span class="line">* cef6e40 create index page</span><br><span class="line">* cc797cd init commit</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-4-2-使用Git查询历史记录时的常见问题"><a href="#5-4-2-使用Git查询历史记录时的常见问题" class="headerlink" title="5.4.2 使用Git查询历史记录时的常见问题"></a>5.4.2 使用Git查询历史记录时的常见问题</h5><ul>
+<li>&#x3D;&#x3D;（1）想要找某个人或某些人的Commit&#x3D;&#x3D;</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --oneline --author=<span class="string">&quot;Sherly&quot;</span></span><br><span class="line">930feb3 add pig</span><br><span class="line">51d54ff add lion and tiger</span><br></pre></td></tr></table></figure>
+
+<p>-- 此外，&#x3D;&#x3D;使用“\|”&#x3D;&#x3D;（“|”是“或者”的意思，前面需要加上“\”，否则会被判定为一般的文字而不是功能符号）可以查询Sherly以及Eddie这两个人的Commit记录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --oneline --author=<span class="string">&quot;Sherly\|Eddie&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>&#x3D;&#x3D;（2）想要找Commit信息中是否含有某些关键字&#x3D;&#x3D;</p>
+<p>-- &#x3D;&#x3D;使用–grep参数，&#x3D;&#x3D;可以从Commit信息中搜索符合关键字的内容，如搜索“LOL”：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --oneline --grep=<span class="string">&quot;LOL&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>&#x3D;&#x3D;（3）怎样在Commit文件中找到Ruby&#x3D;&#x3D;</p>
+<p>-- &#x3D;&#x3D;使用-S参数，&#x3D;&#x3D;可以在所有的Commit文件中进行搜索，找到那些符合特定条件的内容：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> -S <span class="string">&quot;Ruby&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>&#x3D;&#x3D;（4）怎样查找某一时间段内的Commit&#x3D;&#x3D;</p>
+<p>-- 在查看历史记录时，可以搭配&#x3D;&#x3D;–since和–until&#x3D;&#x3D;参数查询：</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git log --oneline --since=&quot;9am&quot; --until=&quot;12am&quot;                    # 这样就可以找出“今天早上9点到12点之间所有的Commit”。还可以再加一个after：</span><br><span class="line">$ git log --oneline --since=&quot;9am&quot; --until=&quot;12am&quot; --after=&quot;2017-01&quot;  # 这样可以找到“从2017年1月之后，每天早上9点到12点之间的Commit”</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="5-5-如何在Git中删除文件或变更文件名"><a href="#5-5-如何在Git中删除文件或变更文件名" class="headerlink" title="5.5 如何在Git中删除文件或变更文件名"></a>5.5 如何在Git中删除文件或变更文件名</h4><ul>
+<li>在Git中，&#x3D;&#x3D;无论是删除文件还是变更文件名，对Git来说都是一种“改动”。&#x3D;&#x3D;</li>
+</ul>
+<h5 id="5-5-1-删除文件"><a href="#5-5-1-删除文件" class="headerlink" title="5.5.1 删除文件"></a>5.5.1 删除文件</h5><ul>
+<li><p>&#x3D;&#x3D;（1）直接删除&#x3D;&#x3D;</p>
+<p>&#x20;-- &#x3D;&#x3D;可以使用系统命令rm或资源管理器之类的工具来删除文件。&#x3D;&#x3D;例如：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">rm</span> welcome.html  <span class="comment"># 删除文件welcome.html</span></span><br></pre></td></tr></table></figure>
+
+<p>-- 然后看一下状态：可以看到welcome.html文件当前的状态是deleted。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">Changes not staged <span class="keyword">for</span> commit: </span><br><span class="line">  (use <span class="string">&quot;git add/rm &lt;file&gt;...&quot;</span> to update what will be committed) </span><br><span class="line">  (use <span class="string">&quot;git checkout -- &lt;file&gt;...&quot;</span> to discard changes <span class="keyword">in</span> workingdirectory)   </span><br><span class="line">  </span><br><span class="line">    deleted: welcome.html</span><br><span class="line">    </span><br><span class="line">no changes added to commit (use <span class="string">&quot;git add&quot;</span> and/or <span class="string">&quot;git commit -a&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>-- 如果确定这是你想做的，就可以把这次的“改动”加到暂存区</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add welcome.html</span><br></pre></td></tr></table></figure>
+
+<p>-- 再看一下当前的状态：它现在的状态是deleted，而且已被加至暂存区，所以接下来就可以进行Commit了。</p>
+<p>-- 如果“把删除文件加到暂存区”让你觉得不好理解，就把“删除文件”也当作一种“改动”就行了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed: </span><br><span class="line">  (use <span class="string">&quot;git reset HEAD &lt;file&gt;...&quot;</span> to unstage)     </span><br><span class="line">  </span><br><span class="line">    deleted: welcome.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>&#x3D;&#x3D;（2）请Git帮你删除&#x3D;&#x3D;</p>
+<p>-- 可以先执行rm命令删除，然后再执行git add命令加入暂存区的两段式动作，&#x3D;&#x3D;也可以直接使用git rm命令来完成（待删除的文件之前已经被提交到存储库）：&#x3D;&#x3D;</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">rm</span> welcome.html</span><br><span class="line"><span class="built_in">rm</span> <span class="string">&#x27;welcome.html&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>-- 这时候查看状态会发现：它就直接在暂存区了，不需要再add一次，可以少做一个步骤。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">&quot;git reset HEAD &lt;file&gt;...&quot;</span> to unstage)     </span><br><span class="line"></span><br><span class="line">    deleted: welcome.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>&#x3D;&#x3D;（3）加上–cached参数&#x3D;&#x3D;</p>
+<p>-- 不论是执行rm命令，还是执行git rm命令，都会真的把这个文件从工作目录中删除。&#x3D;&#x3D;如果不是真的想把这个文件删除，只是不想让这个文件再被Git控制了，可以加上– cached参数：&#x3D;&#x3D;</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">rm</span> welcome --cached</span><br><span class="line"><span class="built_in">rm</span> <span class="string">&#x27;welcome.html&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>-- 这样就不会真的把文件删了，而只是把文件从Git中移除而已。这时的状态会变成：welcome.html的状态从原本已经在Git目录中的tracked变成Untracked了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">&quot;git reset HEAD &lt;file&gt;...&quot;</span> to unstage)    </span><br><span class="line"></span><br><span class="line">    deleted: welcome.html</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to include <span class="keyword">in</span> what will be committed)    </span><br><span class="line"></span><br><span class="line">    welcome.html</span><br></pre></td></tr></table></figure>
+
+<h5 id="x20-5-5-2-变更文件名"><a href="#x20-5-5-2-变更文件名" class="headerlink" title="&#x20;5.5.2　变更文件名"></a>&#x20;5.5.2　变更文件名</h5><ul>
+<li><p>&#x3D;&#x3D;（1）直接改名&#x3D;&#x3D;</p>
+<p>-- &#x3D;&#x3D;与删除文件一样，变更文件名也是一种“改动”，所以在操作上也是差不多的：&#x3D;&#x3D;</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mv</span> hello.html world.html  <span class="comment"># 把hello.html改成world.html</span></span><br></pre></td></tr></table></figure>
+
+<p>-- 这时候看一下状态，会看到两个状态的改变：&#x3D;&#x3D;虽然只是更改文件名，但对Git来说会被认为是两个动作，一个是删除hello.html文件，另一个是新增world.html文件（变成Untracked状态）&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">&quot;git add/rm &lt;file&gt;...&quot;</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">&quot;git checkout -- &lt;file&gt;...&quot;</span> to discard changes <span class="keyword">in</span> working d irectory)   </span><br><span class="line"></span><br><span class="line">	deleted:  hello.html</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to include <span class="keyword">in</span> what will be committed)   </span><br><span class="line"></span><br><span class="line">	world.html</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">&quot;git add&quot;</span> and/or <span class="string">&quot;git commit -a&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>-- 接着继续使用git add命令把这些异动加至暂存区：&#x3D;&#x3D;因为文件的内容没有改变，Git可以判断出这只是单纯地改名，所以现在它的状态变成renamed了&#x3D;&#x3D;&#x20;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git add --all</span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">&quot;git reset HEAD &lt;file&gt;...&quot;</span> to unstage)   </span><br><span class="line"></span><br><span class="line">	renamed:  hello.html -&gt; world.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>&#x3D;&#x3D;（2）请Git帮你改名&#x3D;&#x3D;</p>
+<p>-- 与前面的git rm命令一样，Git也提供了类似的命令&#x3D;&#x3D;git mv（待改名的文件之前已经被添加到存储库中）&#x3D;&#x3D;，可以让你少做一步：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">mv</span> hello.html world.html</span><br></pre></td></tr></table></figure>
+
+<p>-- 查看一下状态：其状态已变成renamed了。</p>
+<pre><code>$ git status
+On branch master
+Changes to be committed:
+  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)   
+
+    renamed: hello.html -&gt; world.html
+</code></pre>
+<h5 id="x20-5-5-3-文件的名称不重要"><a href="#x20-5-5-3-文件的名称不重要" class="headerlink" title="&#x20;5.5.3 文件的名称不重要"></a>&#x20;5.5.3 文件的名称不重要</h5><ul>
+<li>&#x3D;&#x3D;Git是根据文件的“内容”来计算SHA-1的值，所以文件的名称不重要，重要的是文件的内容&#x3D;&#x3D;。&#x3D;&#x3D;当更改文件名时，Git并不会为此做出一个新的Blob对象，而只是指向原来的那个Blob对象&#x3D;&#x3D;。&#x3D;&#x3D;但因为文件名变了，所以Git会为此做出一个新的Tree对象。&#x3D;&#x3D;</li>
+</ul>
+<h4 id="x20-5-6-修改Commit记录"><a href="#x20-5-6-修改Commit记录" class="headerlink" title="&#x20;5.6 修改Commit记录"></a>&#x20;5.6 修改Commit记录</h4><ul>
+<li>（1）把.git目录整个删除;（2）使用git rebase命令来改动历史记录；（3）先把Commit用git reset命令删除，整理后再重新Commit；（4）使用–amend参数改动最后一次的Commit。</li>
+</ul>
+<h5 id="x20-5-6-1-使用–amend参数进行Commit"><a href="#x20-5-6-1-使用–amend参数进行Commit" class="headerlink" title="&#x20;5.6.1 使用–amend参数进行Commit"></a>&#x20;5.6.1 使用–amend参数进行Commit</h5><ul>
+<li>例如，原来的记录是这样的：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --oneline</span><br><span class="line">4879515 WTF</span><br><span class="line">7dbc437 add hello.html</span><br><span class="line">657fce7 add container</span><br><span class="line">abb4f43 update index page</span><br><span class="line">cef6e40 create index page</span><br><span class="line">cc797cd init commit</span><br></pre></td></tr></table></figure>
+
+<p>-- 那个WTF信息有点糟糕！&#x3D;&#x3D;要改动最后一次的Commit信息，只需直接在Commit命令后面加上–amend参数即可：&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git commit --amend -m <span class="string">&quot;Welcome To Facebook&quot;</span></span><br><span class="line">[master 614a90c] Welcome To Facebook</span><br><span class="line">Date: Wed Aug 16 05:42:56 2017 +08001 </span><br><span class="line">file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line">create mode 100644 config/database.yml</span><br></pre></td></tr></table></figure>
+
+<p>-- 再回来查看记录，WTF就被改成Welcome ToFacebook了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --oneline</span><br><span class="line">614a90c Welcome To Facebook</span><br><span class="line">7dbc437 add hello.html</span><br><span class="line">657fce7 add container</span><br><span class="line">abb4f43 update index page</span><br><span class="line">cef6e40 create index page</span><br><span class="line">cc797cd init commit</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>&#x3D;&#x3D;（2）注意：虽然只是修改记录的信息，其他什么都没有改，但对Git来说，因为Commit的内容改变了，所以Git会重新计算并产生一个新的Commit对象，这其实是一次全新的Commit（只是看起来不像新的）。例如，上面这个例子中，改动前的Commit对象的SHA-1值是4879515，但改完信息之后SHA-1值变成了614a90c。虽然Commit的时间与文件的内容看起来并没有被改动，但它仍是一次全新的Commit。&#x3D;&#x3D;</p>
+</li>
+<li><p>（3）可以改动更早的记录吗</p>
+<p>-- &#x3D;&#x3D;可以改动更早的记录，只是要使用Rebase命令来处理，因为–amend参数只能处理最后一次的Commit。&#x3D;&#x3D;关于Rebase命令的使用方式，可参阅7.1节。</p>
+<p>-- 注意，虽然这只是改动信息，但不管怎么说，它就是改动了一次历史记录，&#x3D;&#x3D;所以尽量不要在已经Push出去后再改动，否则可能会给其他人造成困扰。&#x3D;&#x3D;</p>
+</li>
+</ul>
+<h4 id="x20-5-7-追加文件到最近一次的Commit"><a href="#x20-5-7-追加文件到最近一次的Commit" class="headerlink" title="&#x20;5.7 追加文件到最近一次的Commit"></a>&#x20;5.7 追加文件到最近一次的Commit</h4><blockquote>
+<p>刚刚完成Commit，但发现有一个文件忘了加上，又不想为了这个文件重新再发一次Commit……</p>
+</blockquote>
+<ul>
+<li>像上述这种情况，虽然为了这个文件再加送一次Commit也不是不行，但有些人有Commit的洁癖，希望每个Commit既不要太大也不要太小，做到其应该做的事就好。所以，如果不想再发一次Commit，就把这个文件并入最近一次的Commit。可以采用下面这两种方式来完成:</li>
+<li>&#x3D;&#x3D;（1）&#x3D;&#x3D;使用git reset命令把最后一次的Commit删除，加入新文件后再重新Commit； &#x3D;&#x3D;（2）&#x3D;&#x3D;使用–amend参数进行Commit。</li>
+</ul>
+<h5 id="x20-5-7-1-使用–amend参数进行Commit"><a href="#x20-5-7-1-使用–amend参数进行Commit" class="headerlink" title="&#x20;5.7.1 使用–amend参数进行Commit"></a>&#x20;5.7.1 使用–amend参数进行Commit</h5><ul>
+<li>例如，这里有一个名为cinderella.html的文件，想把它加到最近一次的Commit中，可以使用如下命令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Untracked files:  </span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to include <span class="keyword">in</span> what will be committed) </span><br><span class="line"></span><br><span class="line">	 cinderella.html</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use <span class="string">&quot;git add&quot;</span> to track)</span><br></pre></td></tr></table></figure>
+
+<p>-- 假设它刚加进来，状态还是Untracked。流程上一样，还是使用git add命令先把文件加到暂存区：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add cinderella.html</span><br></pre></td></tr></table></figure>
+
+<p>-- 接着在Commit时加上–amend参数：这样就可以把文件并入最近一次的Commit。&#x3D;&#x3D;最后面那个–no-edit参数的意思是“我不要编辑Commit信息”，所以就不会跳出Vim编辑器窗口。&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git commit --amend --no-edit</span><br><span class="line">[master 3128d00] update story</span><br><span class="line">Date: Wed Aug 16 05:42:56 2017 +08002 </span><br><span class="line">files changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line">create mode 100644 cinderella.html </span><br><span class="line">create mode 100644 config/database.yml</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>&#x3D;&#x3D;注意：像这样改动历史记录的操作，尽量不要应用在已经Push出去的Commit上。&#x3D;&#x3D;</li>
+</ul>
+<h4 id="x20-5-8-新增目录"><a href="#x20-5-8-新增目录" class="headerlink" title="&#x20;5.8 新增目录"></a>&#x20;5.8 新增目录</h4><blockquote>
+<p>刚刚新增了一个images目录，却发现这个目录好像无法被加到Git中。</p>
+</blockquote>
+<ul>
+<li>例如：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+
+<p>-- 现在的状态是刚完成Commit，工作目录也没有任何改动。接着创建一个images目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> images</span><br></pre></td></tr></table></figure>
+
+<p>-- 再看一下状态，会发现Git的状态依旧没有变化：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>&#x20;&#x3D;&#x3D;有一点要记住，就是Git在计算、产生对象时，是根据“文件的内容”进行计算的，所以只是新增一个目录的话，Git是无法处理它的，即空的目录无法被提交&#x3D;&#x3D;</p>
+<p>&#x3D;&#x3D;– 这时怎么办？只要在空目录中随便放一个文件就行了。如果当前还没有文件可以放，通常可以放一个名为“.keep”或“.gitkeep”的空文件，让Git能“感应”到这个目录的存在&#x3D;&#x3D;:</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> images/.keep</span><br></pre></td></tr></table></figure>
+
+<p>-- 然后再查看一下状态：可以发现，Git已经感知到这个目录的存在了（其实是感应到里面那个.keep文件的存在），接下来按照一般的流程进行add和commit即可。</p>
+<pre><code>$ git status
+On branch master
+Untracked files:  
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)  
+
+    images/
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</code></pre>
+<h4 id="x20-5-9-有些文件不想放在Git中"><a href="#x20-5-9-有些文件不想放在Git中" class="headerlink" title="&#x20;5.9  有些文件不想放在Git中"></a>&#x20;5.9  有些文件不想放在Git中</h4><blockquote>
+<p>有些比较机密的文件不想放在Git中一起备份，如数据库的存取密码或AWS服务器的存取金钥……</p>
+<p>除了比较机密的文件，对于一些程序编译的中间文件或暂存文件，同样不想将其放在Git中。因为每次只要一编译，就等于产生一个新的文件，对项目来说通常没有实质的利用价值。</p>
+</blockquote>
+<h5 id="5-9-1-忽略这个文件"><a href="#5-9-1-忽略这个文件" class="headerlink" title="5.9.1 忽略这个文件"></a>5.9.1 忽略这个文件</h5><ul>
+<li>如果不想把文件放在Git中，&#x3D;&#x3D;只需在项目目录中放一个.gitignore文件，并且设置想要忽略的规则即可。&#x3D;&#x3D;如果这个文件不存在，就手动新增它：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> .gitignore</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>然后编辑这个文件的内容：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 文件名称 .gitignore</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 忽略secret.yml文件</span></span><br><span class="line">secret.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 忽略config目录下的database.yml文件</span></span><br><span class="line">config/database.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 忽略db目录下所有后缀是 .sqlite3的文件</span></span><br><span class="line">/db/*.sqlite3</span><br><span class="line"></span><br><span class="line"><span class="comment"># 忽略所有后缀是 .tmp的文件</span></span><br><span class="line">*.tmp</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果想要忽略.gitignore这个文件也可以，只是通常不会这么做</span></span><br><span class="line"><span class="comment"># .gitignore</span></span><br></pre></td></tr></table></figure>
+
+<p>-- &#x3D;&#x3D;只要.gitignore文件存在，即使这个文件没有被Commit或Push上Git服务器，也会有效果&#x3D;&#x3D;。&#x3D;&#x3D;但通常建议将这个文件Commit进项目并且push上Git服务器&#x3D;&#x3D;，以便让一起开发项目的所有人可以共享相同的文件。</p>
+<ul>
+<li>在新增文件时，只要符合.gitignore文件中的规定，这个文件就会被忽视。例如，现在的状态是刚刚完成Commit，暂存区与工作目录都是干净的：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+
+<p>-- 这时加入要被忽略的文件secret.yml：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> secret.yml</span><br></pre></td></tr></table></figure>
+
+<p>-- 再看一下状态：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+
+<p>-- 现在，这个文件虽然确实存在这个目录中，但Git已经“感应”不到它了，即它被Git无视了。</p>
+<ul>
+<li>=&#x3D;如果不知道自己所用的工具或程序语言通常会忽略哪些文件，可以登录<a target="_blank" rel="noopener" href="https://github.com/github/gitignore%E6%9F%A5%E7%9C%8B%EF%BC%8C%E4%B8%8A%E9%9D%A2%E6%95%B4%E7%90%86%E4%BA%86%E4%B8%80%E4%BB%BD%E5%90%84%E7%A7%8D%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80%E5%B8%B8%E8%A7%81%E7%9A%84.gitignore%E6%96%87%E4%BB%B6%E3%80%82==">https://github.com/github/gitignore查看，上面整理了一份各种程序语言常见的.gitignore文件。==</a></li>
+</ul>
+<h5 id="5-9-2-可以忽略这个忽略吗"><a href="#5-9-2-可以忽略这个忽略吗" class="headerlink" title="5.9.2 可以忽略这个忽略吗"></a>5.9.2 可以忽略这个忽略吗</h5><ul>
+<li><p>虽然.gitignore文件列出了一些忽略的规则，但其实这些忽略的规则也是可以被忽略的。&#x3D;&#x3D;只需在执行git add命令时加上-f参数：就可以无视规则了。&#x3D;&#x3D;</p>
+<p>$ git add -f 文件名称</p>
+</li>
+</ul>
+<h5 id="5-9-3-咦？怎么没效果"><a href="#5-9-3-咦？怎么没效果" class="headerlink" title="5.9.3 咦？怎么没效果"></a>5.9.3 咦？怎么没效果</h5><ul>
+<li>&#x3D;&#x3D;.gitignore文件设置的规则只对那些在规则设置之后存入的文件有效，&#x3D;&#x3D;那些已经存在的文件就像既得利益者一样，这些规则对它们是无效的。</li>
+<li>如果想套用.gitignore的规则，就必须先使用git rm –cached命令把这些“既得利益者”移出Git，然后它们就会被忽略了。</li>
+</ul>
+<h5 id="x20-5-9-4-清除忽略的文件"><a href="#x20-5-9-4-清除忽略的文件" class="headerlink" title="&#x20;5.9.4 清除忽略的文件"></a>&#x20;5.9.4 清除忽略的文件</h5><ul>
+<li>&#x3D;&#x3D;如果想清除那些已经被忽略的文件，可以使用git clean命令并配合-X参数：&#x3D;&#x3D;</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clean -fX</span><br></pre></td></tr></table></figure>
+
+<h4 id="x20-5-10-查看特定文件的Commit记录"><a href="#x20-5-10-查看特定文件的Commit记录" class="headerlink" title="&#x20;5.10 查看特定文件的Commit记录"></a>&#x20;5.10 查看特定文件的Commit记录</h4><ul>
+<li>git log可以查看整个项目的Commit记录，但如果只想查看单一文件的记录，&#x3D;&#x3D;可在git log后面接上那个文件名（详见书）&#x3D;&#x3D;</li>
+<li>如果想查看这个文件每次的Commit做了什么改动，&#x3D;&#x3D;可以再给它加上一个-p参数（详见书）&#x3D;&#x3D;</li>
+</ul>
+<h4 id="x20-5-11-这行代码是谁写的"><a href="#x20-5-11-这行代码是谁写的" class="headerlink" title="&#x20;5.11 这行代码是谁写的"></a>&#x20;5.11 这行代码是谁写的</h4><blockquote>
+<p>啊！网站怎么挂了？！这行代码是谁写的？！</p>
+</blockquote>
+<ul>
+<li>这种状况经常会发生，想要知道某个文件的某一行代码是谁写的吗？在Git中可使用&#x3D;&#x3D;git blame&#x3D;&#x3D;命令找出来，如：（详见书）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git blame index.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果文件太大，也可以加上-L参数，只显示指定行数的内容（只显示第5～10行的信息）：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git blame -L 5,10 index.html</span><br></pre></td></tr></table></figure>
+
+<h4 id="x20-5-12-不小心把文件或目录删除了"><a href="#x20-5-12-不小心把文件或目录删除了" class="headerlink" title="&#x20;5.12 不小心把文件或目录删除了"></a>&#x20;5.12 不小心把文件或目录删除了</h4><h5 id="x20-5-12-1-挽救已被删除的文件或目录"><a href="#x20-5-12-1-挽救已被删除的文件或目录" class="headerlink" title="&#x20;5.12.1 挽救已被删除的文件或目录"></a>&#x20;5.12.1 挽救已被删除的文件或目录</h5><ul>
+<li>&#x3D;&#x3D;可以使用git checkout命令（仅能对使用rm命令删除且未提交到暂存区的文件生效，因此，不能对使用git rm命令删除的文件）&#x3D;&#x3D;</li>
+<li>这个技巧不仅可以将删除的文件挽救回来，当改动某个文件后反悔了，也可以用它把文件恢复到上一次Commit的状态</li>
+<li>不是所有情况下都能恢复被删除的文件的。&#x3D;&#x3D;因为整个Git的记录都是放在根目录下的.git目录中，如果这个目录被删除了，也就意味着历史记录也被删除了，那么删除的文件也就不能恢复了&#x3D;&#x3D;</li>
+</ul>
+<h5 id="x20-5-12-2-Git是怎样把文件挽救回来的（详见书）"><a href="#x20-5-12-2-Git是怎样把文件挽救回来的（详见书）" class="headerlink" title="&#x20;5.12.2  Git是怎样把文件挽救回来的（详见书）"></a>&#x20;5.12.2  Git是怎样把文件挽救回来的（详见书）</h5><ul>
+<li>&#x3D;&#x3D;当使用git checkout命令时，Git会切换到指定的分支&#x3D;&#x3D;，&#x3D;&#x3D;但如果后面接的是文件名或路径，Git则不会切换分支，而是把文件从.git目录中复制一份到当前的工作目录&#x3D;&#x3D;</li>
+<li>更精准地说，这个命令&#x3D;&#x3D;会把之前添加到过暂存区但删除后仍未添加到暂存区的文件拿来覆盖工作目录中（Working Directory）的内容或文件&#x3D;&#x3D;</li>
+<li>如果在执行这个命令时多加了一个参数：&#x20;</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout HEAD~2 welcome.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>那么距离现在两个版本以上的那个被删除的文件就会被用来覆盖当前工作目录中的welcome.html文件，但要注意，这同时也会更新暂存区的状态，其中：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout HEAD~2 .</span><br></pre></td></tr></table></figure>
+
+<p>这个命令的意思就是“用距离现在两个版本以上的文件来覆盖当前工作目录中的文件，同时更新暂存区中的状态”。</p>
+<h4 id="x20-5-13-刚才的Commit后悔了，想要拆掉重做"><a href="#x20-5-13-刚才的Commit后悔了，想要拆掉重做" class="headerlink" title="&#x20;5.13 刚才的Commit后悔了，想要拆掉重做"></a>&#x20;5.13 刚才的Commit后悔了，想要拆掉重做</h4><h5 id="5-13-1-拆掉重做"><a href="#5-13-1-拆掉重做" class="headerlink" title="5.13.1 拆掉重做"></a>5.13.1 拆掉重做</h5><ul>
+<li><p>&#x3D;&#x3D;（1）退一步海阔天空&#x3D;&#x3D;</p>
+<p>-- 先看一下当前的Git记录：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --oneline</span><br><span class="line">e12d8ef (HEAD -&gt; master) add database.yml <span class="keyword">in</span> config folder</span><br><span class="line">85e7e30 add hello</span><br><span class="line">657fce7 add container</span><br><span class="line">abb4f43 update index page</span><br><span class="line">cef6e40 create index page</span><br><span class="line">cc797cd init commit</span><br></pre></td></tr></table></figure>
+
+<p>-- 如果想拆掉最后一次的Commit，&#x3D;&#x3D;可以采用“相对”或“绝对”的做法&#x3D;&#x3D;。“相对”的做法是这样的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset e12d8ef^</span><br></pre></td></tr></table></figure>
+
+<p>-- 最后的那个<code>^</code>符号代表的是“前一次”，所以<code>e12d8ef^</code>是指e12d8ef这个Commit的前一次；如果是<code>e12d8ef^^</code>，则是往前两次……以此类推。不过如果要倒退5次，通常不会写作<code>e12d8ef^^^^^</code>，而是写成<code>e12d8ef\~5</code>。</p>
+<p>-- 因为刚好HEAD与master当前都是指向e12d8ef这个Commit，而且e12d8ef不太好记，所以上面这行通常会改写成：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git reset master^</span><br><span class="line">或</span><br><span class="line">$ git reset HEAD^</span><br></pre></td></tr></table></figure>
+
+<p>-- 如果你很清楚要把当前的状态退回到哪个Commit，可以直接指明：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset 85e7e30</span><br></pre></td></tr></table></figure>
+
+<p>-- 它就会切换到85e7e30这个Commit的状态</p>
+<ul>
+<li><p>&#x3D;&#x3D;可能有人会问，Commit拆掉了，那拆出来的那些文件去哪儿了？这个问题的答案与接下来要介绍的Reset模式有关。&#x3D;&#x3D;</p>
+</li>
+<li><p>&#x3D;&#x3D;（2）Reset模式&#x3D;&#x3D;</p>
+<p>-- git reset命令可以搭配参数使用。常用参数有3个，分别是–mixed、–soft以及–hard。搭配不同的参数，执行结果会有些微差别。</p>
+<p>-- &#x3D;&#x3D;① mixed模式&#x3D;&#x3D;：–mixed是默认的参数，如果没有另外加参数，git reset命令将使用–mixed模式。该模式会把暂存区的文件删除，但不会影响工作目录的文件。也就是说，Commit拆出来的文件会留在工作目录，但不会留在暂存区。</p>
+<p>-- &#x3D;&#x3D;② soft模式&#x3D;&#x3D;：这种模式下的Reset，其工作目录与暂存区的文件都不会被删除，所以看起来就只有HEAD的移动而已。因此，Commit拆出来的文件会直接放在暂存区。</p>
+<p>-- &#x3D;&#x3D;③ hard模式&#x3D;&#x3D;：在这种模式下，无论是工作目录还是暂存区的文件，都会被删除。</p>
+</li>
+<li><p>&#x3D;&#x3D;（3）拆掉Commit之后又后悔了，可以再救回来吗&#x3D;&#x3D;</p>
+<p>-- 当然可以，甚至使用–hard模式，拆掉的Commit也能救回来，在5.14节就会介绍如何救回来。</p>
+</li>
+</ul>
+<h5 id="x20-5-13-2-不要被Reset这个词给误导了"><a href="#x20-5-13-2-不要被Reset这个词给误导了" class="headerlink" title="&#x20;5.13.2 不要被Reset这个词给误导了"></a>&#x20;5.13.2 不要被Reset这个词给误导了</h5><ul>
+<li>Reset通常翻译为“重新设置”，但在Git中，将Reset解释为“前往”或“变成”更为贴切，即go to或become的意思。当执行以下命令时：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset HEAD~2</span><br></pre></td></tr></table></figure>
+
+<p>-- 该命令可能会被解读成“请帮我拆掉最后两次的Commit”，但其实用“拆”这个动词只是为了便于理解而已，事实上并没有真的把Commit“拆掉”（放心，所有的Commit都还在）。</p>
+<p>-- &#x3D;&#x3D;准确地说，上面这个命令应该解读成“我要前往两个Commit之前的状态”或“我要变成两个Commit之前的状态”，而随着使用不同的参数模式，原本的这些文件就会移去不同的区域。&#x3D;&#x3D;</p>
+<p>-- &#x3D;&#x3D;因为实际上git reset命令也并不是真的删除或重新设置Commit，只是“前往”到指定的Commit。那些看起来好像不见的东西只是暂时看不到了，但随时都可以再救回来。&#x3D;&#x3D;</p>
+<h4 id="x20-5-14-不小心使用hard模式Reset了某个Commit，还救得回来吗"><a href="#x20-5-14-不小心使用hard模式Reset了某个Commit，还救得回来吗" class="headerlink" title="&#x20;5.14 不小心使用hard模式Reset了某个Commit，还救得回来吗"></a>&#x20;5.14 不小心使用hard模式Reset了某个Commit，还救得回来吗</h4><h5 id="x20-5-14-1-退回Reset前"><a href="#x20-5-14-1-退回Reset前" class="headerlink" title="&#x20;5.14.1 退回Reset前"></a>&#x20;5.14.1 退回Reset前</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --oneline</span><br><span class="line">e12d8ef (HEAD -&gt; master) add database.yml <span class="keyword">in</span> config folder</span><br><span class="line">85e7e30 add hello</span><br><span class="line">657fce7 add container</span><br><span class="line">abb4f43 update index page</span><br><span class="line">cef6e40 create index page</span><br><span class="line">cc797cd init commit</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这个例子中共计有6次Commit。&#x3D;&#x3D;首先要树立一个观念，不管用什么模式进行Reset，Commit就是Commit，并不会因为Reset就马上消失。&#x3D;&#x3D;假设先用默认模式的git reset命令倒退两步：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset HEAD~2</span><br></pre></td></tr></table></figure>
+
+<p>-- 这时Commit看起来就会少两个，同时拆出来的文件会被放置在工作目录中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --oneline</span><br><span class="line">657fce7 (HEAD -&gt; master) add container</span><br><span class="line">abb4f43 update index page</span><br><span class="line">cef6e40 create index page</span><br><span class="line">cc797cd init commit</span><br></pre></td></tr></table></figure>
+
+<p>-- 如果想要退回刚刚Reset的这个步骤，只要Reset回一开始那个Commit的SHA-1 e12d8ef即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset e12d8ef --hard</span><br></pre></td></tr></table></figure>
+
+<p>-- 刚刚看起来拆掉的Commit就又回来了。这里使用了–hard参数，可以强迫放弃Reset之后改动的文件</p>
+<h5 id="x20-5-14-2-使用Reflog"><a href="#x20-5-14-2-使用Reflog" class="headerlink" title="&#x20;5.14.2 使用Reflog"></a>&#x20;5.14.2 使用Reflog</h5><ul>
+<li>&#x3D;&#x3D;如果一开始没有记录Commit的SHA-1值也没关系，可以利用Git中的Reflog命令保留一些记录。&#x3D;&#x3D;再次借用上一节的例子，但这次改用–hard模式进行Reset：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset HEAD~2 --hard</span><br><span class="line">HEAD is now at 657fce7 add container</span><br></pre></td></tr></table></figure>
+
+<p>-- 不仅Commit不见了，文件也消失了。接着可以使用Reflog命令来看一下记录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br><span class="line">657fce7 (HEAD -&gt; master) HEAD@&#123;0&#125;: reset: moving to HEAD~2</span><br><span class="line">e12d8ef (origin/master, origin/HEAD, <span class="built_in">cat</span>) HEAD@&#123;1&#125;:checkout: moving from <span class="built_in">cat</span> to master</span><br><span class="line">e12d8ef (origin/master, origin/HEAD, <span class="built_in">cat</span>) HEAD@&#123;2&#125;:checkout: moving frommaster to <span class="built_in">cat</span></span><br></pre></td></tr></table></figure>
+
+<p>-- &#x3D;&#x3D;当HEAD移动时（如切换分支或者Reset都会造成HEAD移动），Git就会在Reflog中留下一条记录。&#x3D;&#x3D;从上面的这3条记录中，可以大致猜出最近3次HEAD的移动，而最后一次的动作就是Reset。所以如果想要取消这次的Reset，就可以“Reset到它Reset前的那个Commit”。在这个例子中就是e12d8ef，所以只要这样：就可以把刚刚hard reset的东西再次救回来了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset e12d8ef –hard</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>&#x3D;&#x3D;提示：git log命令如果加上-g参数，也可以进行Reflog&#x3D;&#x3D;</p>
+</blockquote>
+<h4 id="x20-5-15-HEAD是什么"><a href="#x20-5-15-HEAD是什么" class="headerlink" title="&#x20;5.15 HEAD是什么"></a>&#x20;5.15 HEAD是什么</h4><h5 id="x20-5-15-1-HEAD简介"><a href="#x20-5-15-1-HEAD简介" class="headerlink" title="&#x20;5.15.1 HEAD简介"></a>&#x20;5.15.1 HEAD简介</h5><ul>
+<li>HEAD是一个指标，指向某一个分支，通常可以把它当作“当前所在分支”来看待。在.git目录中有一个名为HEAD的文件，其中记录的就是HEAD的内容。来看一下它到底长什么样：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cat</span> .git/HEAD</span><br><span class="line">ref: refs/heads/master</span><br></pre></td></tr></table></figure>
+
+<p>-- 从这个文件可以看出，HEAD当前正指向master分支。如果有兴趣再深入看一下refs&#x2F;heads&#x2F;master的内容就会发现，其实所谓的master分支也不过就是一个40个字节的文件罢了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cat</span> .git/refs/heads/master</span><br><span class="line">e12d8ef0e8b9deae8bf115c5ce51dbc2e09c8904</span><br></pre></td></tr></table></figure>
+
+<h5 id="x20-5-15-2-切换分支的时候（详见书）"><a href="#x20-5-15-2-切换分支的时候（详见书）" class="headerlink" title="&#x20;5.15.2 切换分支的时候（详见书）"></a>&#x20;5.15.2 切换分支的时候（详见书）</h5><ul>
+<li>&#x3D;&#x3D;HEAD通常会指向当前所在的分支。不过HEAD也不一定总是指向某个分支，当HEAD没有指向某个分支时便会造成detached HEAD的状态，详情可参阅9.5节。&#x3D;&#x3D;</li>
+<li>&#x3D;&#x3D;在切换分支的同时，HEAD的内容会改变，当HEAD的内容改变的时候，Reflog也会留下记录。&#x3D;&#x3D;</li>
+</ul>
+<h4 id="x20-5-16-可以只Commit一个文件的部分内容吗（详见书）"><a href="#x20-5-16-可以只Commit一个文件的部分内容吗（详见书）" class="headerlink" title="&#x20;5.16 可以只Commit一个文件的部分内容吗（详见书）"></a>&#x20;5.16 可以只Commit一个文件的部分内容吗（详见书）</h4><h4 id="x20-5-17-那个长得很像乱码的SHA-1值是怎样算出来的"><a href="#x20-5-17-那个长得很像乱码的SHA-1值是怎样算出来的" class="headerlink" title="&#x20;5.17 那个长得很像乱码的SHA-1值是怎样算出来的"></a>&#x20;5.17 那个长得很像乱码的SHA-1值是怎样算出来的</h4><ul>
+<li>SHA-1（Secure Hash Algorithm 1）是&#x3D;&#x3D;一种杂凑算法，计算之后的结果通常会以40个十六进制的数字形式呈现。&#x3D;&#x3D;</li>
+<li>该算法的特点之一，&#x3D;&#x3D;就是只要输入一样的值，就会有一样的输出值；反之，如果输入不同的值，就会有不同的输出值。&#x3D;&#x3D;</li>
+<li>&#x3D;&#x3D;Git中所有对象的编号都是靠这种算法产生的。&#x3D;&#x3D;</li>
+</ul>
+<h5 id="x20-5-17-1-SHA-1值会有“重复”的状况发生吗"><a href="#x20-5-17-1-SHA-1值会有“重复”的状况发生吗" class="headerlink" title="&#x20;5.17.1 SHA-1值会有“重复”的状况发生吗"></a>&#x20;5.17.1 SHA-1值会有“重复”的状况发生吗</h5><ul>
+<li>首先，前面提到SHA-1算法的特性之一，就是相同的输入值会得到相同的结果，所以遇到SHA-1值“重复”的时候并不代表就是“重复”，通常只是表示有相同的输入值而已。</li>
+<li>而当输入两个不同的值却得到相同的结果时，也就是说，两个内容不同的文件却得到一样的SHA-1值，这种情况称为碰撞（Collision）。&#x20;</li>
+<li>实际上，这种情况发生的概率相当于连续中N次乐透大奖的概率。具体概率有多低，无法给出一个精准的数字，只能说发生碰撞的机会极为渺茫，就算每秒Commit几十万次，在有限的人生中大概也没机会遇到碰撞的情况。</li>
+</ul>
+<h5 id="x20-5-17-2-等等，听说Google破解了SHA-1"><a href="#x20-5-17-2-等等，听说Google破解了SHA-1" class="headerlink" title="&#x20;5.17.2 等等，听说Google破解了SHA-1"></a>&#x20;5.17.2 等等，听说Google破解了SHA-1</h5><ul>
+<li>根据`<a target="_blank" rel="noopener" href="https://shattered.io/">https://shattered.io/</a>`网站的说明，将两个不同的PDF文件（注意，是PDF文件而不是文本文件）的内容交给SHA-1算法，会得到一样的结果。</li>
+<li>不过这其实有一点作弊，因为这里改的是PDF文件而不是文本文件。也就是说，的确可以硬改出两个这样的PDF文件，但这两个PDF文件能不能正常被阅读还不知道。所以如果要改出两个内容不同但SHA-1值一样的文本文件，难度将会更高。而且，这件事如果不是由拥有最强运算资源的Google来做，别人大概也做不到。</li>
+<li>除此之外，对Git来说，它也不是只用文件的内容进行计算，还额外加了一些“料”，让碰撞概率更低。</li>
+</ul>
+<h5 id="x20-5-17-3-计算公式"><a href="#x20-5-17-3-计算公式" class="headerlink" title="&#x20;5.17.3 计算公式"></a>&#x20;5.17.3 计算公式</h5><ul>
+<li><p>在Git中，不同种类对象的SHA-1值的计算方法会稍微有些不同。例如，Blob对象的SHA-1组成模式如下。</p>
+<p>-- &#x3D;&#x3D;（1）“blob”字样; （2）一个空白字节; （3）输入内容的长度; （4）Null结束符号; （5）输入内容。&#x3D;&#x3D;</p>
+<p>-- 如果是Tree物件，第1项则改成“tree”；如果是Commit物件，第1项则改成“commit”，以此类推。</p>
+</li>
+<li><p>同时，从上面的组成模式中可以看出，&#x3D;&#x3D;第1～5项都没有与时间或乱数有关的内容，只与要计算的内容有关（Commit对象及Tag对象除外，因为这两个对象的“内容”本身就包括时间）。&#x3D;&#x3D;所以，以Blob对象来说，&#x3D;&#x3D;不管在什么时间或设备上，一样的输入值就会有一样的输出内容。&#x3D;&#x3D;下面以一段简单的Ruby程序为例，介绍如何计算Git中Blob对象的SHA-1值：</p>
+</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 引入SHA-1计算函数库</span></span><br><span class="line"><span class="keyword">require</span> <span class="string">&quot;digest/sha1&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 要计算的内容</span></span><br><span class="line">content = <span class="string">&quot;Hello, 5xRuby&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算公式</span></span><br><span class="line">input = <span class="string">&quot;blob <span class="subst">#&#123;content.length&#125;</span>\0<span class="subst">#&#123;content&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line">puts <span class="title class_">Digest</span><span class="symbol">:</span><span class="symbol">:SHA1</span>.hexdigest(input)</span><br><span class="line"><span class="comment"># 得到 &quot;4135fc4add3332e25ab3cd5acabe1bd9ea0450fb&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>-- 如果使用Git内置的hash-object命令计算，也可以得到一样的结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">printf</span> <span class="string">&quot;Hello, 5xRuby&quot;</span> | git hash-object --stdin</span><br><span class="line">4135fc4add3332e25ab3cd5acabe1bd9ea0450fb</span><br></pre></td></tr></table></figure>
+
+<h4 id="x20-5-18-git目录中有什么？Part-1"><a href="#x20-5-18-git目录中有什么？Part-1" class="headerlink" title="&#x20;5.18 .git目录中有什么？Part 1"></a>&#x20;5.18 .git目录中有什么？Part 1</h4><ul>
+<li>&#x3D;&#x3D;在Git中，有4种很重要的对象&#x3D;&#x3D;，分别是&#x3D;&#x3D;Blob对象&#x3D;&#x3D;、&#x3D;&#x3D;Tree对象&#x3D;&#x3D;、&#x3D;&#x3D;Commit对象&#x3D;&#x3D;以及&#x3D;&#x3D;Tag对象&#x3D;&#x3D;。</li>
+</ul>
+<h5 id="x20-5-18-1-创建第一个文件并交由Git控制"><a href="#x20-5-18-1-创建第一个文件并交由Git控制" class="headerlink" title="&#x20;5.18.1 创建第一个文件并交由Git控制"></a>&#x20;5.18.1 创建第一个文件并交由Git控制</h5><ul>
+<li>首先创建一个index.html文件，内容是“hello, 5xRuby”：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;hello, 5xRuby&quot;</span> &gt; index.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>前面介绍过，&#x3D;&#x3D;这时，index.html还不算被加入Git中，它只是路过而已，所以当前的状态是Untracked，就是还没有被Git追踪的状态。&#x3D;&#x3D;接下来使用git add命令，把它加入Git的暂存区：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add index.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>index.html文件已被加入暂存区无误。&#x3D;&#x3D;当把文件加入暂存区后，Git便会在.git目录中生成一个Blob（Binary large object）对象，并且依照其“规则”摆放到目录中。&#x3D;&#x3D;这个Blob对象用来&#x3D;&#x3D;存放index.html文件的“内容”&#x3D;&#x3D;。注意，&#x3D;&#x3D;这里说的是“内容”而不是把整个index.html文件搬进.git目录。&#x3D;&#x3D;</li>
+<li>5.17节介绍过Git是怎样计算Blob对象的SHA-1值的，这里直接使用git hash-object命令来计算也可以：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;hello, 5xRuby&quot;</span> | git hash-object --stdin</span><br><span class="line">30ab28d3acb37f96ad61ad8be82c8da46d0a7307</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>经过计算，”hello, 5xRuby”字符串的内容在Git中得到的SHA-1值是30ab28d3acb37f96ad61ad8be82c8da46d0a7307。接着Git就会在.git&#x2F;objects目录中存放文件。&#x3D;&#x3D;Git会用这40字的SHA-1值的前两个字作为目录，剩余的38字是文件名&#x3D;&#x3D;。</li>
+<li>因为文件的内容已经过压缩，所以&#x3D;&#x3D;用一般的文本编辑器是看不出内容的，但可以使用git cat-file命令来查看&#x3D;&#x3D;：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -t 30ab28d3acb37f96ad61ad8be82c8da46d0a7307</span><br><span class="line">blob</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>其中，&#x3D;&#x3D;-t参数表示要查看的SHA-1值所代表的对象的形态&#x3D;&#x3D;。根据结果，Git回报的SHA-1值代表的是一种Blob对象。&#x3D;&#x3D;如果改用-p参数：&#x3D;&#x3D;</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -p 30ab28d3acb37f96ad61ad8be82c8da46d0a7307</span><br><span class="line">hello, 5xRuby</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>则可看到SHA-1值指向的那个对象的内容，它显示为“hello，5xRuby”，可以确定就是刚才的那个index.html文件。&#x3D;&#x3D;至此可知如下信息：&#x3D;&#x3D;</p>
+<p>-- （1）当使用git add命令把文件加入暂存区时，Git会根据这个对象的“内容”计算出SHA-1值。</p>
+<p>-- （2）Git接着会用SHA-1值的前2个字节作为目录名称，后38个字节作为文件名，创建目录及文件并存放在.git&#x2F;objects目录下。</p>
+<p>-- （3）文件的内容则是Git使用压缩算法把原本的“内容”压缩之后的结果。</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>规则</strong> <br>&#x3D;&#x3D;Blob对象的文件名是由SHA-1算法决定的，其内容则是由压缩算法决定的。&#x3D;&#x3D;</p>
+<p><strong>提示</strong><br>在某些操作系统下，一个目录中如果放了非常多的文件，该目录的读取效率就会变得非常低，所以Git抽出了前两位数作为目录名称，就是避免让.git&#x2F;objects目录因为文件过多而降低效率。</p>
+</blockquote>
+<h5 id="x20-5-18-2-创建目录"><a href="#x20-5-18-2-创建目录" class="headerlink" title="&#x20;5.18.2 创建目录"></a>&#x20;5.18.2 创建目录</h5><ul>
+<li>接着创建一个名为config的目录:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> config</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>这时看一下状态，发现Git完全没感应到刚刚创建的那个目录。为什么？</p>
+<p>-- 想一下刚才的规则，Git会针对文件的“内容”使用SHA-1算法进行计算，然后在.git&#x2F;objects中创建对应的目录及文件。&#x3D;&#x3D;但因为这只是一个空的config目录，它根本就没有“内容”可以计算，所以Git根本连感应都感应不到&#x3D;&#x3D;。记住，&#x3D;&#x3D;Git只对“内容”有兴趣，这样一个空的目录对Git来说是无感的，所以它也只是路过，甚至连Untracked都算不上&#x3D;&#x3D;。即使手动下达这个命令，也是没效果的</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add config</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>重要</strong><br>&#x3D;&#x3D;空的目录无法被加入Git中。&#x3D;&#x3D;</p>
+</blockquote>
+<h5 id="x20-5-18-3-创建第二个文件"><a href="#x20-5-18-3-创建第二个文件" class="headerlink" title="&#x20;5.18.3 创建第二个文件"></a>&#x20;5.18.3 创建第二个文件</h5><ul>
+<li>在上一个步骤中，既然Git无法处理config目录，所以接下来在这个目录中创建一个文件：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> config/database.yml</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>&#x3D;&#x3D;即使只是一个空的文件，它也是有“内容”的，就是“空的内容”，原本无法被Git看见的config目录，在里面放了一个文件之后就看得见它了&#x3D;&#x3D;（有种“母凭子贵”的感觉）。接着把它加到Git中：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add config/database.yml</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>根据Git的Blob对象进行计算：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cat</span> config/database.yml | git hash-object --stdin</span><br><span class="line">e69de29bb2d1d6434b8b29ae775ad8c2e48c5391</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>根据前面的规则，这时会在.git&#x2F;objects目录中创建一个e6的目录，其中包含9de29bb2d1d6434b8b29ae775ad8c2e48c5391文件。</li>
+<li>到这里，相信大家已对Git世界中的Blob对象有所了解了。</li>
+<li>接下来你可能会好奇：Git只在意文件的“内容”，&#x3D;&#x3D;难道目录完全不重要吗？文件的名称是什么也不重要吗？其实也不是不重要，只是它们不属于Blob对象的范围，这是后面要介绍的Tree对象要处理的。&#x3D;&#x3D;</li>
+</ul>
+<h5 id="x20-5-18-4-进行commit"><a href="#x20-5-18-4-进行commit" class="headerlink" title="&#x20;5.18.4 进行commit"></a>&#x20;5.18.4 进行commit</h5><ul>
+<li>既然文件已加至暂存区，接下来就要进行Commit，观察一下.git&#x2F;objects目录会有什么变化：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">&quot;init commit&quot;</span></span><br><span class="line">[master (root-commit) 5d47270] init commit</span><br><span class="line">2 files changed, 1 insertion(+)</span><br><span class="line">create mode 100644 config/database.yml</span><br><span class="line">create mode 100644 index.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>除了原本的30与e6目录之外，又多出了好几个目录，下面来看看它们都是什么。从25目录中的32115fab19c7ce70ff78a4929fb5df2f6131c4开始查看：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- $ git cat-file -t 2532115fab19c7ce70ff78a4929fb5df2f6131c4</span><br><span class="line">tree</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Git告诉我们这是一种Tree对象。再看这个对象里有什么内容：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -p 2532115fab19c7ce70ff78a4929fb5df2f6131c4</span><br><span class="line">040000 tree a618ce33da8d21bca841f18e6432fcabf15d4477  config</span><br><span class="line">100644 blob 30ab28d3acb37f96ad61ad8be82c8da46d0a7307  index.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>从中看到一个Tree对象和一个Blob对象，而这个Blob对象正是index.html。再看它指向的另一个对象：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -t a618ce33da8d21bca841f18e6432fcabf15d4477</span><br><span class="line">tree</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这是个Tree对象，内容如下：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -p a618ce33da8d21bca841f18e6432fcabf15d4477</span><br><span class="line">100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391  database.yml</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在这个Tree对象中看到一个Blob对象，正是刚刚放在config目录中的database.yml。到这里，大家可能稍微对Tree对象有点了解了。用一张图来简单说明：</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/6768069fd0e0a243d4e80ffb.jpg"></p>
+<ul>
+<li><p>说明如下：</p>
+<p>-- （1）&#x3D;&#x3D;文件在Git中会以Blob对象的形式存放&#x3D;&#x3D;，如这个示例中的index.html和database.yml。</p>
+<p>-- （2）&#x3D;&#x3D;目录及文件的名称将会以Tree对象的形式存放&#x3D;&#x3D;，如253211代表的是根目录，而a618ce代表的是config目录。&#x20;</p>
+<p>-- （3）&#x3D;&#x3D;Tree对象的内容会指向某个或某些Blob对象，或者其他的Tree对象&#x3D;&#x3D;。</p>
+<p>-- 大家可能会觉得这有点像目录与子目录的关系，但其实并不是。&#x3D;&#x3D;它有个专有名词——Directed Acyclic Graph（DAG），中文翻译为有向无环图。&#x3D;&#x3D;</p>
+<p>-- &#x3D;&#x3D;这些对象之间只有指来指去的关系，并没有阶层或目录、子目录的关系，不管是Blob对象还是Tree对象，都是平行的。&#x3D;&#x3D;</p>
+<p>-- 图中用类似目录的方式呈现，只是因为这样比较容易想象和理解罢了，&#x3D;&#x3D;事实上它们并没有阶层关系。&#x3D;&#x3D;</p>
+</li>
+<li><p>介绍完Tree对象，刚刚Commit完成后多出来的3个对象还有一个没有查看：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -t 5d47270a0a3cb0440f77bdfa795bd712b22ec548</span><br><span class="line">commit</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这就是接下来要介绍的Commit对象。看看这个Commit对象的内容：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -p 5d47270a0a3cb0440f77bdfa795bd712b22ec548</span><br><span class="line">tree 2532115fab19c7ce70ff78a4929fb5df2f6131c4</span><br><span class="line">author Eddie Kao &lt;eddie@5xruby.tw&gt; 1503442336 +0800</span><br><span class="line">committer Eddie Kao &lt;eddie@5xruby.tw&gt; 1503442336 +0800</span><br><span class="line">init commit</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>这个Commit对象包括以下信息：</p>
+<p>-- （1）某个Tree对象。还记得253211吗？如果往回翻就可以发现，它就是代表根目录的那个Tree对象</p>
+<p>-- （2）本次Commit的时间。&#x20;</p>
+<p>-- （3）作者和进行这次Commit的人一般情况下会是同一个人，但偶尔也会有“Code我写好了，但没办法Commit，所以请人代发”的情况。&#x20;</p>
+<p>-- （4）本次Commit的信息。</p>
+</li>
+<li><p>将截至目前提到的Blob对象、Tree对象及Commit对象的关系用图再重新整理一下:</p>
+<p><img src="https://pic.imgdb.cn/item/6768088ad0e0a243d4e810b1.jpg"></p>
+</li>
+<li><p>提醒一下，在图中各个对象旁边写着目录或文件名的小提示牌，&#x3D;&#x3D;并不代表“这个物件就是这个文件或目录”，而是“这个对象的内容是来自这个文件的”，&#x3D;&#x3D;放上提示牌只是为了让大家更容易理解各对象之间的关系而已。</p>
+</li>
+<li><p>参考此图，然后记住以下规则:</p>
+<p>-- &#x3D;&#x3D;（1）Commit对象会指向某个Tree对象&#x3D;&#x3D;</p>
+<p>-- &#x3D;&#x3D;（2）Tree对象的内容会指向某个或某些Blob对象，或者其他的Tree对象。&#x3D;&#x3D;</p>
+</li>
+<li><p>Git对象的“四大天王”已经出现三位了，还少一位，也就是Tag对象，它将在后面的章节中另做介绍。</p>
+</li>
+</ul>
+<h5 id="x20-5-18-5-分支登场"><a href="#x20-5-18-5-分支登场" class="headerlink" title="&#x20;5.18.5 分支登场"></a>&#x20;5.18.5 分支登场</h5><ul>
+<li><p>在6.3节关于分支的介绍中提到，Git中的分支其实就跟一张贴纸一样，它会贴在某个Commit上，并且会随着每次的Commit不断地移动；</p>
+</li>
+<li><p>同时，在5.15节关于HEAD的介绍中指出，HEAD是一个指向某个分支的指标，可以把它看成“当前所在的分支”。</p>
+</li>
+<li><p>综上所述，&#x3D;&#x3D;这时应该会有一个分支（就是Git默认的master分支），并且HEAD会指向当前唯一的Commit，如图所示&#x3D;&#x3D;</p>
+<p><img src="https://pic.imgdb.cn/item/676809ced0e0a243d4e81118.jpg"></p>
+</li>
+</ul>
+<h5 id="x20-5-18-6-继续前进"><a href="#x20-5-18-6-继续前进" class="headerlink" title="&#x20;5.18.6 继续前进"></a>&#x20;5.18.6 继续前进</h5><ul>
+<li>做完了一次Commit，接下来再做一次，看看.git目录又会有什么变化。这次先编辑一下index.html文件，帮它加一些HTML内容。</li>
+<li>因为这个文件被改动了，所以处于modified状态。不过这时还没有新的对象产生，要把文件加到暂存区才会出现新的Blob对象。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add index.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用git hash-object命令计算一下：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cat</span> index.html | git hash-object --stdin</span><br><span class="line">159dba9a492eb6ee354beda28c88652dd7d1c2e2</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>根据前面的规则，这时在.git&#x2F;objects目录下会多出一个15目录，并且其中有一个名为9dba9a492eb6ee354beda28c88652dd7d1c2e2的文件</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/67680b4fd0e0a243d4e811df.jpg"></p>
+<ul>
+<li>那个Blob对象159dba目前还没用到。继续Commit下去，看看会发生什么事</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">&quot;update index.html&quot;</span></span><br><span class="line">[master 4ddb0b5] update index.html </span><br><span class="line">1 file changed, 10 insertions(+), 1 deletion(-)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果与Commit之前的状态进行比对，会发现这次的Commit多出了两个目录，它们的SHA-1值分别是3a648a和4ddb0b（这里仅使用6码短码表示）。使用git cat-file命令查看内容：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -t 3a648a98d322f82a72bff20ed977539c581a181d</span><br><span class="line">tree</span><br><span class="line"></span><br><span class="line">$ git cat-file -p 3a648a98d322f82a72bff20ed977539c581a181d</span><br><span class="line">040000 tree a618ce33da8d21bca841f18e6432fcabf15d4477  config</span><br><span class="line">100644 blob 159dba9a492eb6ee354beda28c88652dd7d1c2e2  index.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>这个Tree对象看起来与上一个Commit中代表根目录的那个Tree对象相似，只是内容有点不太一样。在这个Tree对象中，原本指向config目录的Tree对象因为没有改动，所以它的指向没有变；反倒是代表index.html的那个Blob对象因为内容有改动，所以指向新的Blob对象了。</p>
+</li>
+<li><p>接下来查看另一个对象4ddb0b</p>
+<p>$ git cat-file -t 4ddb0b5fce084d36248eb1ce14109162617abd51<br>commit</p>
+<p>$ git cat-file -p 4ddb0b5fce084d36248eb1ce14109162617abd51<br>tree 3a648a98d322f82a72bff20ed977539c581a181d<br>parent 5d47270a0a3cb0440f77bdfa795bd712b22ec548<br>author Eddie Kao <a href="mailto:&#x65;&#100;&#100;&#105;&#x65;&#x40;&#53;&#120;&#114;&#117;&#98;&#x79;&#x2e;&#116;&#119;">&#x65;&#100;&#100;&#105;&#x65;&#x40;&#53;&#120;&#114;&#117;&#98;&#x79;&#x2e;&#116;&#119;</a> 1503469899 +0800<br>committer Eddie Kao <a href="mailto:&#101;&#100;&#100;&#x69;&#x65;&#x40;&#53;&#x78;&#x72;&#x75;&#x62;&#x79;&#46;&#x74;&#x77;">&#101;&#100;&#100;&#x69;&#x65;&#x40;&#53;&#x78;&#x72;&#x75;&#x62;&#x79;&#46;&#x74;&#x77;</a> 1503469899 +0800</p>
+<p>update index.html</p>
+</li>
+<li><p>这个4ddb0b是一个Commit对象，从上面的信息来看，也指向一个Tree对象3a648a，其他信息类似，但这个Commit对象比前一个Commit对象多了一个parent的信息，表示指向“上一次”的Commit。当前各个对象的关系如图所示</p>
+</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/67680d37d0e0a243d4e8123d.jpg"></p>
+<ul>
+<li><p>分支与HEAD也是随着Commit的变化而调整位置。是不是觉得有点复杂？&#x3D;&#x3D;下面在刚才的两条规则上再加三条新的规则：&#x3D;&#x3D;</p>
+<p>-- （1）Commit对象会指向某个Tree对象</p>
+<p>-- （2）Tree对象的内容会指向某个或某些Blob对象，或者其他的Tree对象</p>
+<p>-- （3）除了第一个Commit对象外，所有Commit对象都会指向其前一次的Commit对象。</p>
+</li>
+<li><p>接下来再做最后一次Commit，为这个“认识Git四大天王对象”之旅结尾。</p>
+</li>
+</ul>
+<h5 id="5-18-7-继续前进"><a href="#5-18-7-继续前进" class="headerlink" title="5.18.7 继续前进"></a>5.18.7 继续前进</h5><ul>
+<li>这次来做一个有趣的试验，在这个项目的根目录下加一个README.md文件，文件内容可以为空：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> README.md</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>再把这个文件加入暂存区：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add README.md</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>由之前的内容可知，执行git add命令后应该会多出一个Blob对象，但如果查看.git&#x2F; objects目录，会发现并没有变多，其原因是这里已经有一个一样内容的Blob对象了。</li>
+<li>还记得吗？一开始放在config目录下的database.yml文件也是空的。在Git的世界中，只要文件的内容是一样的，它们就是同一个Blob对象。这时的对象关系如图所示:</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/67680e85d0e0a243d4e8129d.jpg"></p>
+<ul>
+<li>继续Commit：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">&quot;add README&quot;</span></span><br><span class="line">[master 4bf7d4a] add README </span><br><span class="line">1 file changed, 0 insertions(+), 0 deletions(-) </span><br><span class="line">create mode 100644 README.md</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这次的Commit多了两个新对象，分别是0fc2cc和4bf7d4。先看第一个对象0fc2cc：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -t 0fc2cccfb7a20abde62d9cedd577300b8d1de1a7</span><br><span class="line">tree</span><br><span class="line"></span><br><span class="line">$ git cat-file -p 0fc2cccfb7a20abde62d9cedd577300b8d1de1a7</span><br><span class="line">100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391  README.md</span><br><span class="line">040000 tree a618ce33da8d21bca841f18e6432fcabf15d4477  config</span><br><span class="line">100644 blob 159dba9a492eb6ee354beda28c88652dd7d1c2e2  index.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这是一个Tree对象，将它与前一次Commit的Tree对象进行对比：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -p 3a648a98d322f82a72bff20ed977539c581a181d</span><br><span class="line">040000 tree a618ce33da8d21bca841f18e6432fcabf15d4477  config</span><br><span class="line">100644 blob 159dba9a492eb6ee354beda28c88652dd7d1c2e2  index.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可以看出，代表config目录的Tree对象以及代表index.html内容的Blob对象这两行都没有变，只是新增了一行代表README.md的Blob对象。虽然此次的Commit并没有产生新的Blob对象，但是Tree对象还是需要记录README.md文件的存在，所以Tree对象的“内容”改变了，因此Git会做出一个新的Tree对象。</li>
+<li>再来看看第二个对象4bf7d4：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -t 4bf7d4adf6e56964ae3c0625bbc54275a02672d7</span><br><span class="line">commit</span><br><span class="line"></span><br><span class="line">$ git cat-file -p 4bf7d4adf6e56964ae3c0625bbc54275a02672d7</span><br><span class="line">tree 0fc2cccfb7a20abde62d9cedd577300b8d1de1a7</span><br><span class="line">parent 4ddb0b5fce084d36248eb1ce14109162617abd51 </span><br><span class="line">author Eddie Kao &lt;eddie@5xruby.tw&gt; 1503471804 +0800 </span><br><span class="line">committer Eddie Kao &lt;eddie@5xruby.tw&gt; 1503471804 +0800add README</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这个4bf7d4是一个Commit对象，它指向刚才那个Tree对象0fc2cc，并且也指向前一次的Commit对象。到这里，就可以将这3次Commit涉及的所有对象的关系以有向无环图的形式进行展示</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/676810bdd0e0a243d4e8130b.jpg"></p>
+<ul>
+<li>这3次的Commit共产生了10个对象（分支不算对象）。除了手动计算，也可以使用Git计算：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git count-objects</span><br><span class="line">10 objects, 40 kilobytes</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>经过这3次的Commit，相信大家已对Blob对象、Tree对象以及Commit对象有了更深入的认识。这样的流程也许会让人觉得有点闷，但通过这个过程，如果能理解并预测下一次的Commit大概会出现什么对象，就会更清楚Git内部的运行原理。</li>
+</ul>
+<h5 id="5-18-8-等等，“四大天王”的最后一位还没登场啊"><a href="#5-18-8-等等，“四大天王”的最后一位还没登场啊" class="headerlink" title="5.18.8 等等，“四大天王”的最后一位还没登场啊"></a>5.18.8 等等，“四大天王”的最后一位还没登场啊</h5><ul>
+<li>最后一位——Tag对象，它不会在Commit的过程中出现，必须手动地把Tag贴在某个Commit上，而且还不是一般的轻量Tag，而是有附注的Tag（Annotated Tag），可参阅8.1节。</li>
+<li>下面在当前的Commit上打一个Tag：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git tag -a big_treasure -m <span class="string">&quot; 妈，我在这 &quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这时，.git&#x2F;objects目录下多了一个3b9eab对象，用同样的方式来查看：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -t 3b9eab6d623496a272f61076a765301bb7af4367</span><br><span class="line">tag</span><br><span class="line"></span><br><span class="line">$ git cat-file -p 3b9eab6d623496a272f61076a765301bb7af4367</span><br><span class="line">object 4bf7d4adf6e56964ae3c0625bbc54275a02672d7</span><br><span class="line"><span class="built_in">type</span> committag </span><br><span class="line">big_treasuretagger </span><br><span class="line">Eddie Kao &lt;eddie@5xruby.tw&gt; 1503508397 +0800</span><br><span class="line"></span><br><span class="line">妈，我在这</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可以看出这是一个Tag对象，它同样会标记是谁在什么时候做了这个Tag，并且标在4bf7d4这个Commit对象上。现在完整的对象关系如图所示</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/67681202d0e0a243d4e8135f.jpg"></p>
+<h5 id="5-18-9-小结"><a href="#5-18-9-小结" class="headerlink" title="5.18.9 小结"></a>5.18.9 小结</h5><ul>
+<li>Git中的4种对象的关系如图所示</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/6768126dd0e0a243d4e81377.jpg"></p>
+<ul>
+<li>（1）把文件加入Git之后，文件的内容会被转成Blob对象存储。<br>（2）目录及文件名会存放在Tree对象内，Tree对象会指向Blob对象或者其他的Tree对象。<br>（3）Commit对象会指向某个Tree对象。除了第一个Commit，其他的Commit都会指向前一次的Commit对象。<br>（4）Tag对象（Annotated Tag）会指向某个Commit对象。<br>（5）分支虽然不属于这4种对象之一，但它会指向某个Commit对象。<br>（6）往Git服务器上推送之后，在.git&#x2F;refs下就会多出一个remote目录，里面放的是远端的分支，基本上与本地的分支类似，同样也会指向某个Commit对象。<br>（7）HEAD也不属于这4种对象之一，它会指向某个分支。</li>
+<li>下节将介绍当Git在进行Checkout时会发生的事。</li>
+</ul>
+<h4 id="5-19-git目录中有什么？Part-2"><a href="#5-19-git目录中有什么？Part-2" class="headerlink" title="5.19 .git目录中有什么？Part 2"></a>5.19 .git目录中有什么？Part 2</h4><ul>
+<li>5.18节介绍了.git&#x2F;objects目录中的内容，以及Git的一些运行原理，接下来讲解&#x3D;&#x3D;当Git在Checkout时会发生什么事，看看为什么Git可以这么快地切换状态。&#x3D;&#x3D;</li>
+</ul>
+<h5 id="5-19-1-Git在Checkout时的变化"><a href="#5-19-1-Git在Checkout时的变化" class="headerlink" title="5.19.1 Git在Checkout时的变化"></a>5.19.1 Git在Checkout时的变化</h5><ul>
+<li>5.18节做了3次Commit，最后各个对象的关系如图所示:<br><img src="https://pic.imgdb.cn/item/67681202d0e0a243d4e8135f.jpg"></li>
+<li>虽然Git .git&#x2F;objects目录中保留了完整的内容，但工作目录中的内容会根据当前的Commit，一个一个地把所有对象抽出来（&#x3D;&#x3D;就像葡萄一样，从根拎起来，整串葡萄就被抽出来了&#x3D;&#x3D;），所以当前工作目录的内容如图所示</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/676813f7d0e0a243d4e813ac.jpg"></p>
+<ul>
+<li>还以这个例子来说，当试着Checkout到另一个Commit时，会出现如下说明：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout 4ddb0b5</span><br><span class="line">Note: checking out <span class="string">&#x27;4ddb0b5&#x27;</span>.</span><br><span class="line"></span><br><span class="line">You are <span class="keyword">in</span> <span class="string">&#x27;detached HEAD&#x27;</span> state. You can look around, make exp erimentalchanges and commit them, and you can discard any commits you makein this state without impacting any branches by performing anothercheckout.</span><br><span class="line"></span><br><span class="line">If you want to createa new branch to retain commits you create, you may <span class="keyword">do</span> so (now or later) by using -b with the checkout <span class="built_in">command</span> again.</span><br><span class="line">Example:  </span><br><span class="line"></span><br><span class="line">	git checkout -b &lt;new-branch-name&gt;</span><br><span class="line"></span><br><span class="line">HEAD is now at 4ddb0b5... update index.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>因为4ddb0b5这个Commit没有分支指着，所以&#x3D;&#x3D;会发生detached HEAD的状况&#x3D;&#x3D;。关于detached HEAD，可参阅9.5节。</li>
+<li>当Git切换到这个节点时，这串“葡萄”的样子如图所示</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/67681547d0e0a243d4e813e9.jpg"></p>
+<ul>
+<li>Git根据这串信息，把原本放在.git&#x2F;objects中以SHA-1计算命名的目录及文件，一个一个地复原成原来的样子，所以现在的目录内容是这样的：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">ls</span> -al total 8</span><br><span class="line">drwxr-xr-x 5 eddie staff 170 Aug 24 12:39 .</span><br><span class="line">drwxr-xr-x 8 eddie staff 272 Aug 22 16:23 ..</span><br><span class="line">drwxr-xr-x 13 eddie staff 442 Aug 24 12:39 .git</span><br><span class="line">drwxr-xr-x 3 eddie staff 102 Aug 23 06:22 config</span><br><span class="line">-rw-r--r-- 1 eddie staff 143 Aug 24 12:39 index.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在第3次Commit才加入的README.md，因为这串“葡萄”中并没有提到它，自然就不会被拎出来。同理，继续往前切换时，结果如下：</li>
+</ul>
+<p><img src="https://pic.imgdb.cn/item/676815bad0e0a243d4e813f5.jpg"></p>
+<ul>
+<li>查看目录内容：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">ls</span> -al total 8</span><br><span class="line">drwxr-xr-x 5 eddie staff 170 Aug 24 12:39 .</span><br><span class="line">drwxr-xr-x 8 eddie staff 272 Aug 22 16:23 ..</span><br><span class="line">drwxr-xr-x 13 eddie staff 442 Aug 24 12:39 .git</span><br><span class="line">drwxr-xr-x 3 eddie staff 102 Aug 23 06:22 config</span><br><span class="line">-rw-r--r-- 1 eddie staff 14 Aug 24 12:35 index.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果能理解“拎葡萄”的概念，就能理解为什么文件与目录会有这样的变化了。</li>
+<li>更多关于分支及Checkout时发生的事，如.git&#x2F;HEAD的变化、工作目录及暂存区的变化，可参阅6.3节的补充</li>
+</ul>
+<h5 id="x20-5-19-2-Git不是做差异备份"><a href="#x20-5-19-2-Git不是做差异备份" class="headerlink" title="&#x20;5.19.2 Git不是做差异备份"></a>&#x20;5.19.2 Git不是做差异备份</h5><ul>
+<li>有些版控系统会备份每次Commit之间的“差异”，如这次加了2行、下次删了5行之类的历史记录，然后通过这些信息，像拼图一样一个一个地把文件还原成它该有的样子。</li>
+<li>不过Git并不是这样设计的。从前面的流程来看，每次使用git add命令把文件加到暂存区时，即使文件的内容只改了一个字，因为算出来的SHA-1值不同，所以Git也会为它做出一个全新的Blob对象，而不是只记录“差异”。而Git在切换Commit时会像“拎葡萄”一样整串抽出来，不需要一个一个去拼凑历史记录，所以在进行Checkout时效率相对较高。有些人也会用快照（Snapshot）来形容“拎葡萄”的概念。</li>
+</ul>
+<h5 id="x20-5-19-3-这样是不是很浪费空间"><a href="#x20-5-19-3-这样是不是很浪费空间" class="headerlink" title="&#x20;5.19.3 这样是不是很浪费空间"></a>&#x20;5.19.3 这样是不是很浪费空间</h5><ul>
+<li>如果Git是用这种方式存放文件，就算只改一个字也会做出一个新的对象，那可能就会让人产生疑惑：“这样不是很浪费空间吗？”试想一下，如果有一个100KB的文件，因为改了一行代码，就必须再做出一个差不多也是100KB的文件出来。虽然Git在制作Blob对象时会先进行压缩，但这样“只差一点点就要备份整个文件”的做法，看起来的确是有点浪费。</li>
+<li>对此，Git提供了“资源回收机制”。当启用该机制时，Git会用非常有效率的方式压缩对象及制作下标。下面用一个全新的项目来举例。先使用git ls- files命令查询当前文件在Git中的样子：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git ls-files -s</span><br><span class="line">100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 0 config/database.yml</span><br><span class="line">100644 159dba9a492eb6ee354beda28c88652dd7d1c2e2 0  index.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当前只有两个文件，分别是index.html及config目录中的database.yml，而index.html的内容如下：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>    </span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span>    </span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>    </span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, 5xRuby<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可以看出，这只是一个简单的HTML页面，这个文件的大小是143 bytes。接着对该文件做一些改动。例如：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>    </span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span>    </span><br><span class="line">	 <span class="tag">&lt;<span class="name">title</span>&gt;</span>5xRuby<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>    </span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, 5xRuby<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这里只在&lt;title&gt;&lt;&#x2F;title&gt;中间加上了5xRuby字样。然后进行Commit：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git add index.html</span><br><span class="line">$ git commit -m <span class="string">&quot;update index&quot;</span></span><br><span class="line"></span><br><span class="line">[master 23ee05d] update index </span><br><span class="line">1 file changed, 1 insertion(+), 1 deletion(-)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>完成Commit，查看一下当前的状态：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git ls-files -s</span><br><span class="line">100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 0   config/database.yml</span><br><span class="line">100644 6303bc8384a837e7368692b03cb36cdf16d7f660 0   index.html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Git的确为这几个字节的改动做了一个新的Blob对象6303bc。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -s 6303bc8384a837e7368692b03cb36cdf16d7f660</span><br><span class="line">149</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这个新的Blob对象的大小是149 bytes，只增加了5xRuby 6个字，Git就为了它做了一个新的Blob对象，这就是前面提到的浪费。&#x3D;&#x3D;但当Git启用“资源回收机制”后，会把这些文件以非常有效率的方式打包并做好下标&#x3D;&#x3D;。&#x3D;&#x3D;Git的资源回收机制通常会在它觉得对象太多时自动触发，也可直接执行git gc命令手动触发&#x3D;&#x3D;：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git gc</span><br><span class="line">Counting objects: 11, <span class="keyword">done</span>.</span><br><span class="line">Delta compression using up to 4 threads.</span><br><span class="line">Compressing objects: 100% (8/8), <span class="keyword">done</span>.</span><br><span class="line">Writing objects: 100% (11/11), <span class="keyword">done</span>.</span><br><span class="line">Total 11 (delta 1), reused 0 (delta 0)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这个命令会把原本放在.git&#x2F;objects目录下的那些对象全部打包到.git&#x2F;objects&#x2F;pack目录下，变成这个样子：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ find .git/objects -<span class="built_in">type</span> f</span><br><span class="line">.git/objects/info/packs</span><br><span class="line">.git/objects/pack/pack-ea00f1558d67a7df25bf9744f3d83a17a7a2bf43.idx</span><br><span class="line">.git/objects/pack/pack-ea00f1558d67a7df25bf9744f3d83a17a7a2bf43.pack</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Git中还有一个比较底层的命令git veryfy-pack，可以用它来查看打包的情况：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ git verify-pack -v .git/objects/pack/pack-ea00f1558d67a7df25bf9744f3d83a17a7a2bf43.idx</span><br><span class="line">23ee05d5652c770990e4c65d5a0b8ec34ba4f64f commit 215 151 12</span><br><span class="line">44785d18bb2804a9455d7a2e0d9e9f60df482af7 commit 220 156 163</span><br><span class="line">cd05448adf3ee9b11b3cf846a387d1af754b6191 commit 166 120 319</span><br><span class="line">e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 blob  0 9 439</span><br><span class="line">6303bc8384a837e7368692b03cb36cdf16d7f660 blob   149 110 448</span><br><span class="line">140454ce2b3d2d493653d01fb8d41ab6bcc22f87 tree   71 81 558</span><br><span class="line">a618ce33da8d21bca841f18e6432fcabf15d4477 tree   40 51 63</span><br><span class="line">93a648a98d322f82a72bff20ed977539c581a181d tree   71 82 69</span><br><span class="line">0159dba9a492eb6ee354beda28c88652dd7d1c2e2 blob   9 20 772 1</span><br><span class="line">6303bc8384a837e7368692b03cb36cdf16d7f660</span><br><span class="line">2532115fab19c7ce70ff78a4929fb5df2f6131c4 tree   71 81 792</span><br><span class="line">30ab28d3acb37f96ad61ad8be82c8da46d0a7307 blob   14 23 873</span><br><span class="line">non delta: 10 objects</span><br><span class="line">chain length = 1: 1 object</span><br><span class="line">.git/objects/pack/pack-ea00f1558d67a7df25bf9744f3d83a17a7a2bf43.pack: ok</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在上面的这些信息中，第1栏是对象的SHA-1值，第2栏是对象的形态，第3栏则是文件大小。先看下面一行：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6303bc8384a837e7368692b03cb36cdf16d7f660 blob   149 110 448</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这个文件是刚刚改动过的index.html，文件大小是149 bytes，再看另一行：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">159dba9a492eb6ee354beda28c88652dd7d1c2e2 blob 9 20 772 1</span><br><span class="line">6303bc8384a837e7368692b03cb36cdf16d7f660</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这个文件是改动前的index.html，但其大小只有9 bytes。原因是这个文件参照了后面的6303bc文件，所以才会这么小。也就是说，虽然在对象状态时是完整的文件（打包前），在Git进行资源回收打包时则使用了类似差异备份的方式，有效地缩小了这些对象的体积。</li>
+</ul>
+<h5 id="5-19-4-Git什么时候会自动触发资源回收机制"><a href="#5-19-4-Git什么时候会自动触发资源回收机制" class="headerlink" title="5.19.4 Git什么时候会自动触发资源回收机制"></a>5.19.4 Git什么时候会自动触发资源回收机制</h5><ul>
+<li>（1）当.git&#x2F;objects目录的对象或打包过的packfile数量过多时，Git会自动触发资源回收命令。&#x20;</li>
+<li>（2）当执行git push命令把内容推至远端服务器时（如果仔细观察过Push命令的信息，就会发现这一点）。</li>
+<li>其实，&#x3D;&#x3D;Git并不是很在意空间的浪费，能够快速、有效率地操作才是Git关注的重点&#x3D;&#x3D;</li>
+</ul>
+<hr>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2018-2024 LittleStoneMonkey
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

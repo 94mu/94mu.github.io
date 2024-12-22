@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>《从0到1：Python数据分析》 | Road2Dasheng</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="《从0到1：Python数据分析》 | Road2Dasheng">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="书籍简介 豆瓣  &#x20;书籍笔记第一部分 Numpy篇&#x20;一、数据分析概述&#x20;1.1 数据分析简介 （1）数据科学是什么   （2）数据分析是什么    &#x20;二、Numpy基础&#x20;2.1 Numpy是什么 数据分析“三剑客”指的是NumPy、Pandas、Matplotlib 机器学习算法中用到的大量数组及矩阵运算，也需要借助NumPy来实现。可以这样说，&amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《从0到1：Python数据分析》">
+<meta property="og:url" content="http://example.com/2024/12/10/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E4%BB%8E0%E5%88%B01%EF%BC%9APython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="Road2Dasheng">
+<meta property="og:description" content="书籍简介 豆瓣  &#x20;书籍笔记第一部分 Numpy篇&#x20;一、数据分析概述&#x20;1.1 数据分析简介 （1）数据科学是什么   （2）数据分析是什么    &#x20;二、Numpy基础&#x20;2.1 Numpy是什么 数据分析“三剑客”指的是NumPy、Pandas、Matplotlib 机器学习算法中用到的大量数组及矩阵运算，也需要借助NumPy来实现。可以这样说，&amp;#">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6757adf9d0e0a243d4e0d35d.jpg">
+<meta property="article:published_time" content="2024-12-09T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-12-22T22:47:49.652Z">
+<meta property="article:author" content="ZhaWB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/6757adf9d0e0a243d4e0d35d.jpg">
+
+
+<link rel="icon" href="/img/road2Dasheng.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/little-stone-monkey.jpg"/>
+</a>
+<div class="author">
+    <span>ZhaWB</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="编程">
+            <i class="fold iconfont icon-right"></i>
+            编程
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;其他">
+            
+            其他
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Git">
+            <i class="fold iconfont icon-right"></i>
+            Git
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Git&lt;---&gt;书籍笔记">
+            
+            书籍笔记
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Python">
+            <i class="fold iconfont icon-right"></i>
+            Python
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Python&lt;---&gt;其他">
+            
+            其他
+            
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="编程&lt;---&gt;Python&lt;---&gt;书籍笔记">
+            
+            书籍笔记
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="AI">
+            <i class="fold iconfont icon-right"></i>
+            AI
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="AI&lt;---&gt;机器学习">
+            <i class="fold iconfont icon-right"></i>
+            机器学习
+            
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="AI&lt;---&gt;机器学习&lt;---&gt;书籍笔记">
+            
+            书籍笔记
+            
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="9">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://www.subingwen.cn/">爱编程的大丙</a></li>
+            
+            <li><a target="_blank" href="https://r2coding.com/#/">codesheep</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 编程 Git 书籍笔记 "
+           href="/2024/12/20/%E7%BC%96%E7%A8%8B%EF%BC%9Agit_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_Git%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《Git从入门到精通》">《Git从入门到精通》</span>
+            <span class="post-date" title="2024-12-20 00:00:00">2024/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 书籍笔记 "
+           href="/2024/12/10/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E4%BB%8E0%E5%88%B01%EF%BC%9APython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《从0到1：Python数据分析》">《从0到1：Python数据分析》</span>
+            <span class="post-date" title="2024-12-10 00:00:00">2024/12/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 书籍笔记 "
+           href="/2024/12/10/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E4%BB%8E0%E5%88%B01%EF%BC%9APython%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《从0到1：Python数据可视化》">《从0到1：Python数据可视化》</span>
+            <span class="post-date" title="2024-12-10 00:00:00">2024/12/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 书籍笔记 "
+           href="/2024/12/09/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_Python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B9%8Bmatplotlib%E7%B2%BE%E8%BF%9B/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《Python数据可视化之matplotlib精进》">《Python数据可视化之matplotlib精进》</span>
+            <span class="post-date" title="2024-12-09 00:00:00">2024/12/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 AI 机器学习 书籍笔记 "
+           href="/2024/12/03/AI%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%92%8C%E7%AE%97%E6%B3%95%E5%AE%9E%E8%B7%B5/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《从零开始：机器学习的数学原理和算法实践》">《从零开始：机器学习的数学原理和算法实践》</span>
+            <span class="post-date" title="2024-12-03 00:00:00">2024/12/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 其他 "
+           href="/2024/11/29/%E7%BC%96%E7%A8%8B%EF%BC%9A%E5%85%B6%E4%BB%96_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="正则表达式">正则表达式</span>
+            <span class="post-date" title="2024-11-29 00:00:00">2024/11/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 其他 "
+           href="/2024/11/29/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E5%85%B6%E4%BB%96_%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="学习资源">学习资源</span>
+            <span class="post-date" title="2024-11-29 00:00:00">2024/11/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 其他 "
+           href="/2024/11/29/%E7%BC%96%E7%A8%8B%EF%BC%9A%E5%85%B6%E4%BB%96_%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="文件编码">文件编码</span>
+            <span class="post-date" title="2024-11-29 00:00:00">2024/11/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程 Python 书籍笔记 "
+           href="/2024/11/29/%E7%BC%96%E7%A8%8B%EF%BC%9Apython_%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0_%E7%9C%8B%E6%BC%AB%E7%94%BB%E5%AD%A6Python/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="《看漫画学Python》">《看漫画学Python》</span>
+            <span class="post-date" title="2024-11-29 00:00:00">2024/11/29</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-编程：python_书籍笔记_从0到1：Python数据分析" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">《从0到1：Python数据分析》</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="编程">编程</a> > 
+            
+            <a  data-rel="编程&lt;---&gt;Python">Python</a> > 
+            
+            <a  data-rel="编程&lt;---&gt;Python&lt;---&gt;书籍笔记">书籍笔记</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-12-23 06:47:49'>2024-12-10 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A6%E7%B1%8D%E7%AE%80%E4%BB%8B"><span class="toc-text">书籍简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#x20-%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0"><span class="toc-text"> 书籍笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-Numpy%E7%AF%87"><span class="toc-text">第一部分 Numpy篇</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%A6%82%E8%BF%B0"><span class="toc-text"> 一、数据分析概述</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-1-1-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%AE%80%E4%BB%8B"><span class="toc-text"> 1.1 数据分析简介</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-%E4%BA%8C%E3%80%81Numpy%E5%9F%BA%E7%A1%80"><span class="toc-text"> 二、Numpy基础</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-2-1-Numpy%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text"> 2.1 Numpy是什么</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-2-2-%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84"><span class="toc-text"> 2.2 创建数组</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-2-3-%E6%95%B0%E7%BB%84%E5%B1%9E%E6%80%A7"><span class="toc-text"> 2.3 数组属性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-2-4-%E5%85%83%E7%B4%A0%E6%93%8D%E4%BD%9C"><span class="toc-text"> 2.4 元素操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-2-5-%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C"><span class="toc-text"> 2.5 数组操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-2-6-%E5%90%84%E7%A7%8D%E8%BF%90%E7%AE%97"><span class="toc-text"> 2.6 各种运算</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-2-7-%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%EF%BC%88%E5%9C%A8NumPy%E4%B8%AD%EF%BC%8C%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E9%81%8D%E5%8E%86%E5%88%97%E8%A1%A8%E4%B8%80%E6%A0%B7%EF%BC%8C%E4%B9%9F%E6%98%AF%E4%BD%BF%E7%94%A8for%E5%BE%AA%E7%8E%AF%E6%9D%A5%E5%AE%9E%E7%8E%B0%E7%9A%84%EF%BC%89"><span class="toc-text"> 2.7 遍历数组（在NumPy中，遍历数组和遍历列表一样，也是使用for循环来实现的）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-2-8-%E5%A4%A7%E5%B0%8F%E6%8E%92%E5%BA%8F"><span class="toc-text"> 2.8 大小排序</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81Numpy%E8%BF%9B%E9%98%B6"><span class="toc-text">三、Numpy进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-3-1-%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D"><span class="toc-text"> 3.1 浅拷贝和深拷贝</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-3-2-axis%E7%9A%84%E5%80%BC"><span class="toc-text"> 3.2 axis的值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-3-3-%E5%B9%BF%E6%92%AD%E6%9C%BA%E5%88%B6"><span class="toc-text"> 3.3 广播机制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-3-4-%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6"><span class="toc-text"> 3.4 读写文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-3-5-%E7%9F%A9%E9%98%B5%E7%AE%80%E4%BB%8B"><span class="toc-text"> 3.5 矩阵简介</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x20-%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86-Pandas%E7%AF%87"><span class="toc-text"> 第二部分 Pandas篇</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-%E5%9B%9B%E3%80%81-Pandas%E7%AE%80%E4%BB%8B"><span class="toc-text"> 四、 Pandas简介</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-1-Pandas%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text"> 4.1 Pandas是什么</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-2-Series"><span class="toc-text"> 4.2 Series</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-3-DataFrame"><span class="toc-text"> 4.3 DataFrame</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-4-DataFrame%E7%9A%84%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%EF%BC%88%E8%AF%A6%E8%A7%81%E4%B9%A6%EF%BC%89"><span class="toc-text"> 4.4 DataFrame的数据操作（详见书）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-5-%E9%81%8D%E5%8E%86%E8%A1%8C%E5%88%97%EF%BC%88%E8%AF%A6%E8%A7%81%E4%B9%A6%EF%BC%89"><span class="toc-text"> 4.5 遍历行列（详见书）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-4-6-%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3"><span class="toc-text"> 4.6 深入了解</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-%E4%BA%94%E3%80%81%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-text"> 五、获取数据</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-1-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B"><span class="toc-text"> 5.1 数据分析流程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-2-%E8%AF%BB%E5%86%99%E6%95%B0%E6%8D%AE%E7%AE%80%E4%BB%8B"><span class="toc-text"> 5.2 读写数据简介</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-3-%E8%AF%BB%E5%86%99JSON"><span class="toc-text"> 5.3 读写JSON</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-4-%E8%AF%BB%E5%86%99CSV"><span class="toc-text"> 5.4 读写CSV</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-5-%E8%AF%BB%E5%86%99Excel"><span class="toc-text"> 5.5 读写Excel</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-6-%E8%AF%BB%E5%86%99HTML%EF%BC%88%E8%AF%A6%E8%A7%81%E4%B9%A6%EF%BC%89"><span class="toc-text"> 5.6 读写HTML（详见书）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-7-%E6%B7%B1%E5%85%A5%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%EF%BC%88%E8%AF%A6%E8%A7%81%E4%B9%A6%EF%BC%89"><span class="toc-text"> 5.7 深入文件读取（详见书）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-5-8-%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text"> 5.8 读取数据库</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-%E5%85%AD%E3%80%81%E7%AD%9B%E9%80%89%E6%95%B0%E6%8D%AE"><span class="toc-text"> 六、筛选数据</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-6-1-%E7%AD%9B%E9%80%89%E6%95%B0%E6%8D%AE%E7%AE%80%E4%BB%8B"><span class="toc-text"> 6.1 筛选数据简介</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-6-2-%E8%8E%B7%E5%8F%96%E8%A1%8C%E3%80%81%E5%88%97"><span class="toc-text"> 6.2 获取行、列</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-6-3-%E9%87%8D%E6%96%B0%E7%B4%A2%E5%BC%95"><span class="toc-text"> 6.3 重新索引</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-6-4-%E8%8E%B7%E5%8F%96%E9%A6%96%E5%B0%BE%E6%95%B0%E6%8D%AE"><span class="toc-text"> 6.4 获取首尾数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-6-5-%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7"><span class="toc-text"> 6.5 随机抽样</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-6-6-%E9%80%BB%E8%BE%91%E6%AF%94%E8%BE%83"><span class="toc-text"> 6.6 逻辑比较</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-6-7-%E8%BF%87%E6%BB%A4%E6%93%8D%E4%BD%9C"><span class="toc-text"> 6.7 过滤操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-6-8-%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D"><span class="toc-text"> 6.8 模式匹配</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-%E4%B8%83%E3%80%81%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE"><span class="toc-text"> 七、处理数据</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-7-1-%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E7%AE%80%E4%BB%8B"><span class="toc-text"> 7.1 处理数据简介</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-7-2-%E6%93%8D%E4%BD%9C%E8%A1%8C%E5%90%8D%E5%92%8C%E5%88%97%E5%90%8D"><span class="toc-text"> 7.2 操作行名和列名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-7-3-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text"> 7.3 类型转换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-7-4-%E8%A1%8C%E5%88%97%E8%BD%AC%E7%BD%AE%EF%BC%9AT"><span class="toc-text"> 7.4 行列转置：T</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-7-5-%E5%A4%A7%E5%B0%8F%E6%8E%92%E5%BA%8F"><span class="toc-text"> 7.5 大小排序</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-6-%E6%95%B0%E6%8D%AE%E6%8E%92%E5%90%8D"><span class="toc-text">7.6 数据排名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-7-%E6%95%B0%E6%8D%AE%E6%9B%BF%E6%8D%A2"><span class="toc-text">7.7 数据替换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-8-%E6%95%B0%E6%8D%AE%E7%A7%BB%E5%8A%A8"><span class="toc-text">7.8 数据移动</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-9-%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97"><span class="toc-text">7.9 数据清洗</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-10-%E6%95%B0%E6%8D%AE%E5%90%88%E5%B9%B6"><span class="toc-text">7.10 数据合并</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-11-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86%EF%BC%88%E8%AF%A6%E8%A7%81%E4%B9%A6%EF%BC%89"><span class="toc-text">7.11 字符串处理（详见书）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-12-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><span class="toc-text">7.12 自定义函数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-%E5%85%AB%E3%80%81%E5%88%86%E6%9E%90%E6%95%B0%E6%8D%AE"><span class="toc-text"> 八、分析数据</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-8-1-%E5%88%86%E6%9E%90%E6%95%B0%E6%8D%AE%E7%AE%80%E4%BB%8B"><span class="toc-text"> 8.1  分析数据简介</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-8-2-%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1%E5%87%BD%E6%95%B0"><span class="toc-text"> 8.2 基本统计函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-8-3-%E5%85%B6%E4%BB%96%E7%BB%9F%E8%AE%A1%E5%87%BD%E6%95%B0"><span class="toc-text"> 8.3 其他统计函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-4-%E6%95%B4%E4%BD%93%E6%83%85%E5%86%B5"><span class="toc-text">8.4 整体情况</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-5-%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0"><span class="toc-text">8.5 聚合函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-6-%E6%95%B0%E6%8D%AE%E5%88%86%E7%BB%84"><span class="toc-text">8.6 数据分组</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x20-%E4%B9%9D%E3%80%81%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97"><span class="toc-text"> 九、时间序列</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-9-1-%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%A6%82%E8%BF%B0"><span class="toc-text"> 9.1 时间序列概述</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-9-2-%E9%87%8D%E9%87%87%E6%A0%B7%EF%BC%9Aresample"><span class="toc-text"> 9.2 重采样：resample()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-9-3-%E7%A7%BB%E5%8A%A8%E8%AE%A1%E7%AE%97%EF%BC%9Arolling"><span class="toc-text"> 9.3 移动计算：rolling()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#x20-9-4-%E5%88%86%E7%BB%84%E5%99%A8%EF%BC%9AGrouper"><span class="toc-text"> 9.4 分组器：Grouper()</span></a></li></ol></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-6 i,
+    .toc-level-6 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="书籍简介"><a href="#书籍简介" class="headerlink" title="书籍简介"></a>书籍简介</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://book.douban.com/subject/35930463/">豆瓣</a></li>
+</ul>
+<h2 id="x20-书籍笔记"><a href="#x20-书籍笔记" class="headerlink" title="&#x20;书籍笔记"></a>&#x20;书籍笔记</h2><h3 id="第一部分-Numpy篇"><a href="#第一部分-Numpy篇" class="headerlink" title="第一部分 Numpy篇"></a>第一部分 Numpy篇</h3><h4 id="x20-一、数据分析概述"><a href="#x20-一、数据分析概述" class="headerlink" title="&#x20;一、数据分析概述"></a>&#x20;一、数据分析概述</h4><h5 id="x20-1-1-数据分析简介"><a href="#x20-1-1-数据分析简介" class="headerlink" title="&#x20;1.1 数据分析简介"></a>&#x20;1.1 数据分析简介</h5><ul>
+<li><p>（1）数据科学是什么</p>
+<p><img src="https://pic.imgdb.cn/item/6757adf9d0e0a243d4e0d35d.jpg" alt="数据科学工作流"></p>
+</li>
+<li><p>（2）数据分析是什么</p>
+</li>
+</ul>
+<hr>
+<h4 id="x20-二、Numpy基础"><a href="#x20-二、Numpy基础" class="headerlink" title="&#x20;二、Numpy基础"></a>&#x20;二、Numpy基础</h4><h5 id="x20-2-1-Numpy是什么"><a href="#x20-2-1-Numpy是什么" class="headerlink" title="&#x20;2.1 Numpy是什么"></a>&#x20;2.1 Numpy是什么</h5><ul>
+<li>数据分析“三剑客”指的是NumPy、Pandas、Matplotlib</li>
+<li>机器学习算法中用到的大量数组及矩阵运算，也需要借助NumPy来实现。可以这样说，&#x3D;&#x3D;NumPy是数据科学领域中最基础的一个库&#x3D;&#x3D;</li>
+<li>NumPy主要用于操作多维数组，&#x3D;&#x3D;学习NumPy，其实就是学习数组的各种操作&#x3D;&#x3D;</li>
+</ul>
+<h5 id="x20-2-2-创建数组"><a href="#x20-2-2-创建数组" class="headerlink" title="&#x20;2.2 创建数组"></a>&#x20;2.2 创建数组</h5><ul>
+<li><p>在Python中，可以使用NumPy来创建一个数组。数组和列表很相似，但是它们之间有本质上的区别：</p>
+<p>-- 列表的元素可以是不同数据类型，而数组的元素必须是同一数据类型</p>
+<p>-- 列表不可以进行四则运算，而数组可以进行四则运算</p>
+</li>
+<li><p>（1）基本方法</p>
+<p>-- ① array(列表或元组)：将列表或元组转换为数组；&#x3D;&#x3D;数组元素之间是用空格隔开的，而不是用逗号隔开的&#x3D;&#x3D;</p>
+<p>-- ② arange(start, end, step)：创建在“指定范围的&#x3D;&#x3D;一维数组&#x3D;&#x3D;，不能创建多维数组；&#x3D;&#x3D;取值范围[start, end)&#x3D;&#x3D;；&#x3D;&#x3D;当只有一个参数时，表示只有结束值，开始值是0；&#x3D;&#x3D;步长可以任意数，range()步长必须整数</p>
+<p>-- ③ linspace(start, end, num, endpoint&#x3D;True或False)：取值范围为[start, end]；可以使用endpoint&#x3D;False，使得它的取值范围为[start, end)</p>
+<p>-- ④ zeros((a, b, …, n), dtype&#x3D;int或float)：创建一个元素值全为0的a×b×…×n数组；元素类型默认为float类型，可以使用dtype&#x3D;int改为int类型。</p>
+<p>-- ⑤ ones((a, b, …, n), dtype&#x3D;int或float)：创建一个元素值全为1的a×b×…×n数组；元素类型默认为float类型，可以使用dtype&#x3D;int改为int类型。</p>
+</li>
+<li><p>（2）随机数组（random模块）</p>
+<p>-- ① random.randint(start, end, size&#x3D;元组或整数)：随机整数，范围为[start, end)</p>
+<p>-- ② random.rand(m, n)：随机浮点数，范围为[0, 1)</p>
+<p>-- ③ random.randn(m, n)：随机浮点数，符合正态分布</p>
+</li>
+<li><p>（3）数组和列表的区别（&#x3D;&#x3D;在内存中的存储方式不同，列表相对数组更耗费资源&#x3D;&#x3D;）</p>
+</li>
+</ul>
+<h5 id="x20-2-3-数组属性"><a href="#x20-2-3-数组属性" class="headerlink" title="&#x20;2.3 数组属性"></a>&#x20;2.3 数组属性</h5><ul>
+<li><p>在NumPy中，一个数组就是一个ndarray对象。&#x3D;&#x3D;ndarray，是n dimension array （N维数组）的缩写&#x3D;&#x3D;</p>
+</li>
+<li><p>数组的属性非常多，常用的属性如下：</p>
+<p>-- ndim：维度的个数，即多少维，n dimension的缩写</p>
+<p>-- shape：数组的形状，比如m行n列</p>
+<p>-- size：元素的个数</p>
+<p>-- dtype：元素的类型，data type的缩写</p>
+</li>
+<li><p>在NumPy中，对于一个数组来说，所有元素的类型都是相同的，&#x3D;&#x3D;所以数组的类型其实指的就是它元素的类型。&#x3D;&#x3D;</p>
+</li>
+</ul>
+<h5 id="x20-2-4-元素操作"><a href="#x20-2-4-元素操作" class="headerlink" title="&#x20;2.4 元素操作"></a>&#x20;2.4 元素操作</h5><ul>
+<li>&#x3D;&#x3D;一般来说，NumPy提供的方法不会修改原数组&#x3D;&#x3D;</li>
+<li>（1）访问元素（&#x3D;&#x3D;在NumPy中，使用下标来访问数组中的元素，这一点和列表是一样的&#x3D;&#x3D;）</li>
+<li>（2）修改元素（&#x3D;&#x3D;在NumPy中，也是使用下标来修改某一个元素的值。对于二维数组来说，还可以修改一整行或一整列的值&#x3D;&#x3D;）</li>
+<li>（3）添加元素（np.append(arr, value, axis&#x3D;n)；使用append()在数组的末尾添加一个新元素；&#x3D;&#x3D;append()并不会修改原数组，而是会返回一个新数组&#x3D;&#x3D;）</li>
+<li>（4）删除元素（np.delete(arr, m, axis&#x3D;n)；&#x3D;&#x3D;delete()不仅可以删除某一个元素，还可以删除某一行或某一列。&#x3D;&#x3D;）</li>
+<li>（5）切片（NumPy支持使用“…”（3个点号）来表示剩余的轴）</li>
+</ul>
+<h5 id="x20-2-5-数组操作"><a href="#x20-2-5-数组操作" class="headerlink" title="&#x20;2.5 数组操作"></a>&#x20;2.5 数组操作</h5><ul>
+<li>① 修改形状；② 修改维度；③ 翻转数组；④ 数组去重；⑤ 合并数组；⑥ 分割数组</li>
+<li>（1）修改形状（arr.reshape(m, n)；&#x3D;&#x3D;重塑前后两个数组的元素个数必须相同&#x3D;&#x3D;）</li>
+<li>（2）修改维度（np.array(arr, ndmin&#x3D;n)；&#x3D;&#x3D;ndmin参数只能将低维度数组转换为高维度数组，而不能将高维度数组转换为低维度数组&#x3D;&#x3D;）</li>
+<li>（3）翻转数组（np.transpose(arr)；&#x3D;&#x3D;翻转数组指的是将“m×n的数组”转换成“n×m的数组”&#x3D;&#x3D;）</li>
+<li>（4）数组去重（np.unique(arr)；&#x3D;&#x3D;将数组中重复的数字去除，然后将剩余的数字组成一个新的一维数组&#x3D;&#x3D;；&#x3D;&#x3D;不管是多少维的数组，unique()返回的都是一个一维数组&#x3D;&#x3D;）</li>
+<li>（5）合并数组（&#x3D;&#x3D;① &#x3D;&#x3D;np.concatenate((arr1, arr2), axis&#x3D;n)；&#x3D;&#x3D;②&#x3D;&#x3D; np.hstack()；&#x3D;&#x3D;③&#x3D;&#x3D; np.vstack()；&#x3D;&#x3D;④&#x3D;&#x3D; np.stack((arr1, arr2), axis&#x3D;n)）</li>
+<li>（6）分割数组（&#x3D;&#x3D;①&#x3D;&#x3D; np.split(arr, section&#x3D;整数或数组, axis&#x3D;n)；&#x3D;&#x3D;②&#x3D;&#x3D; np.vsplit()；&#x3D;&#x3D;③&#x3D;&#x3D; np.hsplit()）</li>
+</ul>
+<h5 id="x20-2-6-各种运算"><a href="#x20-2-6-各种运算" class="headerlink" title="&#x20;2.6 各种运算"></a>&#x20;2.6 各种运算</h5><ul>
+<li><p>（1）基本运算（加、减、乘、除、求余、求幂）</p>
+<p>-- 运算符（+、-、<em>、&#x2F;、%、</em>**）</p>
+<p>-- 函数（add(a, b)、subtract(a, b)、multiply(a, b)、divide(a, b)、mod(a, b)、power(a, b)）</p>
+<p>-- &#x3D;&#x3D;在实际开发中，更推荐使用运算符的方式来进行计算&#x3D;&#x3D;</p>
+</li>
+<li><p>（2）比较运算（大于、小于、大于等于、小于等于、等于、不等于）</p>
+<p>-- &#x3D;&#x3D;两个数组的形状必须相同，或者符合广播机制&#x3D;&#x3D;</p>
+</li>
+<li><p>（3）标量运算（&#x3D;&#x3D;可以简单理解为将一个数组和一个数进行加、减、乘、除等操作；&#x3D;&#x3D;不管是多少维的数组，&#x3D;&#x3D;标量运算都是对数组中每一个元素进行相同的操作&#x3D;&#x3D;）</p>
+</li>
+<li><p>（4）数学函数（square()；abs()；sqrt()；around()；ceil()、floor()；reciprocal()；sin()、cos()、tan()）</p>
+</li>
+<li><p>（5）统计函数（sum()；max()；min()；median()；mean()；var()；std()；average()；percentile()）</p>
+</li>
+</ul>
+<h5 id="x20-2-7-遍历数组（在NumPy中，遍历数组和遍历列表一样，也是使用for循环来实现的）"><a href="#x20-2-7-遍历数组（在NumPy中，遍历数组和遍历列表一样，也是使用for循环来实现的）" class="headerlink" title="&#x20;2.7 遍历数组（在NumPy中，遍历数组和遍历列表一样，也是使用for循环来实现的）"></a>&#x20;2.7 遍历数组（在NumPy中，遍历数组和遍历列表一样，也是使用for循环来实现的）</h5><ul>
+<li>对于一维数组，直接使用for循环就可以把每一个元素遍历出来</li>
+<li>对于二维数组或更多维数组来说，使用for循环遍历时，默认情况下是针对第一个轴（axis&#x3D;0）来进行的。&#x3D;&#x3D;如果要遍历数组的所有元素，则需要使用数组的flat属性&#x3D;&#x3D;</li>
+</ul>
+<h5 id="x20-2-8-大小排序"><a href="#x20-2-8-大小排序" class="headerlink" title="&#x20;2.8 大小排序"></a>&#x20;2.8 大小排序</h5><ul>
+<li><p>在NumPy中，可以使用sort()来对数组进行排序。由于数组对象和NumPy都有sort()，所以需要分成以下两种情况来考虑：</p>
+<p>-- 如果是在“数组对象”上调用sort()，则会对数组本身进行排序</p>
+<p>-- 如果是在“NumPy”上调用sort()，则会返回该数组对象的排序副本</p>
+</li>
+<li><p>默认情况下，sort()实现的是升序排列，也就是从小到大排序。如果想要实现数组的降序排列，可以使用一种变通的方式（result &#x3D; arr[::-1]）</p>
+</li>
+</ul>
+<hr>
+<h4 id="三、Numpy进阶"><a href="#三、Numpy进阶" class="headerlink" title="三、Numpy进阶"></a>三、Numpy进阶</h4><h5 id="x20-3-1-浅拷贝和深拷贝"><a href="#x20-3-1-浅拷贝和深拷贝" class="headerlink" title="&#x20;3.1 浅拷贝和深拷贝"></a>&#x20;3.1 浅拷贝和深拷贝</h5><ul>
+<li><p>（1）浅拷贝</p>
+<p>-- 指的是对一个数组对象拷贝之后，虽然前后两个数组对象是不同的对象，但是它们的数据是共享的（&#x3D;&#x3D;藕断丝连&#x3D;&#x3D;）</p>
+<p>-- 语法：arr.view()</p>
+</li>
+<li><p>（2）深拷贝</p>
+<p>-- 指的是对一个数组进行拷贝之后，前后两个数组对象是不同的对象，数据也不是共享的（&#x3D;&#x3D;老死不相往来&#x3D;&#x3D;）</p>
+<p>-- 语法：arr.copy()</p>
+</li>
+<li><p>在实际开发中，&#x3D;&#x3D;较少使用浅拷贝，更多是使用深拷贝这种方式&#x3D;&#x3D;</p>
+</li>
+</ul>
+<h5 id="x20-3-2-axis的值"><a href="#x20-3-2-axis的值" class="headerlink" title="&#x20;3.2 axis的值"></a>&#x20;3.2 axis的值</h5><ul>
+<li>设置axis这个参数是因为在NumPy中，操作多维数组时需要指定对哪一维操作，&#x3D;&#x3D;而axis就是用来指定需要操作哪一维&#x3D;&#x3D;</li>
+<li>&#x3D;&#x3D;axis为大于或等于0的整数&#x3D;&#x3D;，axis&#x3D;0表示对第1维进行操作，axis&#x3D;1表示对第2维进行操作，&#x3D;&#x3D;以此类推&#x3D;&#x3D;</li>
+<li>&#x3D;&#x3D;在实际开发中，数组大多数是二维数组，所以只需要记住&#x3D;&#x3D;：当axis&#x3D;0时，表示沿着“纵轴”操作；当axis&#x3D;1时，表示沿着“横轴”操作。</li>
+<li>详见书</li>
+</ul>
+<h5 id="x20-3-3-广播机制"><a href="#x20-3-3-广播机制" class="headerlink" title="&#x20;3.3 广播机制"></a>&#x20;3.3 广播机制</h5><ul>
+<li>&#x3D;&#x3D;“形状不同”的数组也能进行运算&#x3D;&#x3D;，但是需要满足一定的条件才行</li>
+<li>（详见书）</li>
+</ul>
+<h5 id="x20-3-4-读写文件"><a href="#x20-3-4-读写文件" class="headerlink" title="&#x20;3.4 读写文件"></a>&#x20;3.4 读写文件</h5><ul>
+<li>对于NumPy的文件读写，&#x3D;&#x3D;一般使用CSV这种文件格式&#x3D;&#x3D;</li>
+<li>CSV是一种非常重要的文件格式，它可以和Excel文件进行互相转换</li>
+<li>（1）读取文件（np.loadtxt(path, delimiter&#x3D;”分隔符”)）</li>
+<li>（2）写入文件（np.savetxt(path, arr, delimiter&#x3D;”分隔符”)）</li>
+</ul>
+<h5 id="x20-3-5-矩阵简介"><a href="#x20-3-5-矩阵简介" class="headerlink" title="&#x20;3.5 矩阵简介"></a>&#x20;3.5 矩阵简介</h5><ul>
+<li>在NumPy中，矩阵和数组是两种不同的数据类型。&#x3D;&#x3D;虽然它们很相似，但是有着本质上的区别。数组是一个ndarray对象，矩阵是一个matrix对象。&#x3D;&#x3D;</li>
+<li>矩阵都是二维的，可以把它看成一种特殊的二维数组。NumPy官方建议，&#x3D;&#x3D;如果在某种情况下矩阵和数组都适用，那就选择数组&#x3D;&#x3D;</li>
+<li>在NumPy中，不管是哪一种矩阵，都是使用matlib模块的方法来创建的</li>
+<li>默认情况下，矩阵元素类型是浮点型，可以使用dtype&#x3D;int将其类型定义成整型。</li>
+<li>（1）全0矩阵（np.matlib.zeros((m, n))）</li>
+<li>（2）全1矩阵（np.matlib.ones((m, n))）</li>
+<li>（3）单位矩阵（np.matlib.identity(m)）</li>
+<li>（4）随机矩阵（np.matlib.rand(m, n)）</li>
+</ul>
+<hr>
+<h3 id="x20-第二部分-Pandas篇"><a href="#x20-第二部分-Pandas篇" class="headerlink" title="&#x20;第二部分 Pandas篇"></a>&#x20;第二部分 Pandas篇</h3><h4 id="x20-四、-Pandas简介"><a href="#x20-四、-Pandas简介" class="headerlink" title="&#x20;四、 Pandas简介"></a>&#x20;四、 Pandas简介</h4><h5 id="x20-4-1-Pandas是什么"><a href="#x20-4-1-Pandas是什么" class="headerlink" title="&#x20;4.1 Pandas是什么"></a>&#x20;4.1 Pandas是什么</h5><ul>
+<li>Pandas是基于NumPy实现的一个非常重要的数据分析库。&#x3D;&#x3D;在实际的工作中，我们更多是使用Pandas来进行数据分析，而不是使用NumPy&#x3D;&#x3D;</li>
+<li>实际上，&#x3D;&#x3D;Excel是使用“软件”的方式来操作一张数据表，而Pandas是使用“编程”的方式来操作一张数据表&#x3D;&#x3D;</li>
+<li>用一句话来概括它：&#x3D;&#x3D;Pandas就是用于操作一张二维数据表的工具&#x3D;&#x3D;</li>
+</ul>
+<h5 id="x20-4-2-Series"><a href="#x20-4-2-Series" class="headerlink" title="&#x20;4.2 Series"></a>&#x20;4.2 Series</h5><ul>
+<li><p>Pandas提供了两种数据结构：&#x3D;&#x3D;Series（系列）和DataFrame（数据帧）&#x3D;&#x3D;</p>
+</li>
+<li><p>&#x3D;&#x3D;Series可以看成一种特殊的一维数组&#x3D;&#x3D;，&#x3D;&#x3D;而DataFrame可以看成一种特殊的二维数组&#x3D;&#x3D;</p>
+</li>
+<li><p>（1）创建Series</p>
+<p>-- 语法：pd.Series(data, index&#x3D;列表)</p>
+<p>-- ① data是一个列表（详见书）</p>
+<p>-- ② data是一个字典（详见书）</p>
+</li>
+<li><p>（2）Series的属性</p>
+<p>-- ① index：行号（索引）</p>
+<p>-- ② values: 数据（值）</p>
+</li>
+<li><p>（3）获取某行的值</p>
+<p>-- 语法：se.loc[行名]</p>
+</li>
+<li><p>（4）深入了解</p>
+<p>-- Series和字典非常相似。Series的index对应字典中的key，Series的data对应字典中的value。因此，Series也可以由现有的字典直接转换而成。</p>
+<p>-- Series和字典还是有着本质上的区别：① 字典是无序的，而Series是有序的；② 字典的key是不可变的，而Series的index是可变的；③ Series提供了大量的统计方法，但是字典没有</p>
+</li>
+<li><p>在实际开发中，&#x3D;&#x3D;更多的是使用DataFrame，而不是使用Series。&#x3D;&#x3D;主要是因为Series是一维的，而实际开发中的数据更多是二维的</p>
+</li>
+</ul>
+<h5 id="x20-4-3-DataFrame"><a href="#x20-4-3-DataFrame" class="headerlink" title="&#x20;4.3 DataFrame"></a>&#x20;4.3 DataFrame</h5><ul>
+<li><p>DataFrame是Pandas中&#x3D;&#x3D;最重要的一种数据结构&#x3D;&#x3D;。对于DataFrame，可以把它看成一种特殊的二维数组。</p>
+</li>
+<li><p>（1）创建DataFrame</p>
+<p>-- 语法：pd.DataFrame(data, index&#x3D;列表, columns&#x3D;列表)</p>
+<p>-- ① data是一个列表（&#x3D;&#x3D;列表只能是这两种形式：每一个元素都是一个列表；每一个元素都是一个字典&#x3D;&#x3D;）</p>
+<p>-- ② data是一个字典（当data是一个字典时，&#x3D;&#x3D;字典的key会作为DataFrame的列名，字典的value会作为DataFrame的数据&#x3D;&#x3D;；需要注意的是，字典的每一个value都要求是一个列表或者一个值）</p>
+</li>
+<li><p>（2）DataFrame的属性</p>
+<p>-- ① dtypes：DataFrame的类型（&#x3D;&#x3D;系统会把DataFrame每一列的类型分别列举出来&#x3D;&#x3D;）</p>
+<p>-- ② values：DataFrame的数据（值）（&#x3D;&#x3D;DataFrame的值会以数组的形式返回&#x3D;&#x3D;）</p>
+<p>-- ③ index：行名（索引）</p>
+<p>-- ④ columns：列名</p>
+<p>-- ⑤ shape：形状，也就是行数和列数。shape[0]表示获取行数，shape[1]表示获取列数</p>
+<p>-- ⑥ size：元素的个数</p>
+</li>
+<li><p>（3）深入了解</p>
+<p>-- ① 文件格式（&#x3D;&#x3D;当data是一个列表时&#x3D;&#x3D;，如果想将DataFrame保存到文件中，&#x3D;&#x3D;一般是保存到CSV文件中&#x3D;&#x3D;；&#x3D;&#x3D;当data是一个字典时&#x3D;&#x3D;，如果想将DataFrame保存到文件中，&#x3D;&#x3D;一般是保存到JSON文件中&#x3D;&#x3D;）</p>
+<p>-- ② 对齐输出（在print()语句的前一行加上 <code>pd.set_option(&quot;display.unicode.east_asian_width&quot;, True)</code>）</p>
+<p>-- ③ 不需要指定行名（在实际工作中，创建DataFrame时，一般需要指定列名，但不需要指定行名。如果不显式指定行名，那么它就是从0开始的连续整数。）</p>
+</li>
+<li><p>（4）实际数据</p>
+</li>
+</ul>
+<h5 id="x20-4-4-DataFrame的数据操作（详见书）"><a href="#x20-4-4-DataFrame的数据操作（详见书）" class="headerlink" title="&#x20;4.4 DataFrame的数据操作（详见书）"></a>&#x20;4.4 DataFrame的数据操作（详见书）</h5><h5 id="x20-4-5-遍历行列（详见书）"><a href="#x20-4-5-遍历行列（详见书）" class="headerlink" title="&#x20;4.5 遍历行列（详见书）"></a>&#x20;4.5 遍历行列（详见书）</h5><h5 id="x20-4-6-深入了解"><a href="#x20-4-6-深入了解" class="headerlink" title="&#x20;4.6 深入了解"></a>&#x20;4.6 深入了解</h5><ul>
+<li>DataFrame的一行或一列，本质上是一个Series</li>
+<li>DataFrame的多行或多列，本质上是一个DataFrame</li>
+<li>使用loc[]、iloc[]或df[]获取数据的结果是一个Series或DataFrame</li>
+<li>&#x3D;&#x3D;DataFrame不同列的数据类型可以不同，但是同一列数据的类型要求相同&#x3D;&#x3D;</li>
+</ul>
+<hr>
+<h4 id="x20-五、获取数据"><a href="#x20-五、获取数据" class="headerlink" title="&#x20;五、获取数据"></a>&#x20;五、获取数据</h4><h5 id="x20-5-1-数据分析流程"><a href="#x20-5-1-数据分析流程" class="headerlink" title="&#x20;5.1 数据分析流程"></a>&#x20;5.1 数据分析流程</h5><ul>
+<li>① 明确目的 → ② 获取数据 → ③ 筛选数据 → ④ 处理数据 → ⑤ 分析数据 → ⑥ 展示数据</li>
+</ul>
+<h5 id="x20-5-2-读写数据简介"><a href="#x20-5-2-读写数据简介" class="headerlink" title="&#x20;5.2 读写数据简介"></a>&#x20;5.2 读写数据简介</h5><ul>
+<li><p>在Pandas中，&#x3D;&#x3D;读写数据主要分为以下5种&#x3D;&#x3D;</p>
+<p>-- ① read_json(); to_json()：读写JSON文件</p>
+<p>-- ② read_csv(); to_csv()： 读写CSV文件</p>
+<p>-- ③ read_excel(); to_excel(): 读写excel文件</p>
+<p>-- ④ read_html(); to_html()：读写网页文件</p>
+<p>-- ⑤ read_sql(); to_sql()：  读写数据库</p>
+</li>
+<li><p>利用Pandas读写文件，&#x3D;&#x3D;本质上就是将文件中的数据转换成一个DataFrame，然后再对这个DataFrame进行操作&#x3D;&#x3D;</p>
+</li>
+</ul>
+<h5 id="x20-5-3-读写JSON"><a href="#x20-5-3-读写JSON" class="headerlink" title="&#x20;5.3 读写JSON"></a>&#x20;5.3 读写JSON</h5><ul>
+<li><p>（1）JSON简介</p>
+<p>-- JSON的全称为&#x3D;&#x3D;JavaScript Object Notation&#x3D;&#x3D;，即JavaScript对象表示法，它起源于JavaScript语言</p>
+<p>-- JSON是JavaScript用来处理数据的一种格式。由于&#x3D;&#x3D;这种数据格式非常简单、易用&#x3D;&#x3D;，因此Python也支持这种格式</p>
+<p>-- JSON有两种表示方式：一种是&#x3D;&#x3D;使用“字典”表示&#x3D;&#x3D;，那么它本质上和字典没什么区别；另一种是&#x3D;&#x3D;使用“列表”表示&#x3D;&#x3D;，列表的每一个元素一般要求是一个字典</p>
+<p>-- &#x3D;&#x3D;对于JSON格式，一定要记住一点：只能使用双引号，而不能使用单引号。如果使用单引号，可能会报错&#x3D;&#x3D;</p>
+</li>
+<li><p>（2）读取JSON</p>
+<p>-- <code>pd.read_json(path)</code>: 返回一个DataFrame，也就是会将JSON文件的数据转换成一个DataFrame对象。</p>
+</li>
+<li><p>（3）写入JSON</p>
+<p>-- <code>df.to_json(df, index=布尔值, header=布尔值, force_ascii=布尔值)</code></p>
+</li>
+</ul>
+<h5 id="x20-5-4-读写CSV"><a href="#x20-5-4-读写CSV" class="headerlink" title="&#x20;5.4 读写CSV"></a>&#x20;5.4 读写CSV</h5><ul>
+<li><p>（1）CSV简介</p>
+<p>-- CSV的全称为Comma-Separated Values，即&#x3D;&#x3D;逗号分隔的值&#x3D;&#x3D;</p>
+<p>-- CSV这种格式很常见，CSV文件既可以用文本的方式查看，也可以使用电子表格的方式查看</p>
+<p>-- 需要注意的是，&#x3D;&#x3D;CSV是一种纯文本格式&#x3D;&#x3D;，而不是Excel这种二进制文件格式</p>
+<p>-- CSV文件的优势就是简单、易用，可以把它看成“简化的Excel文件”</p>
+</li>
+<li><p>（2）读取CSV</p>
+<p>-- <code>pd.read_csv(path, index_col=m)</code></p>
+</li>
+<li><p>（3）写入CSV</p>
+<p>-- <code>df.to_csv(df, index=布尔值, header=布尔值)</code></p>
+</li>
+</ul>
+<h5 id="x20-5-5-读写Excel"><a href="#x20-5-5-读写Excel" class="headerlink" title="&#x20;5.5 读写Excel"></a>&#x20;5.5 读写Excel</h5><ul>
+<li><p>（1）Excel简介</p>
+</li>
+<li><p>（2）读取Excel</p>
+<p>-- <code>pd.read_excel(path, index_col=m, sheet_name=n)</code></p>
+</li>
+<li><p>（3）写入Excel</p>
+<p>-- <code>df.to_excel(df, index=布尔值, header=布尔值)</code></p>
+</li>
+</ul>
+<h5 id="x20-5-6-读写HTML（详见书）"><a href="#x20-5-6-读写HTML（详见书）" class="headerlink" title="&#x20;5.6 读写HTML（详见书）"></a>&#x20;5.6 读写HTML（详见书）</h5><h5 id="x20-5-7-深入文件读取（详见书）"><a href="#x20-5-7-深入文件读取（详见书）" class="headerlink" title="&#x20;5.7 深入文件读取（详见书）"></a>&#x20;5.7 深入文件读取（详见书）</h5><ul>
+<li>（1）分块读取</li>
+<li>（2）只读取一部分</li>
+</ul>
+<h5 id="x20-5-8-读取数据库"><a href="#x20-5-8-读取数据库" class="headerlink" title="&#x20;5.8 读取数据库"></a>&#x20;5.8 读取数据库</h5><ul>
+<li>&#x3D;&#x3D;MySQL&#x3D;&#x3D;是一款开源的数据库软件，也是&#x3D;&#x3D;目前使用最多的数据库之一&#x3D;&#x3D;。很多编程语言都将MySQL作为主要的数据库，例如PHP、Python、Go等。</li>
+<li>（1）安装MySQL</li>
+<li>（2）安装Navicat for MySQL</li>
+<li>（3）读取MySQL</li>
+</ul>
+<hr>
+<h4 id="x20-六、筛选数据"><a href="#x20-六、筛选数据" class="headerlink" title="&#x20;六、筛选数据"></a>&#x20;六、筛选数据</h4><h5 id="x20-6-1-筛选数据简介"><a href="#x20-6-1-筛选数据简介" class="headerlink" title="&#x20;6.1 筛选数据简介"></a>&#x20;6.1 筛选数据简介</h5><ul>
+<li>（1）获取行、列：<code>loc[]、iloc[]和df[]</code></li>
+<li>（2）重新索引：<code>reindex()</code></li>
+<li>（3）获取首尾数据：<code>head()和tail()</code></li>
+<li>（4）随机抽样：<code>sample()</code></li>
+<li>（5）逻辑比较</li>
+<li>（6）过滤操作</li>
+<li>（7）模式匹配</li>
+</ul>
+<h5 id="x20-6-2-获取行、列"><a href="#x20-6-2-获取行、列" class="headerlink" title="&#x20;6.2 获取行、列"></a>&#x20;6.2 获取行、列</h5><ul>
+<li>（1）获取行</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取某一行</span></span><br><span class="line">df.loc[行名]</span><br><span class="line">df.iloc[行索引]</span><br><span class="line">df[m:n]  <span class="comment">#不推荐使用</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取某几行</span></span><br><span class="line">df.loc[行名列表]</span><br><span class="line">df.iloc[行索引列表]</span><br><span class="line">df[m:n] <span class="comment">#不推荐使用</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>（2）获取列&#x20;</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取某一列</span></span><br><span class="line">df.loc[:, 列名]</span><br><span class="line">df.iloc[:, 列索引]</span><br><span class="line">df[列名]  <span class="comment">#推荐使用</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取某几列</span></span><br><span class="line">df.loc[:, 列名列表]</span><br><span class="line">df.iloc[:, 列索引列表]</span><br><span class="line">df[列名列表] <span class="comment">#推荐使用</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="x20-6-3-重新索引"><a href="#x20-6-3-重新索引" class="headerlink" title="&#x20;6.3 重新索引"></a>&#x20;6.3 重新索引</h5><ul>
+<li><p>（1）语法简介</p>
+<p>-- 在实际开发中，很多时候需要提取某几条数据，然后组成一个新的DataFrame对象。这种方式叫作“组合数据”，也叫作“重新索引”</p>
+<p>-- <code>df.reindex(index=列表, columns=列表)</code></p>
+<p>-- reindex()并不会修改原来的DataFrame，而是返回一个新的DataFrame</p>
+</li>
+<li><p>（2）深入了解</p>
+<p>-- &#x3D;&#x3D;当行名或列表不存在时，如果使用reindex()，那么数据的值是NaN&#x3D;&#x3D;</p>
+<p>-- 当行名或列表不存在时，如果使用loc[]、iloc[]或df[]，那么程序会报错</p>
+<p>-- 如果使用reindex()获取数据，当行名或列名不存在时，默认情况下缺失的数据会被填充为NaN。但在Pandas中，可以使用fill_value这个参数来将“缺失的数据”填充为“指定值”</p>
+</li>
+</ul>
+<h5 id="x20-6-4-获取首尾数据"><a href="#x20-6-4-获取首尾数据" class="headerlink" title="&#x20;6.4 获取首尾数据"></a>&#x20;6.4 获取首尾数据</h5><ul>
+<li><p><code>df.head(n)</code> 和 <code>df.tail(n)</code></p>
+<p>-- n是一个整数，表示获取n条数据。&#x3D;&#x3D;如果省略n，就表示获取5条数据&#x3D;&#x3D;</p>
+</li>
+</ul>
+<h5 id="x20-6-5-随机抽样"><a href="#x20-6-5-随机抽样" class="headerlink" title="&#x20;6.5 随机抽样"></a>&#x20;6.5 随机抽样</h5><ul>
+<li><p><code>df.sample(n=整数)</code> 和 <code>df.sample(frac= 小数)</code></p>
+<p>-- sample()有两种使用方式：df.sample(n&#x3D;10)表示随机选取10条数据；df.sample(frac&#x3D;0.3)表示随机选取30%的数据</p>
+</li>
+</ul>
+<h5 id="x20-6-6-逻辑比较"><a href="#x20-6-6-逻辑比较" class="headerlink" title="&#x20;6.6 逻辑比较"></a>&#x20;6.6 逻辑比较</h5><ul>
+<li><p>（1）语法简介</p>
+<p>-- 比较运算符：<code>&gt;、&gt;=、&lt;、&lt;=、==和!=</code></p>
+<p>-- 逻辑运算符：<code>&amp;、|、~</code></p>
+</li>
+<li><p>（2）深入了解</p>
+<p>-- &#x3D;&#x3D;布尔选择&#x3D;&#x3D;</p>
+<p>-- 比较方法</p>
+</li>
+</ul>
+<h5 id="x20-6-7-过滤操作"><a href="#x20-6-7-过滤操作" class="headerlink" title="&#x20;6.7 过滤操作"></a>&#x20;6.7 过滤操作</h5><ul>
+<li><p>在Pandas中，如果想要对数据进行过滤，除了逻辑比较这种方式之外，还可以使用query()和filter()来实现</p>
+</li>
+<li><p>（1）query()</p>
+<p>-- <code>df.query(判断条件)</code></p>
+</li>
+<li><p>（2）filter()</p>
+<p>-- <code>df.filter(items, like, regex)</code></p>
+</li>
+</ul>
+<h5 id="x20-6-8-模式匹配"><a href="#x20-6-8-模式匹配" class="headerlink" title="&#x20;6.8 模式匹配"></a>&#x20;6.8 模式匹配</h5><ul>
+<li>在实际工作中，很多时候需要判断某一项是否包含某个值、是否以某个值开头或者是否以某个值结尾</li>
+<li>（1）是否包含：contains(A)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df = pd.DataFrame(data, columns=[<span class="string">&quot;name&quot;</span>, <span class="string">&quot;gender&quot;</span>, <span class="string">&quot;job&quot;</span>])</span><br><span class="line">bools = df[<span class="string">&quot;job&quot;</span>].<span class="built_in">str</span>.contains(<span class="string">&quot;工程师&quot;</span>)</span><br><span class="line">result = df[bools]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>（2）判断开头：startswith(A)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df = pd.DataFrame(data, columns=[<span class="string">&quot;name&quot;</span>, <span class="string">&quot;gender&quot;</span>, <span class="string">&quot;job&quot;</span>])</span><br><span class="line">bools = df[<span class="string">&quot;name&quot;</span>].<span class="built_in">str</span>.startswith(<span class="string">&quot;张&quot;</span>)</span><br><span class="line">result = df[bools]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>（3）判断结尾：.endswith(A)</p>
+<p>df &#x3D; pd.DataFrame(data, columns&#x3D;[“name”, “gender”, “job”])<br>bools &#x3D; df[“name”].str.endswith(“红”)<br>result &#x3D; df[bools]</p>
+</li>
+</ul>
+<hr>
+<h4 id="x20-七、处理数据"><a href="#x20-七、处理数据" class="headerlink" title="&#x20;七、处理数据"></a>&#x20;七、处理数据</h4><h5 id="x20-7-1-处理数据简介"><a href="#x20-7-1-处理数据简介" class="headerlink" title="&#x20;7.1 处理数据简介"></a>&#x20;7.1 处理数据简介</h5><ul>
+<li>处理数据是一项十分烦琐却又极其重要的工作。数据处理的好坏对后面数据分析的结果有决定性的作用</li>
+<li>&#x3D;&#x3D;在实际工作中，大约80%的时间是花在数据准备和数据处理上面的&#x3D;&#x3D;</li>
+</ul>
+<h5 id="x20-7-2-操作行名和列名"><a href="#x20-7-2-操作行名和列名" class="headerlink" title="&#x20;7.2 操作行名和列名"></a>&#x20;7.2 操作行名和列名</h5><ul>
+<li>（1）设置某一列为行名（<code>df.set_index(列名, drop=布尔值)</code>）</li>
+<li>（2）重置行名（<code>df.reset_index(drop=布尔值)</code>）</li>
+<li>（3）修改行名和列名（<code>df.index = 列表</code>，<code>df.columns = 列表</code>；<code>df.rename(index=字典, columns=字典)</code>）</li>
+</ul>
+<h5 id="x20-7-3-类型转换"><a href="#x20-7-3-类型转换" class="headerlink" title="&#x20;7.3 类型转换"></a>&#x20;7.3 类型转换</h5><ul>
+<li><p>（1）针对DataFrame</p>
+<p>-- ① 转换为字典（<code>df.to_dict(into=值)</code>）</p>
+<p>-- ② 转换为数组（<code>np.array(df)</code>）</p>
+<p>-- ③ 转换为列表（如果想要将一个DataFrame转换为一个列表，需要先将DataFrame转换为数组，然后再将数组转换为列表）</p>
+</li>
+<li><p>（2）针对某一列（<code>df[列名].astype(类型)</code>）</p>
+</li>
+</ul>
+<h5 id="x20-7-4-行列转置：T"><a href="#x20-7-4-行列转置：T" class="headerlink" title="&#x20;7.4 行列转置：T"></a>&#x20;7.4 行列转置：T</h5><ul>
+<li><code>df.T</code></li>
+</ul>
+<h5 id="x20-7-5-大小排序"><a href="#x20-7-5-大小排序" class="headerlink" title="&#x20;7.5 大小排序"></a>&#x20;7.5 大小排序</h5><ul>
+<li><code>df.sort_values(by=列表, ascending=布尔值)</code></li>
+</ul>
+<h5 id="7-6-数据排名"><a href="#7-6-数据排名" class="headerlink" title="7.6 数据排名"></a>7.6 数据排名</h5><ul>
+<li><code>df[列名].rank(ascending=布尔值, method=值)</code></li>
+</ul>
+<h5 id="7-7-数据替换"><a href="#7-7-数据替换" class="headerlink" title="7.7 数据替换"></a>7.7 数据替换</h5><ul>
+<li><code>df.replace(A, B)</code>  #替换一个值，A是原值</li>
+<li><code>df.replace(字典)</code>  #替换多个值，字典的键是原值</li>
+</ul>
+<h5 id="7-8-数据移动"><a href="#7-8-数据移动" class="headerlink" title="7.8 数据移动"></a>7.8 数据移动</h5><ul>
+<li><code>df.shift(n, axis=0或1)</code></li>
+</ul>
+<h5 id="7-9-数据清洗"><a href="#7-9-数据清洗" class="headerlink" title="7.9 数据清洗"></a>7.9 数据清洗</h5><ul>
+<li>（1）缺失值<br>-- ① 判断缺失值（<code>df.isnull()</code>）<br>-- ② 处理缺失值（<code>df.dropna(axis=0或1, how=&quot;any&quot;或&quot;all&quot;)</code>; <code>df.fillna(value=字典, method=填充方式)</code>）</li>
+<li>（2）重复值<br>-- ① 判断重复值（<code>df.duplicated()</code>）<br>-- ② 处理重复值（<code>df.drop_duplicates(subset=列表, keep=值)</code>）</li>
+<li>（3）异常值<br>-- ① 判断异常值（散点图分析、箱线图分析、3σ原则、统计分析）<br>-- ② 处理异常值（删除：直接删除该行或该列; 填充：使用平均值替代异常值）</li>
+</ul>
+<h5 id="7-10-数据合并"><a href="#7-10-数据合并" class="headerlink" title="7.10 数据合并"></a>7.10 数据合并</h5><ul>
+<li>（1）轴向合并（<code>pd.concat(列表, axis=0或1, join=连接方式, ignore_index=布尔值)</code>）</li>
+<li>（2）主键合并（<code>pd.merge(df1, df2, how=连接方式)</code>）</li>
+<li>（3）行列连接（<code>df1.join(df2, on=行名或列名)</code>）</li>
+<li>（4）纵向合并（<code>df1.append(df2, ignore_index=布尔值)</code>）</li>
+</ul>
+<h5 id="7-11-字符串处理（详见书）"><a href="#7-11-字符串处理（详见书）" class="headerlink" title="7.11 字符串处理（详见书）"></a>7.11 字符串处理（详见书）</h5><h5 id="7-12-自定义函数"><a href="#7-12-自定义函数" class="headerlink" title="7.12 自定义函数"></a>7.12 自定义函数</h5><ul>
+<li>（1）<code>df[].map(fn)</code>  #应用于一列</li>
+<li>（2）<code>df[].apply(fn, args=元组)</code> #应用于多列</li>
+<li>（3）<code>df.applymap(fn)</code> #应用于所有列</li>
+</ul>
+<hr>
+<h4 id="x20-八、分析数据"><a href="#x20-八、分析数据" class="headerlink" title="&#x20;八、分析数据"></a>&#x20;八、分析数据</h4><h5 id="x20-8-1-分析数据简介"><a href="#x20-8-1-分析数据简介" class="headerlink" title="&#x20;8.1  分析数据简介"></a>&#x20;8.1  分析数据简介</h5><ul>
+<li>基本统计函数、其他统计函数、整体情况、聚合函数agg()、数据分组</li>
+</ul>
+<h5 id="x20-8-2-基本统计函数"><a href="#x20-8-2-基本统计函数" class="headerlink" title="&#x20;8.2 基本统计函数"></a>&#x20;8.2 基本统计函数</h5><ul>
+<li>&#x3D;&#x3D;这些统计函数都不会修改原来的DataFrame&#x3D;&#x3D;</li>
+<li>（1）求和（<code>df.sum(axis=0或1, numeric_only=True或False)</code>）</li>
+<li>（2）统计个数（<code>df.count(axis=0或1)</code>）</li>
+<li>（3）求最值（<code>df.max(axis=0或1)</code> 和 <code>df.max(axis=0或1)</code>）</li>
+<li>（4）求中位数（<code>df.median(axis=0或1)</code>）</li>
+<li>（5）求众数（<code>df.mode(axis=0或1)</code>）</li>
+<li>（6）求平均数（<code>df.mean(axis=0或axis=1)</code>）</li>
+<li>（7）求方差（<code>df.var(axis=0或1)</code>）</li>
+<li>（8）求标准差（<code>df.std(axis=0或1)</code>）</li>
+<li>（9）求分位数（<code>df.quantile(axis=0或1, q=值)</code>）</li>
+</ul>
+<h5 id="x20-8-3-其他统计函数"><a href="#x20-8-3-其他统计函数" class="headerlink" title="&#x20;8.3 其他统计函数"></a>&#x20;8.3 其他统计函数</h5><ul>
+<li>（1）统计取值种类（<code>df[列名].unique()</code>）</li>
+<li>（2）统计取值个数（<code>df[列名].value_counts()</code>）</li>
+<li>（3）求变化百分比（<code>df.pct_change(axis=0或1)</code>）</li>
+<li>（4）求最值的行名（<code>df[列名].idxmax()</code> 和 <code>df[列名].idxmin()</code>）</li>
+</ul>
+<h5 id="8-4-整体情况"><a href="#8-4-整体情况" class="headerlink" title="8.4 整体情况"></a>8.4 整体情况</h5><ul>
+<li>（1）<code>df.describe()</code>：一次性获取一个数据集（DataFrame）的多个统计值，包括个数、中位数、标准差、最大值、最小值等。</li>
+<li>（2）<code>df.info()</code>：获取一个数据集（DataFrame）的基本信息，主要包括类型、列名、个数、内存等</li>
+</ul>
+<h5 id="8-5-聚合函数"><a href="#8-5-聚合函数" class="headerlink" title="8.5 聚合函数"></a>8.5 聚合函数</h5><ul>
+<li><code>df.agg(列表)</code>：对一个DataFrame同时应用多个统计函数</li>
+</ul>
+<h5 id="8-6-数据分组"><a href="#8-6-数据分组" class="headerlink" title="8.6 数据分组"></a>8.6 数据分组</h5><ul>
+<li>（1）基本语法<br>-- ① <code>df.groupby(列名或列表)</code><br>-- ② <code>分组对象.get_group(组名)</code></li>
+<li>（2）统计分析</li>
+</ul>
+<hr>
+<h4 id="x20-九、时间序列"><a href="#x20-九、时间序列" class="headerlink" title="&#x20;九、时间序列"></a>&#x20;九、时间序列</h4><h5 id="x20-9-1-时间序列概述"><a href="#x20-9-1-时间序列概述" class="headerlink" title="&#x20;9.1 时间序列概述"></a>&#x20;9.1 时间序列概述</h5><ul>
+<li><p>（1）在Pandas中，时间序列用一句话来解释就是：以时间作为行名的Series或DataFrame。一般情况下，时间序列是DataFrame的形式，很少是Series形式。</p>
+</li>
+<li><p>（2）转换类型</p>
+<p>-- 时间序列要求行名是时间对象，而不是字符串，所以需要进行类型转换</p>
+<p>-- <code>pd.to_datetime(列)</code>：只有符合特定5种形式的字符串才可以被转换成Pandas支持的时间对象</p>
+<p>-- 其实不管是哪种类型转换，大多是为了能够使用目标类型提供的各种方法</p>
+</li>
+<li><p>（3）获取日期</p>
+<p>-- <code>df.index.属性</code>（year、month、day、weekday、quarter、is_leap_year）</p>
+</li>
+<li><p>（4）索引与切片</p>
+<p>-- <code>df[&quot;2022&quot;]</code>：获取2022年的数据；<code>df[&quot;2022-01&quot;]</code>：获取2022年1月的数据；<code>df[&quot;2022&quot; : &quot;2023&quot;]</code>：获取2022年~2023年间的数据</p>
+</li>
+</ul>
+<h5 id="x20-9-2-重采样：resample"><a href="#x20-9-2-重采样：resample" class="headerlink" title="&#x20;9.2 重采样：resample()"></a>&#x20;9.2 重采样：resample()</h5><ul>
+<li><p>重采样（resample）是基于时间的一个分组操作</p>
+</li>
+<li><p><code>df.resample(freq, axis=0或1).统计函数()</code>：(freq：采样频率；D、M、Y、Q、W)</p>
+</li>
+<li><p>（1）降采样：从高频到低频的操作，例如把天数据变成周数据</p>
+<p>-- &#x3D;&#x3D;df.resample(“1W”)并不等价于df.resample(“7D”)&#x3D;&#x3D;</p>
+</li>
+<li><p>（2）升采样：从低频到高频的操作，例如把周数据变成天数据，数据怎么扩展为7个数据呢？因此会导致有一部分数据是缺失的。对于升采样导致的缺失值，一般使用填充的方式来处理。</p>
+<p>-- ① 向前填充：<code>ffill()</code>：是指使用前一个数据来进行填充</p>
+<p>-- ② 向后填充：<code>bfill()</code>：是指使用后一个数据来进行填充</p>
+</li>
+</ul>
+<h5 id="x20-9-3-移动计算：rolling"><a href="#x20-9-3-移动计算：rolling" class="headerlink" title="&#x20;9.3 移动计算：rolling()"></a>&#x20;9.3 移动计算：rolling()</h5><ul>
+<li>在实际工作中，我们可能会遇到这样一种需求：每天都计算一次3天内的销量总和。例如，第3天要计算一次“1～3天”的销量总和，第4天要计算一次“2～4天”的销量总和，以此类推。</li>
+<li><code>df.rolling(n)</code></li>
+<li>实际工作中，移动计算可以用于普通的DataFrame，不过更多是用于时间序列。</li>
+</ul>
+<h5 id="x20-9-4-分组器：Grouper"><a href="#x20-9-4-分组器：Grouper" class="headerlink" title="&#x20;9.4 分组器：Grouper()"></a>&#x20;9.4 分组器：Grouper()</h5><ul>
+<li>在Pandas中，可以使用Grouper()来指定分组的依据。在实际工作中，Grouper()一般和groupby()搭配使用。</li>
+<li><code>pd.Grouper(key, freq)</code>：key是一个可选参数，表示根据某个列名进行分组。freq也是一个可选参数，表示根据时间频率进行分组。</li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2018-2024 LittleStoneMonkey
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
